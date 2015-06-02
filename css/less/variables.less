@@ -1,0 +1,342 @@
+/* GENERICS */
+//colours
+@c1: #FFF; 		//blanco
+@c2: #000; 		//negro
+@c3: #CCC; 		//gris
+@c4: #FF0033; 	//rojo
+//end colours
+
+//fonts (imports from google fonts)
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400); //open sans
+
+@glyphicon: 	'Glyphicons Halflings';
+@opensans: 		'Open Sans', sans-serif;
+//end fonts
+
+//basics
+@background-color:  @c1;
+@space: 			20px; //margin-bottom block elements and more
+@border-radius: 	0px;
+@opacity: 			0.7;
+@blur:				2px;
+@shadow-color: 		@c3;
+@rotate: 			90;
+@time: 				0.5s;
+//end basics
+
+//text-base
+@font-family: 		@opensans;
+@font-size:   		14px;
+@font-size-xs:  	12px;
+@font-weight: 		400;
+@font-style:		normal;
+@color: 			@c2;
+@line-height: 		160%;
+@letter-spacing: 	2px;
+@text-align: 		left;
+@text-transform: 	normal;
+@indent: 			@space; //.text-indent (class)
+//end text-base
+
+//paths
+@path-images: 		'./images/';
+@path-css: 			'./css/';
+@path-fonts: 		'./fonts/';
+//end paths
+/* END GENERICS */
+
+/* HTML ELEMENTS */
+//links
+@a-color:					@c4;
+@a-color-hover: 			@c4;
+@a-text-decoration-hover: 	underline;
+@a-background-color: 		transparent;
+@a-background-color-hover: 	transparent;
+//end links
+
+//titles
+@h1-font-family: @font-family;
+@h2-font-family: @font-family;
+@h3-font-family: @font-family;
+@h4-font-family: @font-family;
+@h5-font-family: @font-family;
+@h6-font-family: @font-family;
+
+@h1-font-size: 40px;
+@h2-font-size: 32px;
+@h3-font-size: 24px;
+@h4-font-size: 18px;
+@h5-font-size: 16px;
+@h6-font-size: @font-size;
+
+@h1-font-weight: @font-weight;
+@h2-font-weight: @font-weight;
+@h3-font-weight: @font-weight;
+@h4-font-weight: @font-weight;
+@h5-font-weight: @font-weight;
+@h6-font-weight: @font-weight;
+
+@h1-font-style: @font-style;
+@h2-font-style: @font-style;
+@h3-font-style: @font-style;
+@h4-font-style: @font-style;
+@h5-font-style: @font-style;
+@h6-font-style: @font-style;
+
+@h1-color: @color;
+@h2-color: @color;
+@h3-color: @color;
+@h4-color: @color;
+@h5-color: @color;
+@h6-color: @color;
+
+@h1-text-transform: @text-transform;
+@h2-text-transform: @text-transform;
+@h3-text-transform: @text-transform;
+@h4-text-transform: @text-transform;
+@h5-text-transform: @text-transform;
+@h6-text-transform: @text-transform;
+
+@h1-line-height: @line-height;
+@h2-line-height: @line-height;
+@h3-line-height: @line-height;
+@h4-line-height: @line-height;
+@h5-line-height: @line-height;
+@h6-line-height: @line-height;
+
+@h1-text-align: @text-align;
+@h2-text-align: @text-align;
+@h3-text-align: @text-align;
+@h4-text-align: @text-align;
+@h5-text-align: @text-align;
+@h6-text-align: @text-align;
+//end titles
+
+//lists
+@ul-child-padding-left: @space;
+@li-margin-bottom: 		@space / 2;
+
+@li-style-icon: 		'#';
+@li-style-indent: 		@indent;
+@li-style-top: 			0px; //auto
+@li-style-height: 		0px; //auto
+@li-style-width:		0px; //auto
+@li-style-color: 		@c4;
+//end lists
+
+//inputs
+@input-height: 					30px;
+@input-padding: 				5px 10px;
+
+@input-font-family: 			@font-family;
+@input-font-size: 				@font-size;
+@input-font-weight: 			@font-weight;
+@input-color: 					@color;
+@input-background-color: 		rgba(255, 255, 255, 0.01);
+@input-border: 					1px solid @c2;
+@input-border-radius: 			0px;
+@input-border-color-focus: 		@c3;
+@input-box-shadow-color: 		transparent;
+@input-box-shadow-color-focus: 	transparent;
+@input-box-shadow-blur: 		0px;
+//end inputs
+
+//placeholder
+@placeholder-color:	 		@color;
+@placeholder-font-style: 	italic;
+//end placeholder
+
+//label
+@label-font-family: @font-family;
+@label-font-size: 	16px;
+@label-font-weight: @font-weight;
+@label-font-style: 	@font-style;
+@label-color: 		@c3;
+//end label
+
+//button
+@button-padding: 				8px 10px;
+
+@button-font-family: 			@font-family;
+@button-font-size: 				@font-size;
+@button-font-weight: 			@font-weight;
+@button-font-style:				@font-style;
+@button-color: 					@c1;
+@button-color-hover:			@c3;
+@button-background-color:		@c3;
+@button-background-color-hover: @c2;
+@button-text-align: 			center;
+@button-text-transform: 		uppercase;
+@button-line-height: 			100%;
+
+@button-border: 				1px solid @c3;
+@button-border-radius: 			@border-radius;
+@button-shadow-color: 			@shadow-color;
+@button-shadow-blur:  			@blur;
+//end button
+
+//strong
+@strong-color: @color;
+//end strong
+
+//text-highlight & text-lowlight
+@lowlight-color: 	@c3;
+@highlight-color: 	@c4;
+//end text-highlight & text-lowlight
+
+//dd
+@dd-font-weight: @font-weight;
+@dd-line-height: @line-height;
+//end dd
+
+//pre
+@pre-border: 			1px solid @c3;
+@pre-border-radius: 	@border-radius;
+@pre-padding: 			0px 20px;
+
+@pre-font-family: 		@font-family;
+@pre-font-size: 		@font-size;
+@pre-font-weight: 		@font-weight;
+@pre-color: 			@color;
+@pre-background-color: 	@background-color;
+@pre-line-height: 		@line-height;
+//end pre
+
+//marked text
+@mark-color: @c2;
+@mark-background-color: @c3;
+//end marked text
+
+//deleled text
+@del-font-style: 		italic;
+@del-color: 			@color;
+@del-background-color: 	transparent;
+//end deleted text
+
+//small
+@small-font-size: 	65%;
+@small-font-weight: 400;
+@small-color: 		@c3;
+//end small
+/* END HTML ELEMENTS */
+
+/* BOOTSTRAP COMPONENTS */
+//grid system
+//Todos los valores del grid system tienen que ser los mismos que los definidos en variables.less de bootstrap, de forma que lo siguientes valores no se pueden modificar y solamente son de lectura.
+@screen-xs-max: 	767px;
+@screen-sm:         768px;
+@screen-sm-max:     991px;
+@screen-md:         992px;
+@screen-md-max:     1199px;
+@screen-lg: 		1200px;
+
+//popover
+@popover-max-width: 		none;
+
+@popover-font-family: 		@font-family;
+@popover-font-size: 		@font-size;
+@popover-font-weight: 		@font-weight;
+@popover-font-style:		@font-style;
+@popover-color: 			@color;
+@popover-background-color: 	@background-color;
+
+//modal
+@modal-width: 				@screen-xs-max - 150; //no puede ser nunca mayor que @screen-xs-max
+@modal-margin-top: 			80px;
+@modal-padding:				20px;
+@modal-body-padding-bottom:	20px;
+@modal-background-color: 	@background-color;
+
+@modal-close-color: 					@a-color;
+@modal-close-color-hover:				@a-color-hover;
+@modal-close-background-color: 			transparent;
+@modal-close-background-color-hover: 	transparent;
+@modal-close-font-size: 				28px;
+
+@modal-backdrop-background-color: 		@c2;
+
+//form-group
+@form-group-margin-bottom: @space / 1.5;
+
+//carousel
+@carousel-control-color: 			@c2;
+@carousel-control-color-hover: 		@c3;
+@carousel-control-offset: 			-60px;
+@carousel-control-size:				24px;
+@carousel-indicators-bottom: 		15px;
+@carousel-indicators-size: 			12px;
+@carousel-indicators-color: 		@c2;
+@carousel-indicators-color-active: 	@c3;
+@carousel-time: 					0.4s;
+
+//navbar
+@navbar-padding: 5px;
+
+@navbar-font-family: 				@font-family;
+@navbar-font-size: 					@font-size;
+@navbar-font-weigth: 				@font-weight;
+@navbar-font-style: 				@font-style;
+@navbar-color: 						@color;
+@navbar-text-align: 				center;
+@navbar-text-transform: 			@text-transform;
+@navbar-letter-spacing: 			@letter-spacing;
+@navbar-background-color: 			rgba(255, 255, 255, 0.1);
+@navbar-background-color-offset: 	@c2;
+
+@navbar-font-size-xs: 		@font-size-xs;
+@navbar-font-weight-xs: 	700;
+@navbar-text-align-xs: 		center;
+
+@navbar-a-margin: 					16px 12px 10px 12px;
+@navbar-a-color: 					@a-color;
+@navbar-a-color-hover: 				@a-color-hover;
+@navbar-a-text-decoration-hover: 	@a-text-decoration-hover;
+
+@navbar-opacity: 			1;
+@navbar-border: 			0px;
+@navbar-border-radius: 		0px;
+@navbar-icon-bar-color: 	@a-color;
+@navbar-shadow-color: 		transparent;
+@navbar-shadow-blur: 		0px;
+@navbar-time: 				0.5s;
+
+//dropdown-menu [hereda de navbar por defecto]
+@dropdown-menu-font-family: 	@navbar-font-family;
+@dropdown-menu-font-size: 		@navbar-font-size;
+@dropdown-menu-font-weight: 	@navbar-font-weigth;
+@dropdown-menu-font-style: 		@navbar-font-style;
+@dropdown-menu-color: 			@navbar-color;
+
+@dropdown-menu-a-color: 					@navbar-a-color;
+@dropdown-menu-a-color-hover:				@navbar-a-color-hover;
+@dropdown-menu-a-text-decoration-hover: 	@navbar-a-text-decoration-hover;
+@dropdown-menu-a-background-color: 			@navbar-background-color;
+@dropdown-menu-a-background-color-hover: 	@navbar-background-color-offset;
+@dropdown-menu-a-padding: 					10px 15px;
+
+@dropdown-menu-background-color: 	@navbar-background-color;
+@dropdown-menu-border: 				1px solid @c2;
+@dropdown-menu-border-radius:		0px;
+@dropdown-menu-shadow-color: 		@shadow-color;
+@dropdown-menu-shadow-blur: 		0px;
+
+//navbar > dropdown [hereda de navbar por defecto]
+@navbar-dropdown-menu-font-family: 				@navbar-font-family;
+@navbar-dropdown-menu-font-size: 				@navbar-font-size;
+@navbar-dropdown-menu-font-weight: 				@navbar-font-weigth;
+@navbar-dropdown-menu-font-style: 				@navbar-font-style;
+@navbar-dropdown-menu-color: 					@navbar-color;
+
+@navbar-dropdown-menu-border: 					@dropdown-menu-border;
+@navbar-dropdown-menu-border-radius: 			@dropdown-menu-border-radius;
+@navbar-dropdown-menu-shadow-color: 			@dropdown-menu-shadow-color;
+@navbar-dropdown-menu-shadow-blur: 				@dropdown-menu-shadow-blur;
+@navbar-dropdown-menu-background-color: 		@navbar-background-color-offset;
+
+@navbar-dropdown-menu-a-padding: 				@dropdown-menu-a-padding;
+@navbar-dropdown-menu-a-color:					@navbar-a-color;
+@navbar-dropdown-menu-a-color-hover: 			@navbar-a-color-hover;
+@navbar-dropdown-menu-a-text-decoration: 		@navbar-a-text-decoration-hover;
+@navbar-dropdown-menu-a-background-color: 		@navbar-background-color-offset;
+@navbar-dropdown-menu-a-background-color-hover: @navbar-background-color-offset;
+/* END BOOTSTRAP COMPONENTS */

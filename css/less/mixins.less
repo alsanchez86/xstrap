@@ -1,0 +1,346 @@
+/*
+NOTA: Solamente se deben modificar/controlar en los mixins aquellos estilos que sean modificables a través de los parámetros.
+Para aplicar estilos fijos específicos de cada elemento, aplicarlo en el base.less
+(Revisar .link () y .button ())
+*/
+
+/* SPECIFIC FOR HTML ELEMENTS & BOOTSTRAP COMPONENTS */
+/* a (without class .btn) */
+.link (
+		@color: 					@a-color,
+		@color-hover: 				@a-color-hover,
+		@text-decoration: 			@a-text-decoration-hover,
+		@background-color: 			@a-background-color,
+		@background-color-hover: 	@a-background-color-hover
+	){
+
+	color: 				@color;
+	background-color: 	@background-color;
+
+	&:hover,
+	&:focus,
+	&.active {
+		color: 				@color-hover;
+		background-color: 	@background-color-hover;
+		text-decoration: 	@text-decoration;
+	}
+
+	/*&:visited {
+		color: @color;
+
+		&:hover {
+			color: @color-hover;
+		}
+	}*/
+}
+
+/* a, button */
+.button (
+		@color: 					@button-color,
+		@color-hover: 				@button-color-hover,
+		@background-color: 			@button-background-color,
+		@background-color-hover: 	@button-background-color-hover
+	){
+
+	color: 				@color;
+	background-color: 	@background-color;
+
+	&:hover,
+	&:focus,
+	&.active {
+		color: 				@color-hover;
+		background-color: 	@background-color-hover;
+
+		span {
+			color: @color-hover;
+		}
+	}
+
+	&::before,
+	&::after {
+		.transition ();
+
+		display: 		inline-block;
+        vertical-align: middle;
+        border-color: 	@color;
+	}
+
+	&.disabled {
+		.disabled ();
+	}
+
+	span {
+		color: @color;
+	}
+}
+/* END SPECIFIC FOR HTML ELEMENTS & BOOTSTRAP COMPONENTS */
+
+/* GENERICS */
+.text (
+		@font-family: 		@font-family,
+		@font-size: 		@font-size,
+		@font-weight: 		@font-weight,
+		@font-style: 		@font-style,
+		@color: 			@color,
+		@text-align: 		@text-align,
+		@text-transform: 	@text-transform,
+		@line-height: 		@line-height
+	){
+
+	font-family: 	@font-family;
+	font-size: 		@font-size;
+	font-weight: 	@font-weight;
+	font-style: 	@font-style;
+	color: 			@color;
+	text-align: 	@text-align;
+	text-transform: @text-transform;
+	line-height: 	@line-height;
+}
+
+.border (
+		@border: 	0px,
+		@radio: 	@border-radius
+	){
+
+	border: 				@border;
+	border-radius: 			@radio;
+	-moz-border-radius: 	@radio;
+    -webkit-border-radius: 	@radio;
+}
+
+.transition (
+		@time: @time,
+		@direction: all
+	){
+
+	-webkit-transition: @direction @time;
+	-moz-transition:    @direction @time;
+	-ms-transition:     @direction @time;
+	-o-transition:      @direction @time;
+    transition: 		@direction @time;
+}
+
+.fade (
+		@time: @time
+	){
+
+	transition: 		opacity @time ease-in-out;
+    -moz-transition: 	opacity @time ease-in-out;
+    -webkit-transition: opacity @time ease-in-out;
+}
+
+.transform () {
+
+	-webkit-transform: 	translate3d(0,0,0);
+    -o-transform: 		translate3d(0,0,0);
+    transform: 			translate3d(0,0,0);
+}
+
+.text-shadow (
+		@shadow-color: 	@shadow-color,
+		@size: 			1px,
+		@blur: 			0px
+	){
+
+	text-shadow: -@size @size @blur @shadow-color;
+}
+
+.box-shadow (
+		@shadow-color: 	@shadow-color,
+		@blur: 			@blur
+	){
+
+	box-shadow: 0px 2px @blur @shadow-color;
+}
+
+.box-shadow-inset (
+		@size: 	10px,
+		@blur:	0.35
+	){
+
+	box-shadow: inset 0px @size @size rgba(0,0,0, @blur);
+}
+
+.not-outline () {
+
+	outline: 			none !important;
+	outline-offset: 	0px !important;
+}
+
+.disabled () {
+
+	pointer-events: none;
+   	cursor: default;
+   	opacity: @opacity;
+}
+
+.placeholder (
+		@color: 		@placeholder-color,
+		@font-style: 	@placeholder-font-style
+	){
+
+    &::-webkit-input-placeholder {
+    	font-style: @font-style;
+		color: @color;
+	}
+
+	&::-moz-placeholder {
+		font-style: @font-style;
+		color: @color;
+	}
+
+	&:-moz-placeholder {
+		font-style: @font-style;
+		color: @color;
+	}
+
+	&:-ms-input-placeholder {
+		font-style: @font-style;
+		color: @color;
+	}
+}
+
+.break-all () {
+	-ms-word-break: break-all;
+    word-break: break-all;
+
+    //non standard for webkit
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.background-cover () {
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+}
+
+.rotate (
+		@rotation: @rotate
+	){
+
+  	@degs: e("@{rotation}deg");
+  	@degs-ie: @rotation / 90;
+
+    -webkit-transform: rotate(@degs);
+    -moz-transform: rotate(@degs);
+    -o-transform: rotate(@degs);
+    -ms-transform: rotate(@degs);
+    transform: rotate(@degs);
+    filter: e("progid:DXImageTransform.Microsoft.BasicImage(rotation=@{degs-ie})");
+}
+/* END GENERICS */
+
+/* OTHERS */
+/* gradients => http://www.colorzilla.com/gradient-editor/ */
+.gradient (
+		@startcolor: 	rgba(0,0,0, @opacity),
+		@endcolor: 		rgba(255,255,255, @opacity),
+		@direction-1: 	top,
+		@direction-2: 	bottom,
+		@start: 		0%,
+		@end: 			100%
+	){
+
+	background: @startcolor; /* Old browsers */
+	background: -webkit-gradient(linear, left @direction-1, left @direction-2, color-stop(@start,@startcolor), color-stop(@end,@endcolor));
+	background: -moz-linear-gradient(			@direction-1, @startcolor @start, @endcolor @end);
+	background: -webkit-linear-gradient(		@direction-1, @startcolor @start, @endcolor @end);
+	background: -o-linear-gradient(				@direction-1, @startcolor @start, @endcolor @end);
+	background: -ms-linear-gradient(			@direction-1, @startcolor @start, @endcolor @end);
+	background: linear-gradient(to 				@direction-2, @startcolor @start, @endcolor @end);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{startcolor}', endColorstr='@{endcolor}',GradientType=0);
+}
+
+//animated (Animate.css)
+.animated (
+		@time: @time
+	){
+
+	-webkit-animation-duration: 	@time;
+    animation-duration: 			@time;
+    -webkit-animation-fill-mode: 	both;
+    animation-fill-mode: 			both;
+}
+
+.slideInLeft (
+		@time: 	@time,
+		@start: 0%,
+		@end: 	100%
+	){
+
+	.animated (@time);
+
+	@-webkit-keyframes slideInLeft {
+  		0% {
+    		-webkit-transform: translateX(-@end);
+    		transform: translateX(-@end);
+    		visibility: visible;
+  		}
+
+  		100% {
+    		-webkit-transform: translateX(@start);
+    		transform: translateX(@start);
+  		}
+	}
+
+	@keyframes slideInLeft {
+  		0% {
+    		-webkit-transform: translateX(-@end);
+    		-ms-transform: translateX(-@end);
+    		transform: translateX(-@end);
+    		visibility: visible;
+  		}
+
+  		100% {
+    		-webkit-transform: translateX(@start);
+    		-ms-transform: translateX(@start);
+    		transform: translateX(@start);
+  		}
+	}
+
+    animation-name: slideInLeft;
+}
+
+.slideInDown (
+		@time: 	@time,
+		@start: 0%,
+		@end: 	100%
+	){
+
+	.animated (@time);
+
+	@-webkit-keyframes slideInDown {
+  		0% {
+    		-webkit-transform: translateY(-@end);
+    		transform: translateY(-@end);
+    		visibility: visible;
+  		}
+
+  		100% {
+    		-webkit-transform: translateY(@start);
+    		transform: translateY(@start);
+  		}
+	}
+
+	@keyframes slideInDown {
+  		0% {
+    		-webkit-transform: translateY(-@end);
+    		-ms-transform: translateY(-@end);
+    		transform: translateY(-@end);
+    		visibility: visible;
+  		}
+
+  		100% {
+    		-webkit-transform: translateY(@start);
+    		-ms-transform: translateY(@start);
+    		transform: translateY(@start);
+  		}
+	}
+
+    animation-name: slideInDown;
+}
+/* END OTHERS */
