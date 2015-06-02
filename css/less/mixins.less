@@ -25,13 +25,19 @@ Para aplicar estilos fijos específicos de cada elemento, aplicarlo en el base.l
 		text-decoration: 	@text-decoration;
 	}
 
-	/*&:visited {
-		color: @color;
+	&:hover {
+      	& > .badge {
+        	color: @a-color;
+      	}
 
-		&:hover {
-			color: @color-hover;
-		}
-	}*/
+      	& > svg {
+        	fill: @a-color-hover;
+    	}
+    }
+
+    & > svg {
+    	fill: @color;
+    }
 }
 
 /* a, button */
@@ -45,31 +51,23 @@ Para aplicar estilos fijos específicos de cada elemento, aplicarlo en el base.l
 	color: 				@color;
 	background-color: 	@background-color;
 
+	&::before,
+	&::after {
+		border-color: @color;
+	}
+
 	&:hover,
 	&:focus,
 	&.active {
 		color: 				@color-hover;
 		background-color: 	@background-color-hover;
 
-		span {
+		& > span {
 			color: @color-hover;
 		}
 	}
 
-	&::before,
-	&::after {
-		.transition ();
-
-		display: 		inline-block;
-        vertical-align: middle;
-        border-color: 	@color;
-	}
-
-	&.disabled {
-		.disabled ();
-	}
-
-	span {
+	& > span {
 		color: @color;
 	}
 }

@@ -21,11 +21,6 @@ a {
     &:hover {
       .badge {
         .transition ();
-        color: @a-color;
-      }
-
-      svg {
-        fill: @a-color-hover;
       }
     }
 
@@ -40,10 +35,6 @@ a {
 
     &.disabled {
       .disabled ();
-    }
-
-    svg {
-      fill: @color;
     }
   }
 }
@@ -93,10 +84,6 @@ label {
   .text (@label-font-family, @label-font-size, @label-font-weight, @label-font-style, @label-color);
   cursor: pointer;
 }
-
-/*button {
-  .button ();
-}*/
 
 aside {
   img {
@@ -255,24 +242,23 @@ button,
   padding: @button-padding;
 
   text-decoration:  none;
-  cursor:       pointer;
-  white-space:    normal;
-  overflow:       hidden;
+  cursor:           pointer;
+  white-space:      normal;
+  overflow:         hidden;
+
+  &::before,
+  &::after {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
   &.active,
   &:active {
     .box-shadow (transparent, 0px);
   }
 
-  /* negro */
-  &.btn-negro {
-    .button (@c1, @c1);
-    .gradient ();
-
-    &:hover,
-    &.active {
-      .gradient ();
-    }
+  &.disabled {
+    .disabled ();
   }
 }
 
