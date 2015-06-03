@@ -21,6 +21,8 @@
     <link href="./images/favicon.ico" rel="shortcut icon"/>
     <!-- bootstrap -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- offcanvas -->
+    <link href="./bootstrap/extra/offcanvas/css/offcanvas.css" rel="stylesheet"/>
     <!-- main -->
     <link href="./css/main.css" rel="stylesheet"/>
 </head>
@@ -258,36 +260,9 @@
     <p>Aquí se definiran el valor de las variables en config.json</p>
 
     <p>El proceso de pasar el trabajo del entorno de <strong>DESARROLLO</strong> al entorno de <strong>PRODUCCIÓN</strong> trata de trasladar los valores de variables.less a config.json, y deshabilitar aquellos componentes de Bootstrap que no se usen en el proyecto actual (comentar las líneas correspondientes en config.json).</p> -->
-
-    <div class="route-job">
-        <h2>RUTA DE TRABAJO:</h2>
-
-        <ul class="list">
-            <li class="text-highlight">ACTUAL => Boostrap.min.css + (variables.less + mixins + base.less). <i>[Técnica del parche]</i></li>
-            <li>XSTRAP => Boostrap.css (variables.less de bootstrap (modificadas y ampliadas al cruzarlas con variables.less mio) + componentes .less (modificados y ampliados al cruzarlo con base.less mio). Los mixins de bootstrap también serán modificados y ampliados al cruzarlos con el mío, pero también se usarán a la hora de escribir el main.less, media-xs.less, media-md.less, ...</li>
-        </ul>
-
-        <p>
-            En una primera iteracción, se modificarán los componentes de bootstrap a través del base.less (controlado por variables.less), basandose en la técnica del parche de estilos.
-        </p>
-
-        <p><strong>1) Terminar de crear el base.less filtrando todos los componentes de bootstrap y creando sus correspondientes variables.less para modificarlos, y modificando los mixins.less según sea conveniente.</strong></p>
-
-        <p>
-            En la segunda iteracción, se trabajará directamente con el código fuente de bootstrap, modificando los .less de los componentes directamente (variable.less y .less individual de cada componente, cruzándolo con su correspondiente en base.less), de forma que no provoque la sobreescritura de estilos y ahorrando tamaño en el css final.
-        </p>
-
-        <p><strong>2) Fusión de base.less con los componentes de bootstrap directamente modificando el código fuente de este pre-compilación. Fusión de variables.less. Fusión de Mixins.less.</strong></p>
-
-        <p class="text-lowlight">
-            <i>
-                En principio, descartamos la opción final de modificar un config.json para subirlo al compilador de bootstrap y generar un bootstrap personalizado, porque de esta forma perderíamos los     cambios realizados en los .less de los componentes de bootstrap al cruzarlos con el base.less y mixins.less.
-                <br>
-                Ver <a class="blank" href="http://getbootstrap.com/css/#less" target="_blank">variables.less</a> de Bootstrap pre-compilado.
-            </i>
-        </p>
-    </div>
 </div>
+
+<?php include_once ('modal-default.php'); ?>
 
 <!-- jquery [v < 2] -->
 <script src="./jquery/jquery.js"></script>
@@ -299,9 +274,15 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-<!-- main -->
-<script src="./js/main.js"></script>
+<!-- offcanvas -->
+<script src="./bootstrap/extra/offcanvas/js/ie10-viewport-bug-workaround.js"></script>
+<!-- jquery.easing.min -->
+<script src="./jquery/extra/jquery.easing.min.js"></script>
+<!-- rwdImageMaps -->
+<script src="./jquery/extra/jquery.rwdImageMaps.min.js"></script>
 <!-- row generator -->
 <script src="./js/row-generator.js"></script>
+<!-- main -->
+<script src="./js/main.js"></script>
 </body>
 </html>

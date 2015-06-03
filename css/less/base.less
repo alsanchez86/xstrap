@@ -168,7 +168,7 @@ ul {
         content: @li-style-icon;
 
         color: @li-style-color;
-        background: url('@{path-images}list-icon.png') no-repeat center center;
+        //background: url('@{path-images}list-icon.png') no-repeat center center;
         background-size: @li-style-height !important;
       }
     }
@@ -223,6 +223,19 @@ input [type="checkbox"] {
   margin-bottom: @form-group-margin-bottom;
 }
 
+/* input-group */
+.input-group-btn {
+  &:last-child {
+    & > .btn {
+      margin: 0px;
+    }
+  }
+
+  .btn {
+    padding: 6px 12px;
+  }
+}
+
 /* checkbox */
 .checkbox {
   margin-top: 0px;
@@ -262,15 +275,16 @@ button,
   }
 }
 
-.btn-toolbar {
-  .btn-group {
-    margin-bottom: @space;
+.btn-group {
+  &.open {
+    & > .dropdown-toggle {
+      .box-shadow (0px, 0px);
+      background-color: @dropdown-menu-a-background-color-hover;
+    }
   }
-}
 
-.open {
-  .btn {
-    //.active ();
+  .btn-group + .btn-group {
+    margin-left: 0px;
   }
 }
 
@@ -386,21 +400,17 @@ button,
 }
 
 /* pagination */
-/*.pagination {
+.pagination {
   margin-top: 0px;
   margin-bottom: @space;
   padding: 0px;
 
   li {
     a {
-      .link (@c4, @c4);
+      .link ();
       .border (0px, 0px);
-
-      padding: 0px 5px;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      margin: 0px 5px;
+      padding: 0px;
     }
 
     &:before {
@@ -409,25 +419,20 @@ button,
 
     &.active {
       a {
-        .link (@c4, @c4);
-        cursor: pointer;
-
-        &:hover {
-          text-decoration: underline;
-        }
+        .link ();
+        text-decoration: underline;
       }
     }
 
     &.arrow {
       a {
-        .link (@c-base, @c-base, none, @c4, @c4);
-
-        margin-right: 8px;
-        padding: 4px 5px;
+        .link ();
       }
 
       &:first-child {
         a {
+          margin: 2px 7px 0px 0px;
+
           span.glyphicon {
             &:before {
               .rotate (180);
@@ -440,8 +445,7 @@ button,
 
       &:last-child {
         a {
-          margin-right: 0px;
-          margin-left: 8px;
+          margin: 1px 0px 0px 7px;
 
           span.glyphicon {
             &:before {
@@ -452,7 +456,7 @@ button,
       }
     }
   }
-}*/
+}
 
 /* tooltip */
 /*.tooltip {
@@ -541,27 +545,55 @@ button,
 
 /* panels */
 .panel {
-  .border ();
-  margin-bottom: @space !important;
+  .border (0px, 0px);
+  .box-shadow (transparent, 0px);
+  margin-bottom: @space;
 
   .panel-heading {
     padding: 0px;
 
     h4.panel-title {
       margin: 0px;
-    }
 
-    a {
-      .link (@c3, @c3, none);
-      display: block;
-      padding: 10px 15px 10px 15px;
+      a {
+        display: block;
+        padding: 10px 15px 10px 15px;
+      }
     }
-  }
-
-  .panel-body {
-    .border ();
   }
 }
+/* end panels */
+
+/* list-group */
+.list-group {
+  .list-group-item {
+    .border (0px, 0px);
+    position: relative;
+    margin-bottom: @li-margin-bottom;
+    padding: 0px @space + 10 0px 0px;
+
+    background-color: transparent;
+
+    &.active {
+      background-color: transparent;
+    }
+
+    .badge {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+
+      background-color: transparent;
+    }
+  }
+}
+/* end list-group */
+
+/* badge */
+.badge {
+  color: @color;
+}
+/* end badge */
 
 /* dropdown-menu */
 .dropdown-menu {
@@ -573,16 +605,16 @@ button,
   padding: 0px;
   background-color: @dropdown-menu-background-color;
 
-  li {
+  & > li {
     overflow: hidden;
     margin: 0px;
-  }
 
-  a {
-    .link (@dropdown-menu-a-color, @dropdown-menu-a-color-hover, @dropdown-menu-a-text-decoration-hover, @dropdown-menu-a-background-color, @dropdown-menu-a-background-color-hover);
-    position: relative;
-    margin: 0px !important;
-    padding: @dropdown-menu-a-padding !important;
+    & > a {
+      .link (@dropdown-menu-a-color, @dropdown-menu-a-color-hover, @dropdown-menu-a-text-decoration-hover, @dropdown-menu-a-background-color, @dropdown-menu-a-background-color-hover);
+      position: relative;
+      margin: 0px !important;
+      padding: @dropdown-menu-a-padding !important;
+    }
   }
 }
 

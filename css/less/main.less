@@ -7,17 +7,20 @@
 /* MAIN */
 
 
-/* negro */
-  &.btn-negro {
-    .button (@c1, @c1);
-    .gradient ();
+/* example gradient button */
+.btn {
+	&.btn-gradient {
+    	.button (@c1, @c1);
+    	.gradient (@c2, @c3, top, bottom);
 
-    &:hover,
-    &.active {
-      .gradient ();
-    }
-  }
-
+    	&:hover,
+    	&:focus,
+    	&.active {
+    	  .gradient (@c2, @c3, bottom, top);
+    	}
+  	}
+}
+/* end example gradient button */
 /* end MAIN */
 
 //Import Media Bootstrap Breakpoints (al final de base.less, para que no haya sobreescritura de clases y no tener que usar !important)
