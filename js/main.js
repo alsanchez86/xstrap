@@ -18,7 +18,7 @@ jQuery (document).ready (function($) {
     //offCanvas ($('#btn-offcanvas-menu'),    $('#row-offcanvas-menu'));
     //navBarOffset (50);
     //rwdImageMaps ();
-    //xstrapFunny ();
+    xstrapFunny ();
 
     if (! issetCookie ('ximcom-cookies')) {
 
