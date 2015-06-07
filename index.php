@@ -32,7 +32,7 @@
     <header>
         <h1>
             XSTRAP 1.0
-            <img width="40" src="http://i.imgur.com/s6i6Q.gif">
+            <img width="40" src="http://i.imgur.com/s6i6Q.gif" alt="banana" title="banana">
             <small>(It´s just Boostrap)</small>
         </h1>
     </header>
