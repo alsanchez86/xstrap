@@ -151,7 +151,7 @@ function checkIndexScroll (init, end, min) {
 }
 /* -- */
 
-/* dropdowns */
+/* navs */
 function dropdownData (hover, context) {
 
     $('.btn-group, .dropdown', context)
@@ -162,6 +162,7 @@ function dropdownData (hover, context) {
 
 function dropdownHoverBtnGroup (context) {
 
+    //nav formado por el componente btn-group + dropdowns de bootstrap
     $('.dropdown-toggle', context)
         .click (function (event) {
 
@@ -202,6 +203,7 @@ function dropdownHoverBtnGroup (context) {
 
 function dropdownHoverNavbar (context) {
 
+    //nav formado con el componente navbar de bootstrap
     //enlace padre del grupo
     $('.dropdown-toggle', context)
         .click (function (event) {
@@ -256,9 +258,7 @@ function dropdownClose (hover, context) {
         .data ('open', false)
         .removeClass ('open');
 }
-/* -- */
 
-/* navbar offset */
 function navBarOffset (offset) {
 
     var navbar = $('#navbar');

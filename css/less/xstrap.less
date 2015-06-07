@@ -16,3 +16,24 @@
 	&.c3 { background-color: @c3; }
 	&.c4 { background-color: @c4; }
 }
+
+ul.glyphicons-list {
+	overflow: hidden;
+
+	li {
+		.border (1px solid @c3, 0px);
+		float: left;
+		width: 10%;
+		height: 150px;
+		margin: 5px;
+		padding: 10px 8px;
+
+		text-align: center;
+		background-color: #EEE;
+
+		span.glyphicon {
+			display: block;
+			margin: 0px 0px 10px 0px;
+		}
+	}
+}
