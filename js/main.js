@@ -178,7 +178,8 @@ function dropdownHoverBtnGroup (context) {
             var ul      = $('.dropdown-menu', $(this)).length;
 
             $(this).data ('open', ! open);
-            if (hover || (open && href && ul)) return window.location = href;
+            if (href == '#')                    return;
+            if (hover || (open && href && ul))  return window.location = href;
         })
         .mouseenter (function () {
 
@@ -224,8 +225,9 @@ function dropdownHoverNavbar (context) {
                     .addClass ('open');
             }
 
-            if (! $(this).hasClass ('scroll')) window.location = href;
-            if (hover || (open && href && ul)) return scrollTop (href, scrollTopOffset);
+            if (! $(this).hasClass ('scroll'))  window.location = href;
+            if (href == '#')                    return;
+            if (hover || (open && href && ul))  return scrollTop (href, scrollTopOffset);
         })
         .mouseenter (function () {
 
