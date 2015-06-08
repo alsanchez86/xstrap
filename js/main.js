@@ -272,13 +272,26 @@ function navBarOffset (offset) {
 /* -- */
 
 /* modal */
-function modalDefault (text) {
+function modalDefault (text, timeout) {
+
+    timeout || (timeout = 0);
 
     var modal = $('#modal-default');
 
     if (! modal.length) return console.log ('Error modalDefault (). #modal-default (div) no instalado.');
     $('.modal-body', modal).html (text);
     modal.modal ('show');
+
+    if (timeout) {
+        modal
+            .on ('shown.bs.modal', function () {
+
+                window.setTimeout (function () {
+
+                    modal.modal ('hide');
+                }, timeout);
+            });
+    }
 }
 
 function modalEvent () {
