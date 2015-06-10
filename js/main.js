@@ -14,7 +14,8 @@ jQuery (document).ready (function($) {
 
     /* general */
     scrollReady ();
-    dropdownHoverNavbar ($('#menu-fixed'));
+    //dropdownHoverBtnGroup ();
+    dropdownHoverNavbar ();
     //offCanvas ($('#btn-offcanvas-menu'),    $('#row-offcanvas-menu'));
     //navBarOffset (50);
     //rwdImageMaps ();
@@ -74,22 +75,22 @@ function responsive () {
 
 function lg () {
 
-    //dropdownData (true, $('#menu-fixed'));
+    //dropdownData (true);
 }
 
 function md () {
 
-    //dropdownData (true, $('#menu-fixed'));
+    //dropdownData (true);
 }
 
 function sm () {
 
-    //dropdownData (false, $('#menu-fixed'));
+    //dropdownData (false);
 }
 
 function xs () {
 
-    //dropdownData (false, $('#menu-fixed'));
+    //dropdownData (false);
 }
 /* -- */
 
@@ -152,24 +153,25 @@ function checkIndexScroll (init, end, min) {
 /* -- */
 
 /* navs */
-function dropdownData (hover, context) {
+function dropdownData (hover) {
 
-    $('.btn-group, .dropdown', context)
+    $('.btn-group-xstrap, .dropdown-xstrap')
         .data ({hover: hover, open: false});
 
-    dropdownClose (hover, context); //cerramos todos los dropdown-menu al resize
+    dropdownClose (hover); //cerramos todos los dropdown-menu al resize
 }
 
-function dropdownHoverBtnGroup (context) {
+function dropdownHoverBtnGroup () {
 
-    //nav formado por el componente btn-group + dropdowns de bootstrap
-    $('.dropdown-toggle', context)
+    var group = $('.btn-group-xstrap');
+
+    $('.dropdown-toggle', group)
         .click (function (event) {
 
             event.preventDefault ();
         });
 
-    $('.btn-group', context)
+    group
         .click (function (event) {
 
             var hover   = $(this).data ('hover');
@@ -183,13 +185,13 @@ function dropdownHoverBtnGroup (context) {
         })
         .mouseenter (function () {
 
-            var btnGroup    = $(this);
-            var menu        = $('.dropdown-menu', btnGroup);
+            var group = $(this);
+            var menu  = $('.dropdown-menu', group);
 
-            if (btnGroup.data ('hover')) {
+            if (group.data ('hover')) {
 
-                menu.css ({minWidth: btnGroup.outerWidth (), top: btnGroup.outerHeight ()});
-                btnGroup.addClass ('open');
+                menu.css ({minWidth: group.outerWidth (), top: group.outerHeight ()});
+                group.addClass ('open');
                 return;
             }
 
@@ -198,10 +200,11 @@ function dropdownHoverBtnGroup (context) {
         .mouseleave (function () {
 
             $(this).data ('open', false);
-            dropdownClose ($(this).data ('hover'), context);
+            dropdownClose ($(this).data ('hover'));
         });
 }
 
+//REVISAR ESTO. EL CONTEXT SE HA DEJADO DE USAR POR POCO VERSATIL. HAY QUE REPROGRAMAR ESTA FUNCION.
 function dropdownHoverNavbar (context) {
 
     //nav formado con el componente navbar de bootstrap
@@ -251,12 +254,13 @@ function dropdownHoverNavbar (context) {
             if ($(this).data ('hover')) dropdownClose (context);
         });
 }
+//END REVISAR ESTO. EL CONTEXT SE HA DEJADO DE USAR POR POCO VERSATIL. HAY QUE REPROGRAMAR ESTA FUNCION.
 
-function dropdownClose (hover, context) {
+function dropdownClose (hover) {
 
     if (! hover) return;
 
-    $('.btn-group.open, .dropdown.open', context)
+    $('.btn-group-xstrap.open, .dropdown-xstrap.open')
         .data ('open', false)
         .removeClass ('open');
 }
