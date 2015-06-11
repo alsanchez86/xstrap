@@ -37,6 +37,11 @@
         </h1>
     </header>
 
+    <?php include ('dropdown-navbar.php'); ?>
+    <br><br><br><br>
+    <?php include ('dropdown-btn-group.php'); ?>
+    <br><br><br><br>
+
     <p><strong>Antes de instalar en un proyecto, borrar <span class="text-highlight">xstrap.less</span> y <span class="text-highlight">row-generator.js</span></strong></p>
 
     <p>XSTRAP = Guía de diseño <i>(html con todos los elementos y componentes para modificar facilmente su apariencia mediante variables less)</i> basada en Bootstrap.</p>
