@@ -204,6 +204,7 @@ input [type="checkbox"] {
   .placeholder  ();
 
   height: @input-height;
+  margin-bottom: @space;
   padding: @input-padding;
   background-color: @input-background-color;
 
@@ -223,6 +224,14 @@ input [type="checkbox"] {
 }
 
 /* input-group */
+.input-group {
+  margin-bottom: @space;
+
+  & > .form-control {
+    margin-bottom: 0px;
+  }
+}
+
 .input-group-btn {
   &:last-child {
     & > .btn {
