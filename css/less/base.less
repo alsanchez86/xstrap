@@ -4,11 +4,12 @@
 /* end IMPORTS */
 
 /* HTML ELEMENTS */
-//text-base
+//body
 body {
   .text (); //valores por defecto "text-base" en .text ()
   background-color: @background-color;
 }
+//end body
 
 //links
 a {
@@ -79,10 +80,12 @@ strong {
 }
 //end strong
 
+//label
 label {
   .text (@label-font-family, @label-font-size, @label-font-weight, @label-font-style, @label-color);
   cursor: pointer;
 }
+//end label
 
 aside {
   img {
@@ -90,17 +93,18 @@ aside {
   }
 }
 
+//iframe
 iframe {
   .border (0px, 0px);
 }
+//end iframe
 
 pre {
   .border (@pre-border, @pre-border-radius);
-  margin-bottom: @space;
+  margin: 0px 0px @space 0px;
   padding: @pre-padding;
 
   line-height: @pre-line-height;
-
   font-family: @pre-font-family;
   font-size: @pre-font-size;
   font-weight: @pre-font-weight;
@@ -108,10 +112,12 @@ pre {
   background-color: @pre-background-color;
 }
 
-small {
-  font-size: @small-font-size;
-  font-weight: @small-font-size;
-  color: @small-color;
+blockquote {
+  padding: @blockquote-padding;
+  margin: @blockquote-margin;
+
+  font-size: @blockquote-font-size;
+  border-left: @blockquote-border-left;
 }
 
 //dt, dd, dl
@@ -129,8 +135,7 @@ dl {
 
 //hr
 hr {
-  margin-top: @space;
-  margin-bottom: @space;
+  margin: @space 0px @space 0px;
 }
 //end hr
 
@@ -204,7 +209,7 @@ input [type="checkbox"] {
   .placeholder  ();
 
   height: @input-height;
-  margin-bottom: @space;
+  margin: 0px 0px @space 0px;
   padding: @input-padding;
   background-color: @input-background-color;
 
@@ -220,12 +225,12 @@ input [type="checkbox"] {
 
 /* form-group */
 .form-group {
-  margin-bottom: @form-group-margin-bottom;
+  margin: 0px 0px @form-group-margin-bottom 0px;
 }
 
 /* input-group */
 .input-group {
-  margin-bottom: @space;
+  margin: 0px 0px @space 0px;
 
   & > .form-control {
     margin-bottom: 0px;
@@ -368,7 +373,7 @@ button,
 
 /* miga de pan */
 .breadcrumb {
-  margin-bottom: @space;
+  margin: 0px 0px @space 0px;
   padding: 0px;
 
   background-color: transparent;
@@ -410,8 +415,7 @@ button,
 
 /* pagination */
 .pagination {
-  margin-top: 0px;
-  margin-bottom: @space;
+  margin: 0px 0px @space 0px;
   padding: 0px;
 
   li {
@@ -556,7 +560,7 @@ button,
 .panel {
   .border (0px, 0px);
   .box-shadow (transparent, 0px);
-  margin-bottom: @space;
+  margin: 0px 0px @space 0px;
 
   .panel-heading {
     padding: 0px;
@@ -578,7 +582,7 @@ button,
   .list-group-item {
     .border (0px, 0px);
     position: relative;
-    margin-bottom: @li-margin-bottom;
+    margin: 0px 0px @li-margin-bottom 0px;
     padding: 0px @space + 10 0px 0px;
 
     background-color: transparent;
@@ -860,10 +864,10 @@ button,
   .transform  ();
 
   //Fixed
-  position: @navbar-position;
+  /*position: @navbar-position;
   top: 0;
   right: 0;
-  left: 0;
+  left: 0;*/
   z-index: 99999;
   margin-bottom: 0;
   padding: @navbar-padding;

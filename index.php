@@ -37,12 +37,7 @@
         </h1>
     </header>
 
-    <?php include ('dropdown-navbar.php'); ?>
-    <br><br><br><br>
-    <?php include ('dropdown-btn-group.php'); ?>
-    <br><br><br><br>
-
-    <p><strong>Antes de instalar en un proyecto, borrar <span class="text-highlight">xstrap.less</span> y <span class="text-highlight">row-generator.js</span></strong></p>
+    <p><strong>Antes de instalar en un proyecto, borrar <span class="text-highlight">xstrap.less</span> y <span class="text-highlight">xstrap.js</span></strong></p>
 
     <p>XSTRAP = Guía de diseño <i>(html con todos los elementos y componentes para modificar facilmente su apariencia mediante variables less)</i> basada en Bootstrap.</p>
 
@@ -105,11 +100,25 @@
     <br>
     <h3>Fonts:</h3>
 
-    <h4>Glyphicon <small>(Bootstrap Component)</small>:</h4>
+    <h4>
+        Glyphicon <small>(Bootstrap Component)</small>
+        &nbsp;
+        <a id="show-glyphicon-list" class="btn" href="#">Glyphicon-list</a>
+    </h4>
 
-    <?php include_once ('glyphicon-list.php') ?>
+    <div id="glyphicon-list" class="glyphicon-list">
+        <?php include_once ('glyphicon-list.php') ?>
+    </div>
 
-    <h4>Icomoon:</h4>
+    <h4>
+        Icomoon:
+        &nbsp;
+        <a id="show-icomoon-list" class="btn" href="#">Icomoon-list</a>
+    </h4>
+
+    <div id="icomoon-list" class="icomoon-list">
+        <?php //include_once ('icomoon-list.php') ?>
+    </div>
 
     <h4>Installed Typographies <small>(google fonts)</small>:</h4>
 
@@ -178,6 +187,8 @@
 
     <p><em>EM</em>, <b>B</b>, <i>I</i></p>
 
+    <pre>(*) En la documentación de bootstrap, aquí van  las "alignment classes" y las "transformation classes", pero para xstrap quedan descartadas debido a la poca versatilidad a la hora de cambiar el alineamiento o el tipo de transformación para distintas resoluciones.</pre>
+
     <h3>Abbreviation: <small>(abbr)</small></h3>
 
     <p><abbr class="initialism" title="HyperText Markup Language">HTML</abbr> is the best thing since sliced bread.</p>
@@ -190,6 +201,12 @@
         San Francisco, CA 94107<br>
         <abbr title="Phone">P:</abbr> (123) 456-7890
     </address>
+
+    <h3>Blockquotes: <small>(blockquote)</small></h3>
+
+    <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    </blockquote>
 
     <!-- end HTML Elements -->
 
@@ -239,9 +256,9 @@
 <script src="./jquery/extra/jquery.easing.min.js"></script>
 <!-- rwdImageMaps -->
 <script src="./jquery/extra/jquery.rwdImageMaps.min.js"></script>
-<!-- row generator -->
-<script src="./js/row-generator.js"></script>
 <!-- main -->
 <script src="./js/main.js"></script>
+<!-- row generator -->
+<script src="./js/xstrap.js"></script>
 </body>
 </html>

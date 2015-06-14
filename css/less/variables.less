@@ -192,7 +192,7 @@
 //pre
 @pre-border: 			1px solid @c3;
 @pre-border-radius: 	@border-radius;
-@pre-padding: 			0px 20px;
+@pre-padding: 			@space;
 
 @pre-font-family: 		@font-family;
 @pre-font-size: 		@font-size;
@@ -214,21 +214,26 @@
 //end deleted text
 
 //small
-@small-font-size: 	65%;
-@small-font-weight: 400;
-@small-color: 		@c3;
+@small-font-size: 65%;
 //end small
+
+//blockquotes
+@blockquote-padding: 		@space;
+@blockquote-margin: 		0px;
+@blockquote-font-size: 		@font-size;
+@blockquote-border-left: 	5px solid @c3;
+//end blockquotes
 /* END HTML ELEMENTS */
 
 /* BOOTSTRAP COMPONENTS */
 //grid system
-//Todos los valores del grid system tienen que ser los mismos que los definidos en variables.less de bootstrap, de forma que lo siguientes valores no se pueden modificar y solamente son de lectura.
+//Todos los valores del grid system tienen que ser los mismos que los definidos en variables.less de bootstrap, de forma que lo siguientes valores no se pueden modificar y solamente son de lectura. En el caso de que sea necesario modificar los breakpoints, habrá que compilar un bootstrap específico con los valores que queramos (http://getbootstrap.com/customize/).
 @screen-xs-max: 	767px;
-@screen-sm:         768px;
+@screen-sm-min:     768px;
 @screen-sm-max:     991px;
-@screen-md:         992px;
+@screen-md-min:     992px;
 @screen-md-max:     1199px;
-@screen-lg: 		1200px;
+@screen-lg-min: 	1200px;
 
 //popover
 @popover-max-width: 		none;
@@ -270,7 +275,6 @@
 @carousel-time: 					0.4s;
 
 //navbar
-@navbar-position: 					relative;
 @navbar-padding: 					5px;
 
 @navbar-font-family: 				@font-family;
