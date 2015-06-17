@@ -132,16 +132,28 @@ Para aplicar estilos fijos específicos de cada elemento, aplicarlo en el base.l
 		@time: @time
 	){
 
-	transition: 		opacity @time ease-in-out;
-    -moz-transition: 	opacity @time ease-in-out;
-    -webkit-transition: opacity @time ease-in-out;
+    -webkit-transition: 0 @time ease-in-out;
+    -moz-transition: 	0 @time ease-in-out;
+    transition: 		0 @time ease-in-out;
+    -ms-transition:     0 @time ease-in-out;
+    -o-transition:      0 @time ease-in-out;
+    transition: 		0 @time ease-in-out;
 }
 
-.transform () {
+.translate3d () {
 
 	-webkit-transform: 	translate3d(0,0,0);
     -o-transform: 		translate3d(0,0,0);
     transform: 			translate3d(0,0,0);
+}
+
+.scale (
+		@index: 1
+	){
+
+	-webkit-transform: 	scale(@index);
+    -o-transform: 		scale(@index);
+    transform: 			scale(@index);
 }
 
 .text-shadow (
