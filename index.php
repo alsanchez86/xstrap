@@ -30,12 +30,10 @@
     <header>
         <h1>
             XSTRAP 1.0
+            <small>(Responsive Web Design)</small>
             <img width="40" src="http://i.imgur.com/s6i6Q.gif" alt="banana" title="banana">
-            <small>(It´s just Boostrap)</small>
         </h1>
     </header>
-
-    <p><strong>Antes de instalar en un proyecto, borrar <span class="text-highlight">xstrap.less</span> y <span class="text-highlight">xstrap.js</span></strong></p>
 
     <p>XSTRAP = Guía de diseño <i>(html con todos los elementos y componentes para modificar facilmente su apariencia mediante variables less)</i> basada en Bootstrap.</p>
 
