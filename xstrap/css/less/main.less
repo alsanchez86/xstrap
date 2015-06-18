@@ -1,5 +1,5 @@
 /* IMPORTS */
-@import url('xstrap.less'); 						//base
+@import url('base.less');
 //@import url('@{path-css}extra/animate.css'); 	//extra
 /* end IMPORTS */
 
@@ -77,10 +77,10 @@ ul.glyphicons-list {
 /* end DOCUMENTATION */
 /* end MAIN */
 
-//Import Media Bootstrap Breakpoints (al final de base.less, para que no haya sobreescritura de clases y no tener que usar !important)
+//Import Media Breakpoints (al final de base.less, para que no haya sobreescritura de clases y no tener que usar !important)
+@import url('main-no-xs.less');
+@import url('main-xs-sm.less');
 @import url('main-lg.less');
 @import url('main-md.less');
 @import url('main-sm.less');
 @import url('main-xs.less');
-@import url('main-no-xs.less');
-@import url('main-xs-sm.less');
