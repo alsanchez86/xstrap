@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>XSTRAP 1.0</title>
+    <title>XSTRAP 1.0 [min version]</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,13 +18,11 @@
     <meta name="generator" content=""/>
 
     <!-- favicon -->
-    <link href="./images/favicon.ico" rel="shortcut icon"/>
-    <!-- bootstrap -->
-    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./xstrap/images/favicon.ico" rel="shortcut icon"/>
     <!-- offcanvas -->
-    <link href="./bootstrap/extra/offcanvas/css/offcanvas.css" rel="stylesheet"/>
+    <!-- <link href="./xstrap/extra/offcanvas/css/offcanvas.css" rel="stylesheet"/> -->
     <!-- main -->
-    <link href="./css/main.css" rel="stylesheet"/>
+    <link href="./xstrap/css/main.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -107,7 +105,7 @@
     </h4>
 
     <div id="glyphicon-list-xstrap" class="glyphicon-list-xstrap">
-        <?php include_once ('glyphicon-list.html') ?>
+        <?php include_once ('./xstrap/glyphicon-list.html') ?>
     </div>
 
     <h4>
@@ -361,12 +359,12 @@
     <p>El proceso de pasar el trabajo del entorno de <strong>DESARROLLO</strong> al entorno de <strong>PRODUCCIÓN</strong> trata de trasladar los valores de variables.less a config.json, y deshabilitar aquellos componentes de Bootstrap que no se usen en el proyecto actual (comentar las líneas correspondientes en config.json).</p> -->
 </div>
 
-<?php include_once ('modal-default.php'); ?>
+<?php //include_once ('modal-default.php'); ?>
 
 <!-- jquery [v < 2] -->
-<script src="./jquery/jquery.js"></script>
+<script src="./xstrap/js/jquery.js"></script>
 <!-- bootstrap -->
-<script src="./bootstrap/js/bootstrap.min.js"></script>
+<!-- <script src="./bootstrap/js/bootstrap.min.js"></script> -->
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -374,14 +372,14 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <!-- offcanvas -->
-<script src="./bootstrap/extra/offcanvas/js/ie10-viewport-bug-workaround.js"></script>
+<!-- <script src="./xstrap/extra/offcanvas/js/ie10-viewport-bug-workaround.js"></script> -->
 <!-- jquery.easing.min -->
-<script src="./jquery/extra/jquery.easing.min.js"></script>
+<!-- <script src="./xstrap/extra/js/jquery.easing.min.js"></script> -->
 <!-- rwdImageMaps -->
-<script src="./jquery/extra/jquery.rwdImageMaps.min.js"></script>
+<!-- <script src="./xstrap/extra/js/jquery.rwdImageMaps.min.js"></script> -->
 <!-- main -->
-<script src="./js/main.js"></script>
-<!-- row generator -->
-<script src="./js/xstrap.js"></script>
+<script src="./xstrap/js/xstrap.js"></script>
+<!-- main -->
+<script src="./xstrap/js/main.js"></script>
 </body>
 </html>

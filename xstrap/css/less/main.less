@@ -1,12 +1,9 @@
 /* IMPORTS */
-@import url('base.less'); 						//base
-@import url('xstrap.less'); 					//xstrap (guía de diseño)
+@import url('xstrap.less'); 						//base
 //@import url('@{path-css}extra/animate.css'); 	//extra
 /* end IMPORTS */
 
 /* MAIN */
-
-
 /* example gradient button */
 .btn {
 	&.btn-gradient {
@@ -21,12 +18,69 @@
   	}
 }
 /* end example gradient button */
+
+/* DOCUMENTATION */
+.body-container {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.route-job {
+	padding: 30px;
+	background-color: #EEE;
+}
+
+.colour {
+	height: 60px;
+
+	&.c1 { background-color: @c1; }
+	&.c2 { background-color: @c2; }
+	&.c3 { background-color: @c3; }
+	&.c4 { background-color: @c4; }
+}
+
+.glyphicon-list-xstrap,
+.icomoon-list {
+	display: none;
+}
+
+ul.glyphicons-list {
+	overflow: hidden;
+
+	li {
+		.border (1px solid @c3, 0px);
+		float: left;
+		width: 13%;
+		height: 110px;
+		margin: 5px;
+		padding: 10px 8px;
+
+		text-align: center;
+		background-color: #EEE;
+
+		span.glyphicon {
+			display: block;
+			margin: 0px 0px 10px 0px;
+		}
+
+		/* SM */
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+			width: 18.5%;
+		}
+
+		/* XS */
+		@media (max-width: @screen-xs-max) {
+			width: 100%;
+		}
+	}
+}
+/* end DOCUMENTATION */
 /* end MAIN */
 
 //Import Media Bootstrap Breakpoints (al final de base.less, para que no haya sobreescritura de clases y no tener que usar !important)
-@import url('media-lg.less');
-@import url('media-md.less');
-@import url('media-sm.less');
-@import url('media-xs.less');
-@import url('media-no-xs.less');
-@import url('media-xs-sm.less');
+@import url('main-lg.less');
+@import url('main-md.less');
+@import url('main-sm.less');
+@import url('main-xs.less');
+@import url('main-no-xs.less');
+@import url('main-xs-sm.less');
