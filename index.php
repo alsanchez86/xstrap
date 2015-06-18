@@ -194,7 +194,11 @@
 
     <h3>Abbreviation: <small>(abbr)</small></h3>
 
-    <p><abbr class="initialism" title="HyperText Markup Language">HTML</abbr> is the best thing since sliced bread.</p>
+    <p>
+        <abbr title="attribute">attr</abbr>
+        <br>
+        <abbr class="initialism" title="HyperText Markup Language">HTML</abbr> is the best thing since sliced bread.
+    </p>
 
     <h3>Address: <small>(address)</small></h3>
 
@@ -321,11 +325,11 @@
 
     <p><strong>Basic block</strong>: <small>(pre)</small></p>
 
+    <pre>(*) En la documentación de bootstrap, aquí van  las "alignment classes" y las "transformation classes", pero para xstrap quedan descartadas debido a la poca versatilidad a la hora de cambiar el alineamiento o el tipo de transformación para distintas resoluciones.</pre>
+
     <p><strong>Variables</strong>: <small>(var)</small></p>
 
     <p><strong>Sample output</strong>: <small>(samp)</small></p>
-
-    <pre>(*) En la documentación de bootstrap, aquí van  las "alignment classes" y las "transformation classes", pero para xstrap quedan descartadas debido a la poca versatilidad a la hora de cambiar el alineamiento o el tipo de transformación para distintas resoluciones.</pre>
 
     <!-- end HTML Elements -->
 
