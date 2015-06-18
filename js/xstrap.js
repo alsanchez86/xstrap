@@ -28,7 +28,7 @@ function glyphiconIcomoonLists () {
 		.click (function (event) {
 
 			event.preventDefault ();
-			$('#glyphicon-list').slideToggle ();
+			$('#glyphicon-list-xstrap').slideToggle ();
 		});
 
 	icomoonBtn

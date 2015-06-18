@@ -61,8 +61,10 @@ p {
 
 //marked text
 mark {
-  color:            @mark-color;
-  background-color: @mark-background-color;
+  padding:    @mark-padding;
+
+  color:      @mark-color;
+  background: @mark-background-color none repeat scroll 0% 0%;
 }
 //end marked text
 
@@ -74,25 +76,81 @@ del {
 }
 //end deleted text
 
-//label
-label {
-  .text (@label-font-family, @label-font-size, @label-font-weight, @label-font-style, @label-color);
-  cursor: pointer;
-}
-//end label
+//blockquote
+blockquote {
+  padding: @blockquote-padding;
+  margin: @blockquote-margin;
 
-aside {
-  img {
-    .border ();
+  font-size: @blockquote-font-size;
+  border-left: @blockquote-border-left;
+}
+//end blockquote
+
+//lists
+ul,
+ol {
+  margin: 0px 0px @space 0px;
+  padding: 0px;
+
+  list-style-position: @list-style-position;
+
+  li {
+    margin: 0px 0px @list-item-margin-bottom 0px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &.li-no-icon {
+      list-style: none;
+    }
+
+    ul,
+    ol {
+      margin-bottom: 0px;
+      padding-left: @sublist-padding-left;
+    }
   }
 }
 
-//iframe
-iframe {
-  .border (0px, 0px);
-}
-//end iframe
+ul {
+  &:not(.list-styled) {
+    list-style: none;
+  }
 
+  &.list-styled {
+    list-style-image: url(@styled-list-style-image);
+  }
+}
+
+ol {
+  list-style-type: @ol-list-style-type;
+}
+
+dl {
+  margin: 0px 0px @space 0px;
+
+  dt,
+  dd {
+    margin: 0px 0px @list-item-margin-bottom 0px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  dt {
+    font-weight: 400;
+  }
+
+  dl {
+    margin-bottom: 0px;
+    padding-left: @sublist-padding-left;
+  }
+}
+//end lists
+
+//pre
 pre {
   .border (@pre-border, @pre-border-radius);
   margin: 0px 0px @space 0px;
@@ -105,86 +163,20 @@ pre {
   color: @pre-color;
   background-color: @pre-background-color;
 }
+//end pre
 
-blockquote {
-  padding: @blockquote-padding;
-  margin: @blockquote-margin;
-
-  font-size: @blockquote-font-size;
-  border-left: @blockquote-border-left;
+//label
+label {
+  .text (@label-font-family, @label-font-size, @label-font-weight, @label-font-style, @label-color);
+  cursor: pointer;
 }
+//end label
 
-//dt, dd, dl
-dt, dd {
-  margin: 0px 0px @space 0px;
-
-  font-weight: @dd-font-weight;
-  line-height: @dd-line-height;
-}
-
-dl {
-  margin: 0px 0px @space 0px;
-}
-//end dt, dd, dl
-
-//hr
-hr {
-  margin: @space 0px @space 0px;
-}
-//end hr
-
-//lists
-ul {
-  margin: 0px 0px @space 0px;
-  padding: 0px;
-  list-style: none;
-
-  li {
-    margin: 0px 0px @li-margin-bottom 0px;
-
-    &:last-child {
-      margin-bottom: 0px;
-    }
-
-    ul {
-      padding-left: @ul-child-padding-left;
-    }
-  }
-
-  &.list {
-    padding-left: @li-style-indent;
-
-    li {
-      position: relative;
-
-      &:before {
-        position: absolute;
-        top: @li-style-top;
-        left: -@li-style-indent;
-        height: @li-style-height;
-        width: @li-style-width;
-        content: @li-style-icon;
-
-        color: @li-style-color;
-        //background: url('@{path-images}list-icon.png') no-repeat center center;
-        background-size: @li-style-height !important;
-      }
-    }
-  }
-}
-//end lists
-
+//inputs
 input,
 select,
 textarea {
   resize: none;
-  background-color: @input-background-color;
-
-  &:focus {
-    .not-outline ();
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
 }
 
 select,
@@ -192,10 +184,23 @@ input [type="radio"],
 input [type="checkbox"] {
   cursor: pointer;
 }
+//end inputs
+
+//hr
+hr {
+  margin: @space 0px @space 0px;
+}
+
+//iframe
+iframe {
+  .border (0px, 0px);
+}
+//end iframe
+//end hr
 /* END HTML ELEMENTS */
 
 /* BOOTSTRAP COMPONENTS */
-/* inputs */
+//forms
 .form-control {
   .text         (@input-font-family, @input-font-size, @input-font-weight, @input-color);
   .border       (@input-border, @input-border-radius);
@@ -208,6 +213,7 @@ input [type="checkbox"] {
   background-color: @input-background-color;
 
   &:focus {
+    .not-outline  ();
     .box-shadow   (@input-box-shadow-color-focus);
     border-color: @input-border-color-focus;
   }
@@ -217,12 +223,10 @@ input [type="checkbox"] {
   font-size: @input-font-size;
 }
 
-/* form-group */
 .form-group {
   margin: 0px 0px @form-group-margin-bottom 0px;
 }
 
-/* input-group */
 .input-group {
   margin: 0px 0px @space 0px;
 
@@ -244,13 +248,11 @@ input [type="checkbox"] {
   }
 }
 
-/* checkbox */
 .checkbox {
   margin-top: 0px;
   margin-bottom: 10px;
 }
 
-/* buttons */
 button,
 .btn,
 .btn-default {
@@ -295,6 +297,7 @@ button,
     margin-left: 0px;
   }
 }
+//end forms
 
 /* tablas */
 /*.table {
@@ -583,7 +586,7 @@ button,
   .list-group-item {
     .border (0px, 0px);
     position: relative;
-    margin: 0px 0px @li-margin-bottom 0px;
+    margin: 0px 0px @list-item-margin-bottom 0px;
     padding: 0px @space + 10 0px 0px;
 
     background-color: transparent;

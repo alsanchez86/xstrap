@@ -106,8 +106,8 @@
         <a id="show-glyphicon-list" class="btn" href="#">Glyphicon-list</a>
     </h4>
 
-    <div id="glyphicon-list" class="glyphicon-list">
-        <?php include_once ('glyphicon-list.php') ?>
+    <div id="glyphicon-list-xstrap" class="glyphicon-list-xstrap">
+        <?php include_once ('glyphicon-list.html') ?>
     </div>
 
     <h4>
@@ -129,7 +129,12 @@
 
     <!-- HTML Elements -->
     <br>
-    <h2>HTML ELEMENTS&nbsp;&nbsp;<span class="glyphicon glyphicon-paperclip"></span></h2>
+    <h2>
+        HTML ELEMENTS
+        &nbsp;&nbsp;
+        <span class="glyphicon glyphicon-paperclip"></span>
+        <small>(not bootstrap components)</small>
+    </h2>
 
     <h3>Links (a):</h3>
 
@@ -187,8 +192,6 @@
 
     <p><em>EM</em>, <b>B</b>, <i>I</i></p>
 
-    <pre>(*) En la documentación de bootstrap, aquí van  las "alignment classes" y las "transformation classes", pero para xstrap quedan descartadas debido a la poca versatilidad a la hora de cambiar el alineamiento o el tipo de transformación para distintas resoluciones.</pre>
-
     <h3>Abbreviation: <small>(abbr)</small></h3>
 
     <p><abbr class="initialism" title="HyperText Markup Language">HTML</abbr> is the best thing since sliced bread.</p>
@@ -204,9 +207,125 @@
 
     <h3>Blockquotes: <small>(blockquote)</small></h3>
 
+    <p>Normal:</p>
+
     <blockquote>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
     </blockquote>
+
+    <p>Reverse:</p>
+
+    <blockquote class="blockquote-reverse">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    </blockquote>
+
+    <h3>Lists: <small>(ul, ol, dl)</small></h3>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+            <p><strong>Unordered:</strong></p>
+
+            <ul>
+                <li>item li 1</li>
+                <li>item li 2</li>
+                <li>item li 3</li>
+
+                <li>
+                    <ul>
+                        <li>subitem li 1</li>
+                        <li>subitem li 2</li>
+                        <li>subitem li 3</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+            <p><strong>Ordered:</strong></p>
+
+            <ol>
+                <li>item li 1</li>
+                <li>item li 2</li>
+                <li>item li 3</li>
+
+                <li class="li-no-icon">
+                    <ol>
+                        <li>subitem li 1</li>
+                        <li>subitem li 2</li>
+                        <li>subitem li 3</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+            <p><strong>Styled:</strong></p>
+
+            <ul class="list-styled">
+                <li>item li 1</li>
+                <li>item li 2</li>
+                <li>item li 3</li>
+
+                <li class="li-no-icon">
+                    <ul class="list-styled">
+                        <li>subitem li 1</li>
+                        <li>subitem li 2</li>
+                        <li>subitem li 3</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <p><strong>Inline:</strong></p>
+
+            <ul class="list-inline">
+                <li>item li 1</li>
+                <li>item li 2</li>
+                <li>item li 3</li>
+            </ul>
+        </div>
+
+        <div class="clearfix visible-sm"></div>
+
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+            <p><strong>Description List:</strong></p>
+
+            <dl>
+                <dt>item dt</dt>
+                <dd>item dd</dd>
+                <dd>item dd</dd>
+                <dd>
+                    <dl>
+                        <dt>item dt</dt>
+                        <dd>item dd</dd>
+                        <dd>item dd</dd>
+                    </dl>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <h3>Code: <small>(code, kbd, pre, var, samp)</small></h3>
+
+    <p><strong>Inline:</strong> <small>(code)</small></p>
+
+    <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+
+    <p><strong>User input</strong>: <small>(kbd)</small></p>
+
+    <p>
+        To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+        To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+    </p>
+
+    <p><strong>Basic block</strong>: <small>(pre)</small></p>
+
+    <p><strong>Variables</strong>: <small>(var)</small></p>
+
+    <p><strong>Sample output</strong>: <small>(samp)</small></p>
+
+    <pre>(*) En la documentación de bootstrap, aquí van  las "alignment classes" y las "transformation classes", pero para xstrap quedan descartadas debido a la poca versatilidad a la hora de cambiar el alineamiento o el tipo de transformación para distintas resoluciones.</pre>
 
     <!-- end HTML Elements -->
 

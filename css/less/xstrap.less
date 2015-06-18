@@ -9,7 +9,7 @@
 }
 
 .colour {
-	height: 100px;
+	height: 60px;
 
 	&.c1 { background-color: @c1; }
 	&.c2 { background-color: @c2; }
@@ -17,7 +17,7 @@
 	&.c4 { background-color: @c4; }
 }
 
-.glyphicon-list,
+.glyphicon-list-xstrap,
 .icomoon-list {
 	display: none;
 }
@@ -28,8 +28,8 @@ ul.glyphicons-list {
 	li {
 		.border (1px solid @c3, 0px);
 		float: left;
-		width: 10%;
-		height: 150px;
+		width: 13%;
+		height: 110px;
 		margin: 5px;
 		padding: 10px 8px;
 
@@ -39,6 +39,16 @@ ul.glyphicons-list {
 		span.glyphicon {
 			display: block;
 			margin: 0px 0px 10px 0px;
+		}
+
+		/* SM */
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+			width: 18.5%;
+		}
+
+		/* XS */
+		@media (max-width: @screen-xs-max) {
+			width: 100%;
 		}
 	}
 }

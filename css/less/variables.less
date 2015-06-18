@@ -39,7 +39,7 @@
 //end text-base
 
 //paths
-@path-images: 		'./images/';
+@path-images: 		'../images/';
 @path-css: 			'./css/';
 @path-fonts: 		'./fonts/';
 //end paths
@@ -112,16 +112,20 @@
 @h6-text-align: @text-align;
 //end titles
 
-//lists
-@ul-child-padding-left: @space;
-@li-margin-bottom: 		@space / 2;
+//marked text
+@mark-padding: 2px 5px;
 
-@li-style-icon: 		'#';
-@li-style-indent: 		@indent;
-@li-style-top: 			0px; //auto
-@li-style-height: 		0px; //auto
-@li-style-width:		0px; //auto
-@li-style-color: 		@c4;
+@mark-color: 			@c2;
+@mark-background-color: @c3;
+//end marked text
+
+//lists
+@list-item-margin-bottom: 	@space / 2;
+@sublist-padding-left: 		@space;
+
+@list-style-position: 		inside;
+@styled-list-style-image: 	'@{path-images}list-styled-icon.gif';
+@ol-list-style-type:		normal; //normal, upper-roman, lower-alpha
 //end lists
 
 //inputs
@@ -139,12 +143,10 @@
 @input-box-shadow-color: 		transparent;
 @input-box-shadow-color-focus: 	transparent;
 @input-box-shadow-blur: 		0px;
-//end inputs
 
-//placeholder
-@placeholder-color:	 		@color;
-@placeholder-font-style: 	italic;
-//end placeholder
+@input-placeholder-color:	 	@color;
+@input-placeholder-font-style: 	italic;
+//end inputs
 
 //label
 @label-font-family: @font-family;
@@ -180,11 +182,6 @@
 @highlight-color: 	@c4;
 //end text-highlight & text-lowlight
 
-//dd
-@dd-font-weight: @font-weight;
-@dd-line-height: @line-height;
-//end dd
-
 //pre
 @pre-border: 			1px solid @c3;
 @pre-border-radius: 	@border-radius;
@@ -198,11 +195,6 @@
 @pre-line-height: 		@line-height;
 //end pre
 
-//marked text
-@mark-color: @c2;
-@mark-background-color: @c3;
-//end marked text
-
 //deleled text
 @del-font-style: 		italic;
 @del-color: 			@color;
@@ -210,12 +202,12 @@
 //end deleted text
 
 //small
-@small-font-size: 65%;
+@small-font-size: 75%;
 //end small
 
 //blockquotes
 @blockquote-padding: 		@space;
-@blockquote-margin: 		0px;
+@blockquote-margin: 		0px 0px @space 0px;
 @blockquote-font-size: 		@font-size;
 @blockquote-border-left: 	5px solid @c3;
 //end blockquotes
