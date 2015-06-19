@@ -2,13 +2,8 @@ XSTRAP!
 
 VENDORS USED:
 
-+ Less / Css:
-	- animate.css
-
-+ jquery [version < 2]:
-	- easing
-	- rwdImageMaps
-
++ Less / Css.
++ jquery [version < 2].
 + From from Bootstrap v3.3.5:
 	- normalize.css v3.0.3
 	- Grid system
@@ -16,5 +11,8 @@ VENDORS USED:
 	- Print media styles
 	- Responsive utilities
 
-+ Others:
++ Extra (optionals):
+	- animate.css (https://daneden.github.io/animate.css/)
 	- Offcanvas
+	- jquery.easing
+	- jquery.rwdImageMaps
