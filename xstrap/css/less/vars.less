@@ -1,4 +1,53 @@
+/* GRID SYSTEM */
+//Sizes
+//xs
+@screen-xs:     480px;
+@screen-xs-min: @screen-xs;
+@screen-phone:  @screen-xs-min;
+
+//sm
+@screen-sm:     768px;
+@screen-sm-min: @screen-sm;
+@screen-tablet: @screen-sm-min;
+
+//md
+@screen-md:      992px;
+@screen-md-min:  @screen-md;
+@screen-desktop: @screen-md-min;
+
+//lg
+@screen-lg:         1200px;
+@screen-lg-min:     @screen-lg;
+@screen-lg-desktop: @screen-lg-min;
+
+//others
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+
+//Grid system
+@grid-columns:      12;
+@grid-gutter-width: 30px;
+
+//Containers
+//sm
+//@container-tablet: (720px + @grid-gutter-width);
+@container-sm: auto;
+//md
+@container-desktop: (940px + @grid-gutter-width);
+@container-md:      @container-desktop;
+//lg
+@container-large-desktop: (1140px + @grid-gutter-width);
+@container-lg:            @container-large-desktop;
+/* end GRID SYSTEM */
+
 /* GENERICS */
+//paths
+@path-images: 		'../images/';
+@path-css: 			'../css/';
+@path-fonts: 		'../fonts/';
+//end paths
+
 //colours
 @c1: #FFF; 		//blanco
 @c2: #000; 		//negro
@@ -37,12 +86,6 @@
 @text-transform: 	normal;
 @indent: 			@space; //.text-indent (class)
 //end text-base
-
-//paths
-@path-images: 		'../images/';
-@path-css: 			'./css/';
-@path-fonts: 		'./fonts/';
-//end paths
 /* END GENERICS */
 
 /* HTML ELEMENTS */
@@ -228,17 +271,8 @@
 /* END HTML ELEMENTS */
 
 /* BOOTSTRAP COMPONENTS */
-//grid system
-//Todos los valores del grid system tienen que ser los mismos que los definidos en variables.less de bootstrap, de forma que lo siguientes valores no se pueden modificar y solamente son de lectura. En el caso de que sea necesario modificar los breakpoints, habrá que compilar un bootstrap específico con los valores que queramos (http://getbootstrap.com/customize/).
-@screen-xs-max: 	767px;
-@screen-sm-min:     768px;
-@screen-sm-max:     991px;
-@screen-md-min:     992px;
-@screen-md-max:     1199px;
-@screen-lg-min: 	1200px;
-
 //popover
-@popover-max-width: 		none;
+/*@popover-max-width: 		none;
 
 @popover-font-family: 		@font-family;
 @popover-font-size: 		@font-size;
@@ -345,5 +379,5 @@
 @dropdown-menu-border: 				1px solid @c2;
 @dropdown-menu-border-radius:		0px;
 @dropdown-menu-shadow-color: 		@shadow-color;
-@dropdown-menu-shadow-blur: 		0px;
+@dropdown-menu-shadow-blur: 		0px;*/
 /* END BOOTSTRAP COMPONENTS */

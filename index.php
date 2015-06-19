@@ -288,7 +288,7 @@
 
         <div class="clearfix visible-sm"></div>
 
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-3">
             <p><strong>Description List:</strong></p>
 
             <dl>
@@ -376,7 +376,7 @@
 <!-- rwdImageMaps -->
 <!-- <script src="./xstrap/extra/js/jquery.rwdImageMaps.min.js"></script> -->
 <!-- main -->
-<script src="./xstrap/js/xstrap.js"></script>
+<!-- <script src="./xstrap/js/xstrap.js"></script> -->
 <!-- main -->
 <script src="./xstrap/js/main.js"></script>
 </body>

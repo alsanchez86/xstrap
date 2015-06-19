@@ -1,5 +1,5 @@
 /* IMPORTS */
-@import url('base.less');
+@import url('./core/base.less'); //xstrap core
 //@import url('@{path-css}extra/animate.css'); 	//extra
 /* end IMPORTS */
 
@@ -72,6 +72,12 @@ ul.glyphicons-list {
 		@media (max-width: @screen-xs-max) {
 			width: 100%;
 		}
+	}
+}
+
+.container {
+	.col-xs-12 {
+		background-color: blue;
 	}
 }
 /* end DOCUMENTATION */

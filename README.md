@@ -1,12 +1,12 @@
 XSTRAP!
 
-VENDORS USED:
+Vendors used:
 
 + Less / Css.
 + jquery [version < 2].
 + From from Bootstrap v3.3.5:
 	- normalize.css v3.0.3
-	- Grid system
+	- Grid system [clearfix required]
 	- Glyphicons
 	- Print media styles
 	- Responsive utilities
@@ -16,3 +16,4 @@ VENDORS USED:
 	- Offcanvas
 	- jquery.easing
 	- jquery.rwdImageMaps
+	- Owl carousel
