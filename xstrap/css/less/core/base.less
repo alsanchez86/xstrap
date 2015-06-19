@@ -98,6 +98,12 @@ blockquote {
 
   font-size: @blockquote-font-size;
   border-left: @blockquote-border-left;
+
+  ol, p, ul {
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
 }
 //end blockquote
 
@@ -997,7 +1003,7 @@ a.thumbnail {
 .block                                    { display: block; }
 .pointer                                  { cursor: pointer; }
 .vertical-center                          { vertical-align: middle; }
-.text-indent                              { text-indent: @indent; }
+.text-indent                              { text-indent: @text-indent; }
 .text-highlight                           { color: @highlight-color; }
 .text-lowlight                            { color: @lowlight-color; }
 
@@ -1043,6 +1049,22 @@ a.thumbnail {
 
 /* XS & SM */
 @media (max-width: @screen-sm-max) {
+  body,
+  p {
+    font-size: @font-size - 2%;
+  }
+
+  h1, h2, h3, h4, h5, p {
+    margin: 0px 0px @space / 1.2 0px;
+  }
+
+  h1 { font-size: @h1-font-size - 8%; }
+  h2 { font-size: @h2-font-size - 8%; }
+  h3 { font-size: @h3-font-size - 8%; }
+  h4 { font-size: @h4-font-size - 8%; }
+  h5 { font-size: @h5-font-size - 8%; }
+  h6 { font-size: @h6-font-size - 8%; }
+
   /*
   //carousel-indicators
   .owl-controls,
@@ -1081,15 +1103,6 @@ a.thumbnail {
 
 /* XS */
 @media (max-width: @screen-xs-max) {
-  body,
-  p {
-    font-size: @font-size-xs;
-  }
-
-  h1, h2, h3, h4, h5, p {
-    margin: 0px 0px @space / 1.2 0px;
-  }
-
   /*
   //modal
   .modal {

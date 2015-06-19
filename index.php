@@ -42,7 +42,7 @@
 
     <h3>Containers:</h3>
 
-    <ul class="list">
+    <ul class="list-styled">
         <li>Container <small>(&amp; = container-fluid para XS y SM)</small>: <span class="text-highlight">div.container</span></li>
         <li>Container Fluid: <span class="text-highlight">div.container-fluid</span></li>
     </ul>
@@ -51,7 +51,7 @@
 
     <p>2 formas de generar un row:</p>
 
-    <ul class="list">
+    <ul class="list-styled">
         <li>Mediante el ROW Generator de XSTRAP basado en jquery, con la posibilidad de offset, resets, ordering,...</li>
         <li>Mediante los mixins de less de bootstrap, para generar rows personalizados que no se correspondan con el grid (12 columnas) del proyecto.</li>
     </ul>
@@ -207,15 +207,7 @@
 
     <h3>Blockquotes: <small>(blockquote)</small></h3>
 
-    <p>Normal:</p>
-
     <blockquote>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-    </blockquote>
-
-    <p>Reverse:</p>
-
-    <blockquote class="blockquote-reverse">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
     </blockquote>
 
