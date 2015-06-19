@@ -64,6 +64,7 @@
 
 //basics
 @space: 			20px; //margin-bottom block elements and more
+@space-xs-sm: 		15px; //margin-bottom block elements and more
 
 @background-color:  @c1;
 @border-radius: 	2px;
@@ -78,6 +79,7 @@
 //text-base
 @font-family: 		@opensans;
 @font-size:   		14px;
+@font-size-xs-sm:   12px;
 @font-weight: 		400;
 @font-style:		normal;
 @color: 			@c2;
@@ -106,12 +108,18 @@
 @h5-font-family: @font-family;
 @h6-font-family: @font-family;
 
-@h1-font-size: 40px;
-@h2-font-size: 32px;
-@h3-font-size: 24px;
-@h4-font-size: 18px;
-@h5-font-size: 16px;
-@h6-font-size: @font-size;
+@h1-font-size: 			40px;
+@h1-font-size-xs-sm: 	@h1-font-size - 5px;
+@h2-font-size: 			32px;
+@h2-font-size-xs-sm: 	@h2-font-size - 5px;
+@h3-font-size: 			24px;
+@h3-font-size-xs-sm: 	@h3-font-size - 5px;
+@h4-font-size: 			18px;
+@h4-font-size-xs-sm: 	@h4-font-size - 5px;
+@h5-font-size: 			16px;
+@h5-font-size-xs-sm: 	@h5-font-size - 5px;
+@h6-font-size: 			@font-size;
+@h6-font-size-xs-sm: 	@font-size-xs-sm;
 
 @h1-font-weight: @font-weight;
 @h2-font-weight: @font-weight;

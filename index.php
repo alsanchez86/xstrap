@@ -35,8 +35,6 @@
         </h1>
     </header>
 
-    <p>XSTRAP = Guía de diseño <i>(html con todos los elementos y componentes para modificar facilmente su apariencia mediante variables less)</i> basada en Bootstrap.</p>
-
     <!-- Grid System -->
     <h2>Grid System&nbsp;<span class="glyphicon glyphicon-th"></span></h2>
 
@@ -47,7 +45,7 @@
         <li>Container Fluid: <span class="text-highlight">div.container-fluid</span></li>
     </ul>
 
-    <h3>Row Generator:</h3>
+    <!-- <h3>Row Generator:</h3>
 
     <p>2 formas de generar un row:</p>
 
@@ -62,22 +60,31 @@
 
     <h4>Generate Specific Row with LESS Bootstrap Mixins:</h4>
 
-    <p>Ver <a class="blank" href="http://getbootstrap.com/css/#grid-less" target="_blank">http://getbootstrap.com/css/#grid-less</a></p>
+    <p>Ver <a class="blank" href="http://getbootstrap.com/css/#grid-less" target="_blank">http://getbootstrap.com/css/#grid-less</a></p> -->
 
-    <!-- <div class="wrapper">
-        <div class="content-main">1</div>
-        <div class="content-secondary">2</div>
-    </div> -->
+    <h3>Rows:</h3>
 
-    <!-- <div class="row">
+    <p>Default row:</p>
+
+    <div class="row">
         <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
         <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
 
-        <div class="clearfix visible-lg-block"></div>
+        <div class="clearfix visible-lg"></div>
 
         <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
         <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-    </div> -->
+    </div>
+
+    <br>
+    <p>Custom row:</p>
+
+    <div class="custom-row">
+        <div class="custom-col-1">1</div>
+        <div class="custom-col-2">2</div>
+        <div class="custom-col-3">2</div>
+    </div>
+
     <!-- end Grid System -->
 
     <!-- Generics -->

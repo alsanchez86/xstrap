@@ -1049,21 +1049,20 @@ a.thumbnail {
 
 /* XS & SM */
 @media (max-width: @screen-sm-max) {
-  body,
-  p {
-    font-size: @font-size - 2%;
+  body, p {
+    font-size: @font-size-xs-sm;
   }
+
+  h1 { font-size: @h1-font-size-xs-sm; }
+  h2 { font-size: @h2-font-size-xs-sm; }
+  h3 { font-size: @h3-font-size-xs-sm; }
+  h4 { font-size: @h4-font-size-xs-sm; }
+  h5 { font-size: @h5-font-size-xs-sm; }
+  h6 { font-size: @h6-font-size-xs-sm; }
 
   h1, h2, h3, h4, h5, p {
-    margin: 0px 0px @space / 1.2 0px;
+    margin: 0px 0px @space-xs-sm 0px;
   }
-
-  h1 { font-size: @h1-font-size - 8%; }
-  h2 { font-size: @h2-font-size - 8%; }
-  h3 { font-size: @h3-font-size - 8%; }
-  h4 { font-size: @h4-font-size - 8%; }
-  h5 { font-size: @h5-font-size - 8%; }
-  h6 { font-size: @h6-font-size - 8%; }
 
   /*
   //carousel-indicators
