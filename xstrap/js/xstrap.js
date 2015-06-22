@@ -1,5 +1,5 @@
 var preload         = [];
-var scrollTopOffset = 15;
+//var scrollTopOffset = 15;
 
 jQuery (document).ready (function($) {
 
@@ -9,33 +9,33 @@ jQuery (document).ready (function($) {
     responsive ();
 
     /* bootstrap behavior */
-    modalEvent ();
-    modalButtons ();
+    //modalEvent ();
+    //modalButtons ();
 
     /* general */
-    scrollReady ();
-    dropdownBtnGroupXstrap ();
+    //scrollReady ();
+    //dropdownBtnGroupXstrap ();
     //dropdownNavbarXstrap ();
     //offCanvas ($('#btn-offcanvas-menu'),    $('#row-offcanvas-menu'));
     //navBarOffset (50);
     //rwdImageMaps ();
 
-    if (! issetCookie ('ximcom-cookies')) {
+    /*if (! issetCookie ('ximcom-cookies')) {
 
         createCookie ('ximcom-cookies', 1, 15);
         cookiesPopup (false);
-    }
+    }*/
 });
 
 $(window)
     .resize (function () {
 
-        popoverHide ();
+        //popoverHide ();
         responsive ();
     })
     .scroll (function (event) {
 
-        popoverHide ();
+        //popoverHide ();
         //navBarOffset (50);
     })
     .load (function () {
@@ -74,22 +74,22 @@ function responsive () {
 
 function lg () {
 
-    dropdownData (true);
+    //dropdownData (true);
 }
 
 function md () {
 
-    dropdownData (true);
+    //dropdownData (true);
 }
 
 function sm () {
 
-    dropdownData (false);
+    //dropdownData (false);
 }
 
 function xs () {
 
-    dropdownData (false);
+    //dropdownData (false);
 }
 /* -- */
 
@@ -101,7 +101,7 @@ function preLoad (imgs) {
 /* -- */
 
 /* scroll */
-function scrollReady () {
+/*function scrollReady () {
 
     $('#navbar').data ('ready', true);
 
@@ -148,11 +148,11 @@ function checkIndexScroll (init, end, min) {
 
     if (checked <= min) return min;
     return checked;
-}
+}*/
 /* -- */
 
 /* navs */
-function dropdownData (hover) {
+/*function dropdownData (hover) {
 
     $('a.dropdown-toggle-xstrap').data ({hover: hover});
     dropdownOut ($('a.dropdown-toggle-xstrap').parent ());
@@ -207,11 +207,11 @@ function navBarOffset (offset) {
     if (! navbar.length) return;
     if (navbar.offset().top > offset)   navbar.addClass ('navbar-offset');
     else                                navbar.removeClass ('navbar-offset');
-}
+}*/
 /* -- */
 
 /* modal */
-function modalDefault (text, timeout) {
+/*function modalDefault (text, timeout) {
 
     timeout || (timeout = 0);
 
@@ -250,29 +250,29 @@ function modalEvent () {
 
             $('body').css ({padding: 0}); //fix bootstrap bug
         });
-}
+}*/
 /* -- */
 
 /* modal buttons */
-function modalButtons () {
+/*function modalButtons () {
 
     $('#modal-politica-cookies')
         .click (function () {
 
             modalDefault ('<h4>Política de Cookies</h4><p>Open Ximdex Evolution SL informa al Usuario del uso que se hacen de las cookies en su Portal Web en Internet formado por diversos subdominios bajo <a href="http://www.ximdex.com/">http://www.ximdex.com/</a>, ximdex.net, ximdex.es y ximdex.org.</p><h5>¿Qué son las cookies?</h5><p>Son pequeños ficheros de texto que se almacenan en la caché del navegador y que en la práctica se utilizan para poder recuperar datos en futuras visitas. Estos datos por lo general pueden tener una finalidad técnica (ej.: para el correcto funcionamiento del sitio), analítico (ej.: para la consulta de métricas de navegación) o social (ej.: para compartir información sobre el sitio).</p><h5>Aceptación de cookies</h5><p>La aceptación de cookies implica que consiente la utilización de las cookies definidas en los sitios mencionados al principio del documento.</p><p>Es posible deshabilitar las cookies en cualquier momento mediante el ajuste de la configuración de su navegador. Deshabilitar las cookies puede afectar a la correcta navegación a través de nuestros sitios web o al uso de los productos expuestos. Usando las opciones propias de cada navegador, podrá borrarlas o consultar el tiempo de vigencia de cada una de ellas.</p><ul class="lista"><li>Para información adicional sobre Chrome pulsa <a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank">aquí</a>.</li><li>Para información adicional sobre Firefox pulsa <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we" target="_blank">aquí</a>.</li><li>Para información adicional sobre Internet Explorer pulsa <a href="http://windows.microsoft.com/es-es/windows7/how-to-manage-cookies-in-internet-explorer-9" target="_blank">aquí</a>.</li><li>Para información adicional sobre Safari pulsa <a href="https://support.apple.com/kb/PH5042?viewlocale=en_US&locale=en_US" target="_blank">aquí</a>.</li></ul><h5>Cookies en Portal Web Ximdex</h5><ul class="lista"><li>Cookies propias de Ximdex. Cookies permanentes de tipo técnico para la gestión de cookies en el Portal así como de control de sesión de los productos expuestos.</li><li>Cookies de terceros de “Analytics” de Google Inc: Cookies permanentes de terceros para análisis del tráfico web recopilando métricas de la navegación del Usuario tales como duración de la visita al Sitio Web, páginas visitadas, procedencia geográfica del Usuario, etc.</li><li>Cookies de terceros de Tipo Social: Cookies permanentes de terceros para ayudar a compartir las páginas web del Portal Ximdex a través de email, redes sociales, etc.</li></ul>');
         });
-}
+}*/
 /* end modal buttons */
 
 /* popover */
-function popoverHide () {
+/*function popoverHide () {
 
     $('.popover').popover ('hide');
-}
+}*/
 /* end popover */
 
 /* offcanvas */
-function offCanvas (btn, row) {
+/*function offCanvas (btn, row) {
 
     var delay = 300;
 
@@ -306,11 +306,11 @@ function offCanvas (btn, row) {
             btn.click ();
         }, delay);
     });
-}
+}*/
 /* end offcanvas */
 
 /* subir */
-function subir () {
+/*function subir () {
 
     var destino = $('#row-offcanvas-aside').offset().top;
 
@@ -319,18 +319,18 @@ function subir () {
         .animate({
             scrollTop: destino - 20
         }, 1500, 'easeInOutExpo');
-}
+}*/
 /* end subir */
 
 /* image Map Responsive */
-function rwdImageMaps () {
+/*function rwdImageMaps () {
 
   $('img[usemap]').rwdImageMaps ();
-}
+}*/
 /* -- */
 
 /* cookies */
-function createCookie (nombre, valor, caducidad){
+/*function createCookie (nombre, valor, caducidad){
 
    var fecha = new Date();
    fecha.setDate(fecha.getDate () + caducidad);
@@ -361,5 +361,5 @@ function issetCookie (name){
     }
 
     return false;
-}
+}*/
 /* end cookies */
