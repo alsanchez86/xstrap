@@ -162,6 +162,7 @@ Para aplicar estilos fijos específicos de cada elemento, aplicarlo en el base.l
 		@blur: 			0px
 	){
 
+	-webkit-text-shadow: -@size @size @blur @shadow-color; // iOS <4.3 & Android <4.1
 	text-shadow: -@size @size @blur @shadow-color;
 }
 
@@ -170,6 +171,7 @@ Para aplicar estilos fijos específicos de cada elemento, aplicarlo en el base.l
 		@blur: 			@blur
 	){
 
+	-webkit-box-shadow: 0px 2px @blur @shadow-color; // iOS <4.3 & Android <4.1
 	box-shadow: 0px 2px @blur @shadow-color;
 }
 
