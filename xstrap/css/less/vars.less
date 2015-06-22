@@ -48,20 +48,6 @@
 @path-fonts: 		'../fonts/';
 //end paths
 
-//colours
-@c1: #FFF; 		//blanco
-@c2: #000; 		//negro
-@c3: #CCC; 		//gris
-@c4: #FF0033; 	//rojo
-//end colours
-
-//fonts (imports from google fonts)
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400); //open sans
-
-@glyphicon: 	'Glyphicons Halflings';
-@opensans: 		'Open Sans', sans-serif;
-//end fonts
-
 //basics
 @space: 			20px; //margin-bottom block elements and more
 @space-xs-sm: 		12px; //margin-bottom block elements and more
@@ -75,6 +61,20 @@
 @rotate: 			90;
 @time: 				0.5s;
 //end basics
+
+//colours
+@c1: #FFF; 		//blanco
+@c2: #000; 		//negro
+@c3: #CCC; 		//gris
+@c4: #FF0033; 	//rojo
+//end colours
+
+//fonts (imports from google fonts)
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400); //open sans
+
+@glyphicon: 	'Glyphicons Halflings';
+@opensans: 		'Open Sans', sans-serif;
+//end fonts
 
 //text-base
 @font-family: 		@opensans;
@@ -176,9 +176,11 @@
 //end small
 
 //blockquotes
-@blockquote-padding: 		@space;
-@blockquote-font-size: 		@font-size;
-@blockquote-border-left: 	5px solid @c3;
+@blockquote-padding: 			@space;
+@blockquote-font-size: 			@font-size;
+@blockquote-border-left: 		5px solid @c3;
+@blockquote-small-font-size: 	12px;
+@blockquote-small-color: 		@c3;
 //end blockquotes
 
 //text-highlight & text-lowlight

@@ -105,9 +105,22 @@ blockquote {
   font-size: @blockquote-font-size;
   border-left: @blockquote-border-left;
 
-  ol, p, ul {
+  p, ol, ul {
+    margin: 0px 0px @space / 2 0px;
+
     &:last-child {
       margin-bottom: 0px;
+    }
+  }
+
+  footer,
+  small {
+    display: block;
+    font-size: @blockquote-small-font-size;
+    color: @blockquote-small-color;
+
+    &:before {
+      content: '\2014 \00A0';
     }
   }
 }

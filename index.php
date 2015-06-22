@@ -54,6 +54,7 @@
     <p><i>En xstrap, por defecto (ver vars.less) el .container se comportará como .container-fluid para las resoluciones XS y SM.</i></p>
 
     <div class="doc-rows">
+        <br>
         <h3>Rows:</h3>
 
         <p>
@@ -93,6 +94,7 @@
             <div class="custom-col-no-12-5">.custom-col-no-12-5</div>
         </div>
 
+        <br>
         <br>
         <h3>Casos especiales:</h3>
 
@@ -153,45 +155,76 @@
 
     <!-- Generics -->
     <br>
+    <br>
     <h2>Generics&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></h2>
+
+    <h3>Basics:</h3>
+
+    <ul class="list-styled">
+        <li>space</li>
+        <li>space-xs-sm</li>
+        <li>background-color</li>
+        <li>border-radius</li>
+        <li>opacity</li>
+        <li>shadow-color</li>
+        <li>blur</li>
+        <li>rotate</li>
+        <li>time</li>
+    </ul>
 
     <h3>Colours:</h3>
 
     <div class="row">
-        <div class="colour c1 col-xs-1">c1:<br>#FFF</div>
-        <div class="colour c2 col-xs-1">c2:<br>#000</div>
-        <div class="colour c3 col-xs-1">c3:<br>#CCC</div>
-        <div class="colour c4 col-xs-1">c4:<br>#FF0033</div>
+        <div class="colour c1 col-xs-12 col-sm-2 col-md-1 col-lg-1">c1:<br>#FFF</div>
+        <div class="colour c2 col-xs-12 col-sm-2 col-md-1 col-lg-1">c2:<br>#000</div>
+        <div class="colour c3 col-xs-12 col-sm-2 col-md-1 col-lg-1">c3:<br>#CCC</div>
+        <div class="colour c4 col-xs-12 col-sm-2 col-md-1 col-lg-1">c4:<br>#FF0033</div>
     </div>
 
     <br>
     <h3>Fonts:</h3>
 
-    <h4>
-        Glyphicon <small>(Bootstrap Component)</small>
+    <p>
+        <strong>Glyphicon <small>(Bootstrap Component):</small></strong>
         &nbsp;
         <a id="show-glyphicon-list" class="btn" href="#">Glyphicon-list</a>
-    </h4>
+    </p>
 
     <div id="glyphicon-list-xstrap" class="glyphicon-list-xstrap">
         <?php include_once ('./xstrap/glyphicon-list.html') ?>
     </div>
 
-    <h4>
-        Icomoon:
+    <p>
+        <strong>Icomoon:</strong>
         &nbsp;
         <a id="show-icomoon-list" class="btn" href="#">Icomoon-list</a>
-    </h4>
+    </p>
 
     <div id="icomoon-list" class="icomoon-list">
         <?php //include_once ('icomoon-list.php') ?>
     </div>
 
-    <h4>Installed Typographies <small>(google fonts)</small>:</h4>
+    <p><strong>Installed Typographies <small>(google fonts)</small></strong>:</p>
 
-    <ol>
+    <ul class="list-styled">
         <li>Opensans</li>
-    </ol>
+    </ul>
+
+    <h3>Text base:</h3>
+
+    <ul class="list-styled">
+        <li>font-family</li>
+        <li>font-size</li>
+        <li>font-size-xs-sm</li>
+        <li>font-weight</li>
+        <li>font-style</li>
+        <li>color</li>
+        <li>line-height</li>
+        <li>letter-spacing</li>
+        <li>text-align</li>
+        <li>text-transform</li>
+        <li>text-indent</li>
+    </ul>
     <!-- end Generics -->
 
     <!-- HTML Elements -->
@@ -280,6 +313,10 @@
 
     <blockquote>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+
+        <footer>
+            Someone famous in <cite title="Source Title">Source Title</cite>
+        </footer>
     </blockquote>
 
     <h3>Lists: <small>(ul, ol, dl)</small></h3>
