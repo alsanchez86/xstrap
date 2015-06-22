@@ -503,7 +503,7 @@
 <!-- <script src="./xstrap/extra/js/jquery.easing.min.js"></script> -->
 <!-- rwdImageMaps -->
 <!-- <script src="./xstrap/extra/js/jquery.rwdImageMaps.min.js"></script> -->
-<!-- main -->
+<!-- xstrap -->
 <!-- <script src="./xstrap/js/xstrap.js"></script> -->
 <!-- main -->
 <!-- <script src="./xstrap/js/main.js"></script> -->
