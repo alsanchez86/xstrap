@@ -44,7 +44,7 @@
 
     <ul class="list-styled">
         <li>Container <small>(&amp; = container-fluid para XS y SM)</small>: <span class="text-highlight">div.container</span></li>
-        <li>Container Fluid: <span class="text-highlight">div.container-fluid</span></li>
+        <li>Fluid container: <span class="text-highlight">div.container-fluid</span></li>
     </ul>
 
     <p class="text-highlight">
@@ -98,7 +98,7 @@
         <br>
         <h3>Casos especiales:</h3>
 
-        <p><strong>1) Columns reset:</strong></p>
+        <p><strong>1) Reset de posición de columnas:</strong></p>
 
         <p>
             Usar .clearfix cuando queramos resetear/limpiar las posiciones de unas determinadas columnas para una resolución determinada, de forma que las que se encuentren a continuación del div.clearfix, pasarán a ocupar la siguiente línea horizontal.
@@ -111,13 +111,13 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
-            <div class="clearfix visible-md-block"></div>
+            <div class="clearfix visible-md-block">.clearfix</div>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
         </div>
 
         <br>
-        <p><strong>2) Columns offsets:</strong></p>
+        <p><strong>2) Desplazamiento de columnas:</strong></p>
 
         <p>Desplaza columnas hacía la derecha para determinadas resoluciones usando las clases .col-*-offset-*.</p>
 
@@ -158,73 +158,101 @@
     <br>
     <h2>Generics&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></h2>
 
-    <h3>Basics:</h3>
-
-    <ul class="list-styled">
-        <li>space</li>
-        <li>space-xs-sm</li>
-        <li>background-color</li>
-        <li>border-radius</li>
-        <li>opacity</li>
-        <li>shadow-color</li>
-        <li>blur</li>
-        <li>rotate</li>
-        <li>time</li>
-    </ul>
-
-    <h3>Colours:</h3>
-
     <div class="row">
-        <div class="colour c1 col-xs-12 col-sm-2 col-md-1 col-lg-1">c1:<br>#FFF</div>
-        <div class="colour c2 col-xs-12 col-sm-2 col-md-1 col-lg-1">c2:<br>#000</div>
-        <div class="colour c3 col-xs-12 col-sm-2 col-md-1 col-lg-1">c3:<br>#CCC</div>
-        <div class="colour c4 col-xs-12 col-sm-2 col-md-1 col-lg-1">c4:<br>#FF0033</div>
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <h3>Basics:</h3>
+
+            <ul class="list-styled">
+                <li>space</li>
+                <li>space-xs-sm</li>
+                <li>background-color</li>
+                <li>border-radius</li>
+                <li>opacity</li>
+                <li>shadow-color</li>
+                <li>blur</li>
+                <li>rotate</li>
+                <li>time</li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <h3>Colours:</h3>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="colour c1">
+                        c1:<br>#FFF
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="colour c2">
+                        c2:<br>#000
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="colour c3">
+                        c3:<br>#CCC
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="colour c4">
+                        c4:<br>#FF0033
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <h3>Fonts:</h3>
+
+            <p>
+                <strong>Glyphicon <small>(Bootstrap Component):</small></strong>
+                &nbsp;
+                <a id="show-glyphicon-list" class="btn" href="#">Glyphicon-list <small>(modal)</small></a>
+            </p>
+
+            <div id="glyphicon-list-xstrap" class="glyphicon-list-xstrap">
+                <?php include_once ('./xstrap/glyphicon-list.html') ?>
+            </div>
+
+            <p>
+                <strong>Icomoon:</strong>
+                &nbsp;
+                <a id="show-icomoon-list" class="btn" href="#">Icomoon-list <small>(modal)</small></a>
+            </p>
+
+            <div id="icomoon-list" class="icomoon-list">
+                <?php //include_once ('icomoon-list.php') ?>
+            </div>
+
+            <p><strong>Installed Typographies <small>(google fonts)</small></strong>:</p>
+
+            <ul class="list-styled">
+                <li>Opensans</li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <h3>Text base:</h3>
+
+            <ul class="list-styled">
+                <li>font-family</li>
+                <li>font-size</li>
+                <li>font-size-xs-sm</li>
+                <li>font-weight</li>
+                <li>font-style</li>
+                <li>color</li>
+                <li>line-height</li>
+                <li>letter-spacing</li>
+                <li>text-align</li>
+                <li>text-transform</li>
+                <li>text-indent</li>
+            </ul>
+        </div>
     </div>
-
-    <br>
-    <h3>Fonts:</h3>
-
-    <p>
-        <strong>Glyphicon <small>(Bootstrap Component):</small></strong>
-        &nbsp;
-        <a id="show-glyphicon-list" class="btn" href="#">Glyphicon-list</a>
-    </p>
-
-    <div id="glyphicon-list-xstrap" class="glyphicon-list-xstrap">
-        <?php include_once ('./xstrap/glyphicon-list.html') ?>
-    </div>
-
-    <p>
-        <strong>Icomoon:</strong>
-        &nbsp;
-        <a id="show-icomoon-list" class="btn" href="#">Icomoon-list</a>
-    </p>
-
-    <div id="icomoon-list" class="icomoon-list">
-        <?php //include_once ('icomoon-list.php') ?>
-    </div>
-
-    <p><strong>Installed Typographies <small>(google fonts)</small></strong>:</p>
-
-    <ul class="list-styled">
-        <li>Opensans</li>
-    </ul>
-
-    <h3>Text base:</h3>
-
-    <ul class="list-styled">
-        <li>font-family</li>
-        <li>font-size</li>
-        <li>font-size-xs-sm</li>
-        <li>font-weight</li>
-        <li>font-style</li>
-        <li>color</li>
-        <li>line-height</li>
-        <li>letter-spacing</li>
-        <li>text-align</li>
-        <li>text-transform</li>
-        <li>text-indent</li>
-    </ul>
     <!-- end Generics -->
 
     <!-- HTML Elements -->
@@ -236,7 +264,7 @@
         <small>(not bootstrap components)</small>
     </h2>
 
-    <h3>Links (a):</h3>
+    <h3>Links: <small>(a)</small></h3>
 
     <ol>
         <li><a href="">LINK</a></li>
