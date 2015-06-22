@@ -1,23 +1,42 @@
 /* IMPORTS */
 //vars
-@import url('vars.less'); //variables
+@import url('vars.less');
 
 //mixins
 @import url('./mixins/clearfix.less');
 @import url('./mixins/grid.less');
 @import url('./mixins/grid-framework.less');
 @import url('./mixins/responsive-visibility.less');
+@import url('./mixins/vendor-prefixes.less');
+@import url('./mixins/image.less');
+@import url('./mixins/center-block.less');
+@import url('./mixins/hide-text.less');
 @import url('./mixins/mixins.less');
 
 //less
 @import url('normalize.less');
 @import url('grid.less');
-@import url('responsive-utilities.less');
 @import url('print.less');
-@import url('glyphicon.less');
+@import url('glyphicons.less');
+@import url('utilities.less');
+@import url('responsive-utilities.less');
 /* end IMPORTS */
 
 /* HTML ELEMENTS */
+* {
+  .box-sizing(border-box);
+}
+*:before,
+*:after {
+  .box-sizing(border-box);
+}
+
+//html
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+//end html
+
 //body
 body {
   .text (); //valores por defecto "text-base" en .text ()
@@ -55,7 +74,6 @@ a {
 
 /*a {
   color: @link-color;
-  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -264,29 +282,46 @@ label {
 
 //inputs
 input,
+button,
 select,
 textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
   resize: none;
 }
 
 select,
 input [type="radio"],
-input [type="checkbox"] {
+input [type="checkbox"],
+[role="button"] {
   cursor: pointer;
 }
 //end inputs
+
+//img
+img {
+  vertical-align: middle;
+}
+//end img
 
 //hr
 hr {
   margin: @space 0px @space 0px;
 }
+//end hr
 
 //iframe
 iframe {
   .border (0px, 0px);
 }
 //end iframe
-//end hr
+
+//figure
+figure {
+  margin: 0;
+}
+//end figure
 /* END HTML ELEMENTS */
 
 /* BOOTSTRAP COMPONENTS */
@@ -388,6 +423,8 @@ button,
   }
 }
 //end forms
+
+
 
 //tablas
 .table {
@@ -1025,6 +1062,22 @@ a.thumbnail {
 
 /* COMMONS (utilizados en cualquier HTML) */
 /* Generales */
+
+.img-responsive {
+  .img-responsive();
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 .relative                                 { position: relative; }
 .absolute                                 { position: absolute; }
 .img-responsive.img-responsive-max        { width: 100%; }
