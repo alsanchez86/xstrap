@@ -1055,10 +1055,11 @@ a.thumbnail {
 
 /* XS & SM */
 @media (max-width: @screen-sm-max) {
-  body, p {
+  body {
     font-size: @font-size-xs-sm;
   }
 
+  //titles
   h1 { font-size: @h1-font-size-xs-sm; }
   h2 { font-size: @h2-font-size-xs-sm; }
   h3 { font-size: @h3-font-size-xs-sm; }
@@ -1066,7 +1067,50 @@ a.thumbnail {
   h5 { font-size: @h5-font-size-xs-sm; }
   h6 { font-size: @h6-font-size-xs-sm; }
 
-  h1, h2, h3, h4, h5, p {
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0px 0px @space-xs-sm 0px;
+  }
+  //end titles
+
+  //paragraph
+  p {
+    margin: 0px 0px @space-xs-sm 0px;
+    font-size: @font-size-xs-sm;
+  }
+  //end paragraph
+
+  //address
+  address {
+    margin: 0px 0px @space-xs-sm 0px;
+  }
+  //end address
+
+  //blockquote
+  blockquote {
+    margin: 0px 0px @space-xs-sm 0px;
+  }
+  //end blockquote
+
+  //lists
+  ul,
+  ol {
+    margin: 0px 0px @space-xs-sm 0px;
+  }
+  //end lists
+
+  //dl
+  dl {
+    margin: 0px 0px @space-xs-sm 0px;
+  }
+  //end dl
+
+  //hr
+  hr {
+    margin: @space-xs-sm 0px @space-xs-sm 0px;
+  }
+  //end hr
+
+  .space {
     margin: 0px 0px @space-xs-sm 0px;
   }
 

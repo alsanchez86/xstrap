@@ -47,7 +47,9 @@
         <li>Container Fluid: <span class="text-highlight">div.container-fluid</span></li>
     </ul>
 
-    <p class="text-highlight">(*) Los containers, normales o fluids, podrán contener todo tipo de contenido; y a su vez esté podrá estar organizado en filas y columnas, pero <strong>en ningún caso un container podrá contener a otros containers.</strong></p>
+    <p class="text-highlight">
+        (*) Los containers, normales o fluids, podrán contener todo tipo de contenido; y a su vez esté podrá estar organizado en filas y columnas, pero <strong>en ningún caso un container podrá contener a otros containers.</strong>
+    </p>
 
     <p><i>En xstrap, por defecto (ver vars.less) el .container se comportará como .container-fluid para las resoluciones XS y SM.</i></p>
 
