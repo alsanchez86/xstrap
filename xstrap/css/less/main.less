@@ -1,148 +1,22 @@
 /* IMPORTS */
 @import url('./core/base.less'); //xstrap core
-//@import url('@{path-css}extra/animate.css'); 	//extra
+
+//EXTRAS
+@import url('../../extra/glyphicons/glyphicons.less');
+@import url('../../extra/breadcrumbs/breadcrumbs.less');
+@import url('../../extra/pagination/pagination.less');
+@import url('../../extra/offcanvas/less/offcanvas.less');
+@import url('../../extra/panels/panels.less');
+@import url('../../extra/buttons/buttons.less');
+@import url('../../extra/forms/forms.less');
+@import url('../../extra/tables/tables.less');
+@import url('../../extra/input-groups/input-groups.less'); //require forms.less component
+@import url('../../extra/list-group/list-group.less');
+@import url('../../extra/modals/less/modals.less');
 /* end IMPORTS */
 
 /* MAIN */
-/* example gradient button */
-.btn {
-	&.btn-gradient {
-    	.button (@c1, @c1);
-    	.gradient (@c2, @c3, top, bottom);
 
-    	&:hover,
-    	&:focus,
-    	&.active {
-    	  .gradient (@c2, @c3, bottom, top);
-    	}
-  	}
-}
-/* end example gradient button */
-
-/* DOCUMENTATION */
-.body-container {
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
-
-.doc-rows {
-	.row {
-		background-color: #EEE;
-
-		div:nth-child(1) {background-color: #99CCFF;}
-		div:nth-child(2) {background-color: #8AB8E6;}
-		div:nth-child(3) {background-color: #7AA3CC;}
-		div:nth-child(4) {background-color: #6B8FB2;}
-		div:nth-child(5) {background-color: #5C7A99;}
-		div:nth-child(6) {background-color: #4C6680;}
-	}
-}
-
-/* custom-row */
-.custom-col-1 {
-	.make-lg-column(4);
-	.make-md-column(4);
-	.make-sm-column(4);
-	.make-xs-column(12);
-}
-
-.custom-col-2 {
-	.make-lg-column(4);
-	.make-md-column(4);
-	.make-sm-column(4);
-	.make-xs-column(12);
-}
-
-.custom-col-3 {
-	.make-lg-column(4);
-	.make-md-column(4);
-	.make-sm-column(4);
-	.make-xs-column(12);
-}
-/* end custom-row */
-
-/* row no multiplo de 12 */
-.custom-col-no-12-1 {
-	.make-lg-column(2.4);
-	.make-md-column(2.4);
-	.make-sm-column(2.4);
-	.make-xs-column(12);
-}
-
-.custom-col-no-12-2 {
-	.make-lg-column(2.4);
-	.make-md-column(2.4);
-	.make-sm-column(2.4);
-	.make-xs-column(12);
-}
-
-.custom-col-no-12-3 {
-	.make-lg-column(2.4);
-	.make-md-column(2.4);
-	.make-sm-column(2.4);
-	.make-xs-column(12);
-}
-
-.custom-col-no-12-4 {
-	.make-lg-column(2.4);
-	.make-md-column(2.4);
-	.make-sm-column(2.4);
-	.make-xs-column(12);
-}
-
-.custom-col-no-12-5 {
-	.make-lg-column(2.4);
-	.make-md-column(2.4);
-	.make-sm-column(2.4);
-	.make-xs-column(12);
-}
-/* end row no multiplo de 12 */
-
-.colour {
-	padding: 15px;
-
-	&.c1 { background-color: @c1; }
-	&.c2 { background-color: @c2; }
-	&.c3 { background-color: @c3; }
-	&.c4 { background-color: @c4; }
-}
-
-.glyphicon-list-xstrap,
-.icomoon-list {
-	display: none;
-}
-
-ul.glyphicons-list {
-	overflow: hidden;
-
-	li {
-		.border (1px solid @c3, 0px);
-		float: left;
-		width: 13%;
-		height: 110px;
-		margin: 5px;
-		padding: 10px 8px;
-
-		text-align: center;
-		background-color: #EEE;
-
-		span.glyphicon {
-			display: block;
-			margin: 0px 0px 10px 0px;
-		}
-
-		/* SM */
-		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-			width: 18.5%;
-		}
-
-		/* XS */
-		@media (max-width: @screen-xs-max) {
-			width: 100%;
-		}
-	}
-}
-/* end DOCUMENTATION */
 /* end MAIN */
 
 //Import Media Breakpoints (al final de base.less, para que no haya sobreescritura de clases y no tener que usar !important)

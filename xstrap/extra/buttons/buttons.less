@@ -1,0 +1,70 @@
+@button-min-height: 30px;
+@button-padding: 0px 10px;
+
+@button-font-family:            @font-family;
+@button-font-size:              12px;
+@button-font-weight:            @font-weight;
+@button-font-style:             @font-style;
+@button-color:                  @c1;
+@button-color-hover:            @c1;
+@button-background-color:       @c8;
+@button-background-color-hover: @c9;
+@button-text-align:             center;
+@button-text-transform:         none;
+@button-line-height:            @button-min-height;
+
+@button-border:        1px solid transparent;
+@button-border-radius: 2px;
+@button-shadow-color:  transparent;
+@button-shadow-blur:   0px;
+
+button,
+.btn {
+  .button       ();
+  .text         (@button-font-family, @button-font-size, @button-font-weight, @button-font-style, @button-color, @button-text-align, @button-text-transform, @button-line-height);
+  .border       (@button-border, @button-border-radius);
+  .box-shadow   (@button-shadow-color, @button-shadow-blur);
+  .user-select  (none);
+  .transition   ();
+  .not-outline  ();
+  display: inline-block;
+  height: @button-min-height;
+  margin-bottom: 0; // For input.btn
+  padding: @button-padding;
+
+  overflow:         hidden;
+  text-decoration:  none;
+  cursor:           pointer;
+  white-space:      nowrap;
+  vertical-align:   middle;
+  touch-action:     manipulation;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &::before,
+  &::after {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &.active,
+  &:active {
+    outline: 0;
+    background-image: none;
+    .box-shadow (transparent, 0px);
+  }
+}
+
+.btn-gradient {
+  .gradient (@c2, @c3, top, bottom);
+
+  &:hover,
+  &:focus,
+  &.active {
+    .gradient (@c2, @c3, bottom, top);
+  }
+}

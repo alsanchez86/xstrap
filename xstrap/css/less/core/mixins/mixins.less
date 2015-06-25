@@ -20,7 +20,6 @@ Para aplicar estilos fijos específicos de cada elemento, aplicarlo en el base.l
 	background-color: 	@background-color;
 
 	&:hover,
-	&:focus,
 	&.active {
 		color: 				@color-hover;
 		text-decoration: 	@text-decoration-hover;
@@ -63,7 +62,6 @@ Para aplicar estilos fijos específicos de cada elemento, aplicarlo en el base.l
 	}
 
 	&:hover,
-	&:focus,
 	&.active {
 		color: 				@color-hover;
 		background-color: 	@background-color-hover;
@@ -128,18 +126,6 @@ Para aplicar estilos fijos específicos de cada elemento, aplicarlo en el base.l
     transition: 		@direction @time;
 }
 
-.fade (
-		@time: @time
-	){
-
-    -webkit-transition: 0 @time ease-in-out;
-    -moz-transition: 	0 @time ease-in-out;
-    transition: 		0 @time ease-in-out;
-    -ms-transition:     0 @time ease-in-out;
-    -o-transition:      0 @time ease-in-out;
-    transition: 		0 @time ease-in-out;
-}
-
 .translate3d () {
 
 	-webkit-transform: 	translate3d(0,0,0);
@@ -195,32 +181,6 @@ Para aplicar estilos fijos específicos de cada elemento, aplicarlo en el base.l
 	pointer-events: none;
    	cursor: not-allowed;
    	opacity: @opacity;
-}
-
-.placeholder (
-		@color: 		@input-placeholder-color,
-		@font-style: 	@input-placeholder-font-style
-	){
-
-    &::-webkit-input-placeholder {
-    	font-style: @font-style;
-		color: @color;
-	}
-
-	&::-moz-placeholder {
-		font-style: @font-style;
-		color: @color;
-	}
-
-	&:-moz-placeholder {
-		font-style: @font-style;
-		color: @color;
-	}
-
-	&:-ms-input-placeholder {
-		font-style: @font-style;
-		color: @color;
-	}
 }
 
 .break-all () {

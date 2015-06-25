@@ -1,0 +1,54 @@
+@pagination-a-color-active: @c13;
+
+.pagination {
+  display: inline-block;
+  margin: 0px 0px @space 0px;
+
+  & > li {
+    display: inline;
+
+    & > a {
+      position: relative;
+      float: left;
+      margin: 0px 5px;
+
+      line-height: @line-height;
+    }
+
+    &:first-child {
+      & > a {
+        margin-left: 0;
+      }
+    }
+
+    &.active {
+      & > a {
+        .link (@pagination-a-color-active, @pagination-a-color-active, underline, underline);
+      }
+    }
+
+    &.arrow {
+      &:first-child {
+        & > a {
+          & > span.glyphicon {
+            &:before {
+              .rotate (180);
+              content: '\e072';
+              display: inline-block;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        & > a {
+          & > span.glyphicon {
+            &:before {
+              content: '\e072';
+            }
+          }
+        }
+      }
+    }
+  }
+}

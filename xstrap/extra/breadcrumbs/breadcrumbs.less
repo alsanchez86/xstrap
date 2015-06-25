@@ -1,0 +1,53 @@
+.breadcrumb {
+  margin: 0px 0px @space 0px;
+  padding: 0px;
+
+  list-style: none;
+  background-color: transparent;
+
+  & > li {
+    display: inline-block;
+    margin-right: 2px;
+
+    & + li {
+      &:before {
+        content: none;
+        padding: 0px;
+      }
+    }
+  }
+
+  a {
+    .link (@a-color, @a-color-hover);
+
+    &:after {
+      content: "\e258";
+      padding-left: 8px;
+
+      font-family: @glyphicon;
+      font-size: 8px;
+      color: @a-color;
+    }
+
+    &:hover {
+      &::after {
+        color: @a-color-hover;
+      }
+    }
+  }
+
+  &.active {
+    color: @a-color-hover;
+  }
+}
+
+/* XS */
+@media (max-width: @screen-xs-max) {
+  .breadcrumb {
+    li {
+      display: block;
+      margin: 0px;
+    }
+  }
+}
+/* end XS */

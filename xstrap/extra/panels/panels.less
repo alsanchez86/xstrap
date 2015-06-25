@@ -1,0 +1,45 @@
+@panel-heading-padding: 15px 25px;
+@panel-body-padding:    0px 25px;
+@panel-footer-padding:  @panel-heading-padding;
+
+@panel-background-color: @background-color;
+@panel-border:           1px solid transparent;
+@panel-border-radius:    0px;
+@panel-box-shadow:       @shadow-color;
+@panel-box-shadow-blur:  @blur;
+
+// Base class
+.panel {
+  .border (@panel-border, @panel-border-radius);
+  .box-shadow (@panel-box-shadow);
+  margin: 0px 0px @space 0px;
+
+  overflow: hidden;
+  background-color: @panel-background-color;
+
+  .panel-heading,
+  .panel-body,
+  .panel-footer {
+    &:extend(.clearfix all);
+  }
+
+  .panel-heading {
+    padding: @panel-heading-padding;
+
+    .panel-title {
+      margin: 0px; //delete h1,h2,h3,h4,h5,h6 margin-bottom
+    }
+  }
+
+  .panel-body {
+    padding: @panel-body-padding;
+
+    .list-group {
+      margin: 0px;
+    }
+  }
+
+  .panel-footer {
+    padding: @panel-footer-padding;
+  }
+}

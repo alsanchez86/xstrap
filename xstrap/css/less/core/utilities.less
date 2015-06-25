@@ -19,7 +19,6 @@
   float: left !important;
 }
 
-
 // Toggling content
 // -------------------------
 
@@ -37,6 +36,20 @@
   .text-hide();
 }
 
+.disabled {
+  .disabled ();
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
 
 // Hide from screenreaders and browsers
 //
@@ -52,4 +65,58 @@
 
 .affix {
   position: fixed;
+}
+
+.relative         { position: relative; }
+.absolute         { position: absolute; }
+.container iframe { width: 100%; }
+.sin-margin       { margin: 0px; }
+.sin-padding      { padding: 0px; }
+.overhidden       { overflow: hidden; }
+.space            { margin-bottom: @space; }
+.block            { display: block; }
+.pointer          { cursor: pointer; }
+.vertical-center  { vertical-align: middle; }
+.text-indent      { text-indent: @text-indent; }
+.text-highlight   { color: @highlight-color; }
+.text-lowlight    { color: @lowlight-color; }
+.text-left        { text-align: left; }
+.text-right       { text-align: right; }
+.text-center      { text-align: center; }
+.text-justify     { text-align: justify; }
+.text-nowrap      { white-space: nowrap; }
+
+.blank {
+  &:after {
+    .glyphicon ("\e164");
+    top: 0px;
+    padding-left: 10px;
+
+    font-size: 90%;
+  }
+}
+
+.cargando,
+.cargando-2 {
+  position: absolute;
+  z-index: 998;
+}
+
+.cargando {
+  top: 47%;
+  left: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.cargando-2 {
+  display: none;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+
+  opacity: 0.9;
+  background: url('@{path-images}cargando-2.gif') no-repeat center 50px #FFF;
+  background-size: 55px;
 }

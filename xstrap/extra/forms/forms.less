@@ -1,0 +1,222 @@
+@input-height:  30px;
+@input-padding: 5px 10px;
+
+@input-font-family:             @font-family;
+@input-font-size:               @font-size;
+@input-font-weight:             @font-weight;
+@input-font-style:              @font-style;
+@input-color:                   @color;
+@input-background-color:        rgba(255, 255, 255, 0.01);
+@input-border:                  1px solid @c12;
+@input-border-radius:           0px;
+@input-border-color-focus:      @c12;
+@input-box-shadow-color:        transparent;
+@input-box-shadow-color-focus:  transparent;
+@input-box-shadow-blur:         0px;
+
+@input-color-placeholder: #CCC;
+@form-group-margin-bottom: @space;
+
+.form-control {
+  .text         (@input-font-family, @input-font-size, @input-font-weight, @input-font-style, @input-color);
+  .border       (@input-border, @input-border-radius);
+  .box-shadow   (@input-box-shadow-color, @input-box-shadow-blur);
+  .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+  .placeholder ();
+  display: block;
+  height: @input-height;
+  width: 100%;
+  margin: 0px 0px @space 0px;
+  padding: @input-padding;
+  background-color: @input-background-color;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+
+  &:focus {
+    .box-shadow (@input-box-shadow-color-focus);
+    border-color: @input-border-color-focus;
+    outline: 0;
+  }
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    .disabled ();
+  }
+
+  textarea& {
+    height: auto;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"] {
+    &.form-control {
+      line-height: @input-height;
+    }
+  }
+}
+
+.form-group {
+  margin: 0px 0px @form-group-margin-bottom 0px;
+}
+
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  label {
+    min-height: @line-height;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+  }
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px \9;
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: -5px;
+}
+
+.radio-inline,
+.checkbox-inline {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.radio-inline,
+.checkbox-inline {
+  fieldset[disabled] & {
+    .disabled ();
+  }
+}
+
+.radio,
+.checkbox {
+  fieldset[disabled] & {
+    label {
+      .disabled ();
+    }
+  }
+}
+
+//form-control-static
+/*.form-control-static {
+  padding-top: (@padding-base-vertical + 1);
+  padding-bottom: (@padding-base-vertical + 1);
+  margin-bottom: 0;
+  min-height: (@line-height-computed + @font-size-base);
+}*/
+
+//form-inline
+/*.form-inline {
+  @media (min-width: @screen-sm-min) {
+    .form-group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    .form-control {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+    }
+
+    .form-control-static {
+      display: inline-block;
+    }
+
+    .input-group {
+      display: inline-table;
+      vertical-align: middle;
+
+      .input-group-addon,
+      .input-group-btn,
+      .form-control {
+        width: auto;
+      }
+    }
+
+    .input-group > .form-control {
+      width: 100%;
+    }
+
+    .control-label {
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    .radio,
+    .checkbox {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      vertical-align: middle;
+
+      label {
+        padding-left: 0;
+      }
+    }
+    .radio input[type="radio"],
+    .checkbox input[type="checkbox"] {
+      position: relative;
+      margin-left: 0;
+    }
+  }
+}*/
+
+//form-horizontal
+/*.form-horizontal {
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: (@padding-base-vertical + 1);
+  }
+
+  .radio,
+  .checkbox {
+    min-height: (@line-height-computed + (@padding-base-vertical + 1));
+  }
+
+  .form-group {
+    .make-row();
+  }
+
+  @media (min-width: @screen-sm-min) {
+    .control-label {
+      text-align: right;
+      margin-bottom: 0;
+      padding-top: (@padding-base-vertical + 1);
+    }
+  }
+}*/

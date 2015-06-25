@@ -22,7 +22,6 @@
   width: device-width;
 }
 
-
 // Visibility utilities
 // Note: Deprecated .visible-xs, .visible-sm, .visible-md, and .visible-lg as of v3.2.0
 .visible-xs,
@@ -190,5 +189,18 @@
 .hidden-print {
   @media print {
     .responsive-invisibility();
+  }
+}
+
+//img responsive
+.img-responsive {
+  .img-responsive ();
+
+  &.img-responsive-max {
+    width: 100%;
+  }
+
+  &.img-responsive-center {
+    margin: 0 auto;
   }
 }
