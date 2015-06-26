@@ -1,20 +1,21 @@
-@button-min-height: 30px;
+@button-min-height: 35px;
 @button-padding: 0px 10px;
 
 @button-font-family:            @font-family;
-@button-font-size:              12px;
+@button-font-size:              @font-size;
+@button-font-size-xs-sm:        @font-size-xs-sm;
 @button-font-weight:            @font-weight;
 @button-font-style:             @font-style;
 @button-color:                  @c1;
 @button-color-hover:            @c1;
-@button-background-color:       @c8;
-@button-background-color-hover: @c9;
+@button-background-color:       @naranja;
+@button-background-color-hover: @naranja;
 @button-text-align:             center;
-@button-text-transform:         none;
+@button-text-transform:         uppercase;
 @button-line-height:            @button-min-height;
 
 @button-border:        1px solid transparent;
-@button-border-radius: 2px;
+@button-border-radius: @border-radius;
 @button-shadow-color:  transparent;
 @button-shadow-blur:   0px;
 
@@ -57,14 +58,18 @@ button,
     background-image: none;
     .box-shadow (transparent, 0px);
   }
-}
 
-.btn-gradient {
-  .gradient (@c2, @c3, top, bottom);
+  &.btn-gradient {
+    .gradient (@c2, @c3, top, bottom);
 
-  &:hover,
-  &:focus,
-  &.active {
-    .gradient (@c2, @c3, bottom, top);
+    &:hover,
+    &:focus,
+    &.active {
+      .gradient (@c2, @c3, bottom, top);
+    }
+  }
+
+  @media (max-width: @screen-sm-max) {
+    font-size: @font-size-xs-sm;
   }
 }
