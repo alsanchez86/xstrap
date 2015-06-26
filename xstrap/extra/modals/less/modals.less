@@ -10,6 +10,9 @@
 @modal-close-background-color-hover:  transparent;
 @modal-close-font-size:               28px;
 
+@modal-close-shadow-color: transparent;
+@modal-close-blur: 0px;
+
 @modal-title-padding:  0px 0px 10px 0px;
 @modal-footer-padding: 10px 0px 0px 0px;
 
@@ -95,6 +98,7 @@
 
           .close {
             .button (@modal-close-color, @modal-close-color-hover, @modal-close-background-color, @modal-close-background-color-hover);
+            .box-shadow (@modal-close-shadow-color, @modal-close-blur);
             margin-top: -2px;
             padding: 3px;
 
