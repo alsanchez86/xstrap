@@ -41,6 +41,14 @@ html {
 //body
 body {
   .text (); //valores por defecto "text-base" en .text ()
+
+  letter-spacing: normal;
+  line-break: auto;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+
   background-color: @background-color;
 }
 //end body
@@ -157,16 +165,6 @@ ol {
       margin-bottom: 0px;
       padding-left: @sublist-padding-left;
     }
-  }
-}
-
-ul {
-  &:not(.list-styled) {
-    list-style: none;
-  }
-
-  &.list-styled {
-    list-style-image: url(@styled-list-style-image);
   }
 }
 

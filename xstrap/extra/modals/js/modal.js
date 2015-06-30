@@ -38,6 +38,24 @@ function modalDefault (text, timeout) {
   }
 }
 
+function modalEvent () {
+
+  $('.modal')
+    .on ('show.bs.modal', function (e) {
+
+      if ($('.popover').length) popoverHide ();
+      if ($('.modal').hasClass ('in')) $('.modal').modal ('hide');
+    })
+    .on ('hide.bs.modal', function () {
+
+      if ($('.popover').length) popoverHide ();
+    })
+    .on ('hidden.bs.modal', function () {
+
+      $('body').css ({padding: 0}); //fix bootstrap bug
+    });
+}
+
 +function ($) {
   'use strict';
 
