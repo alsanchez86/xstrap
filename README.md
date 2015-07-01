@@ -5,13 +5,16 @@ Vendors used:
 + jquery [version < 2].
 + From from Bootstrap v3.3.5:
 	- normalize.css v3.0.3
-	- Grid system [clearfix required]
-	- Glyphicons
+	- Grid system
 	- Print media styles
 	- Responsive utilities
+	- Utilities
+	- Mixins:
+		- qwefewff
 
 + Extra (optionals):
-	- animate.css (https://daneden.github.io/animate.css/)
+	- Glyphicons
+	- Icomoon
 	- Offcanvas
 	- jquery.easing
 	- jquery.rwdImageMaps
