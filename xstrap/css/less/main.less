@@ -1,7 +1,7 @@
-/* IMPORTS */
+// CORE
 @import url('./core/base.less'); //xstrap core
 
-//EXTRAS
+// EXTRAS
 @import url('../../extra/glyphicons/less/glyphicons.less');
 @import url('../../extra/lists/less/lists.less');
 @import url('../../extra/breadcrumbs/breadcrumbs.less');
@@ -16,9 +16,8 @@
 @import url('../../extra/modals/less/modals.less');
 @import url('../../extra/tooltips/less/tooltip.less');
 @import url('../../extra/popovers/less/popovers.less'); //require tooltip component
-/* end IMPORTS */
 
-/* MAIN */
+// MAIN
 .cargando,
 .cargando-2 {
   position: absolute;
@@ -43,12 +42,35 @@
   background: url('@{path-images}cargando-2.gif') no-repeat center 50px #FFF;
   background-size: 55px;
 }
-/* end MAIN */
 
-//Import Media Breakpoints (al final de base.less, para que no haya sobreescritura de clases y no tener que usar !important)
-@import url('main-no-xs.less');
-@import url('main-xs-sm.less');
-@import url('main-lg.less');
-@import url('main-md.less');
-@import url('main-sm.less');
-@import url('main-xs.less');
+// Media Breakpoints (al final de base.less, para que no haya sobreescritura de clases y no tener que usar !important)
+// XS
+@media (max-width: @screen-xs-max) {
+
+}
+
+// SM
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+}
+
+// MD
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+}
+
+// LG
+@media (min-width: @screen-lg-min) {
+
+}
+
+// Specials cases
+// XS & SM
+@media (max-width: @screen-sm-max) {
+
+}
+
+// NO XS
+@media (min-width: @screen-sm-min) {
+
+}
