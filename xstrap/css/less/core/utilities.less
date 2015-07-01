@@ -1,75 +1,8 @@
-//
-// Utility classes
-// --------------------------------------------------
-
-
-// Floats
-// -------------------------
-
-.clearfix {
-  .clearfix();
-}
-.center-block {
-  .center-block();
-}
-.pull-right {
-  float: right !important;
-}
-.pull-left {
-  float: left !important;
-}
-
-// Toggling content
-// -------------------------
-
-// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
-.hide {
-  display: none !important;
-}
-.show {
-  display: block !important;
-}
-.invisible {
-  visibility: hidden;
-}
-.text-hide {
-  .text-hide();
-}
-
-.disabled {
-  .disabled ();
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
-// Hide from screenreaders and browsers
-//
-// Credit: HTML5 Boilerplate
-
-.hidden {
-  display: none !important;
-}
-
-
-// For Affix plugin
-// -------------------------
-
-.affix {
-  position: fixed;
-}
+//Clases genéricas para usar directamente en el HTML.
+//Solamente para casos excepcionales.
 
 .relative         { position: relative; }
 .absolute         { position: absolute; }
-.container iframe { width: 100%; }
 .sin-margin       { margin: 0px; }
 .sin-padding      { padding: 0px; }
 .overhidden       { overflow: hidden; }
@@ -85,13 +18,46 @@
 .text-center      { text-align: center; }
 .text-justify     { text-align: justify; }
 .text-nowrap      { white-space: nowrap; }
+.clearfix         { .clearfix(); }
+.center-block     { .center-block(); }
+.pull-right       { float: right !important; }
+.pull-left        { float: left !important; }
+/*.hide           { display: none !important; }*/
+.hidden           { display: none !important; }
+.show             { display: block !important; }
+.invisible        { visibility: hidden; }
+.text-hide        { .text-hide (); }
+.disabled         { .disabled (); }
 
-.blank {
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+//required glyphicon component
+a.blank {
   &:after {
     .glyphicon ("\e164");
-    top: 0px;
-    padding-left: 10px;
+    padding-left: 8px;
 
     font-size: 90%;
+  }
+}
+
+.img-responsive {
+  .img-responsive ();
+
+  &.img-responsive-max {
+    width: 100%;
+  }
+
+  &.img-responsive-center {
+    margin: 0 auto;
   }
 }

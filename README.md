@@ -7,10 +7,17 @@ Vendors used:
 	- normalize.css v3.0.3
 	- Grid system
 	- Print media styles
-	- Responsive utilities
 	- Utilities
+	- Responsive utilities
 	- Mixins:
-		- qwefewff
+		- Center block
+		- Clearfix
+		- Grid & Grid framework
+		- Hide text
+		- Image
+		- Opacity
+		- Responsive visibility
+		- Vendro prefixes
 
 + Extra (optionals):
 	- Glyphicons
