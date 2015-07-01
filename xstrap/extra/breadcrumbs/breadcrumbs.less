@@ -1,18 +1,22 @@
 .breadcrumb {
   margin: 0px 0px @space 0px;
-  padding: 0px;
-
   list-style: none;
-  background-color: transparent;
 
   & > li {
     display: inline-block;
     margin-right: 2px;
 
-    & + li {
-      &:before {
-        content: none;
-        padding: 0px;
+    &:last-child {
+      a {
+        &:after {
+          content: none;
+        }
+      }
+    }
+
+    &.active {
+      a {
+        .link (@a-color-hover, @a-color-hover, underline, underline);
       }
     }
   }
@@ -28,16 +32,6 @@
       font-size: 8px;
       color: @a-color;
     }
-
-    &:hover {
-      &::after {
-        color: @a-color-hover;
-      }
-    }
-  }
-
-  &.active {
-    color: @a-color-hover;
   }
 }
 
