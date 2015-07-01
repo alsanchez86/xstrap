@@ -1,14 +1,14 @@
 @modal-width:               @screen-xs-max - 100; //no puede ser nunca mayor que @screen-xs-max
-@modal-margin-top:          50px;
+@modal-margin:              50px;
 @modal-padding:             20px;
 @modal-body-padding-bottom: 20px;
-@modal-background-color:    @background-color;
+@modal-background-color:    @c1;
 
 @modal-close-color:                   @a-color;
 @modal-close-color-hover:             @a-color-hover;
 @modal-close-background-color:        transparent;
 @modal-close-background-color-hover:  transparent;
-@modal-close-font-size:               28px;
+@modal-close-font-size:               32px;
 
 @modal-close-shadow-color: transparent;
 @modal-close-blur: 0px;
@@ -63,8 +63,7 @@
   .modal-dialog {
     position:   relative;
     width:      @modal-width;
-    margin:     auto;
-    margin-top: @modal-margin-top;
+    margin:     @modal-margin auto @modal-margin auto;
 
     .modal-content {
       .border (@modal-border, @modal-border-radius);
@@ -162,6 +161,7 @@
     .modal-dialog {
       max-width: auto;
       width: auto;
+      margin: @modal-margin @space-xs-sm;
     }
   }
 }
