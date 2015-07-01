@@ -6,6 +6,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
+jQuery (document).ready (function($) {
+
+    modalEvent ();
+});
+
 function modalButton (button, text, timeout) {
 
   button
@@ -27,14 +32,11 @@ function modalDefault (text, timeout) {
   modal.modal ('show');
 
   if (timeout) {
-    modal
-      .on ('shown.bs.modal', function () {
 
-        window.setTimeout (function () {
+    window.setTimeout (function () {
 
-          modal.modal ('hide');
-      }, timeout);
-    });
+      modal.modal ('hide');
+    }, timeout);
   }
 }
 
@@ -64,6 +66,7 @@ function modalEvent () {
 
   var Modal = function (element, options) {
     this.options             = options
+    this.$html               = $('html')
     this.$body               = $(document.body)
     this.$element            = $(element)
     this.$dialog             = this.$element.find('.modal-dialog')
@@ -109,6 +112,8 @@ function modalEvent () {
 
     this.checkScrollbar()
     this.setScrollbar()
+
+    this.$html.addClass('modal-open')
     this.$body.addClass('modal-open')
 
     this.escape()
@@ -217,6 +222,7 @@ function modalEvent () {
     var that = this
     this.$element.hide()
     this.backdrop(function () {
+      that.$html.removeClass('modal-open')
       that.$body.removeClass('modal-open')
       that.resetAdjustments()
       that.resetScrollbar()
