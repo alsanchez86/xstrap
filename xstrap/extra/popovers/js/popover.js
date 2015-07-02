@@ -6,6 +6,20 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
+jQuery (document).ready (function($) {
+
+    popover ([$('#share'), 'body', 'click', false, 'auto right', true, '<div class="popover" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>', '<a href="https://twitter.com/share?url=http://damasco.ximdex.net/demo/&via=ximdex&text=I´ve just visited XMDS demo (Data Edition and Visualizaton service), powered by the Ximdex Platform at " target="_blank">Tweet</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a data-toggle="modal" data-target="#modal-share" href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp;E-mail</a>']);
+});
+
+$(window)
+    .resize (function () {
+
+        popoverHide ();
+    })
+    .scroll (function (event) {
+
+        popoverHide ();
+    });
 
 function popover (element) {
 
@@ -24,7 +38,8 @@ function popover (element) {
 
 function popoverHide () {
 
-    $('.popover').popover ('hide');
+    $('.popover')
+      .popover ('hide');
 }
 
 +function ($) {

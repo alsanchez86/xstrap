@@ -19,8 +19,6 @@
 
     <!-- favicon -->
     <link href="./xstrap/images/favicon.ico" rel="shortcut icon"/>
-    <!-- offcanvas -->
-    <!-- <link href="./xstrap/extra/offcanvas/css/offcanvas.css" rel="stylesheet"/> -->
     <!-- main -->
     <link href="./xstrap/css/main.css" rel="stylesheet"/>
 </head>
@@ -31,7 +29,6 @@
         <h1>
             XSTRAP 1.0
             <small>(Responsive Web Design)</small>
-            <img width="40" src="http://i.imgur.com/s6i6Q.gif" alt="banana" title="banana">
         </h1>
     </header>
 
@@ -215,7 +212,7 @@
             </p>
 
             <div id="glyphicon-list-xstrap" class="glyphicon-list-xstrap">
-                <?php include_once ('./xstrap/glyphicon-list.html') ?>
+                <?php //include_once ('./xstrap/glyphicon-list.html') ?>
             </div>
 
             <p>
