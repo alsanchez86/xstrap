@@ -53,8 +53,8 @@
 
     <p><i>En xstrap, por defecto (ver vars.less) el .container se comportará como .container-fluid para las resoluciones XS y SM.</i></p>
 
+    <br>
     <div class="doc-rows">
-        <br>
         <h3>Rows:</h3>
 
         <p>
@@ -259,9 +259,8 @@
     <br>
     <h2>
         HTML ELEMENTS
-        &nbsp;&nbsp;
+        &nbsp;
         <span class="glyphicon glyphicon-paperclip"></span>
-        <small>(not bootstrap components)</small>
     </h2>
 
     <h3>Links: <small>(a)</small></h3>
