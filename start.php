@@ -24,6 +24,21 @@
 </head>
 <body>
 
+<!-- <div class="container">
+    <header>
+        <h1>
+            Error 404. Page not found.
+            &nbsp;
+            <span class="glyphicon glyphicon-info-sign"></span>
+        </h1>
+    </header>
+
+    <p>
+        Sorry, the content you're looking for is not in our servers.
+        <br>
+        Try another search.
+    </p>
+</div> -->
 
 <?php //include_once ('modal-default.php'); ?>
 
