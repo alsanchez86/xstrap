@@ -35,7 +35,6 @@ function bootstrap () {
 
     if (isAndroid) $('select.form-control').removeClass ('form-control').css ('width', '100%');
 }
-// end
 
 // responsive
 function responsive () {
@@ -63,11 +62,9 @@ function sm () {
 function xs () {
 
 }
-// end
 
 // preload
 function preLoad () {
 
   for (var i = 0; i < preload.length; i++) $('<img />').attr ('src', preload [i]);
 }
-// end

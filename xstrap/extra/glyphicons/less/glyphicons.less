@@ -12,12 +12,12 @@
 // Import the fonts
 @font-face {
   font-family: @glyphicon;
-  src: url('../extra/glyphicons/fonts/glyphicons-halflings-regular.eot');
-  src: url('../extra/glyphicons/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-       url('../extra/glyphicons/fonts/glyphicons-halflings-regular.woff2') format('woff2'),
-       url('../extra/glyphicons/fonts/glyphicons-halflings-regular.woff') format('woff'),
-       url('../extra/glyphicons/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
-       url('../extra/glyphicons/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('@{path-extra}glyphicons/fonts/glyphicons-halflings-regular.eot');
+  src: url('@{path-extra}glyphicons/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('@{path-extra}glyphicons/fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+       url('@{path-extra}glyphicons/fonts/glyphicons-halflings-regular.woff') format('woff'),
+       url('@{path-extra}glyphicons/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('@{path-extra}glyphicons/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
 //mixing for create glyphicon from less
@@ -41,6 +41,16 @@
 // Catchall baseclass
 .glyphicon {
   .glyphicon ();
+}
+
+// Extra class for external links
+a.blank {
+  &:after {
+    .glyphicon ("\e164");
+    padding-left: 8px;
+
+    font-size: 90%;
+  }
 }
 
 // Individual icons

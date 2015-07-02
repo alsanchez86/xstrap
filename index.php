@@ -21,6 +21,13 @@
     <link href="./xstrap/images/favicon.ico" rel="shortcut icon"/>
     <!-- main -->
     <link href="./xstrap/css/main.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 
@@ -264,7 +271,7 @@
 
     <ol>
         <li><a href="">LINK</a></li>
-        <li><a class="blank" href="#" target="_blank">LINK (Target blank)</a></li>
+        <li><a class="blank" href="#" target="_blank">LINK (Target blank) <i>[required glyphicon component]</i></a></li>
         <li><a class="disabled" href="#">LINK (Disabled)</a></li>
         <li><a href="#">LINK with glyphicon&nbsp;<span class="glyphicon glyphicon-cloud"></span></a></li>
     </ol>
@@ -485,22 +492,6 @@
 
 <!-- jquery [v < 2] -->
 <script src="./xstrap/js/jquery.js"></script>
-<!-- bootstrap -->
-<!-- <script src="./bootstrap/js/bootstrap.min.js"></script> -->
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-<!-- offcanvas -->
-<!-- <script src="./xstrap/extra/offcanvas/js/ie10-viewport-bug-workaround.js"></script> -->
-<!-- jquery.easing.min -->
-<!-- <script src="./xstrap/extra/js/jquery.easing.min.js"></script> -->
-<!-- rwdImageMaps -->
-<!-- <script src="./xstrap/extra/js/jquery.rwdImageMaps.min.js"></script> -->
-<!-- xstrap -->
-<!-- <script src="./xstrap/js/xstrap.js"></script> -->
 <!-- main -->
 <script src="./xstrap/js/main.js"></script>
 </body>

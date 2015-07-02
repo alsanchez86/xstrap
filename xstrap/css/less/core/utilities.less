@@ -6,7 +6,7 @@
 .sin-margin       { margin: 0px; }
 .sin-padding      { padding: 0px; }
 .overhidden       { overflow: hidden; }
-.space            { margin-bottom: @space; }
+.space            { .space (); }
 .block            { display: block; }
 .pointer          { cursor: pointer; }
 .vertical-center  { vertical-align: middle; }
@@ -38,16 +38,6 @@
   overflow: hidden;
   clip: rect(0,0,0,0);
   border: 0;
-}
-
-// required glyphicon component
-a.blank {
-  &:after {
-    .glyphicon ("\e164");
-    padding-left: 8px;
-
-    font-size: 90%;
-  }
 }
 
 .img-responsive {

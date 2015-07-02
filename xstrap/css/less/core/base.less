@@ -1,45 +1,44 @@
-//ATENCIÓN: Base.less tiene incorporado de serie el código less de Scaffolding.less de Bootstrap. No es necesario importarlo.
-/* IMPORTS */
-//vars
+// ATENCIÓN: Base.less tiene incorporado de serie el código less de Scaffolding.less de Bootstrap. No es necesario importarlo.
+// IMPORTS
+// vars
 @import url('vars.less');
 
-//mixins
+// mixins
 @import url('./mixins/clearfix.less');
 @import url('./mixins/grid.less');
 @import url('./mixins/grid-framework.less');
 @import url('./mixins/responsive-visibility.less');
-@import url('./mixins/vendor-prefixes.less');
+@import url('./mixins/space.less');
 @import url('./mixins/image.less');
 @import url('./mixins/center-block.less');
 @import url('./mixins/hide-text.less');
 @import url('./mixins/opacity.less');
+@import url('./mixins/vendor-prefixes.less');
 @import url('./mixins/mixins.less');
 
-//less
+// less
 @import url('normalize.less');
 @import url('grid.less');
 @import url('print.less');
 @import url('utilities.less');
 @import url('responsive-utilities.less');
-/* end IMPORTS */
 
-/* XSTRAP BASE */
+// XSTRAP Base
 * {
   .box-sizing (border-box);
+
+  &:before,
+  &:after {
+    .box-sizing (border-box);
+  }
 }
 
-*:before,
-*:after {
-  .box-sizing (border-box);
-}
-
-//html
+// html
 html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-//end html
 
-//body
+// body
 body {
   .text (); //valores por defecto "text-base" en .text ()
 
@@ -52,9 +51,8 @@ body {
 
   background-color: @background-color;
 }
-//end body
 
-//links
+// links
 a {
   &:not(.btn) {
     .link (); //valores por defecto "links" en .link ()
@@ -68,9 +66,8 @@ a {
     }
   }
 }
-//end links
 
-//titles
+// titles
 h1 {.text (@h1-font-family, @h1-font-size, @h1-font-weight, @h1-font-style, @h1-color, @h1-text-align, @h1-text-transform, @h1-line-height);}
 h2 {.text (@h2-font-family, @h2-font-size, @h2-font-weight, @h2-font-style, @h2-color, @h2-text-align, @h2-text-transform, @h2-line-height);}
 h3 {.text (@h3-font-family, @h3-font-size, @h3-font-weight, @h3-font-style, @h3-color, @h3-text-align, @h3-text-transform, @h3-line-height);}
@@ -79,50 +76,45 @@ h5 {.text (@h5-font-family, @h5-font-size, @h5-font-weight, @h5-font-style, @h5-
 h6 {.text (@h6-font-family, @h6-font-size, @h6-font-weight, @h6-font-style, @h6-color, @h6-text-align, @h6-text-transform, @h6-line-height);}
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0px 0px @space 0px;
+  .space ();
 }
-//end titles
 
-//paragraphs
+// paragraphs
 p {
-  margin: 0px 0px @space 0px;
+  .space ();
 }
-//end paragraphs
 
-//marked text
+// marked text
 mark {
   padding:    @mark-padding;
 
   color:      @mark-color;
   background: @mark-background-color none repeat scroll 0% 0%;
 }
-//end marked text
 
-//abbr
+// abbr
 abbr {
   &[title],
   &[data-original-title] {
     border-bottom: 0px;
   }
 }
-//end abbr
 
-//address
+// address
 address {
-  margin: 0px 0px @space 0px;
+  .space ();
 }
-//end address
 
-//blockquote
+// blockquote
 blockquote {
-  margin: 0px 0px @space 0px;
+  .space ();
   padding: @blockquote-padding;
 
   font-size: @blockquote-font-size;
   border-left: @blockquote-border-left;
 
   p, ol, ul {
-    margin: 0px 0px @space / 2 0px;
+    .space (@space / 2, @space-small / 2);
 
     &:last-child {
       margin-bottom: 0px;
@@ -140,18 +132,17 @@ blockquote {
     }
   }
 }
-//end blockquote
 
-//lists
+// lists
 ul,
 ol {
-  margin: 0px 0px @space 0px;
+  .space ();
   padding: 0px;
 
   list-style-position: @list-style-position;
 
   li {
-    margin: 0px 0px @list-item-margin-bottom 0px;
+    .space (@list-item-margin-bottom);
 
     &:last-child {
       margin-bottom: 0px;
@@ -175,11 +166,11 @@ ol {
 }
 
 dl {
-  margin: 0px 0px @space 0px;
+  .space ();
 
   dt,
   dd {
-    margin: 0px 0px @list-item-margin-bottom 0px;
+    .space (@list-item-margin-bottom);
 
     &:last-child {
       margin-bottom: 0px;
@@ -195,18 +186,16 @@ dl {
     padding-left: @sublist-padding-left;
   }
 }
-//end lists
 
-//code
+// code
 code {
   .text (@code-font-family, @font-size, @font-weight, @font-style, @code-color);
   .border (@code-border, @code-border-radius);
   padding: @code-padding;
   background-color: @code-background-color;
 }
-//end code
 
-//kbd
+// kbd
 kbd {
   .text (@code-font-family, @font-size, @font-weight, @font-style, @kbd-color);
   .border (@kbd-border, @kbd-border-radius);
@@ -214,9 +203,8 @@ kbd {
   padding: @kbd-padding;
   background-color: @kbd-background-color;
 }
-//kbd
 
-//pre
+// pre
 pre {
   display: block;
   padding: 9.5px;
@@ -230,9 +218,8 @@ pre {
   border: 1px solid #CCC;
   border-radius: 4px;
 }
-//end pre
 
-//label
+// label
 label {
   .text (@label-font-family, @label-font-size, @label-font-weight, @label-font-style, @label-color);
   display: inline-block;
@@ -240,9 +227,8 @@ label {
   margin-bottom: 5px;
   cursor: pointer;
 }
-//end label
 
-//inputs
+// inputs
 input,
 button,
 select,
@@ -260,38 +246,38 @@ input [type="checkbox"],
   cursor: pointer;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+input [type="radio"],
+input [type="checkbox"] {
   margin: 4px 0 0;
   margin-top: 1px \9; // IE8-9
   line-height: normal;
 
-  &[disabled],
-  fieldset[disabled] & {
+  & [disabled],
+  fieldset [disabled] & {
     .disabled ();
   }
 }
 
-input[type="search"] {
+input [type="search"] {
   .box-sizing(border-box);
   -webkit-appearance: none;
 }
 
-input[type="file"] {
+input [type="file"] {
   display: block;
 }
 
-input[type="range"] {
+input [type="range"] {
   display: block;
   width: 100%;
 }
 
-select[multiple],
-select[size] {
+select [multiple],
+select [size] {
   height: auto;
 }
-//end inputs
 
+// fieldset
 fieldset {
   padding: 0;
   margin: 0;
@@ -302,6 +288,7 @@ fieldset {
   min-width: 0;
 }
 
+// legend
 legend {
   display: block;
   width: 100%;
@@ -318,25 +305,22 @@ legend {
 img {
   vertical-align: middle;
 }
-//end img
 
 //hr
 hr {
-  margin: @space 0px @space 0px;
+  .space ();
+  //margin: @space 0px @space 0px;
 }
-//end hr
 
 //iframe
 iframe {
   .border (0px, 0px);
 }
-//end iframe
 
 //figure
 figure {
   margin: 0;
 }
-//end figure
 
 // Adjust output element
 /*output {
@@ -346,22 +330,36 @@ figure {
   line-height: @line-height;
   color: @input-color;
 }*/
-/* end XSTRAP BASE */
 
-/* MEDIA BREAKPOINTS */
-/* NO XS */
-@media (min-width: @screen-sm-min) {
+// Media Breakpoints (al final de base.less, para que no haya sobreescritura de clases y no tener que usar !important)
+// XS
+@media (max-width: @screen-xs-max) {
 
 }
-/* end NO XS */
 
-/* XS & SM */
+// SM
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+}
+
+// MD
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+}
+
+// LG
+@media (min-width: @screen-lg-min) {
+
+}
+
+// Specials breakpoints
+// XS & SM
 @media (max-width: @screen-sm-max) {
   body {
     font-size: @font-size-xs-sm;
   }
 
-  //titles
+  // titles
   h1 { font-size: @h1-font-size-xs-sm; }
   h2 { font-size: @h2-font-size-xs-sm; }
   h3 { font-size: @h3-font-size-xs-sm; }
@@ -369,76 +367,13 @@ figure {
   h5 { font-size: @h5-font-size-xs-sm; }
   h6 { font-size: @h6-font-size-xs-sm; }
 
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0px 0px @space-xs-sm 0px;
-  }
-  //end titles
-
-  //paragraph
+  // paragraph
   p {
-    margin: 0px 0px @space-xs-sm 0px;
     font-size: @font-size-xs-sm;
   }
-  //end paragraph
-
-  //address
-  address {
-    margin: 0px 0px @space-xs-sm 0px;
-  }
-  //end address
-
-  //blockquote
-  blockquote {
-    margin: 0px 0px @space-xs-sm 0px;
-  }
-  //end blockquote
-
-  //lists
-  ul,
-  ol {
-    margin: 0px 0px @space-xs-sm 0px;
-  }
-  //end lists
-
-  //dl
-  dl {
-    margin: 0px 0px @space-xs-sm 0px;
-  }
-  //end dl
-
-  //hr
-  hr {
-    margin: @space-xs-sm 0px @space-xs-sm 0px;
-  }
-  //end hr
-
-  .space {
-    margin: 0px 0px @space-xs-sm 0px;
-  }
 }
-/* end XS & SM */
 
-/* XS */
-@media (max-width: @screen-xs-max) {
+// NO XS (todas las resoluciones menos XS)
+@media (min-width: @screen-sm-min) {
 
 }
-/* end XS */
-
-/* SM */
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-
-}
-/* end SM */
-
-/* MD */
-@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-
-}
-/* end MD */
-
-/* LG */
-@media (min-width: @screen-lg-min) {
-
-}
-/* end LG */
-/* end MEDIAS */
