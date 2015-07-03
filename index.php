@@ -37,15 +37,19 @@
         <small>Responsive web design</small>
     </h1>
 
-    <img class="img-responsive center-block" src="./xstrap/images/xstrap-logo.png">
+    <img class="img-responsive center-block" src="./xstrap/images/xstrap-logo.png" alt="XStrap" title="XStrap">
 
     <div class="designed-by-header">
         <i>designed by</i>
-        <img src="./xstrap/images/oxe-logo.png">
+        <img src="./xstrap/images/oxe-logo.png" alt="designed by Ximdex" title="designed by Ximdex">
     </div>
 </header>
 
 <div class="container">
+    <p>
+        <a class="btn-3d btn" href="">Prueba de componente button</a>
+    </p>
+
     <!-- Grid System -->
     <h2>Grid System&nbsp;<span class="glyphicon glyphicon-th"></span></h2>
 

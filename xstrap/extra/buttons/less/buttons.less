@@ -1,0 +1,60 @@
+@import url('vars.less');
+@import url('mixin.less');
+
+button,
+.btn {
+  .button       ();
+  .text         (@button-font-family, @button-font-size, @button-font-weight, @button-font-style, @button-color, @button-text-align, @button-text-transform, @button-line-height);
+  .border       (@button-border, @button-border-radius);
+  .box-shadow   (@button-shadow-color, @button-shadow-blur);
+  .user-select  (none);
+  .transition   (@button-time);
+  .not-outline  ();
+  display: inline-block;
+  height: @button-min-height;
+  margin-bottom: 0; // For input.btn
+  padding: @button-padding;
+
+  overflow:         hidden;
+  text-decoration:  none;
+  cursor:           pointer;
+  white-space:      nowrap;
+  vertical-align:   middle;
+  touch-action:     manipulation;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &::before,
+  &::after {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &.active,
+  &:active {
+    outline: 0;
+    background-image: none;
+    .box-shadow (transparent, 0px);
+  }
+
+  @media (max-width: @screen-sm-max) {
+    font-size: @font-size-xs-sm;
+  }
+}
+
+.btn-3d {
+  .border (1px solid @rojo-o, 2px);
+  .gradient (@rojo, @rojo-o, -180deg, 0%, 100%);
+  .box-shadow (rgba(0,0,0,0.4));
+
+  &:hover,
+  &:focus,
+  &.active {
+    .gradient (@rojo, @rojo-o, 0deg, 0%, 60%);
+    .box-shadow (transparent, 0px);
+  }
+}
