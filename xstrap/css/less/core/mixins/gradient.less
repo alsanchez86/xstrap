@@ -1,0 +1,18 @@
+.gradient (
+		@startcolor: 	rgba(0,0,0, @opacity),
+		@endcolor: 		rgba(255,255,255, @opacity),
+		@direction-1: 	top,
+		@direction-2: 	bottom,
+		@start: 		0%,
+		@end: 			100%
+	){
+
+	background: @startcolor; /* Old browsers */
+	background: -webkit-gradient(linear, left @direction-1, left @direction-2, color-stop(@start,@startcolor), color-stop(@end,@endcolor));
+	background: -moz-linear-gradient(			@direction-1, @startcolor @start, @endcolor @end);
+	background: -webkit-linear-gradient(		@direction-1, @startcolor @start, @endcolor @end);
+	background: -o-linear-gradient(				@direction-1, @startcolor @start, @endcolor @end);
+	background: -ms-linear-gradient(			@direction-1, @startcolor @start, @endcolor @end);
+	background: linear-gradient(to 				@direction-2, @startcolor @start, @endcolor @end);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{startcolor}', endColorstr='@{endcolor}',GradientType=0);
+}

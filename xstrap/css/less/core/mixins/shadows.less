@@ -1,0 +1,27 @@
+.text-shadow (
+		@shadow-color: 	@shadow-color,
+		@size: 			1px,
+		@blur: 			0px
+	){
+
+	-webkit-text-shadow: -@size @size @blur @shadow-color; // iOS <4.3 & Android <4.1
+	-moz-text-shadow: -@size @size @blur @shadow-color;
+	text-shadow: -@size @size @blur @shadow-color;
+}
+
+.box-shadow (
+		@shadow-color: 	@shadow-color,
+		@blur: 			@blur
+	){
+
+	-webkit-box-shadow: 0px 2px @blur @shadow-color; // iOS <4.3 & Android <4.1
+	box-shadow: 0px 2px @blur @shadow-color;
+}
+
+.box-shadow-inset (
+		@size: 	10px,
+		@blur:	0.35
+	){
+
+	box-shadow: inset 0px @size @size rgba(0,0,0, @blur);
+}

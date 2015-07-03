@@ -19,6 +19,37 @@
 @button-shadow-color:  transparent;
 @button-shadow-blur:   0px;
 
+// mixin
+.button (
+    @color:           @button-color,
+    @color-hover:         @button-color-hover,
+    @background-color:      @button-background-color,
+    @background-color-hover:  @button-background-color-hover
+  ){
+
+  color:        @color;
+  background-color:   @background-color;
+
+  &::before,
+  &::after {
+    border-color: @color;
+  }
+
+  &:hover,
+  &.active {
+    color:        @color-hover;
+    background-color:   @background-color-hover;
+
+    & > span {
+      color: @color-hover;
+    }
+  }
+
+  & > span {
+    color: @color;
+  }
+}
+
 button,
 .btn {
   .button       ();

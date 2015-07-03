@@ -163,6 +163,21 @@
           transform: translate3d(@x, @y, @z);
 }
 
+/*.rotate (
+    @rotation: @rotate
+  ){
+
+    @degs: e("@{rotation}deg");
+    @degs-ie: @rotation / 90;
+
+    -webkit-transform: rotate(@degs);
+    -moz-transform: rotate(@degs);
+    -o-transform: rotate(@degs);
+    -ms-transform: rotate(@degs);
+    transform: rotate(@degs);
+    filter: e("progid:DXImageTransform.Microsoft.BasicImage(rotation=@{degs-ie})");
+}*/
+
 .rotate (@degrees) {
   -webkit-transform: rotate(@degrees);
       -ms-transform: rotate(@degrees); // IE9 only
@@ -204,10 +219,22 @@
 }
 
 // Transitions
-.transition (@transition) {
+/*.transition (@transition) {
   -webkit-transition: @transition;
        -o-transition: @transition;
           transition: @transition;
+}
+*/
+.transition (
+    @time: @time,
+    @direction: all
+  ){
+
+  -webkit-transition: @direction @time;
+  -moz-transition:    @direction @time;
+  -ms-transition:     @direction @time;
+  -o-transition:      @direction @time;
+    transition:     @direction @time;
 }
 
 .transition-property (@transition-property) {
