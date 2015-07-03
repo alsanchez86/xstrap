@@ -36,6 +36,8 @@
         XSTRAP <strong>1.0</strong>
         <small>Responsive web design</small>
     </h1>
+
+    <img class="img-responsive center-block" src="./xstrap/images/xstrap-logo.png">
 </header>
 
 <div class="container">

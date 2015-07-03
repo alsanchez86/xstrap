@@ -6,12 +6,14 @@
 
 // MAIN
 .header {
+  margin-bottom: @space;
+  padding: @space * 2.5 @space;
+
+  overflow: hidden;
   background: linear-gradient(160deg, #290B36 0%, #043453 100%);
 
-  h1 {
+  & > h1 {
     .text-shadow (@blanco, 0px , 3px);
-    padding: @space * 2.5 @space;
-
     color: @blanco;
     text-align: center;
 
@@ -19,6 +21,10 @@
       display: block;
       font-size: 50%;
     }
+  }
+
+  & > p {
+    margin-bottom: 0px;
   }
 }
 
