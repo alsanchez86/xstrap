@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>XSTRAP 1.0 [min version]</title>
+    <title>XSTRAP 1.0</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,6 +38,11 @@
     </h1>
 
     <img class="img-responsive center-block" src="./xstrap/images/xstrap-logo.png">
+
+    <div class="designed-by-header">
+        <i>designed by</i>
+        <img src="./xstrap/images/oxe-logo.png">
+    </div>
 </header>
 
 <div class="container">

@@ -6,8 +6,9 @@
 
 // MAIN
 .header {
+  position: relative;
   margin-bottom: @space;
-  padding: @space * 2.5 @space;
+  padding: @space * 2.8 @space;
 
   overflow: hidden;
   background: linear-gradient(160deg, #290B36 0%, #043453 100%);
@@ -25,6 +26,24 @@
 
   & > p {
     margin-bottom: 0px;
+  }
+
+  .designed-by-header {
+    position: absolute;
+    bottom: @space / 1.5;
+    right: @space * 1.5;
+
+    overflow: hidden;
+    color: @blanco;
+
+    i {
+      padding-right: 12px;
+      font-size: 12px;
+    }
+
+    img {
+      float: right;
+    }
   }
 }
 
@@ -132,6 +151,24 @@
 // XS
 @media (max-width: @screen-xs-max) {
 
+  .header {
+    padding-bottom: @space * 4;
+
+    .designed-by-header {
+      bottom: 5px;
+      left: 0px;
+      right: 0px;
+      text-align: center;
+
+      i {
+        display: block;
+      }
+
+      img {
+        float: none;
+      }
+    }
+  }
 }
 
 // SM
