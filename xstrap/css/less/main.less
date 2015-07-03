@@ -6,6 +6,22 @@
 @import url('../../extra/buttons/less/buttons.less');
 
 // MAIN
+.btn-3d {
+  .border (1px solid @rojo-o);
+  .gradient (@rojo, @rojo-o, -180deg, 50%, 100%);
+  .box-shadow (rgba(0,0,0,0.4), 3px);
+  border-top-color: @rojo-c;
+  border-bottom-color: @rojo-oo;
+
+  &:hover,
+  &:focus,
+  &.active {
+    .gradient (@rojo, @rojo-o, 0deg, 0%, 50%);
+    border-top-color: @rojo-o;
+    border-bottom-color: @rojo-o;
+  }
+}
+
 .header {
   position: relative;
   margin-bottom: @space;

@@ -1,6 +1,8 @@
+// imports
 @import url('vars.less');
 @import url('mixin.less');
 
+// less
 button,
 .btn {
   .button       ();
@@ -23,38 +25,23 @@ button,
   touch-action:     manipulation;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-
   &::before,
   &::after {
     display: inline-block;
     vertical-align: middle;
   }
 
+  &:hover,
+  &:focus,
   &.active,
   &:active {
-    outline: 0;
-    background-image: none;
     .box-shadow (transparent, 0px);
+    outline: 0;
+    text-decoration: none;
+    background-image: none;
   }
 
   @media (max-width: @screen-sm-max) {
-    font-size: @font-size-xs-sm;
-  }
-}
-
-.btn-3d {
-  .border (1px solid @rojo-o, 2px);
-  .gradient (@rojo, @rojo-o, -180deg, 0%, 100%);
-  .box-shadow (rgba(0,0,0,0.4));
-
-  &:hover,
-  &:focus,
-  &.active {
-    .gradient (@rojo, @rojo-o, 0deg, 0%, 60%);
-    .box-shadow (transparent, 0px);
+    font-size: @font-size-small;
   }
 }
