@@ -47,3 +47,5 @@ p{margin:0 0 20px 0}
 
 Estilos de botones:
 http://monodraw.helftone.com/
+
+En un futuro, desarrollar super-componentes tipo navbar de bootstrap.
