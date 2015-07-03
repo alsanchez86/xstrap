@@ -31,14 +31,14 @@
 </head>
 <body>
 
-<div class="body-container container">
-    <header>
-        <h1>
-            XSTRAP 1.0
-            <small>(Responsive Web Design)</small>
-        </h1>
-    </header>
+<header class="header">
+    <h1>
+        XSTRAP <strong>1.0</strong>
+        <small>Responsive web design</small>
+    </h1>
+</header>
 
+<div class="container">
     <!-- Grid System -->
     <h2>Grid System&nbsp;<span class="glyphicon glyphicon-th"></span></h2>
 

@@ -1,119 +1,103 @@
 // A través del archivo vars.less, se tiene que poder modificar las variables de los archivos del core base.less, grid.less, print.less, responsive-utilities.less y utilities.less
 // Los mixins "beberán" de dichas variables.
 
-/* GRID SYSTEM */
-//Sizes
-//xs
+// GRID SYSTEM
+// xs
 @screen-xs:     480px;
 @screen-xs-min: @screen-xs;
 @screen-phone:  @screen-xs-min;
 
-//sm
+// sm
 @screen-sm:     768px;
 @screen-sm-min: @screen-sm;
 @screen-tablet: @screen-sm-min;
 
-//md
+// md
 @screen-md:      992px;
 @screen-md-min:  @screen-md;
 @screen-desktop: @screen-md-min;
 
-//lg
+// lg
 @screen-lg:         1200px;
 @screen-lg-min:     @screen-lg;
 @screen-lg-desktop: @screen-lg-min;
 
-//others
+// specials
 @screen-xs-max: (@screen-sm-min - 1);
 @screen-sm-max: (@screen-md-min - 1);
 @screen-md-max: (@screen-lg-min - 1);
 
-//Grid system
+// columns
 @grid-columns:      12; //grid base. Se pueden crear grid no multiplos de 12 específicos sin necesidad de cambiar el base.
 @grid-gutter-width: 30px;
 
-//Containers
-//sm
-//@container-tablet: (720px + @grid-gutter-width);
+// containers
+// sm
+// @container-tablet: (720px + @grid-gutter-width);
 @container-sm: auto;
-//md
+
+// md
 @container-desktop: (940px + @grid-gutter-width);
 @container-md:      @container-desktop;
-//lg
+
+// lg
 @container-large-desktop: (1140px + @grid-gutter-width);
 @container-lg:            @container-large-desktop;
-/* end GRID SYSTEM */
 
-/* GENERICS */
-//paths
+// GENERICS
+// paths
 @path-images: 	'../images/';
 @path-css: 		'../css/';
 @path-extra: 	'../extra/';
 @path-fonts: 	'../fonts/';
-//end paths
 
-//basics
+// basics
 @space: 			20px; // margin-bottom block elements
 @space-small: 		15px; // margin-bottom block elements
 
-@background-color:  @c1;
+@background-color:  @blanco;
 @border-radius: 	2px;
 @opacity: 			0.7;
-@shadow-color: 		rgba(0,0,0,0.18);
+@shadow-color: 		rgba(0,0,0,0.2);
 @blur:				2px;
 
 @rotate: 			90;
-@time: 				0.15s;
-//end basics
+@time: 				.15s;
 
-//colours (http://paletton.com/)
-@c1: #FFF; 		//blanco
-@c2: #000; 		//negro
-@c3: #CCC; 		//gris
-@c4: #FF0033; 	//rojo
+// colours (http://paletton.com/)
+@blanco: 	#FFF;
+@negro: 	#000;
+@gris: 		#CCC;
+@rojo: 		#FF0033;
 
-@c5: 	#252B3E; 	//azul oscuro
-@c8: 	#59B69E; 	//verde
-@c9: 	#69D7BB; 	//verde claro
-@c10: 	#777777; 	//gris
-@c11: 	#F9F9FA; 	//gris claro
-@c12: 	#EEEEEE; 	//gris claro 2
-@c13: 	#F7805F; 	//naranja ximdex
-@c14: 	#FF916D; 	//naranja ximdex claro
-//end colours
-
-//fonts (imports from google fonts)
+// fonts (imports from google fonts)
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400);
 
 @ubuntu: 'Ubuntu', sans-serif;
-//end fonts
 
-//text-base
+// text-base
 @font-family: 		@ubuntu;
 @font-size:   		14px;
 @font-size-xs-sm:   12px;
 @font-weight: 		400;
 @font-style:		normal;
-@color: 			@c10;
+@color: 			@negro;
 @line-height: 		180%;
 @letter-spacing: 	2px;
 @text-align: 		left;
 @text-transform: 	normal;
 @text-indent: 		@space; //.text-indent (class)
-//end text-base
-/* END GENERICS */
 
-/* HTML ELEMENTS */
-//links
-@a-color:					@c8;
-@a-color-hover: 			@c9;
+// HTML
+// links
+@a-color:					@rojo;
+@a-color-hover: 			@rojo;
 @a-text-decoration: 		none;
 @a-text-decoration-hover: 	none;
 @a-background-color: 		transparent;
 @a-background-color-hover: 	transparent;
-//end links
 
-//titles
+// titles
 @h1-font-family: @font-family;
 @h2-font-family: @font-family;
 @h3-font-family: @font-family;
@@ -134,7 +118,7 @@
 @h6-font-size: 			@font-size;
 @h6-font-size-xs-sm: 	@font-size-xs-sm;
 
-@h1-font-weight: 700;
+@h1-font-weight: @font-weight;
 @h2-font-weight: @font-weight;
 @h3-font-weight: @font-weight;
 @h4-font-weight: @font-weight;
@@ -148,10 +132,10 @@
 @h5-font-style: @font-style;
 @h6-font-style: @font-style;
 
-@h1-color: @c5;
-@h2-color: @c5;
-@h3-color: @c5;
-@h4-color: @c5;
+@h1-color: @color;
+@h2-color: @color;
+@h3-color: @color;
+@h4-color: @color;
 @h5-color: @color;
 @h6-color: @color;
 
@@ -162,7 +146,7 @@
 @h5-text-transform: @text-transform;
 @h6-text-transform: @text-transform;
 
-@h1-line-height: 100%;
+@h1-line-height: 120%;
 @h2-line-height: @line-height;
 @h3-line-height: @line-height;
 @h4-line-height: @line-height;
@@ -175,64 +159,56 @@
 @h4-text-align: @text-align;
 @h5-text-align: @text-align;
 @h6-text-align: @text-align;
-//end titles
 
-//marked text
+// marked text
 @mark-padding: 2px 5px;
 
-@mark-color: 			@c2;
-@mark-background-color: @c3;
-//end marked text
+@mark-color: 			@negro;
+@mark-background-color: @gris;
 
-//small
+// small
 @small-font-size: 70%;
-//end small
 
-//blockquotes
+// blockquotes
 @blockquote-padding: 			@space;
 @blockquote-font-size: 			@font-size;
-@blockquote-border-left: 		5px solid @c3;
+@blockquote-border-left: 		5px solid @gris;
 @blockquote-small-font-size: 	12px;
-@blockquote-small-color: 		@c3;
-//end blockquotes
+@blockquote-small-color: 		@gris;
 
-//text-highlight & text-lowlight
-@lowlight-color: 	@c3;
-@highlight-color: 	@c13;
-//end text-highlight & text-lowlight
+// text-highlight & text-lowlight
+@lowlight-color: 	@gris;
+@highlight-color: 	@rojo;
 
-//lists
+// lists
 @list-item-margin-bottom: 	@space / 2;
 @sublist-padding-left: 		@space;
 
 @list-style-position: 		inside;
 @styled-list-style-image: 	'@{path-images}list-styled-icon.gif';
 @ol-list-style-type:		normal; //normal, upper-roman, lower-alpha
-@ol-list-style-color:		@c10;
-//end lists
+@ol-list-style-color:		@color;
 
-//code
+// code
 //.text (@font-family, @font-size, @font-weight, @font-style, @color);
 @code-padding: 			2px 4px;
 
 @code-font-family: 		'Courier New', sans-serif;
-@code-color: 			@c4;
-@code-background-color: @c3;
-@code-border:  			1px solid @c2;
+@code-color: 			@rojo;
+@code-background-color: @gris;
+@code-border:  			1px solid @negro;
 @code-border-radius: 	@border-radius;
-//end code
 
-//kbd
+// kbd
 @kbd-padding: 			2px 4px;
 
-@kbd-color: 			@c1;
-@kbd-background-color: 	@c2;
+@kbd-color: 			@blanco;
+@kbd-background-color: 	@negro;
 @kbd-border:  			0px;
 @kbd-border-radius: 	@border-radius;
-//end kbd
 
-//pre
-@pre-border: 			1px solid @c3;
+// pre
+@pre-border: 			1px solid @gris;
 @pre-border-radius: 	@border-radius;
 @pre-padding: 			@space;
 
@@ -242,13 +218,10 @@
 @pre-color: 			@color;
 @pre-background-color: 	@background-color;
 @pre-line-height: 		@line-height;
-//end pre
 
-//label
+// label
 @label-font-family: @font-family;
 @label-font-size: 	16px;
 @label-font-weight: @font-weight;
 @label-font-style: 	@font-style;
-@label-color: 		@c3;
-//end label
-/* END HTML ELEMENTS */
+@label-color: 		@gris;
