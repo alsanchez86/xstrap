@@ -272,3 +272,126 @@
       -ms-user-select: @select; // IE10+
           user-select: @select;
 }
+
+// Animate.css
+.animated (
+    @time: @time
+  ){
+
+  -webkit-animation-duration:   @time;
+  animation-duration:       @time;
+  -webkit-animation-fill-mode:  both;
+  animation-fill-mode:      both;
+}
+
+.fadeIn (
+    @time: @time,
+    @start: 0,
+    @end: 1
+  ){
+
+  .animated (@time);
+
+  @-webkit-keyframes fadeIn {
+      0% {
+        opacity: @start;
+      }
+
+      100% {
+        opacity: @end;
+      }
+  }
+
+  @keyframes fadeIn {
+      0% {
+        opacity: @start;
+      }
+
+      100% {
+        opacity: @end;
+      }
+  }
+
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.slideInLeft (
+    @time:  @time,
+    @start: 0%,
+    @end:   100%
+  ){
+
+  .animated (@time);
+
+  @-webkit-keyframes slideInLeft {
+      0% {
+        -webkit-transform: translateX(-@end);
+        transform: translateX(-@end);
+        visibility: visible;
+      }
+
+      100% {
+        -webkit-transform: translateX(@start);
+        transform: translateX(@start);
+      }
+  }
+
+  @keyframes slideInLeft {
+      0% {
+        -webkit-transform: translateX(-@end);
+        -ms-transform: translateX(-@end);
+        transform: translateX(-@end);
+        visibility: visible;
+      }
+
+      100% {
+        -webkit-transform: translateX(@start);
+        -ms-transform: translateX(@start);
+        transform: translateX(@start);
+      }
+  }
+
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+.slideInDown (
+    @time:  @time,
+    @start: 0%,
+    @end:   100%
+  ){
+
+  .animated (@time);
+
+  @-webkit-keyframes slideInDown {
+      0% {
+        -webkit-transform: translateY(-@end);
+        transform: translateY(-@end);
+        visibility: visible;
+      }
+
+      100% {
+        -webkit-transform: translateY(@start);
+        transform: translateY(@start);
+      }
+  }
+
+  @keyframes slideInDown {
+      0% {
+        -webkit-transform: translateY(-@end);
+        -ms-transform: translateY(-@end);
+        transform: translateY(-@end);
+        visibility: visible;
+      }
+
+      100% {
+        -webkit-transform: translateY(@start);
+        -ms-transform: translateY(@start);
+        transform: translateY(@start);
+      }
+  }
+
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
