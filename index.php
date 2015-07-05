@@ -39,6 +39,8 @@
 
     <img class="img-responsive center-block" src="./xstrap/images/xstrap-logo.png" alt="XStrap" title="XStrap">
 
+    <a class="btn-github-header btn hidden-xs" href="https://github.com/alsanchez86/xstrap" target="_blank">View on github&nbsp;&nbsp;<span class="icomoon-github icomoon"></span></a>
+
     <div class="designed-by-header">
         <i>designed by</i>
         <img src="./xstrap/images/oxe-logo.png" alt="designed by Ximdex" title="designed by Ximdex">
