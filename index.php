@@ -48,12 +48,11 @@
 </header>
 
 <div class="container">
-    <p>
-        <a class="btn-3d btn" href="">Prueba de componente button</a>
-    </p>
-
     <!-- Grid System -->
-    <h2>Grid System&nbsp;<span class="glyphicon glyphicon-th"></span></h2>
+    <h2>
+        <span class="icomoon-redo2 icomoon"></span>
+        Grid System
+    </h2>
 
     <h3>Containers:</h3>
 
@@ -64,13 +63,18 @@
         <li>Fluid container: <span class="text-highlight">div.container-fluid</span></li>
     </ul>
 
-    <p class="text-highlight">
-        (*) Los containers, normales o fluids, podrán contener todo tipo de contenido; y a su vez esté podrá estar organizado en filas y columnas, pero <strong>en ningún caso un container podrá contener a otros containers.</strong>
-    </p>
+    <blockquote>
+        <p>
+            <i>
+                (*) Los containers, normales o fluids, podrán contener todo tipo de contenido; y a su vez esté podrá estar organizado en filas y columnas, pero <strong>en ningún caso un container podrá contener a otros containers.</strong>
+            </i>
+        </p>
 
-    <p><i>En xstrap, por defecto (ver vars.less) el .container se comportará como .container-fluid para las resoluciones XS y SM.</i></p>
+        <p>
+            <i>En xstrap, por defecto (ver vars.less) el .container se comportará como .container-fluid para las resoluciones XS y SM.</i>
+        </p>
+    </blockquote>
 
-    <br>
     <div class="doc-rows">
         <h3>Rows:</h3>
 
@@ -173,7 +177,10 @@
     <!-- Generics -->
     <br>
     <br>
-    <h2>Generics&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></h2>
+    <h2>
+        <span class="icomoon-redo2 icomoon"></span>
+        Generics
+    </h2>
 
     <div class="row">
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
@@ -181,7 +188,7 @@
 
             <ul class="list-styled">
                 <li>space</li>
-                <li>space-xs-sm</li>
+                <li>space-small</li>
                 <li>background-color</li>
                 <li>border-radius</li>
                 <li>opacity</li>
@@ -193,72 +200,12 @@
         </div>
 
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <h3>Colours:</h3>
-
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="colour c1">
-                        c1:<br>#FFF
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="colour c2">
-                        c2:<br>#000
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="colour c3">
-                        c3:<br>#CCC
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="colour c4">
-                        c4:<br>#FF0033
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <h3>Fonts:</h3>
-
-            <p>
-                <strong>Glyphicon <small>(Bootstrap Component):</small></strong>
-                &nbsp;
-                <a id="show-glyphicon-list" class="btn" href="#">Glyphicon-list <small>(modal)</small></a>
-            </p>
-
-            <div id="glyphicon-list-xstrap" class="glyphicon-list-xstrap">
-                <?php //include_once ('./xstrap/glyphicon-list.html') ?>
-            </div>
-
-            <p>
-                <strong>Icomoon:</strong>
-                &nbsp;
-                <a id="show-icomoon-list" class="btn" href="#">Icomoon-list <small>(modal)</small></a>
-            </p>
-
-            <div id="icomoon-list" class="icomoon-list">
-                <?php //include_once ('icomoon-list.php') ?>
-            </div>
-
-            <p><strong>Installed Typographies <small>(google fonts)</small></strong>:</p>
-
-            <ul class="list-styled">
-                <li>Opensans</li>
-            </ul>
-        </div>
-
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
             <h3>Text base:</h3>
 
             <ul class="list-styled">
                 <li>font-family</li>
                 <li>font-size</li>
-                <li>font-size-xs-sm</li>
+                <li>font-size-small</li>
                 <li>font-weight</li>
                 <li>font-style</li>
                 <li>color</li>
@@ -275,9 +222,8 @@
     <!-- HTML Elements -->
     <br>
     <h2>
+        <span class="icomoon-redo2 icomoon"></span>
         HTML ELEMENTS
-        &nbsp;
-        <span class="glyphicon glyphicon-paperclip"></span>
     </h2>
 
     <h3>Links: <small>(a)</small></h3>

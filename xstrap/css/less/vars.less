@@ -68,8 +68,9 @@
 @blanco: 	#FFF;
 @negro: 	#000;
 @gris: 		#CCC;
+@gris-2: 	#666;
 @rojo: 		#FF0033;
-@rojo1: 	#FF5383;
+@rojo1: 	#E60026;
 @rojo-1: 	#D60023;
 @rojo-2: 	#8F0014;
 
@@ -136,7 +137,7 @@
 @h6-font-style: @font-style;
 
 @h1-color: @color;
-@h2-color: @color;
+@h2-color: @rojo1;
 @h3-color: @color;
 @h4-color: @color;
 @h5-color: @color;
@@ -174,14 +175,16 @@
 
 // blockquotes
 @blockquote-padding: 			@space;
-@blockquote-font-size: 			@font-size;
-@blockquote-border-left: 		5px solid @gris;
-@blockquote-small-font-size: 	12px;
+
+@blockquote-font-size: 			12px;
+@blockquote-color: 				@gris-2;
+@blockquote-small-font-size: 	11px;
 @blockquote-small-color: 		@gris;
+@blockquote-border-left: 		5px solid @gris;
 
 // text-highlight & text-lowlight
 @lowlight-color: 	@gris;
-@highlight-color: 	@rojo;
+@highlight-color: 	@gris-2;
 
 // lists
 @list-item-margin-bottom: 	@space / 2;
