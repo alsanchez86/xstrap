@@ -29,7 +29,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#spy-nav" data-offset="20" data-offset-bottom="200">
 
 <header class="header">
     <h1>
@@ -48,176 +48,196 @@
 </header>
 
 <div class="container">
-    <!-- Grid System -->
-    <h2>
-        <span class="icomoon-redo2 icomoon"></span>
-        Grid System
-    </h2>
+    <div class="row">
+        <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+            <nav id="spy-nav" data-spy="affix" data-offset-top="0">
+                <ol class="nav">
+                    <li><a href="#open-data">Open Data</a></li>
+                    <li class="li-no-style">
+                        <ol>
+                            <li><a href="#data-management">Data Management</a></li>
+                            <li><a href="#data-gov">Data.gov</a></li>
+                            <li><a href="#agriculture-nutrition">Agriculture & Nutrition</a></li>
+                            <li><a href="#disaster-prevention-recovery">Disaster Prevention & Recovery qwiqygd q qiwud gqiu gqwid qwid ug</a></li>
+                        </ol>
+                    </li>
+                </ol>
 
-    <h3>Containers:</h3>
-
-    <p>Dos tipos de container:</p>
-
-    <ul class="list-styled">
-        <li>Container <small>(&amp; = container-fluid para XS y SM)</small>: <span class="text-highlight">div.container</span></li>
-        <li>Fluid container: <span class="text-highlight">div.container-fluid</span></li>
-    </ul>
-
-    <blockquote>
-        <p>
-            <i>
-                (*) Los containers, normales o fluids, podrán contener todo tipo de contenido; y a su vez esté podrá estar organizado en filas y columnas, pero <strong>en ningún caso un container podrá contener a otros containers.</strong>
-            </i>
-        </p>
-
-        <p>
-            <i>En xstrap, por defecto (ver vars.less) el .container se comportará como .container-fluid para las resoluciones XS y SM.</i>
-        </p>
-    </blockquote>
-
-    <div class="doc-rows">
-        <h3>Rows:</h3>
-
-        <p>
-            Existen diferentes métodos para crear el grid system, cada uno pensado para cubrir ciertas necesidades que nos puedan surgir según los requisitos del diseño, tales como grids no múltiplos de 12.
-        </p>
-
-        <p><strong>1) Default row (grid múltiplo de 12) creado directamente en el html con el grid-system de bootstrap:</strong></p>
-
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
+                <a href="#header">Go to top&nbsp;&nbsp;<span class="glyphicon glyphicon-hand-up"></span></a>
+            </nav>
         </div>
 
-        <br>
-        <p><strong>2) Custom row (grid múltiplo de 12) creado a través del mixin <u>.make-*-column ()</u> de bootstrap:</strong></p>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            <!-- Grid System -->
+            <h2>
+                <span class="icomoon-redo2 icomoon"></span>
+                Grid System
+            </h2>
 
-        <div class="row">
-            <div class="custom-col-1">custom-col-1</div>
-            <div class="custom-col-2">custom-col-2</div>
-            <div class="custom-col-3">custom-col-3</div>
-        </div>
+            <h3>Containers:</h3>
 
-        <br>
-        <p><strong>3) Custom row (NO multiplo de 12) creado a través del mixins <u>.make-*-column ()</u> de bootstrap:</strong></p>
+            <p>Dos tipos de container:</p>
 
-        <p>
-            En este caso, se le pasará a los mixins .make-*-column () como parámetro el resultado de dividir 12 por el número de columnas de las que queramos que esté compuesto el grid. Ej: 12 / 5 = 2.4
-        </p>
+            <ul class="list-styled">
+                <li>Container <small>(&amp; = container-fluid para XS y SM)</small>: <span class="text-highlight">div.container</span></li>
+                <li>Fluid container: <span class="text-highlight">div.container-fluid</span></li>
+            </ul>
 
-        <div class="row">
-            <div class="custom-col-no-12-1">.custom-col-no-12-1</div>
-            <div class="custom-col-no-12-2">.custom-col-no-12-2</div>
-            <div class="custom-col-no-12-3">.custom-col-no-12-3</div>
-            <div class="custom-col-no-12-4">.custom-col-no-12-4</div>
-            <div class="custom-col-no-12-5">.custom-col-no-12-5</div>
-        </div>
+            <blockquote>
+                <p>
+                    <i>
+                        (*) Los containers, normales o fluids, podrán contener todo tipo de contenido; y a su vez esté podrá estar organizado en filas y columnas, pero <strong>en ningún caso un container podrá contener a otros containers.</strong>
+                    </i>
+                </p>
 
-        <br>
-        <br>
-        <h3>Casos especiales:</h3>
+                <p>
+                    <i>En xstrap, por defecto (ver vars.less) el .container se comportará como .container-fluid para las resoluciones XS y SM.</i>
+                </p>
+            </blockquote>
 
-        <p><strong>1) Reset de posición de columnas:</strong></p>
+            <div class="doc-rows">
+                <h3>Rows:</h3>
 
-        <p>
-            Usar .clearfix cuando queramos resetear/limpiar las posiciones de unas determinadas columnas para una resolución determinada, de forma que las que se encuentren a continuación del div.clearfix, pasarán a ocupar la siguiente línea horizontal.
-        </p>
+                <p>
+                    Existen diferentes métodos para crear el grid system, cada uno pensado para cubrir ciertas necesidades que nos puedan surgir según los requisitos del diseño, tales como grids no múltiplos de 12.
+                </p>
 
-        <p>
-            Es muy útil cuando, debido a que las columnas tienen diferentes altos debido a su contenido, obligamos a las nuevas columnas que se añadan a que se posicionen en una nueva línea horizontal respetando la altura de su columna hermana, y no posicionandose en el hueco que quedaría (tal como ocurre por defecto).
-        </p>
+                <p><strong>1) Default row (grid múltiplo de 12) creado directamente en el html con el grid-system de bootstrap:</strong></p>
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
-            <div class="clearfix visible-md-block">.clearfix</div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
-        </div>
-
-        <br>
-        <p><strong>2) Desplazamiento de columnas:</strong></p>
-
-        <p>Desplaza columnas hacía la derecha para determinadas resoluciones usando las clases .col-*-offset-*.</p>
-
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-3 col-md-offset-4 col-lg-3 col-lg-offset-5">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
-        </div>
-
-        <br>
-        <p><strong>3) Unificando filas y columnas:</strong></p>
-
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">.col-xs-12 col-sm-4 col-md-4 col-lg-4</div>
-            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
+                </div>
+
+                <br>
+                <p><strong>2) Custom row (grid múltiplo de 12) creado a través del mixin <u>.make-*-column ()</u> de bootstrap:</strong></p>
+
+                <div class="row">
+                    <div class="custom-col-1">custom-col-1</div>
+                    <div class="custom-col-2">custom-col-2</div>
+                    <div class="custom-col-3">custom-col-3</div>
+                </div>
+
+                <br>
+                <p><strong>3) Custom row (NO multiplo de 12) creado a través del mixins <u>.make-*-column ()</u> de bootstrap:</strong></p>
+
+                <p>
+                    En este caso, se le pasará a los mixins .make-*-column () como parámetro el resultado de dividir 12 por el número de columnas de las que queramos que esté compuesto el grid. Ej: 12 / 5 = 2.4
+                </p>
+
+                <div class="row">
+                    <div class="custom-col-no-12-1">.custom-col-no-12-1</div>
+                    <div class="custom-col-no-12-2">.custom-col-no-12-2</div>
+                    <div class="custom-col-no-12-3">.custom-col-no-12-3</div>
+                    <div class="custom-col-no-12-4">.custom-col-no-12-4</div>
+                    <div class="custom-col-no-12-5">.custom-col-no-12-5</div>
+                </div>
+
+                <br>
+                <br>
+                <h3>Casos especiales:</h3>
+
+                <p><strong>1) Reset de posición de columnas:</strong></p>
+
+                <p>
+                    Usar .clearfix cuando queramos resetear/limpiar las posiciones de unas determinadas columnas para una resolución determinada, de forma que las que se encuentren a continuación del div.clearfix, pasarán a ocupar la siguiente línea horizontal.
+                </p>
+
+                <p>
+                    Es muy útil cuando, debido a que las columnas tienen diferentes altos debido a su contenido, obligamos a las nuevas columnas que se añadan a que se posicionen en una nueva línea horizontal respetando la altura de su columna hermana, y no posicionandose en el hueco que quedaría (tal como ocurre por defecto).
+                </p>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
+                    <div class="clearfix visible-md-block">.clearfix</div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
+                </div>
+
+                <br>
+                <p><strong>2) Desplazamiento de columnas:</strong></p>
+
+                <p>Desplaza columnas hacía la derecha para determinadas resoluciones usando las clases .col-*-offset-*.</p>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-3 col-md-offset-4 col-lg-3 col-lg-offset-5">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
+                </div>
+
+                <br>
+                <p><strong>3) Unificando filas y columnas:</strong></p>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">.col-xs-12 col-sm-4 col-md-4 col-lg-4</div>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <p><strong>4) Ordenación de columnas:</strong></p>
+
+                <p>
+                    Se puede alterar el orden de las columnas como se desee para determinadas resoluciones, de forma que el orden predispuesto en el HTML del row se pueda alterar cuando el diséño así lo exija.
+                </p>
+
+                <div class="row">
+                    <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+                    <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
                 </div>
             </div>
+            <!-- end Grid System -->
+
+            <!-- Generics -->
+            <br>
+            <br>
+            <h2>
+                <span class="icomoon-redo2 icomoon"></span>
+                Generics:
+            </h2>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <h3>Basics:</h3>
+
+                <ul class="list-styled">
+                    <li>space</li>
+                    <li>space-small</li>
+                    <li>background-color</li>
+                    <li>border-radius</li>
+                    <li>opacity</li>
+                    <li>shadow-color</li>
+                    <li>blur</li>
+                    <li>rotate</li>
+                    <li>time</li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <h3>Text base:</h3>
+
+                <ul class="list-styled">
+                    <li>font-family</li>
+                    <li>font-size</li>
+                    <li>font-size-small</li>
+                    <li>font-weight</li>
+                    <li>font-style</li>
+                    <li>color</li>
+                    <li>line-height</li>
+                    <li>letter-spacing</li>
+                    <li>text-align</li>
+                    <li>text-transform</li>
+                    <li>text-indent</li>
+                </ul>
+            </div>
         </div>
-
-        <br>
-        <p><strong>4) Ordenación de columnas:</strong></p>
-
-        <p>
-            Se puede alterar el orden de las columnas como se desee para determinadas resoluciones, de forma que el orden predispuesto en el HTML del row se pueda alterar cuando el diséño así lo exija.
-        </p>
-
-        <div class="row">
-            <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
-            <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
-        </div>
-    </div>
-    <!-- end Grid System -->
-
-    <!-- Generics -->
-    <br>
-    <br>
-    <h2>
-        <span class="icomoon-redo2 icomoon"></span>
-        Generics:
-    </h2>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <h3>Basics:</h3>
-
-            <ul class="list-styled">
-                <li>space</li>
-                <li>space-small</li>
-                <li>background-color</li>
-                <li>border-radius</li>
-                <li>opacity</li>
-                <li>shadow-color</li>
-                <li>blur</li>
-                <li>rotate</li>
-                <li>time</li>
-            </ul>
-        </div>
-
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <h3>Text base:</h3>
-
-            <ul class="list-styled">
-                <li>font-family</li>
-                <li>font-size</li>
-                <li>font-size-small</li>
-                <li>font-weight</li>
-                <li>font-style</li>
-                <li>color</li>
-                <li>line-height</li>
-                <li>letter-spacing</li>
-                <li>text-align</li>
-                <li>text-transform</li>
-                <li>text-indent</li>
-            </ul>
-        </div>
-    </div>
-    <!-- end Generics -->
+        <!-- end Generics -->
 
     <!-- HTML Elements -->
     <br>
@@ -507,6 +527,14 @@
             </tbody>
         </table>
     </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
     <!-- <p>Las variables declaradas en variables.less, la mayoría son traspasables al compilador de bootstrap (como @form-group-margin-bottom), de manera que dichos valores de dichas variables se pueden tener en un confing.json que se sube al customize de bootstrap <a href="http://getbootstrap.com/customize/" target="_blank">http://getbootstrap.com/customize/</a> y así se evita que haya estilos duplicados y redefinidos en el CSS.</p>
 
@@ -534,12 +562,18 @@
     <p>Aquí se definiran el valor de las variables en config.json</p>
 
     <p>El proceso de pasar el trabajo del entorno de <strong>DESARROLLO</strong> al entorno de <strong>PRODUCCIÓN</strong> trata de trasladar los valores de variables.less a config.json, y deshabilitar aquellos componentes de Bootstrap que no se usen en el proyecto actual (comentar las líneas correspondientes en config.json).</p> -->
-</div>
 
 <?php //include_once ('modal-default.php'); ?>
 
 <!-- jquery [v < 2] -->
 <script src="./xstrap/js/jquery.js"></script>
+
+<!-- COMPONENTS -->
+<!-- affix -->
+<script src="./xstrap/extra/affix/js/affix.js"></script>
+<!-- scrollspy -->
+<script src="./xstrap/extra/scrollspy/js/scrollspy.js"></script>
+
 <!-- main -->
 <script src="./xstrap/js/main.js"></script>
 </body>
