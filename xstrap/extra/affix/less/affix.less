@@ -1,1 +1,13 @@
-.affix { position: fixed; }
+.affix {
+	position: fixed;
+    max-width: 250px;
+
+    .nav {
+        .active {
+            & > a {
+                .link (@blanco, @blanco, none, none, @rojo, @rojo);
+                padding: 5px;
+            }
+        }
+    }
+}
