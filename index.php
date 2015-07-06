@@ -179,7 +179,7 @@
     <br>
     <h2>
         <span class="icomoon-redo2 icomoon"></span>
-        Generics
+        Generics:
     </h2>
 
     <div class="row">
@@ -221,9 +221,10 @@
 
     <!-- HTML Elements -->
     <br>
+    <br>
     <h2>
         <span class="icomoon-redo2 icomoon"></span>
-        HTML ELEMENTS
+        HTML ELEMENTS:
     </h2>
 
     <h3>Links: <small>(a)</small></h3>
@@ -320,7 +321,7 @@
                 <li>item li 2</li>
                 <li>item li 3</li>
 
-                <li class="li-no-icon">
+                <li class="li-no-style">
                     <ul>
                         <li>subitem li 1</li>
                         <li>subitem li 2</li>
@@ -338,7 +339,7 @@
                 <li>item li 2</li>
                 <li>item li 3</li>
 
-                <li class="li-no-icon">
+                <li class="li-no-style">
                     <ol>
                         <li>subitem li 1</li>
                         <li>subitem li 2</li>
@@ -356,7 +357,7 @@
                 <li>item li 2</li>
                 <li>item li 3</li>
 
-                <li class="li-no-icon">
+                <li class="li-no-style">
                     <ul class="list-styled">
                         <li>subitem li 1</li>
                         <li>subitem li 2</li>
@@ -424,8 +425,88 @@
 
         <p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
     </div>
-
     <!-- end HTML Elements -->
+
+    <br>
+    <br>
+    <h2>
+        <span class="icomoon-redo2 icomoon"></span>
+        XSTRAP COMPONENTS:
+    </h2>
+
+    <h3>Tables: <small>(table)</small></h3>
+
+    <h4>Default table:</h4>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1 owighwoef hwioefheoifhwefio</td>
+                <td>2 owighwoef hwioefheoifhwefio</td>
+                <td>3 owighwoef hwioefheoifhwefio</td>
+                <td>1 owighwoef hwioefheoifhwefio</td>
+                <td>2 owighwoef hwioefheoifhwefio</td>
+                <td>3 owighwoef hwioefheoifhwefio</td>
+            </tr>
+
+            <tr>
+                <td>1 owighwoef hwioefheoifhwefio</td>
+                <td>2 owighwoef hwioefheoifhwefio</td>
+                <td>3 owighwoef hwioefheoifhwefio</td>
+                <td>1 owighwoef hwioefheoifhwefio</td>
+                <td>2 owighwoef hwioefheoifhwefio</td>
+                <td>3 owighwoef hwioefheoifhwefio</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Responsive table:</h4>
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>1 iuyewg iwgefiwegfiuwe gfiuewf</th>
+                    <th>2 iuyewg iwgefiwegfiuwe gfiuewf</th>
+                    <th>3 iuyewg iwgefiwegfiuwe gfiuewf</th>
+                    <th>1 iuyewg iwgefiwegfiuwe gfiuewf</th>
+                    <th>2 iuyewg iwgefiwegfiuwe gfiuewf</th>
+                    <th>3 iuyewg iwgefiwegfiuwe gfiuewf</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1 owighwoef hwioefheoifhwefio</td>
+                    <td>2 owighwoef hwioefheoifhwefio</td>
+                    <td>3 owighwoef hwioefheoifhwefio</td>
+                    <td>1 owighwoef hwioefheoifhwefio</td>
+                    <td>2 owighwoef hwioefheoifhwefio</td>
+                    <td>3 owighwoef hwioefheoifhwefio</td>
+                </tr>
+
+                <tr>
+                    <td>1rwoufhw ofweou hfwue fheiowufh oweiufh</td>
+                    <td>2rwoufhw ofweou hfwue fheiowufh oweiufh</td>
+                    <td>3rwoufhw ofweou hfwue fheiowufh oweiufh</td>
+                    <td>1rwoufhw ofweou hfwue fheiowufh oweiufh</td>
+                    <td>2rwoufhw ofweou hfwue fheiowufh oweiufh</td>
+                    <td>3rwoufhw ofweou hfwue fheiowufh oweiufh</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <!-- <p>Las variables declaradas en variables.less, la mayoría son traspasables al compilador de bootstrap (como @form-group-margin-bottom), de manera que dichos valores de dichas variables se pueden tener en un confing.json que se sube al customize de bootstrap <a href="http://getbootstrap.com/customize/" target="_blank">http://getbootstrap.com/customize/</a> y así se evita que haya estilos duplicados y redefinidos en el CSS.</p>
 

@@ -1,0 +1,98 @@
+@import url('vars.less');
+
+// Reset default table behavior
+table col[class*="col-"] {
+  position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+  float: none;
+  display: table-column;
+}
+
+table {
+  td,
+  th {
+    &[class*="col-"] {
+      position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+      float: none;
+      display: table-cell;
+    }
+  }
+}
+
+// Default table component
+.table {
+  .space ();
+  width: 100%;
+  max-width: 100%;
+
+  background-color: @table-background-color;
+
+  // Cells
+  & > thead,
+  & > tbody,
+  & > tfoot {
+    & > tr {
+      & > th,
+      & > td {
+        padding: @table-cell-padding;
+
+        line-height: @table-line-height;
+        text-align: @table-text-align;
+        vertical-align: top;
+
+        @media (max-width: @screen-sm-max) {
+          padding: @table-cell-padding-small;
+        }
+      }
+    }
+  }
+
+  // Bottom align for column headings
+  & > thead > tr > th {
+    vertical-align: bottom;
+  }
+
+  // Remove top border from thead by default
+  & > caption + thead,
+  & > colgroup + thead,
+  & > thead:first-child {
+    & > tr:first-child {
+      & > th,
+      & > td {
+        border-top: 0px;
+      }
+    }
+  }
+}
+
+// Responsive tables
+//
+// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies < 768px. Everything above that
+// will display normally.
+
+.table-responsive {
+  .space ();
+  overflow-x: auto;
+  min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+
+  & > .table {
+    margin-bottom: 0px;
+
+    & > thead,
+    & > tbody,
+    & > tfoot {
+      & > tr {
+        & > th,
+        & > td {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    width: 100%;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}
