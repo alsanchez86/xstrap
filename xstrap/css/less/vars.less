@@ -196,34 +196,40 @@
 @ol-list-style-color:		@color;
 
 // code
-//.text (@font-family, @font-size, @font-weight, @font-style, @color);
 @code-padding: 			2px 4px;
 
 @code-font-family: 		'Courier New', sans-serif;
-@code-color: 			@rojo;
-@code-background-color: @gris;
+@code-font-size: 		@font-size;
+@code-font-weight: 		@font-weight;
+@code-font-style: 		@font-style;
+@code-color: 			@blanco;
+@code-background-color: @negro;
 @code-border:  			1px solid @negro;
 @code-border-radius: 	@border-radius;
 
-// kbd
-@kbd-padding: 			2px 4px;
+	// kbd
+	@kbd-padding: 			@code-padding;
 
-@kbd-color: 			@blanco;
-@kbd-background-color: 	@negro;
-@kbd-border:  			0px;
-@kbd-border-radius: 	@border-radius;
+	@kbd-font-family: 		@code-font-family;
+	@kbd-font-size: 		@code-font-size;
+	@kbd-font-weight: 		@code-font-weight;
+	@kbd-font-style: 		@code-font-style;
+	@kbd-color: 			@code-color;
+	@kbd-background-color: 	@code-background-color;
+	@kbd-border:  			@code-border;
+	@kbd-border-radius: 	@code-border-radius;
 
-// pre
-@pre-border: 			1px solid @gris;
-@pre-border-radius: 	@border-radius;
-@pre-padding: 			@space;
+	// pre
+	@pre-padding: 			@code-padding;
 
-@pre-font-family: 		@font-family;
-@pre-font-size: 		@font-size;
-@pre-font-weight: 		@font-weight;
-@pre-color: 			@color;
-@pre-background-color: 	@background-color;
-@pre-line-height: 		@line-height;
+	@pre-font-family: 		@code-font-family;
+	@pre-font-size: 		@code-font-size;
+	@pre-font-weight: 		@code-font-weight;
+	@pre-font-style: 		@code-font-style;
+	@pre-color: 			@code-color;
+	@pre-background-color: 	@code-background-color;
+	@pre-border: 			@code-border;
+	@pre-border-radius: 	@code-border-radius;
 
 // label
 @label-font-family: @font-family;

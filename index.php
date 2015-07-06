@@ -82,7 +82,7 @@
             Existen diferentes métodos para crear el grid system, cada uno pensado para cubrir ciertas necesidades que nos puedan surgir según los requisitos del diseño, tales como grids no múltiplos de 12.
         </p>
 
-        <p><strong>1) Default row (grid múltiplo de 12) creado directamente con el html del grid-system de bootstrap:</strong></p>
+        <p><strong>1) Default row (grid múltiplo de 12) creado directamente en el html con el grid-system de bootstrap:</strong></p>
 
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">.col-xs-12.col-sm-6.col-md-3.col-lg-3</div>
@@ -92,7 +92,7 @@
         </div>
 
         <br>
-        <p><strong>2) Custom row (grid múltiplo de 12) creado a través de los mixins de bootstrap .make-row () .make-*-column ():</strong></p>
+        <p><strong>2) Custom row (grid múltiplo de 12) creado a través del mixin <u>.make-*-column ()</u> de bootstrap:</strong></p>
 
         <div class="row">
             <div class="custom-col-1">custom-col-1</div>
@@ -101,7 +101,7 @@
         </div>
 
         <br>
-        <p><strong>3) Custom row (NO multiplo de 12) creado a través de los mixins de bootstrap .make-row () .make-*-column ():</strong></p>
+        <p><strong>3) Custom row (NO multiplo de 12) creado a través del mixins <u>.make-*-column ()</u> de bootstrap:</strong></p>
 
         <p>
             En este caso, se le pasará a los mixins .make-*-column () como parámetro el resultado de dividir 12 por el número de columnas de las que queramos que esté compuesto el grid. Ej: 12 / 5 = 2.4
@@ -320,7 +320,7 @@
                 <li>item li 2</li>
                 <li>item li 3</li>
 
-                <li>
+                <li class="li-no-icon">
                     <ul>
                         <li>subitem li 1</li>
                         <li>subitem li 2</li>
@@ -398,24 +398,32 @@
 
     <h3>Code: <small>(code, kbd, pre, var, samp)</small></h3>
 
-    <p><strong>Inline:</strong> <small>(code)</small></p>
+    <div class="code-block">
+        <p><strong>Inline:</strong> <small>(code)</small></p>
 
-    <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+        <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
 
-    <p><strong>User input</strong>: <small>(kbd)</small></p>
+        <p><strong>User input</strong>: <small>(kbd)</small></p>
 
-    <p>
-        To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
-        To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
-    </p>
+        <p>
+            To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+            To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+        </p>
 
-    <p><strong>Basic block</strong>: <small>(pre)</small></p>
+        <p><strong>Basic block</strong>: <small>(pre)</small></p>
 
-    <pre>(*) En la documentación de bootstrap, aquí van  las "alignment classes" y las "transformation classes", pero para xstrap quedan descartadas debido a la poca versatilidad a la hora de cambiar el alineamiento o el tipo de transformación para distintas resoluciones.</pre>
+        <pre>
+            (*) En la documentación de bootstrap, aquí van  las "alignment classes" y las "transformation classes", pero para xstrap quedan descartadas debido a la poca versatilidad a la hora de cambiar el alineamiento o el tipo de transformación para distintas resoluciones.
+        </pre>
 
-    <p><strong>Variables</strong>: <small>(var)</small></p>
+        <p><strong>Variables</strong>: <small>(var)</small></p>
 
-    <p><strong>Sample output</strong>: <small>(samp)</small></p>
+        <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
+
+        <p><strong>Sample output</strong>: <small>(samp)</small></p>
+
+        <p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+    </div>
 
     <!-- end HTML Elements -->
 

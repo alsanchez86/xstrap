@@ -204,7 +204,7 @@ dl {
 
 // code
 code {
-  .text (@code-font-family, @font-size, @font-weight, @font-style, @code-color);
+  .text (@code-font-family, @code-font-size, @code-font-weight, @code-font-style, @code-color);
   .border (@code-border, @code-border-radius);
   padding: @code-padding;
   background-color: @code-background-color;
@@ -212,26 +212,39 @@ code {
 
 // kbd
 kbd {
-  .text (@code-font-family, @font-size, @font-weight, @font-style, @kbd-color);
+  .text (@kbd-font-family, @kbd-font-size, @kbd-font-weight, @kbd-font-style, @kbd-color);
   .border (@kbd-border, @kbd-border-radius);
-  .box-shadow ();
   padding: @kbd-padding;
   background-color: @kbd-background-color;
+
+  kbd {
+    padding: 0px;
+    border: 0px;
+  }
 }
 
 // pre
 pre {
+  .space ();
+  .text (@pre-font-family, @pre-font-size, @pre-font-weight, @pre-font-style, @pre-color);
+  .border (@pre-border, @pre-border-radius);
   display: block;
-  padding: 9.5px;
-  margin: 0px 0px 10px;
-  font-size: 13px;
-  line-height: 1.42857;
+  padding: @pre-padding;
+
+  line-height: @line-height;
+  background-color: @pre-background-color;
   word-break: break-all;
   word-wrap: break-word;
-  color: #333;
-  background-color: #F5F5F5;
-  border: 1px solid #CCC;
-  border-radius: 4px;
+
+  code {
+    padding: 0px;
+    border: 0px;
+
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+  }
 }
 
 // label
