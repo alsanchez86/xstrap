@@ -50,7 +50,7 @@
 <div class="container">
     <div class="row">
         <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
-            <nav id="spy-nav">
+            <nav id="spy-nav" data-spy="affix" data-offset-top="60" data-offset-bottom="500">
                 <ul class="nav">
                     <li>
                         <a href="#spy-grid-system">Grid System</a>

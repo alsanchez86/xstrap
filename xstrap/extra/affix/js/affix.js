@@ -14,6 +14,7 @@
   // ======================
 
   var Affix = function (element, options) {
+
     this.options = $.extend({}, Affix.DEFAULTS, options)
 
     this.$target = $(this.options.target)
@@ -25,12 +26,12 @@
     this.unpin        = null
     this.pinnedOffset = null
 
-    this.checkPosition()
+    this.checkPosition ();
+    this.checkWidth ();
   }
 
-  Affix.VERSION  = '3.3.5'
-
-  Affix.RESET    = 'affix affix-top affix-bottom'
+  Affix.VERSION  = '3.3.5';
+  Affix.RESET    = 'affix affix-top affix-bottom';
 
   Affix.DEFAULTS = {
     offset: 0,
@@ -38,6 +39,7 @@
   }
 
   Affix.prototype.getState = function (scrollHeight, height, offsetTop, offsetBottom) {
+
     var scrollTop    = this.$target.scrollTop()
     var position     = this.$element.offset()
     var targetHeight = this.$target.height()
@@ -60,6 +62,7 @@
   }
 
   Affix.prototype.getPinnedOffset = function () {
+
     if (this.pinnedOffset) return this.pinnedOffset
     this.$element.removeClass(Affix.RESET).addClass('affix')
     var scrollTop = this.$target.scrollTop()
@@ -68,10 +71,12 @@
   }
 
   Affix.prototype.checkPositionWithEventLoop = function () {
+
     setTimeout($.proxy(this.checkPosition, this), 1)
   }
 
   Affix.prototype.checkPosition = function () {
+
     if (!this.$element.is(':visible')) return
 
     var height       = this.$element.height()
@@ -112,12 +117,24 @@
     }
   }
 
+  Affix.prototype.checkWidth = function () {
+
+    var nav     = this.$element;
+    var parent  = nav.parent ();
+
+    nav
+      .css ({
+        width: parent.width ()
+      });
+  }
 
   // AFFIX PLUGIN DEFINITION
   // =======================
 
-  function Plugin(option) {
+  function Plugin (option) {
+
     return this.each(function () {
+
       var $this   = $(this)
       var data    = $this.data('bs.affix')
       var options = typeof option == 'object' && option
@@ -132,7 +149,6 @@
   $.fn.affix             = Plugin
   $.fn.affix.Constructor = Affix
 
-
   // AFFIX NO CONFLICT
   // =================
 
@@ -141,26 +157,16 @@
     return this
   }
 
-
   // AFFIX DATA-API
   // ==============
 
-  function initWidth (nav) {
-
-    var parent = nav.parent ();
-
-    nav
-      .css ({
-        width: parent.width ()
-      });
-  }
-
   $(window)
     .on ({
-        load: function () {
+      load: function () {
 
-          /*
-          $('[data-spy="affix"]').each(function () {
+        $('[data-spy="affix"]')
+          .each (function () {
+
             var $spy = $(this)
             var data = $spy.data()
 
@@ -170,25 +176,10 @@
             if (data.offsetTop    != null) data.offset.top    = data.offsetTop
 
             Plugin.call($spy, data)
-          })
-          */
+          });
+      },
+      resize: function () {
 
-          initWidth ($('#spy-nav'));
-
-          $('#spy-nav')
-            .affix({
-              offset: {
-                top: 0,
-                bottom: function () {
-
-                  return $('#footer').outerHeight ();
-                }
-              }
-            });
-        },
-        resize: function () {
-
-          initWidth ($('#spy-nav'));
-        }
+      }
     });
 }(jQuery);
