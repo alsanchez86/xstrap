@@ -12,7 +12,6 @@
 .btn-3d {
   .border (1px solid @rojo-1);
   .gradient (@rojo, @rojo-1, -180deg, 50%, 100%);
-  .box-shadow (rgba(0,0,0,0.5), 8px);
   border-top-color: @rojo1;
   border-bottom-color: @rojo-2;
 
@@ -23,6 +22,15 @@
     border-top-color: @rojo-1;
     border-bottom-color: @rojo-1;
   }
+}
+
+.btn-3d-2 {
+  .button (@blanco, @blanco, #7cbc27, #7cbc27);
+  .text-shadow (#426d06, 1px, 0px);
+  .box-shadow-inset (#a0d642, 0px, 1px, 0px, 0px);
+  .border (0px, 3px);
+  .gradient (#7cbc27, #62a30c);
+  padding: 0px @space;
 }
 
 .header {
@@ -69,6 +77,25 @@
 
     img {
       float: right;
+    }
+  }
+}
+
+.footer {
+  margin-top: @space * 2;
+  padding: @space * 2 0px @space * 4 0px;
+
+  color: @gris;
+  text-align: center;
+  background: url('@{path-images}texture.png') repeat;
+
+  a:not(.btn) {
+    .link (@blanco, @blanco, none, underline);
+  }
+
+  .footer-links {
+    a:not(.btn) {
+      margin: 0px @space / 2;
     }
   }
 }

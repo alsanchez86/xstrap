@@ -1,8 +1,8 @@
 // text-shadow
 .text-shadow (
 		@shadow-color: 	@shadow-color,
-		@size: 			1px,
-		@blur: 			0px
+		@size: 			0px,
+		@blur: 			@blur
 	){
 
 	-webkit-text-shadow: -@size @size @blur @shadow-color; // iOS <4.3 & Android <4.1
@@ -10,21 +10,29 @@
 	text-shadow: -@size @size @blur @shadow-color;
 }
 
-// box-shadow
+// box-shadows
 .box-shadow (
-		@shadow-color: 	@shadow-color,
-		@blur: 			@blur
+		@shadow-color: 		@shadow-color,
+		@shadow-width:		0px,
+		@shadow-height: 	0px,
+		@shadow-radius:		0px,
+		@shadow-size:		0px
 	){
 
-	-webkit-box-shadow: 0px 2px @blur @shadow-color; // iOS <4.3 & Android <4.1
-	box-shadow: 0px 2px @blur @shadow-color;
+	-webkit-box-shadow: @shadow-width @shadow-height @shadow-radius @shadow-size @shadow-color;
+	-moz-box-shadow: @shadow-width @shadow-height @shadow-radius @shadow-size @shadow-color;
+	box-shadow: @shadow-width @shadow-height @shadow-radius @shadow-size @shadow-color;
 }
 
-// box-shadow-inset
 .box-shadow-inset (
-		@size: 	10px,
-		@blur:	0.35
+		@shadow-color: 		@shadow-color,
+		@shadow-width:		0px,
+		@shadow-height: 	0px,
+		@shadow-radius:		0px,
+		@shadow-size:		0px
 	){
 
-	box-shadow: inset 0px @size @size rgba(0,0,0, @blur);
+	-webkit-box-shadow: @shadow-width @shadow-height @shadow-radius @shadow-size @shadow-color inset;
+	-moz-box-shadow: @shadow-width @shadow-height @shadow-radius @shadow-size @shadow-color inset;
+	box-shadow: @shadow-width @shadow-height @shadow-radius @shadow-size @shadow-color inset;
 }

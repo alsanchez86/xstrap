@@ -532,36 +532,18 @@
 </div>
 
 
-
-
-
-
-    <!-- <p>Las variables declaradas en variables.less, la mayoría son traspasables al compilador de bootstrap (como @form-group-margin-bottom), de manera que dichos valores de dichas variables se pueden tener en un confing.json que se sube al customize de bootstrap <a href="http://getbootstrap.com/customize/" target="_blank">http://getbootstrap.com/customize/</a> y así se evita que haya estilos duplicados y redefinidos en el CSS.</p>
-
-    <p>Esto provocará que muchos mixins de mixins.less se eliminen.</p>
-
-    <p class="text-highlight">ATENCION:</p>
-
-    <p>
-        Si trasladamos el definir el valor de las variables del <strong>variables.less</strong> al <strong>config.json</strong>, tendremos que compilar un bootstrap cada vez que queramos cambiar el valor de alguna de estas, por lo que entorperecería mucho el trabajo.
+<footer class="footer">
+    <p class="footer-links">
+        <a href="">qqqq</a>&nbsp;|&nbsp;
+        <a href="">qqqq</a>&nbsp;|&nbsp;
+        <a href="">qqqq</a>&nbsp;|&nbsp;
+        <a href="">qqqq</a>&nbsp;|&nbsp;
+        <a href="">qqqq</a>&nbsp;|&nbsp;
+        <a href="">qqqq</a>
     </p>
 
-    <p>Se podría dividir el trabajo en dos "ENTORNOS":</p>
-
-    <ul class="list">
-        <li>Entorno de DESARROLLO.</li>
-        <li>Entorno de PRODUCCIÓN.</li>
-    </ul>
-
-    <p><strong>Entorno de DESARROLLO:</strong></p>
-
-    <p>Aquí se definiran el valor de las variables en variables.less</p>
-
-    <p><strong>Entorno de PRODUCCIÓN:</strong></p>
-
-    <p>Aquí se definiran el valor de las variables en config.json</p>
-
-    <p>El proceso de pasar el trabajo del entorno de <strong>DESARROLLO</strong> al entorno de <strong>PRODUCCIÓN</strong> trata de trasladar los valores de variables.less a config.json, y deshabilitar aquellos componentes de Bootstrap que no se usen en el proyecto actual (comentar las líneas correspondientes en config.json).</p> -->
+    <a class="btn-3d-2 btn">BTN 3D 2</a>
+</footer>
 
 <?php //include_once ('modal-default.php'); ?>
 

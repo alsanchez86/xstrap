@@ -8,7 +8,7 @@ button,
   .button       ();
   .text         (@button-font-family, @button-font-size, @button-font-weight, @button-font-style, @button-color, @button-text-align, @button-text-transform, @button-line-height);
   .border       (@button-border, @button-border-radius);
-  .box-shadow   (@button-shadow-color, @button-shadow-blur);
+  .box-shadow   (@button-shadow-color, @button-shadow-width, @button-shadow-height, @button-shadow-radius, @button-shadow-size);
   .user-select  (none);
   .transition   (@button-time);
   .not-outline  ();
@@ -19,6 +19,7 @@ button,
 
   overflow:         hidden;
   text-decoration:  none;
+  letter-spacing:   @button-letter-spacing;
   cursor:           pointer;
   white-space:      nowrap;
   vertical-align:   middle;
@@ -35,7 +36,7 @@ button,
   &:focus,
   &.active,
   &:active {
-    .box-shadow (transparent, 0px);
+    .box-shadow (transparent, 0px, 0px, 0px, 0px);
     outline: 0;
     text-decoration: none;
     background-image: none;
