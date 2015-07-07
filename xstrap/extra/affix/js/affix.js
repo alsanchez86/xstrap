@@ -180,7 +180,8 @@
               offset: {
                 top: 0,
                 bottom: function () {
-                  return (this.bottom = $('#footer').outerHeight (true))
+
+                  return $('#footer').outerHeight ();
                 }
               }
             });
@@ -188,9 +189,6 @@
         resize: function () {
 
           initWidth ($('#spy-nav'));
-        },
-        scroll: function () {
-
         }
     });
 }(jQuery);

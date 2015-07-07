@@ -52,8 +52,9 @@
         <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
             <nav id="spy-nav">
                 <ul class="nav">
-                    <li><a href="#spy-grid-system">Grid System</a></li>
-                    <li class="li-no-style">
+                    <li>
+                        <a href="#spy-grid-system">Grid System</a>
+
                         <ul>
                             <li><a href="#spy-containers">Containers qgqwuydg qwiudgqiwdg qwidg qwiudg iqwgdiyqwgduiqgwd iuqwgdiu gqwuid gqwidug qwiudg</a></li>
                             <li><a href="#spy-rows">Rows</a></li>
