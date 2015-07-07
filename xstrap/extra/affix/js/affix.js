@@ -145,18 +145,52 @@
   // AFFIX DATA-API
   // ==============
 
-  $(window).on('load', function () {
-    $('[data-spy="affix"]').each(function () {
-      var $spy = $(this)
-      var data = $spy.data()
+  function initWidth (nav) {
 
-      data.offset = data.offset || {}
+    var parent = nav.parent ();
 
-      if (data.offsetBottom != null) data.offset.bottom = data.offsetBottom
-      if (data.offsetTop    != null) data.offset.top    = data.offsetTop
+    nav
+      .css ({
+        width: parent.width ()
+      });
+  }
 
-      Plugin.call($spy, data)
-    })
-  })
+  $(window)
+    .on ({
+        load: function () {
 
+          /*
+          $('[data-spy="affix"]').each(function () {
+            var $spy = $(this)
+            var data = $spy.data()
+
+            data.offset = data.offset || {}
+
+            if (data.offsetBottom != null) data.offset.bottom = data.offsetBottom
+            if (data.offsetTop    != null) data.offset.top    = data.offsetTop
+
+            Plugin.call($spy, data)
+          })
+          */
+
+          initWidth ($('#spy-nav'));
+
+          $('#spy-nav')
+            .affix({
+              offset: {
+                top: 0,
+                bottom: function () {
+                  return (this.bottom = $('#footer').outerHeight (true))
+                }
+              }
+            });
+        },
+        resize: function () {
+
+          initWidth ($('#spy-nav'));
+        },
+        scroll: function () {
+
+        }
+    });
 }(jQuery);

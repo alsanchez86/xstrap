@@ -4,19 +4,20 @@ jQuery (document).ready (function($) {
 
     bootstrap ();
     if (typeof preload  != 'undefined') preLoad ();
-    responsive ();
+    //responsive ();
 });
 
 $(window)
-    .resize (function () {
+    .on ({
+        load: function () {
 
-        responsive ();
-    })
-    .scroll (function () {
+        },
+        resize: function () {
+            //responsive ();
+        },
+        scroll: function () {
 
-    })
-    .load (function () {
-
+        }
     });
 
 // bootstrap

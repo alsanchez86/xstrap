@@ -29,7 +29,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#spy-nav" data-offset="20" data-offset-bottom="200">
+<body data-spy="scroll" data-target="#spy-nav" data-offset="20">
 
 <header class="header">
     <h1>
@@ -39,7 +39,7 @@
 
     <img class="img-responsive center-block" src="./xstrap/images/xstrap-logo.png" alt="XStrap" title="XStrap">
 
-    <a class="btn-github-header btn hidden-xs" href="https://github.com/alsanchez86/xstrap" target="_blank">View on github&nbsp;&nbsp;<span class="icomoon-github icomoon"></span></a>
+    <a class="btn-github-header btn" href="https://github.com/alsanchez86/xstrap" target="_blank">View on github&nbsp;&nbsp;<span class="icomoon-github icomoon"></span></a>
 
     <div class="designed-by-header">
         <i>designed by</i>
@@ -50,31 +50,30 @@
 <div class="container">
     <div class="row">
         <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
-            <nav id="spy-nav" data-spy="affix" data-offset-top="0">
-                <ol class="nav">
-                    <li><a href="#open-data">Open Data</a></li>
+            <nav id="spy-nav">
+                <ul class="nav">
+                    <li><a href="#spy-grid-system">Grid System</a></li>
                     <li class="li-no-style">
-                        <ol>
-                            <li><a href="#data-management">Data Management</a></li>
-                            <li><a href="#data-gov">Data.gov</a></li>
-                            <li><a href="#agriculture-nutrition">Agriculture & Nutrition</a></li>
-                            <li><a href="#disaster-prevention-recovery">Disaster Prevention & Recovery qwiqygd q qiwud gqiu gqwid qwid ug</a></li>
-                        </ol>
+                        <ul>
+                            <li><a href="#spy-containers">Containers qgqwuydg qwiudgqiwdg qwidg qwiudg iqwgdiyqwgduiqgwd iuqwgdiu gqwuid gqwidug qwiudg</a></li>
+                            <li><a href="#spy-rows">Rows</a></li>
+                            <li><a href="#spy-casos-especiales">Casos especiales</a></li>
+                        </ul>
                     </li>
-                </ol>
 
-                <a href="#header">Go to top&nbsp;&nbsp;<span class="glyphicon glyphicon-hand-up"></span></a>
+                    <li><a href="#spy-generics">Generics</a></li>
+                </ul>
             </nav>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
             <!-- Grid System -->
-            <h2>
+            <h2 id="spy-grid-system">
                 <span class="icomoon-redo2 icomoon"></span>
                 Grid System
             </h2>
 
-            <h3>Containers:</h3>
+            <h3 id="spy-containers">Containers:</h3>
 
             <p>Dos tipos de container:</p>
 
@@ -96,7 +95,7 @@
             </blockquote>
 
             <div class="doc-rows">
-                <h3>Rows:</h3>
+                <h3 id="spy-rows">Rows:</h3>
 
                 <p>
                     Existen diferentes métodos para crear el grid system, cada uno pensado para cubrir ciertas necesidades que nos puedan surgir según los requisitos del diseño, tales como grids no múltiplos de 12.
@@ -137,7 +136,7 @@
 
                 <br>
                 <br>
-                <h3>Casos especiales:</h3>
+                <h3 id="spy-casos-especiales">Casos especiales:</h3>
 
                 <p><strong>1) Reset de posición de columnas:</strong></p>
 
@@ -197,7 +196,7 @@
             <!-- Generics -->
             <br>
             <br>
-            <h2>
+            <h2 id="spy-generics">
                 <span class="icomoon-redo2 icomoon"></span>
                 Generics:
             </h2>
@@ -531,15 +530,10 @@
     </div>
 </div>
 
-
-<footer class="footer">
+<footer id="footer" class="footer">
     <p class="footer-links">
         <a href="">qqqq</a>&nbsp;|&nbsp;
-        <a href="">qqqq</a>&nbsp;|&nbsp;
-        <a href="">qqqq</a>&nbsp;|&nbsp;
-        <a href="">qqqq</a>&nbsp;|&nbsp;
-        <a href="">qqqq</a>&nbsp;|&nbsp;
-        <a href="">qqqq</a>
+        <a href="">Open Ximdex Evolution (&copy;) | All rights reserved.</a>
     </p>
 
     <a class="btn-3d-2 btn">BTN 3D 2</a>
@@ -551,10 +545,10 @@
 <script src="./xstrap/js/jquery.js"></script>
 
 <!-- COMPONENTS -->
-<!-- affix -->
-<script src="./xstrap/extra/affix/js/affix.js"></script>
 <!-- scrollspy -->
 <script src="./xstrap/extra/scrollspy/js/scrollspy.js"></script>
+<!-- affix -->
+<script src="./xstrap/extra/affix/js/affix.js"></script>
 
 <!-- main -->
 <script src="./xstrap/js/main.js"></script>
