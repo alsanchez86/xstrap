@@ -218,17 +218,6 @@
           transition: @transition;
 }
 */
-.transition (
-    @time: @time,
-    @direction: all
-  ){
-
-  -webkit-transition: @direction @time;
-  -moz-transition:    @direction @time;
-  -ms-transition:     @direction @time;
-  -o-transition:      @direction @time;
-    transition:     @direction @time;
-}
 
 .transition-property (@transition-property) {
   -webkit-transition-property: @transition-property;

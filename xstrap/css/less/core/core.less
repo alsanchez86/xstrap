@@ -2,6 +2,7 @@
 // Base.less tiene incorporado de serie los siguientes less de bootstrap:
 // scaffolding.less
 // type.less
+// utilities.less
 
 // IMPORTS
 // vars (xstrap control core)
@@ -10,6 +11,13 @@
 // mixins (required by core)
 @import url('./mixins/clearfix.less');
 @import url('./mixins/box-sizing.less');
+
+// mixins (required by multiple components)
+@import url('./mixins/not-outline.less');
+@import url('./mixins/transition.less');
+@import url('./mixins/text.less');
+@import url('./mixins/space.less');
+@import url('./mixins/border.less');
 
 /*@import url('./mixins/grid-framework.less');
 @import url('./mixins/grid.less');
@@ -35,7 +43,7 @@
 
 // less (xstrap core)
 @import url('normalize.less');
-@import url('utilities.less');
+//@import url('utilities.less');
 
 /*
 @import url('grid.less');
@@ -58,13 +66,12 @@ html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-.clearfix {
-  .clearfix ();
-}
+
 
 // Clases genéricas para usar directamente en el HTML.
 // Solamente para casos excepcionales.
 
+.clearfix { .clearfix (); }
 //.relative         { position: relative; }
 //.absolute         { position: absolute; }
 //.sin-margin       { margin: 0px; }
