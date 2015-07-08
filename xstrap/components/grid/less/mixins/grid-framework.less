@@ -3,7 +3,7 @@
 // Used only by Bootstrap to generate the correct number of grid classes given
 // any value of `@grid-columns`.
 
-.make-grid-columns() {
+.make-grid-columns () {
 
   // Common styles for all sizes of grid columns, widths 1-12
   .col (@index) { // initial
@@ -106,9 +106,9 @@
 // Create grid for specific class
 .make-grid (@class) {
 
-  .float-grid-columns(@class);
-  .loop-grid-columns(@grid-columns, @class, width);
-  .loop-grid-columns(@grid-columns, @class, pull);
-  .loop-grid-columns(@grid-columns, @class, push);
-  .loop-grid-columns(@grid-columns, @class, offset);
+  .float-grid-columns (@class);
+  .loop-grid-columns (@grid-columns, @class, width);
+  .loop-grid-columns (@grid-columns, @class, pull);
+  .loop-grid-columns (@grid-columns, @class, push);
+  .loop-grid-columns (@grid-columns, @class, offset);
 }

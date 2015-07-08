@@ -35,7 +35,7 @@
 <header class="header">
     <h1>
         XSTRAP <strong>1.0</strong>
-        <small>Responsive web design</small>
+        <small>Build your own front-end framework</small>
     </h1>
 
     <img class="img-responsive center-block" src="./xstrap/images/xstrap-logo.png" alt="XStrap" title="XStrap">

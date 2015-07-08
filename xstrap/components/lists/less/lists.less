@@ -1,6 +1,56 @@
 @import url('vars.less'); //xstrap core
 
 // lists
+ul,
+ol {
+  .space ();
+  padding: 0px;
+
+  list-style-position: @list-style-position;
+
+  li {
+    .space (@list-item-margin-bottom);
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    ul,
+    ol {
+      margin-top: @list-item-margin-bottom;
+      margin-bottom: 0px;
+      padding-left: @sublist-padding-left;
+    }
+  }
+}
+
+ol {
+  list-style-type: @ol-list-style-type;
+  color: @ol-list-style-color;
+}
+
+dl {
+  .space ();
+
+  dt,
+  dd {
+    .space (@list-item-margin-bottom);
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  dt {
+    font-weight: 400;
+  }
+
+  dl {
+    margin-bottom: 0px;
+    padding-left: @sublist-padding-left;
+  }
+}
+
 ul {
   &:not(.list-styled) {
     list-style: none;
