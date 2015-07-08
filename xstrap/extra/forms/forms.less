@@ -1,28 +1,81 @@
-@input-height:  30px;
-@input-padding: 5px 10px;
+@import url('vars.less');
 
-@input-font-family:             @font-family;
-@input-font-size:               @font-size;
-@input-font-weight:             @font-weight;
-@input-font-style:              @font-style;
-@input-color:                   @color;
-@input-background-color:        rgba(255, 255, 255, 0.01);
-@input-border:                  1px solid @c12;
-@input-border-radius:           0px;
-@input-border-color-focus:      @c12;
-@input-box-shadow-color:        transparent;
-@input-box-shadow-color-focus:  transparent;
-@input-box-shadow-blur:         0px;
+// label
+label {
+  .text (@label-font-family, @label-font-size, @label-font-weight, @label-font-style, @label-color);
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  margin-bottom: 5px;
 
-@input-color-placeholder: #CCC;
-@form-group-margin-bottom: @space;
+  cursor: pointer;
+}
+
+// inputs
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  resize: none;
+}
+
+select,
+input [type="radio"],
+input [type="checkbox"],
+[role="button"] {
+  cursor: pointer;
+}
+
+input [type="radio"],
+input [type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9; // IE8-9
+  line-height: normal;
+
+  & [disabled],
+  fieldset [disabled] & {
+    .disabled ();
+  }
+}
+
+input [type="search"] {
+  .box-sizing(border-box);
+  -webkit-appearance: none;
+}
+
+input [type="file"] {
+  display: block;
+}
+
+input [type="range"] {
+  display: block;
+  width: 100%;
+}
+
+select [multiple],
+select [size] {
+  height: auto;
+}
+
+// fieldset
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+  // so we reset that to ensure it behaves more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359.
+  min-width: 0;
+}
 
 .form-control {
   .text         (@input-font-family, @input-font-size, @input-font-weight, @input-font-style, @input-color);
   .border       (@input-border, @input-border-radius);
   .box-shadow   (@input-box-shadow-color, @input-box-shadow-blur);
-  .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
-  .placeholder ();
+  .transition   (~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+  .placeholder  ();
   display: block;
   height: @input-height;
   width: 100%;
