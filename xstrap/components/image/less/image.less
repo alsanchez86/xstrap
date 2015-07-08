@@ -1,0 +1,18 @@
+// vars
+@import url('vars.less');
+
+// mixins
+@import url('./mixins/image.less');
+@import url('./mixins/center-block.less');
+
+.img-responsive {
+  	.img-responsive ();
+
+  	&.img-responsive-max {
+    	width: 100%;
+  	}
+
+  	&.img-responsive-center {
+    	.center-block ();
+  	}
+}

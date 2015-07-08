@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>XSTRAP 1.0</title>
+    <title>XSTRAP 1.1</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,11 +34,11 @@
 <div class="body-content">
 <header class="header">
     <h1>
-        XSTRAP <strong>1.0</strong>
-        <small>Build your own front-end framework</small>
+        XSTRAP <strong>1.1</strong>
+        <small>Build your own <strong>front-end</strong> framework</small>
     </h1>
 
-    <img class="img-responsive center-block" src="./xstrap/images/xstrap-logo.png" alt="XStrap" title="XStrap">
+    <img class="img-responsive img-responsive-center" src="./xstrap/images/xstrap-logo.png" alt="XStrap" title="XStrap">
 
     <a class="btn-github-header btn" href="https://github.com/alsanchez86/xstrap" target="_blank">View on github&nbsp;&nbsp;<span class="icomoon-github icomoon"></span></a>
 

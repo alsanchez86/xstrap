@@ -1,4 +1,5 @@
-@import url('vars.less'); //xstrap core
+// vars
+@import url('vars.less');
 
 // lists
 ul,
@@ -6,13 +7,20 @@ ol {
   .space ();
   padding: 0px;
 
-  list-style-position: @list-style-position;
+  &.list-styled {
+    list-style-image: url(@styled-list-style-image);
+    list-style-position: @list-style-position;
+  }
 
   li {
     .space (@list-item-margin-bottom);
 
     &:last-child {
       margin-bottom: 0px;
+    }
+
+    &.li-no-style {
+      list-style: none;
     }
 
     ul,
@@ -24,6 +32,12 @@ ol {
   }
 }
 
+ul {
+  &:not(.list-styled) {
+    list-style: none;
+  }
+}
+
 ol {
   list-style-type: @ol-list-style-type;
   color: @ol-list-style-color;
@@ -31,6 +45,28 @@ ol {
 
 dl {
   .space ();
+
+  &.dl-horizontal {
+    dd {
+      &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
+    }
+
+    @media (min-width: @dd-float-breakpoint) {
+      dt {
+        float: left;
+        width: (@dl-horizontal-offset - 20);
+        clear: left;
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      dd {
+        margin-left: @dl-horizontal-offset;
+      }
+    }
+  }
 
   dt,
   dd {
@@ -48,43 +84,5 @@ dl {
   dl {
     margin-bottom: 0px;
     padding-left: @sublist-padding-left;
-  }
-}
-
-ul {
-  &:not(.list-styled) {
-    list-style: none;
-  }
-
-  &.list-styled {
-    list-style-image: url(@styled-list-style-image);
-  }
-
-  li {
-    &.li-no-style {
-      list-style: none;
-    }
-  }
-}
-
-dl.dl-horizontal {
-  dd {
-    &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
-  }
-
-  @media (min-width: @dd-float-breakpoint) {
-    dt {
-      float: left;
-      width: (@dl-horizontal-offset - 20);
-      clear: left;
-      text-align: right;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    dd {
-      margin-left: @dl-horizontal-offset;
-    }
   }
 }

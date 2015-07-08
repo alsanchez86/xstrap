@@ -1,25 +1,27 @@
 // CORE
-@import url('./core/core.less');
+@import url('../../core/core.less');
 
 // VARS (propias del proyecto)
 @import url('vars.less');
+
+// MIXINS (propios del proyecto. No usados por ningún componente)
+@import url('./mixins/gradient.less');
+@import url('./mixins/text-shadow.less');
 
 // COMPONENTS (personalizados con de los valores de las variables definidas en vars.less)
 @import url('../../components/grid/less/grid.less'); //grid
 @import url('../../components/texts/less/texts.less'); //grid
 @import url('../../components/links/less/links.less'); //links
+@import url('../../components/image/less/image.less'); //image
 @import url('../../components/icomoon/less/icomoon.less'); //icomoon
 @import url('../../components/glyphicons/less/glyphicons.less'); //glyphicon
-
-//
-/*
-
-@import url('../../components/buttons/less/buttons.less');
-@import url('../../components/tables/less/tables.less');
-@import url('../../components/affix/less/affix.less');*/
+@import url('../../components/buttons/less/buttons.less'); //buttons
+@import url('../../components/lists/less/lists.less'); //buttons
+@import url('../../components/tables/less/tables.less'); //tables
+@import url('../../components/affix/less/affix.less'); //affix
 
 // MAIN
-/*body {
+body {
   background: url('@{path-images}texture.png') repeat;
 }
 
@@ -257,9 +259,9 @@
   .code-block {
     padding-left: 0px;
   }
-}*/
+}
 
-/*// GRID COMPONENT
+// GRID COMPONENT
 // SM
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
 
@@ -284,4 +286,4 @@
 // NO XS (todas las resoluciones menos XS)
 @media (min-width: @screen-sm-min) {
 
-}*/
+}
