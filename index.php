@@ -206,318 +206,318 @@
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                     <h3>Basics:</h3>
 
-                <ul class="list-styled">
-                    <li>space</li>
-                    <li>space-small</li>
-                    <li>background-color</li>
-                    <li>border-radius</li>
-                    <li>opacity</li>
-                    <li>shadow-color</li>
-                    <li>blur</li>
-                    <li>rotate</li>
-                    <li>time</li>
-                </ul>
-            </div>
-
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <h3>Text base:</h3>
-
-                <ul class="list-styled">
-                    <li>font-family</li>
-                    <li>font-size</li>
-                    <li>font-size-small</li>
-                    <li>font-weight</li>
-                    <li>font-style</li>
-                    <li>color</li>
-                    <li>line-height</li>
-                    <li>letter-spacing</li>
-                    <li>text-align</li>
-                    <li>text-transform</li>
-                    <li>text-indent</li>
-                </ul>
-            </div>
-        </div>
-        <!-- end Generics -->
-
-    <!-- HTML Elements -->
-    <br>
-    <br>
-    <h2>
-        <span class="icomoon-redo2 icomoon"></span>
-        HTML ELEMENTS:
-    </h2>
-
-    <h3>Links: <small>(a)</small></h3>
-
-    <ol>
-        <li><a href="">LINK</a></li>
-        <li><a class="blank" href="#" target="_blank">LINK (Target blank) <i>[required glyphicon component]</i></a></li>
-        <li><a class="disabled" href="#">LINK (Disabled)</a></li>
-        <li><a href="#">LINK with glyphicon&nbsp;<span class="glyphicon glyphicon-cloud"></span></a></li>
-    </ol>
-
-    <h3>Titles: <small>(h1, h2, h3, h4, h5, h6)</small></h3>
-
-    <h1>h1 Title <small>Secondary text</small></h1>
-    <h2>h2 Title <small>Secondary text</small></h2>
-    <h3>h3 Title <small>Secondary text</small></h3>
-    <h4>h4 Title <small>Secondary text</small></h4>
-    <h5>h5 Title <small>Secondary text</small></h5>
-    <h6>h6 Title <small>Secondary text</small></h6>
-
-    <h3>Paragraphs: <small>(p)</small></h3>
-
-    <p>Esto es un párrafo 1.</p>
-
-    <p>Esto es un párrafo 2.</p>
-
-    <h3>Marked Text: <small>(mark)</small></h3>
-
-    <p>You can use the mark tag to <mark>highlight</mark> text.</p>
-
-    <h3>Deleted Text: <small>(del)</small></h3>
-
-    <p><del>This line of text is meant to be treated as deleted text.</del></p>
-
-    <h3>Strikethrough Text: <small>(s)</small></h3>
-
-    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-
-    <h3>Inserted Text: <small>(ins)</small></h3>
-
-    <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-
-    <h3>Underline Text: <small>(u)</small></h3>
-
-    <p><u>This line of text will render as underlined</u></p>
-
-    <h3>Small Text: <small>(small)</small></h3>
-
-    <p><small>This line of text is meant to be treated as fine print.</small></p>
-
-    <h3>Bold Text: <small>(strong)</small></h3>
-
-    <p><strong>Text rendered as bold text.</strong></p>
-
-    <h3>Italic Text: <small>(em, b, i)</small></h3>
-
-    <p><em>EM</em>, <b>B</b>, <i>I</i></p>
-
-    <h3>Abbreviation: <small>(abbr)</small></h3>
-
-    <p>
-        <abbr title="attribute">attr</abbr>
-        <br>
-        <abbr class="initialism" title="HyperText Markup Language">HTML</abbr> is the best thing since sliced bread.
-    </p>
-
-    <h3>Address: <small>(address)</small></h3>
-
-    <address>
-        <strong>Twitter, Inc.</strong><br>
-        795 Folsom Ave, Suite 600<br>
-        San Francisco, CA 94107<br>
-        <abbr title="Phone">P:</abbr> (123) 456-7890
-    </address>
-
-    <h3>Blockquotes: <small>(blockquote)</small></h3>
-
-    <blockquote>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-
-        <footer>
-            Someone famous in <cite title="Source Title">Source Title</cite>
-        </footer>
-    </blockquote>
-
-    <h3>Lists: <small>(ul, ol, dl)</small></h3>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-            <p><strong>Unordered:</strong></p>
-
-            <ul>
-                <li>item li 1</li>
-                <li>item li 2</li>
-                <li>item li 3</li>
-
-                <li class="li-no-style">
-                    <ul>
-                        <li>subitem li 1</li>
-                        <li>subitem li 2</li>
-                        <li>subitem li 3</li>
+                    <ul class="list-styled">
+                        <li>space</li>
+                        <li>space-small</li>
+                        <li>background-color</li>
+                        <li>border-radius</li>
+                        <li>opacity</li>
+                        <li>shadow-color</li>
+                        <li>blur</li>
+                        <li>rotate</li>
+                        <li>time</li>
                     </ul>
-                </li>
-            </ul>
-        </div>
+                </div>
 
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-            <p><strong>Ordered:</strong></p>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <h3>Text base:</h3>
+
+                    <ul class="list-styled">
+                        <li>font-family</li>
+                        <li>font-size</li>
+                        <li>font-size-small</li>
+                        <li>font-weight</li>
+                        <li>font-style</li>
+                        <li>color</li>
+                        <li>line-height</li>
+                        <li>letter-spacing</li>
+                        <li>text-align</li>
+                        <li>text-transform</li>
+                        <li>text-indent</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end Generics -->
+
+            <!-- HTML Elements -->
+            <br>
+            <br>
+            <h2>
+                <span class="icomoon-redo2 icomoon"></span>
+                HTML ELEMENTS:
+            </h2>
+
+            <h3>Links: <small>(a)</small></h3>
 
             <ol>
-                <li>item li 1</li>
-                <li>item li 2</li>
-                <li>item li 3</li>
-
-                <li class="li-no-style">
-                    <ol>
-                        <li>subitem li 1</li>
-                        <li>subitem li 2</li>
-                        <li>subitem li 3</li>
-                    </ol>
-                </li>
+                <li><a href="">LINK</a></li>
+                <li><a class="blank" href="#" target="_blank">LINK (Target blank) <i>[required glyphicon component]</i></a></li>
+                <li><a class="disabled" href="#">LINK (Disabled)</a></li>
+                <li><a href="#">LINK with glyphicon&nbsp;<span class="glyphicon glyphicon-cloud"></span></a></li>
             </ol>
-        </div>
 
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-            <p><strong>Styled:</strong></p>
+            <h3>Titles: <small>(h1, h2, h3, h4, h5, h6)</small></h3>
 
-            <ul class="list-styled">
-                <li>item li 1</li>
-                <li>item li 2</li>
-                <li>item li 3</li>
+            <h1>h1 Title <small>Secondary text</small></h1>
+            <h2>h2 Title <small>Secondary text</small></h2>
+            <h3>h3 Title <small>Secondary text</small></h3>
+            <h4>h4 Title <small>Secondary text</small></h4>
+            <h5>h5 Title <small>Secondary text</small></h5>
+            <h6>h6 Title <small>Secondary text</small></h6>
 
-                <li class="li-no-style">
-                    <ul class="list-styled">
-                        <li>subitem li 1</li>
-                        <li>subitem li 2</li>
-                        <li>subitem li 3</li>
+            <h3>Paragraphs: <small>(p)</small></h3>
+
+            <p>Esto es un párrafo 1.</p>
+
+            <p>Esto es un párrafo 2.</p>
+
+            <h3>Marked Text: <small>(mark)</small></h3>
+
+            <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+
+            <h3>Deleted Text: <small>(del)</small></h3>
+
+            <p><del>This line of text is meant to be treated as deleted text.</del></p>
+
+            <h3>Strikethrough Text: <small>(s)</small></h3>
+
+            <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+
+            <h3>Inserted Text: <small>(ins)</small></h3>
+
+            <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+
+            <h3>Underline Text: <small>(u)</small></h3>
+
+            <p><u>This line of text will render as underlined</u></p>
+
+            <h3>Small Text: <small>(small)</small></h3>
+
+            <p><small>This line of text is meant to be treated as fine print.</small></p>
+
+            <h3>Bold Text: <small>(strong)</small></h3>
+
+            <p><strong>Text rendered as bold text.</strong></p>
+
+            <h3>Italic Text: <small>(em, b, i)</small></h3>
+
+            <p><em>EM</em>, <b>B</b>, <i>I</i></p>
+
+            <h3>Abbreviation: <small>(abbr)</small></h3>
+
+            <p>
+                <abbr title="attribute">attr</abbr>
+                <br>
+                <abbr class="initialism" title="HyperText Markup Language">HTML</abbr> is the best thing since sliced bread.
+            </p>
+
+            <h3>Address: <small>(address)</small></h3>
+
+            <address>
+                <strong>Twitter, Inc.</strong><br>
+                795 Folsom Ave, Suite 600<br>
+                San Francisco, CA 94107<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+            </address>
+
+            <h3>Blockquotes: <small>(blockquote)</small></h3>
+
+            <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+
+                <footer>
+                    Someone famous in <cite title="Source Title">Source Title</cite>
+                </footer>
+            </blockquote>
+
+            <h3>Lists: <small>(ul, ol, dl)</small></h3>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                    <p><strong>Unordered:</strong></p>
+
+                    <ul>
+                        <li>item li 1</li>
+                        <li>item li 2</li>
+                        <li>item li 3</li>
+
+                        <li class="li-no-style">
+                            <ul>
+                                <li>subitem li 1</li>
+                                <li>subitem li 2</li>
+                                <li>subitem li 3</li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-            </ul>
-        </div>
+                </div>
 
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <p><strong>Inline:</strong></p>
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                    <p><strong>Ordered:</strong></p>
 
-            <ul class="list-inline">
-                <li>item li 1</li>
-                <li>item li 2</li>
-                <li>item li 3</li>
-            </ul>
-        </div>
+                    <ol>
+                        <li>item li 1</li>
+                        <li>item li 2</li>
+                        <li>item li 3</li>
 
-        <div class="clearfix visible-sm"></div>
+                        <li class="li-no-style">
+                            <ol>
+                                <li>subitem li 1</li>
+                                <li>subitem li 2</li>
+                                <li>subitem li 3</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
 
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-3">
-            <p><strong>Description List:</strong></p>
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                    <p><strong>Styled:</strong></p>
 
-            <dl>
-                <dt>item dt</dt>
-                <dd>item dd</dd>
-                <dd>item dd</dd>
-                <dd>
+                    <ul class="list-styled">
+                        <li>item li 1</li>
+                        <li>item li 2</li>
+                        <li>item li 3</li>
+
+                        <li class="li-no-style">
+                            <ul class="list-styled">
+                                <li>subitem li 1</li>
+                                <li>subitem li 2</li>
+                                <li>subitem li 3</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <p><strong>Inline:</strong></p>
+
+                    <ul class="list-inline">
+                        <li>item li 1</li>
+                        <li>item li 2</li>
+                        <li>item li 3</li>
+                    </ul>
+                </div>
+
+                <div class="clearfix visible-sm"></div>
+
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-3">
+                    <p><strong>Description List:</strong></p>
+
                     <dl>
                         <dt>item dt</dt>
                         <dd>item dd</dd>
                         <dd>item dd</dd>
+                        <dd>
+                            <dl>
+                                <dt>item dt</dt>
+                                <dd>item dd</dd>
+                                <dd>item dd</dd>
+                            </dl>
+                        </dd>
                     </dl>
-                </dd>
-            </dl>
-        </div>
-    </div>
+                </div>
+            </div>
 
-    <h3>Code: <small>(code, kbd, pre, var, samp)</small></h3>
+            <h3>Code: <small>(code, kbd, pre, var, samp)</small></h3>
 
-    <div class="code-block">
-        <p><strong>Inline:</strong> <small>(code)</small></p>
+            <div class="code-block">
+                <p><strong>Inline:</strong> <small>(code)</small></p>
 
-        <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+                <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
 
-        <p><strong>User input</strong>: <small>(kbd)</small></p>
+                <p><strong>User input</strong>: <small>(kbd)</small></p>
 
-        <p>
-            To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
-            To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
-        </p>
+                <p>
+                    To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+                    To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+                </p>
 
-        <p><strong>Basic block</strong>: <small>(pre)</small></p>
+                <p><strong>Basic block</strong>: <small>(pre)</small></p>
 
-        <pre>
-            (*) En la documentación de bootstrap, aquí van  las "alignment classes" y las "transformation classes", pero para xstrap quedan descartadas debido a la poca versatilidad a la hora de cambiar el alineamiento o el tipo de transformación para distintas resoluciones.
-        </pre>
+                <pre>
+                    (*) En la documentación de bootstrap, aquí van  las "alignment classes" y las "transformation classes", pero para xstrap quedan descartadas debido a la poca versatilidad a la hora de cambiar el alineamiento o el tipo de transformación para distintas resoluciones.
+                </pre>
 
-        <p><strong>Variables</strong>: <small>(var)</small></p>
+                <p><strong>Variables</strong>: <small>(var)</small></p>
 
-        <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
+                <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
 
-        <p><strong>Sample output</strong>: <small>(samp)</small></p>
+                <p><strong>Sample output</strong>: <small>(samp)</small></p>
 
-        <p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
-    </div>
-    <!-- end HTML Elements -->
+                <p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+            </div>
+            <!-- end HTML Elements -->
 
-    <br>
-    <br>
-    <h2>
-        <span class="icomoon-redo2 icomoon"></span>
-        XSTRAP COMPONENTS:
-    </h2>
+            <br>
+            <br>
+            <h2>
+                <span class="icomoon-redo2 icomoon"></span>
+                XSTRAP COMPONENTS:
+            </h2>
 
-    <h3>Tables: <small>(table)</small></h3>
+            <h3>Tables: <small>(table)</small></h3>
 
-    <h4>Default table:</h4>
+            <h4>Default table:</h4>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-            </tr>
-        </thead>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                    </tr>
+                </thead>
 
-        <tbody>
-            <tr>
-                <td>1 owighwoef hwioefheoifhwefio</td>
-                <td>2 owighwoef hwioefheoifhwefio</td>
-                <td>3 owighwoef hwioefheoifhwefio</td>
-            </tr>
+                <tbody>
+                    <tr>
+                        <td>1 owighwoef hwioefheoifhwefio</td>
+                        <td>2 owighwoef hwioefheoifhwefio</td>
+                        <td>3 owighwoef hwioefheoifhwefio</td>
+                    </tr>
 
-            <tr>
-                <td>1 owighwoef hwioefheoifhwefio</td>
-                <td>2 owighwoef hwioefheoifhwefio</td>
-                <td>3 owighwoef hwioefheoifhwefio</td>
-            </tr>
-        </tbody>
-    </table>
+                    <tr>
+                        <td>1 owighwoef hwioefheoifhwefio</td>
+                        <td>2 owighwoef hwioefheoifhwefio</td>
+                        <td>3 owighwoef hwioefheoifhwefio</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <h4>Responsive table:</h4>
+            <h4>Responsive table:</h4>
 
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>1 iuyewg iwgefiwegfiuwe gfiuewf</th>
-                    <th>2 iuyewg iwgefiwegfiuwe gfiuewf</th>
-                    <th>3 iuyewg iwgefiwegfiuwe gfiuewf</th>
-                    <th>1 iuyewg iwgefiwegfiuwe gfiuewf</th>
-                    <th>2 iuyewg iwgefiwegfiuwe gfiuewf</th>
-                    <th>3 iuyewg iwgefiwegfiuwe gfiuewf</th>
-                </tr>
-            </thead>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>1 iuyewg iwgefiwegfiuwe gfiuewf</th>
+                            <th>2 iuyewg iwgefiwegfiuwe gfiuewf</th>
+                            <th>3 iuyewg iwgefiwegfiuwe gfiuewf</th>
+                            <th>1 iuyewg iwgefiwegfiuwe gfiuewf</th>
+                            <th>2 iuyewg iwgefiwegfiuwe gfiuewf</th>
+                            <th>3 iuyewg iwgefiwegfiuwe gfiuewf</th>
+                        </tr>
+                    </thead>
 
-            <tbody>
-                <tr>
-                    <td>1 owighwoef hwioefheoifhwefio</td>
-                    <td>2 owighwoef hwioefheoifhwefio</td>
-                    <td>3 owighwoef hwioefheoifhwefio</td>
-                    <td>1 owighwoef hwioefheoifhwefio</td>
-                    <td>2 owighwoef hwioefheoifhwefio</td>
-                    <td>3 owighwoef hwioefheoifhwefio</td>
-                </tr>
+                    <tbody>
+                        <tr>
+                            <td>1 owighwoef hwioefheoifhwefio</td>
+                            <td>2 owighwoef hwioefheoifhwefio</td>
+                            <td>3 owighwoef hwioefheoifhwefio</td>
+                            <td>1 owighwoef hwioefheoifhwefio</td>
+                            <td>2 owighwoef hwioefheoifhwefio</td>
+                            <td>3 owighwoef hwioefheoifhwefio</td>
+                        </tr>
 
-                <tr>
-                    <td>1rwoufhw ofweou hfwue fheiowufh oweiufh</td>
-                    <td>2rwoufhw ofweou hfwue fheiowufh oweiufh</td>
-                    <td>3rwoufhw ofweou hfwue fheiowufh oweiufh</td>
-                    <td>1rwoufhw ofweou hfwue fheiowufh oweiufh</td>
-                    <td>2rwoufhw ofweou hfwue fheiowufh oweiufh</td>
-                    <td>3rwoufhw ofweou hfwue fheiowufh oweiufh</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+                        <tr>
+                            <td>1rwoufhw ofweou hfwue fheiowufh oweiufh</td>
+                            <td>2rwoufhw ofweou hfwue fheiowufh oweiufh</td>
+                            <td>3rwoufhw ofweou hfwue fheiowufh oweiufh</td>
+                            <td>1rwoufhw ofweou hfwue fheiowufh oweiufh</td>
+                            <td>2rwoufhw ofweou hfwue fheiowufh oweiufh</td>
+                            <td>3rwoufhw ofweou hfwue fheiowufh oweiufh</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
