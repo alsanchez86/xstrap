@@ -29,7 +29,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#spy-nav" data-offset="20">
+<body data-spy="scroll" data-target="#spy-affix-nav" data-offset="20">
 
 <header class="header">
     <h1>
@@ -50,7 +50,7 @@
 <div class="container">
     <div class="row">
         <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
-            <nav id="spy-nav" data-spy="affix" data-offset-top="60" data-offset-bottom="500">
+            <nav id="spy-affix-nav">
                 <ul class="nav">
                     <li>
                         <a href="#spy-grid-system">Grid System</a>

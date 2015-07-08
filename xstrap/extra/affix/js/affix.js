@@ -18,8 +18,8 @@
     this.options = $.extend({}, Affix.DEFAULTS, options)
 
     this.$target = $(this.options.target)
-      .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
-      .on('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
+      .on ('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
+      .on ('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
 
     this.$element     = $(element)
     this.affixed      = null
@@ -47,6 +47,7 @@
     if (offsetTop != null && this.affixed == 'top') return scrollTop < offsetTop ? 'top' : false
 
     if (this.affixed == 'bottom') {
+
       if (offsetTop != null) return (scrollTop + this.unpin <= position.top) ? false : 'bottom'
       return (scrollTop + targetHeight <= scrollHeight - offsetBottom) ? false : 'bottom'
     }
@@ -55,10 +56,10 @@
     var colliderTop    = initializing ? scrollTop : position.top
     var colliderHeight = initializing ? targetHeight : height
 
-    if (offsetTop != null && scrollTop <= offsetTop) return 'top'
-    if (offsetBottom != null && (colliderTop + colliderHeight >= scrollHeight - offsetBottom)) return 'bottom'
+    if (offsetTop != null && scrollTop <= offsetTop) return 'top';
+    if (offsetBottom != null && (colliderTop + colliderHeight >= scrollHeight - offsetBottom)) return 'bottom';
 
-    return false
+    return false;
   }
 
   Affix.prototype.getPinnedOffset = function () {
@@ -89,28 +90,30 @@
     if (typeof offsetTop == 'function')    offsetTop    = offset.top(this.$element)
     if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
 
-    var affix = this.getState(scrollHeight, height, offsetTop, offsetBottom)
+    var affix = this.getState (scrollHeight, height, offsetTop, offsetBottom);
 
     if (this.affixed != affix) {
-      if (this.unpin != null) this.$element.css('top', '')
 
-      var affixType = 'affix' + (affix ? '-' + affix : '')
-      var e         = $.Event(affixType + '.bs.affix')
+      if (this.unpin != null) this.$element.css('top', '');
 
-      this.$element.trigger(e)
+      var affixType = 'affix' + (affix ? '-' + affix : '');
+      var e         = $.Event(affixType + '.bs.affix');
 
-      if (e.isDefaultPrevented()) return
+      this.$element.trigger(e);
 
-      this.affixed = affix
-      this.unpin = affix == 'bottom' ? this.getPinnedOffset() : null
+      if (e.isDefaultPrevented()) return;
+
+      this.affixed = affix;
+      this.unpin = affix == 'bottom' ? this.getPinnedOffset() : null;
 
       this.$element
-        .removeClass(Affix.RESET)
-        .addClass(affixType)
-        .trigger(affixType.replace('affix', 'affixed') + '.bs.affix')
+        .removeClass (Affix.RESET)
+        .addClass (affixType)
+        .trigger (affixType.replace('affix', 'affixed') + '.bs.affix');
     }
 
     if (affix == 'bottom') {
+
       this.$element.offset({
         top: scrollHeight - height - offsetBottom
       })
@@ -153,6 +156,7 @@
   // =================
 
   $.fn.affix.noConflict = function () {
+
     $.fn.affix = old
     return this
   }
@@ -160,7 +164,7 @@
   // AFFIX DATA-API
   // ==============
 
-  $(window)
+  /*$(window)
     .on ({
       load: function () {
 
@@ -181,5 +185,5 @@
       resize: function () {
 
       }
-    });
+    });*/
 }(jQuery);

@@ -5,6 +5,7 @@ jQuery (document).ready (function($) {
     bootstrap ();
     if (typeof preload  != 'undefined') preLoad ();
     //responsive ();
+    affix ();
 });
 
 $(window)
@@ -14,6 +15,7 @@ $(window)
         },
         resize: function () {
             //responsive ();
+            affixResponsive ();
         },
         scroll: function () {
 
@@ -68,4 +70,29 @@ function xs () {
 function preLoad () {
 
   for (var i = 0; i < preload.length; i++) $('<img />').attr ('src', preload [i]);
+}
+
+// affix
+function affix () {
+
+    $('#spy-affix-nav').affix({
+        offset: {
+            top: 0,
+            bottom: function () {
+
+                return (this.bottom = $('#footer').outerHeight (true))
+            }
+        }
+    });
+}
+
+function affixResponsive () {
+
+    var nav     = $('#spy-affix-nav');
+    var parent  = nav.parent ();
+
+    nav
+        .css ({
+            width: parent.width ()
+        });
 }
