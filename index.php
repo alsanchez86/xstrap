@@ -31,6 +31,7 @@
 </head>
 <body data-spy="scroll" data-target="#spy-affix-nav" data-offset="20">
 
+<div class="body-content">
 <header class="header">
     <h1>
         XSTRAP <strong>1.0</strong>
@@ -521,11 +522,15 @@
         </div>
     </div>
 </div>
+</div>
 
 <footer id="footer" class="footer">
-    <p class="footer-links">
-        <a href="">qqqq</a>&nbsp;|&nbsp;
-        <a href="">Open Ximdex Evolution (&copy;) | All rights reserved.</a>
+    <p>
+        <span>qqqq</span>
+        |
+        <a href=""><span>Open Ximdex Evolution &copy;</span></a>
+        |
+        <span>All rights reserved</span>
     </p>
 
     <a class="btn-3d-2 btn">BTN 3D 2</a>

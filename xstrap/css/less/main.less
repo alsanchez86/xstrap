@@ -10,6 +10,15 @@
 @import url('../../extra/affix/less/affix.less');
 
 // MAIN
+body {
+  background: url('@{path-images}texture.png') repeat;
+}
+
+.body-content {
+  padding-bottom: @space * 3;
+  background-color: @background-color;
+}
+
 .btn-3d {
   .border (1px solid @rojo-1);
   .gradient (@rojo, @rojo-1, -180deg, 50%, 100%);
@@ -84,22 +93,18 @@
 }
 
 .footer {
-  margin-top: @space * 2;
   padding: @space * 2 0px @space * 4 0px;
 
   font-size: 12px;
-  color: @gris;
+  color: @blanco;
   text-align: center;
-  background: url('@{path-images}texture.png') repeat;
 
   a:not(.btn) {
     .link (@blanco, @blanco, none, underline);
   }
 
-  .footer-links {
-    a:not(.btn) {
-      margin: 0px @space / 2;
-    }
+  span {
+    margin: 0px @space / 2;
   }
 }
 
