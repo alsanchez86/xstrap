@@ -57,13 +57,43 @@
                         <a href="#spy-grid-system">Grid System</a>
 
                         <ul>
-                            <li><a href="#spy-containers">Containers qgqwuydg qwiudgqiwdg qwidg qwiudg iqwgdiyqwgduiqgwd iuqwgdiu gqwuid gqwidug qwiudg</a></li>
+                            <li><a href="#spy-containers">Containers</a></li>
                             <li><a href="#spy-rows">Rows</a></li>
                             <li><a href="#spy-casos-especiales">Casos especiales</a></li>
                         </ul>
                     </li>
 
                     <li><a href="#spy-generics">Generics</a></li>
+
+                    <li>
+                        <a href="#spy-html-elements">Html elements</a>
+
+                        <ul>
+                            <li><a href="#spy-links">Links</a></li>
+                            <li><a href="#spy-titles">Titles</a></li>
+                            <li><a href="#spy-marked">Marked</a></li>
+                            <li><a href="#spy-deleted">Deleted</a></li>
+                            <li><a href="#spy-strikethrough">Strikethrough</a></li>
+                            <li><a href="#spy-inserted">Inserted</a></li>
+                            <li><a href="#spy-underline">Underline</a></li>
+                            <li><a href="#spy-small">Small</a></li>
+                            <li><a href="#spy-bold">Bold</a></li>
+                            <li><a href="#spy-italic">Italic</a></li>
+                            <li><a href="#spy-abbreviation">Abbreviation</a></li>
+                            <li><a href="#spy-address">Address</a></li>
+                            <li><a href="#spy-blockquotes">Blockquotes</a></li>
+                            <li><a href="#spy-lists">Lists</a></li>
+                            <li><a href="#spy-code">Code</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#spy-xstrap-components">Xstrap Components</a>
+
+                        <ul>
+                            <li><a href="#spy-tables">Tables</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -243,12 +273,12 @@
             <!-- HTML Elements -->
             <br>
             <br>
-            <h2>
+            <h2 id="spy-html-elements">
                 <span class="icomoon-redo2 icomoon"></span>
                 HTML ELEMENTS:
             </h2>
 
-            <h3>Links: <small>(a)</small></h3>
+            <h3 id="spy-links">Links: <small>(a)</small></h3>
 
             <ol>
                 <li><a href="">LINK</a></li>
@@ -257,7 +287,7 @@
                 <li><a href="#">LINK with glyphicon&nbsp;<span class="glyphicon glyphicon-cloud"></span></a></li>
             </ol>
 
-            <h3>Titles: <small>(h1, h2, h3, h4, h5, h6)</small></h3>
+            <h3 id="spy-titles">Titles: <small>(h1, h2, h3, h4, h5, h6)</small></h3>
 
             <h1>h1 Title <small>Secondary text</small></h1>
             <h2>h2 Title <small>Secondary text</small></h2>
@@ -266,45 +296,45 @@
             <h5>h5 Title <small>Secondary text</small></h5>
             <h6>h6 Title <small>Secondary text</small></h6>
 
-            <h3>Paragraphs: <small>(p)</small></h3>
+            <h3 id="spy-paragraphs">Paragraphs: <small>(p)</small></h3>
 
             <p>Esto es un párrafo 1.</p>
 
             <p>Esto es un párrafo 2.</p>
 
-            <h3>Marked Text: <small>(mark)</small></h3>
+            <h3 id="spy-marked">Marked Text: <small>(mark)</small></h3>
 
             <p>You can use the mark tag to <mark>highlight</mark> text.</p>
 
-            <h3>Deleted Text: <small>(del)</small></h3>
+            <h3 id="spy-deleted">Deleted Text: <small>(del)</small></h3>
 
             <p><del>This line of text is meant to be treated as deleted text.</del></p>
 
-            <h3>Strikethrough Text: <small>(s)</small></h3>
+            <h3 id="spy-strikethrough">Strikethrough Text: <small>(s)</small></h3>
 
             <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
 
-            <h3>Inserted Text: <small>(ins)</small></h3>
+            <h3 id="spy-inserted">Inserted Text: <small>(ins)</small></h3>
 
             <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
 
-            <h3>Underline Text: <small>(u)</small></h3>
+            <h3 id="spy-underline">Underline Text: <small>(u)</small></h3>
 
             <p><u>This line of text will render as underlined</u></p>
 
-            <h3>Small Text: <small>(small)</small></h3>
+            <h3 id="spy-small">Small Text: <small>(small)</small></h3>
 
             <p><small>This line of text is meant to be treated as fine print.</small></p>
 
-            <h3>Bold Text: <small>(strong)</small></h3>
+            <h3 id="spy-bold">Bold Text: <small>(strong)</small></h3>
 
             <p><strong>Text rendered as bold text.</strong></p>
 
-            <h3>Italic Text: <small>(em, b, i)</small></h3>
+            <h3 id="spy-italic">Italic Text: <small>(em, b, i)</small></h3>
 
             <p><em>EM</em>, <b>B</b>, <i>I</i></p>
 
-            <h3>Abbreviation: <small>(abbr)</small></h3>
+            <h3 id="spy-abbreviation">Abbreviation: <small>(abbr)</small></h3>
 
             <p>
                 <abbr title="attribute">attr</abbr>
@@ -312,7 +342,7 @@
                 <abbr class="initialism" title="HyperText Markup Language">HTML</abbr> is the best thing since sliced bread.
             </p>
 
-            <h3>Address: <small>(address)</small></h3>
+            <h3 id="spy-address">Address: <small>(address)</small></h3>
 
             <address>
                 <strong>Twitter, Inc.</strong><br>
@@ -321,7 +351,7 @@
                 <abbr title="Phone">P:</abbr> (123) 456-7890
             </address>
 
-            <h3>Blockquotes: <small>(blockquote)</small></h3>
+            <h3 id="spy-blockquotes">Blockquotes: <small>(blockquote)</small></h3>
 
             <blockquote>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -331,7 +361,7 @@
                 </footer>
             </blockquote>
 
-            <h3>Lists: <small>(ul, ol, dl)</small></h3>
+            <h3 id="spy-lists">Lists: <small>(ul, ol, dl)</small></h3>
 
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
@@ -418,7 +448,7 @@
                 </div>
             </div>
 
-            <h3>Code: <small>(code, kbd, pre, var, samp)</small></h3>
+            <h3 id="spy-code">Code: <small>(code, kbd, pre, var, samp)</small></h3>
 
             <div class="code-block">
                 <p><strong>Inline:</strong> <small>(code)</small></p>
@@ -450,12 +480,12 @@
 
             <br>
             <br>
-            <h2>
+            <h2 id="spy-xstrap-components">
                 <span class="icomoon-redo2 icomoon"></span>
                 XSTRAP COMPONENTS:
             </h2>
 
-            <h3>Tables: <small>(table)</small></h3>
+            <h3 id="spy-tables">Tables: <small>(table)</small></h3>
 
             <h4>Default table:</h4>
 
