@@ -573,9 +573,9 @@
 
 <!-- COMPONENTS -->
 <!-- scrollspy -->
-<script src="./xstrap/extra/scrollspy/js/scrollspy.js"></script>
+<script src="./xstrap/components/scrollspy/js/scrollspy.js"></script>
 <!-- affix -->
-<script src="./xstrap/extra/affix/js/affix.js"></script>
+<script src="./xstrap/components/affix/js/affix.js"></script>
 
 <!-- main -->
 <script src="./xstrap/js/main.js"></script>

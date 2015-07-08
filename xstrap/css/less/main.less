@@ -3,11 +3,11 @@
 
 // EXTRAS
 // @import url('../../extra/glyphicons/less/glyphicons.less');
-@import url('../../extra/icomoon/less/icomoon.less');
-@import url('../../extra/lists/less/lists.less');
-@import url('../../extra/buttons/less/buttons.less');
-@import url('../../extra/tables/less/tables.less');
-@import url('../../extra/affix/less/affix.less');
+@import url('../../components/icomoon/less/icomoon.less');
+@import url('../../components/lists/less/lists.less');
+@import url('../../components/buttons/less/buttons.less');
+@import url('../../components/tables/less/tables.less');
+@import url('../../components/affix/less/affix.less');
 
 // MAIN
 body {
@@ -183,7 +183,8 @@ body {
 }
 
 .code-block {
-  padding-left: @space;
+  .border (1px solid @gris, 2px);
+  padding: @space;
 }
 
 //cargandos
