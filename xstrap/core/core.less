@@ -1,57 +1,29 @@
 // ATENCIÓN:
 // Base.less tiene incorporado de serie los siguientes less de bootstrap:
+
+// REVISAR DONDE SE HA QUEDADO EL LESS DE LOS SIGUIENTES ARCHIVOS... PONER EN reset.less???
 // scaffolding.less
 // type.less
 // utilities.less
 
-// MIXINS
-  // required by core
-  @import url('./mixins/clearfix.less');
-  @import url('./mixins/box-sizing.less');
+// VARS
+@import url('vars.less');
 
-  // required by multiple components
-  @import url('./mixins/not-outline.less');
-  @import url('./mixins/transition.less');
-  @import url('./mixins/text.less');
-  @import url('./mixins/space.less');
-  @import url('./mixins/border.less');
-  @import url('./mixins/box-shadow.less');
-  @import url('./mixins/links.less');
+// MIXINS
+// required by core
+@import url('./mixins/clearfix.less');
+@import url('./mixins/box-sizing.less');
+
+// >>> required by multiple components <<<
+@import url('./mixins/not-outline.less');
+@import url('./mixins/transition.less');
+@import url('./mixins/text.less');
+@import url('./mixins/space.less');
+@import url('./mixins/border.less');
+@import url('./mixins/box-shadow.less');
+@import url('./mixins/links.less');
 
 // CORE LESS
 @import url('normalize.less');
 @import url('reset.less');
 @import url('utilities.less');
-
-// Clases genéricas para usar directamente en el HTML.
-// Solamente para casos excepcionales.
-
-/*
-// legend
-legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: @line-height;
-  font-size: (@font-size * 1.5);
-  line-height: inherit;
-  color: @color;
-  border: 0;
-  border-bottom: 1px solid @color;
-}
-
-//hr
-hr {
-  .space ();
-  //margin: @space 0px @space 0px;
-}
-*/
-
-// Adjust output element
-/*output {
-  display: block;
-  padding-top: (@padding-base-vertical + 1);
-  font-size: @font-size-base;
-  line-height: @line-height;
-  color: @input-color;
-}*/

@@ -1,15 +1,5 @@
 @import url('vars.less');
 
-// label
-label {
-  .text (@label-font-family, @label-font-size, @label-font-weight, @label-font-style, @label-color);
-  display: inline-block;
-  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
-  margin-bottom: 5px;
-
-  cursor: pointer;
-}
-
 // inputs
 input,
 button,
@@ -68,6 +58,16 @@ fieldset {
   // so we reset that to ensure it behaves more like a standard block element.
   // See https://github.com/twbs/bootstrap/issues/12359.
   min-width: 0;
+}
+
+// label
+label {
+  .text (@label-font-family, @label-font-size, @label-font-weight, @label-font-style, @label-color);
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  margin-bottom: 5px;
+
+  cursor: pointer;
 }
 
 .form-control {
