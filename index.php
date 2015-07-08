@@ -464,9 +464,6 @@
                 <th>1</th>
                 <th>2</th>
                 <th>3</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
             </tr>
         </thead>
 
@@ -475,15 +472,9 @@
                 <td>1 owighwoef hwioefheoifhwefio</td>
                 <td>2 owighwoef hwioefheoifhwefio</td>
                 <td>3 owighwoef hwioefheoifhwefio</td>
-                <td>1 owighwoef hwioefheoifhwefio</td>
-                <td>2 owighwoef hwioefheoifhwefio</td>
-                <td>3 owighwoef hwioefheoifhwefio</td>
             </tr>
 
             <tr>
-                <td>1 owighwoef hwioefheoifhwefio</td>
-                <td>2 owighwoef hwioefheoifhwefio</td>
-                <td>3 owighwoef hwioefheoifhwefio</td>
                 <td>1 owighwoef hwioefheoifhwefio</td>
                 <td>2 owighwoef hwioefheoifhwefio</td>
                 <td>3 owighwoef hwioefheoifhwefio</td>
