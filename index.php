@@ -573,6 +573,38 @@
 
                 <button type="submit" class="btn-3d btn">Submit</button>
             </form>
+
+            <br>
+            <h3 id=="spy-images">Images: <small>(image)</small></h3>
+
+            <h4>Default image:</h4>
+
+            <img src="http://lorempixel.com/400/200/">
+
+            <br>
+            <br>
+            <h4>Responsive image:</h4>
+
+            <img class="img-responsive" src="http://lorempixel.com/400/200/">
+
+            <br>
+            <h4>Responsive max:</h4>
+
+            <img class="img-responsive-max img-responsive" src="http://lorempixel.com/400/200/">
+
+            <br>
+            <h4>Responsive center:</h4>
+
+            <img class="img-responsive-center img-responsive" src="http://lorempixel.com/400/200/">
+
+            <br>
+            <p>
+                Con Lorem Pixel, se pueden generar imágenes aleatorias para maquetar en fase de desarrollo.
+                <br>
+                <code>&lt;img src="http://lorempixel.com/400/200/"&gt;</code>
+                <br>
+                <a class="blank" href="http://lorempixel.com" target="_blank">Lorem Pixel</a>
+            </p>
         </div>
     </div>
 </div>
