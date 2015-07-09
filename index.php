@@ -553,25 +553,21 @@
 
             <h3 id="spy-forms">Forms: <small>(forms)</small></h3>
 
-            <form>
-                <div class="form-group disabled">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            <form method="POST" action="javascript:actionForm ()">
+                <!-- action="{{ route("register") }}" -->
+                <div class="form-group">
+                    <label for="form-name">Name</label>
+                    <input type="text" class="form-control" id="form-name" name="form-name" placeholder="Name">
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <input type="file" id="exampleInputFile">
+                    <label for="form-email">Email</label>
+                    <input type="text" class="form-control" id="form-email" name="form-email" placeholder="Email">
                 </div>
 
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox"> Check me out
+                        <input id="form-checkbox" name="form-checkbox" type="checkbox"> Check me out
                     </label>
                 </div>
 
@@ -604,6 +600,12 @@
 <script src="./xstrap/components/scrollspy/js/scrollspy.js"></script>
 <!-- affix -->
 <script src="./xstrap/components/affix/js/affix.js"></script>
+<!-- tooltip -->
+<script src="./xstrap/components/tooltips/js/tooltip.js"></script>
+<!-- popover -->
+<script src="./xstrap/components/popovers/js/popover.js"></script>
+<!-- forms -->
+<script src="./xstrap/components/forms/js/forms.js"></script>
 
 <!-- main -->
 <script src="./xstrap/js/main.js"></script>

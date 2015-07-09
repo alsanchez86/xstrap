@@ -1,19 +1,9 @@
+// vars
+@import url('vars.less');
+
 //
 // Popovers
 // --------------------------------------------------
-
-@zindex-popover:           1060;
-
-@popover-bg:                          #fff;
-@popover-max-width:                   276px;
-@popover-border-color:                rgba(0,0,0,.2);
-@popover-fallback-border-color:       #ccc;
-@popover-title-bg:                    darken(@popover-bg, 3%);
-@popover-arrow-width:                 10px;
-@popover-arrow-color:                 @popover-bg;
-@popover-arrow-outer-width:           (@popover-arrow-width + 1);
-@popover-arrow-outer-color:           fadein(@popover-border-color, 5%);
-@popover-arrow-outer-fallback-color:  darken(@popover-fallback-border-color, 20%);
 
 /*.popover {
   .text (@popover-font-family, @popover-font-size, @popover-font-weight, @popover-font-style, @popover-color);
@@ -66,29 +56,27 @@
 }*/
 
 .popover {
+  .text (@popover-font-family, @popover-font-size, @popover-font-weight, @popover-font-style, @popover-color, @popover-text-align, @popover-text-transform, @popover-line-height);
+  .border (@popover-border, @popover-border-radius);
+  .box-shadow (@popover-shadow-color, @popover-shadow-width, @popover-shadow-height, @popover-shadow-radius, @popover-shadow-size);
   position: absolute;
   top: 0;
   left: 0;
-  z-index: @zindex-popover;
+  z-index: @popover-zindex;
   display: none;
   max-width: @popover-max-width;
   padding: 1px;
   // Our parent element can be arbitrary since popovers are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
   //.reset-text();
-  font-size: @font-size;
 
-  background-color: @popover-bg;
+  background-color: @popover-background-color;
   background-clip: padding-box;
-  border: 1px solid @popover-fallback-border-color;
-  border: 1px solid @popover-border-color;
-  border-radius: @border-radius;
-  .box-shadow(0 5px 10px rgba(0,0,0,.2));
 
   // Offset the popover to account for the popover arrow
-  &.top     { margin-top: -@popover-arrow-width; }
-  &.right   { margin-left: @popover-arrow-width; }
-  &.bottom  { margin-top: @popover-arrow-width; }
+  &.top     { margin-top:  -@popover-arrow-width; }
+  &.right   { margin-left:  @popover-arrow-width; }
+  &.bottom  { margin-top:   @popover-arrow-width; }
   &.left    { margin-left: -@popover-arrow-width; }
 }
 
@@ -96,8 +84,8 @@
   margin: 0; // reset heading margin
   padding: 8px 14px;
   font-size: @font-size;
-  background-color: @popover-title-bg;
-  border-bottom: 1px solid darken(@popover-title-bg, 5%);
+  background-color: @popover-title-background-color;
+  border-bottom: 1px solid darken(@popover-title-background-color, 5%);
   border-radius: (@border-radius - 1) (@border-radius - 1) 0 0;
 }
 

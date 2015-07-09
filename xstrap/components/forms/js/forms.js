@@ -1,8 +1,13 @@
+// components required:
+//
+// popover
+// modal
+
 function actionForm (route) {
 
-    var name  = $('#fullname');
-    var email = $('#email');
-    var agree = $('#agree');
+    var name  = $('#form-name');
+    var email = $('#form-email');
+    var check = $('#form-checkbox');
 
     name
         .popover ('destroy')
@@ -18,19 +23,19 @@ function actionForm (route) {
             email.popover ('destroy');
         });
 
-    agree
+    check
         .popover ('destroy')
         .click (function () {
 
-            agree.popover ('destroy');
+            check.popover ('destroy');
         });
 
     if (name.val () == '')              return reqInput (name,  'You must enter a name.');
     if (email.val () == '')             return reqInput (email, 'You must enter an valid email.');
     if (! validateEmail (email.val ())) return reqInput (email, 'Your email is not valid.');
-    if (! agree.is (':checked'))        return reqInput (agree, 'You must accept the terms and conditions.');
+    if (! check.is (':checked'))        return reqInput (check, 'You must accept the terms and conditions.');
 
-    sendForm ($('#login-form').serialize ());
+    //sendForm ($('#login-form').serialize ());
 }
 
 function sendForm (datos) {
