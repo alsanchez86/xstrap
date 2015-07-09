@@ -1,5 +1,3 @@
-* ) INCLUIR COMPONENTE texts EN reset.less DEL CORE????
-
 XSTRAP!
 
 Vendors used:
