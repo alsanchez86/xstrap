@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>XSTRAP 1.1</title>
+    <title>XSTRAP 1.0</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +34,7 @@
 <div class="body-content">
 <header class="header">
     <h1>
-        XSTRAP <strong>1.1</strong>
+        XSTRAP <strong>1.0</strong>
         <small>Build your own <strong>front-end</strong> framework</small>
     </h1>
 
