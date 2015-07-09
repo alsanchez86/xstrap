@@ -92,6 +92,7 @@
 
                         <ul>
                             <li><a href="#spy-tables">Tables</a></li>
+                            <li><a href="#spy-forms">Forms</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -549,6 +550,33 @@
                     </tbody>
                 </table>
             </div>
+
+            <h3 id="spy-forms">Forms: <small>(forms)</small></h3>
+
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" id="exampleInputFile">
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Check me out
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-3d btn">Submit</button>
+            </form>
         </div>
     </div>
 </div>

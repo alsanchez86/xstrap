@@ -3,7 +3,6 @@
 
 // REVISAR DONDE SE HA QUEDADO EL LESS DE LOS SIGUIENTES ARCHIVOS... PONER EN reset.less???
 // scaffolding.less
-// type.less
 // utilities.less
 
 // NORMALIZE
@@ -17,10 +16,11 @@
 @import url('./mixins/clearfix.less');
 @import url('./mixins/box-sizing.less');
 
-//required by components
+//required by many components
 @import url('./mixins/background-cover.less');
 @import url('./mixins/border.less');
 @import url('./mixins/box-shadow.less');
+@import url('./mixins/center-block.less');
 @import url('./mixins/disabled.less');
 @import url('./mixins/not-outline.less');
 @import url('./mixins/opacity.less');
@@ -28,7 +28,7 @@
 @import url('./mixins/transition.less');
 //@import url('./mixins/vendor-prefixes.less');
 
-// LESS
+// scaffolding
 * {
     .box-sizing (border-box);
 
@@ -42,12 +42,37 @@ html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-.clearfix {
-  .clearfix ();
+img {
+  vertical-align: middle;
 }
 
-// class required by core
+figure {
+  margin: 0;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+hr {
+  .space ();
+  .border (0px, 0px);
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+// classes required by core
+.clearfix         { .clearfix (); }
 .space            { .space (); }
+.disabled         { .disabled (); }
+.center-block     { .center-block (); }
 .relative         { position: relative; }
 .absolute         { position: absolute; }
 .no-margin        { margin: 0px; }
@@ -62,7 +87,6 @@ html {
 .hidden           { display: none !important; }
 .show             { display: block !important; }
 .invisible        { visibility: hidden; }
-.disabled         { .disabled (); }
 
 .sr-only {
   position: absolute;
@@ -73,4 +97,16 @@ html {
   overflow: hidden;
   clip: rect(0,0,0,0);
   border: 0;
+}
+
+.sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
 }

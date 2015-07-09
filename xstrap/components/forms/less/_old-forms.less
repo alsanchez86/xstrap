@@ -1,0 +1,222 @@
+// normalize
+@import url('normalize.less');
+
+// vars
+@import url('vars.less');
+
+// mixins
+@import url('./mixins/placeholder.less');
+
+// label
+label {
+  .space (@label-margin-bottom);
+  .text (@label-font-family, @label-font-size, @label-font-weight, @label-font-style, @label-color);
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  cursor: pointer;
+}
+
+.form-control {
+  .text         (@input-font-family, @input-font-size, @input-font-weight, @input-font-style, @input-color);
+  .space        (@input-margin-bottom);
+  .border       (@input-border, @input-border-radius);
+  .box-shadow   (@input-box-shadow-color, @input-box-shadow-blur);
+  .transition   (~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+  .placeholder  (@input-placeholder-color);
+  display: block;
+  height: @input-height;
+  width: 100%;
+  padding: @input-padding;
+  background-color: @input-background-color;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+
+  &:focus {
+    .box-shadow   (@input-box-shadow-color-focus);
+    .not-outline  ();
+    border-color: @input-border-color-focus;
+  }
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    .disabled ();
+  }
+
+  textarea& {
+    height: auto;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"] {
+    &.form-control {
+      line-height: @input-height;
+    }
+  }
+}
+
+.form-group {
+  .space (@form-group-margin-bottom);
+
+  & > .form-control {
+    .space (0px);
+  }
+}
+
+.radio,
+.checkbox {
+  //.space (@input-margin-bottom);
+  position: relative;
+  display: block;
+
+  label {
+    .space (0px);
+    min-height: @line-height;
+    padding-left: @checkbox-padding-left;
+  }
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px \9;
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: -5px;
+}
+
+.radio-inline,
+.checkbox-inline {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.radio-inline,
+.checkbox-inline {
+  fieldset[disabled] & {
+    .disabled ();
+  }
+}
+
+.radio,
+.checkbox {
+  fieldset[disabled] & {
+    label {
+      .disabled ();
+    }
+  }
+}
+
+//form-control-static
+/*.form-control-static {
+  padding-top: (@padding-base-vertical + 1);
+  padding-bottom: (@padding-base-vertical + 1);
+  margin-bottom: 0;
+  min-height: (@line-height-computed + @font-size-base);
+}*/
+
+//form-inline
+/*.form-inline {
+  @media (min-width: @screen-sm-min) {
+    .form-group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    .form-control {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+    }
+
+    .form-control-static {
+      display: inline-block;
+    }
+
+    .input-group {
+      display: inline-table;
+      vertical-align: middle;
+
+      .input-group-addon,
+      .input-group-btn,
+      .form-control {
+        width: auto;
+      }
+    }
+
+    .input-group > .form-control {
+      width: 100%;
+    }
+
+    .control-label {
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    .radio,
+    .checkbox {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      vertical-align: middle;
+
+      label {
+        padding-left: 0;
+      }
+    }
+    .radio input[type="radio"],
+    .checkbox input[type="checkbox"] {
+      position: relative;
+      margin-left: 0;
+    }
+  }
+}*/
+
+//form-horizontal
+/*.form-horizontal {
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: (@padding-base-vertical + 1);
+  }
+
+  .radio,
+  .checkbox {
+    min-height: (@line-height-computed + (@padding-base-vertical + 1));
+  }
+
+  .form-group {
+    .make-row();
+  }
+
+  @media (min-width: @screen-sm-min) {
+    .control-label {
+      text-align: right;
+      margin-bottom: 0;
+      padding-top: (@padding-base-vertical + 1);
+    }
+  }
+}*/
