@@ -1,0 +1,76 @@
+// ATENCIÓN:
+// core.less tiene incorporado de serie los siguientes less de bootstrap:
+
+// REVISAR DONDE SE HA QUEDADO EL LESS DE LOS SIGUIENTES ARCHIVOS... PONER EN reset.less???
+// scaffolding.less
+// type.less
+// utilities.less
+
+// NORMALIZE
+@import url('normalize.less');
+
+// VARS
+@import url('vars.less');
+
+// MIXINS
+//required by core
+@import url('./mixins/clearfix.less');
+@import url('./mixins/box-sizing.less');
+
+//required by components
+@import url('./mixins/background-cover.less');
+@import url('./mixins/border.less');
+@import url('./mixins/box-shadow.less');
+@import url('./mixins/disabled.less');
+@import url('./mixins/not-outline.less');
+@import url('./mixins/opacity.less');
+@import url('./mixins/space.less');
+@import url('./mixins/transition.less');
+//@import url('./mixins/vendor-prefixes.less');
+
+// LESS
+* {
+    .box-sizing (border-box);
+
+    &:before,
+    &:after {
+      .box-sizing (border-box);
+    }
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.clearfix {
+  .clearfix ();
+}
+
+// class required by core
+.space            { .space (); }
+.relative         { position: relative; }
+.absolute         { position: absolute; }
+.no-margin        { margin: 0px; }
+.no-padding       { padding: 0px; }
+.overhidden       { overflow: hidden; }
+.block            { display: block; }
+.pointer          { cursor: pointer; }
+.vertical-center  { vertical-align: middle; }
+.pull-right       { float: right !important; }
+.pull-left        { float: left !important; }
+.hide             { display: none !important; }
+.hidden           { display: none !important; }
+.show             { display: block !important; }
+.invisible        { visibility: hidden; }
+.disabled         { .disabled (); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

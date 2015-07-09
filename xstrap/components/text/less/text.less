@@ -1,35 +1,12 @@
 // vars
 @import url('vars.less');
 
-// *
-* {
-    .box-sizing (border-box);
+// mixins
+@import url('./mixins/text.less');
+@import url('./mixins/hide-text.less');
 
-    &:before,
-    &:after {
-      .box-sizing (border-box);
-    }
-}
-
-// html
-html {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-// figure
-figure {
-  margin: 0;
-}
-
-// iframe
-iframe {
-  .border (0px, 0px);
-}
-
-// hr
-hr {
-  .space ();
-}
+// utilities
+@import url('utilities.less');
 
 // legend
 /*legend {
@@ -43,8 +20,6 @@ hr {
     border: 0;
     border-bottom: 1px solid @color;
 }*/
-
-
 
 // Adjust output element
 /*output {

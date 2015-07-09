@@ -96,18 +96,6 @@
           hyphens: @mode;
 }
 
-// Placeholder text
-.placeholder (@color: @input-color-placeholder) {
-  // Firefox
-  &::-moz-placeholder {
-    color: @color;
-    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
-  }
-
-  &:-ms-input-placeholder { color: @color; } // Internet Explorer 10+
-  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
-}
-
 // Transformations
 .scale (@ratio) {
   -webkit-transform: scale(@ratio);
@@ -209,41 +197,6 @@
      -moz-transform-origin: @origin;
       -ms-transform-origin: @origin; // IE9 only
           transform-origin: @origin;
-}
-
-// Transitions
-/*.transition (@transition) {
-  -webkit-transition: @transition;
-       -o-transition: @transition;
-          transition: @transition;
-}
-*/
-
-.transition-property (@transition-property) {
-  -webkit-transition-property: @transition-property;
-          transition-property: @transition-property;
-}
-
-.transition-delay (@transition-delay) {
-  -webkit-transition-delay: @transition-delay;
-          transition-delay: @transition-delay;
-}
-
-.transition-duration (@transition-duration) {
-  -webkit-transition-duration: @transition-duration;
-          transition-duration: @transition-duration;
-}
-
-.transition-timing-function (@timing-function) {
-  -webkit-transition-timing-function: @timing-function;
-          transition-timing-function: @timing-function;
-}
-
-.transition-transform (@transition) {
-  -webkit-transition: -webkit-transform @transition;
-     -moz-transition: -moz-transform @transition;
-       -o-transition: -o-transform @transition;
-          transition: transform @transition;
 }
 
 // Animate.css

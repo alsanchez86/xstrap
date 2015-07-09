@@ -1,22 +1,22 @@
+// CORE
+@import url('../../core/less/core.less');
+
 // VARS
 @import url('vars.less');
-
-// CORE
-@import url('../../core/core.less');
 
 // MIXINS (propios del proyecto. No usados por ningún componente)
 @import url('./mixins/gradient.less');
 @import url('./mixins/text-shadow.less');
 
 // COMPONENTS (personalizados con de los valores de las variables definidas en vars.less)
-@import url('../../components/reset/less/reset.less'); //reset
-@import url('../../components/grid/less/grid.less'); //grid
-@import url('../../components/links/less/links.less'); //links
-@import url('../../components/image/less/image.less'); //image
-@import url('../../components/icomoon/less/icomoon.less'); //icomoon
-@import url('../../components/glyphicons/less/glyphicons.less'); //glyphicon
-@import url('../../components/buttons/less/buttons.less'); //buttons
-@import url('../../components/lists/less/lists.less'); //buttons
+@import url('../../components/grid/less/grid.less'); //require: core (.clearfix)
+@import url('../../components/text/less/text.less'); //require: grid
+@import url('../../components/links/less/links.less');
+@import url('../../components/glyphicons/less/glyphicons.less');
+@import url('../../components/icomoon/less/icomoon.less');
+@import url('../../components/image/less/image.less');
+@import url('../../components/buttons/less/buttons.less');
+@import url('../../components/lists/less/lists.less');
 @import url('../../components/tables/less/tables.less'); //tables
 @import url('../../components/affix/less/affix.less'); //affix
 
