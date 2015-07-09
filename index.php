@@ -554,7 +554,7 @@
             <h3 id="spy-forms">Forms: <small>(forms)</small></h3>
 
             <form>
-                <div class="form-group">
+                <div class="form-group disabled">
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
                 </div>

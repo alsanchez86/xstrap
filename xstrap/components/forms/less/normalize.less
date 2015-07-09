@@ -16,12 +16,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: @line-height;
-  font-size: (@font-size * 1.5);
   line-height: inherit;
-  color: @color;
   border: 0;
-  border-bottom: 1px solid @color;
 }
 
 label {
@@ -29,6 +25,10 @@ label {
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
   margin-bottom: 5px;
   font-weight: bold;
+}
+
+output {
+  display: block;
 }
 
 // Normalize form controls
@@ -73,11 +73,13 @@ input[type="checkbox"]:focus {
   //.tab-focus();
 }
 
-// Adjust output element
-output {
-  display: block;
-  padding-top: (@space + 1);
-  font-size: @font-size;
-  line-height: @line-height;
-  color: @color;
+// Search inputs in iOS
+//
+// This overrides the extra rounded corners on search inputs in iOS so that our
+// `.form-control` class can properly style them. Note that this cannot simply
+// be added to `.form-control` as it's not specific enough. For details, see
+// https://github.com/twbs/bootstrap/issues/11586.
+
+input[type="search"] {
+  -webkit-appearance: none;
 }
