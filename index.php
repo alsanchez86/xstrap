@@ -117,13 +117,11 @@
 
             <blockquote>
                 <p>
-                    <i>
-                        (*) Los containers, normales o fluids, podrán contener todo tipo de contenido; y a su vez esté podrá estar organizado en filas y columnas, pero <strong>en ningún caso un container podrá contener a otros containers.</strong>
-                    </i>
+                    (*) Los containers, normales o fluids, podrán contener todo tipo de contenido; y a su vez esté podrá estar organizado en filas y columnas, pero <strong>en ningún caso un container podrá contener a otros containers.</strong>
                 </p>
 
                 <p>
-                    <i>En xstrap, por defecto (ver vars.less) el .container se comportará como .container-fluid para las resoluciones XS y SM.</i>
+                    En xstrap, por defecto (ver vars.less) el .container se comportará como .container-fluid para las resoluciones XS y SM.
                 </p>
             </blockquote>
 
@@ -580,6 +578,12 @@
             <h4>Default image:</h4>
 
             <img src="http://lorempixel.com/400/200/">
+
+            <br>
+            <br>
+            <h4>Rounded image:</h4>
+
+            <img class="img-rounded" src="http://lorempixel.com/400/200/">
 
             <br>
             <br>
