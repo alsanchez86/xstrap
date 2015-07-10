@@ -1,5 +1,10 @@
 XSTRAP!
 
+Build your on front-end franmework.
+Thinks on components.
+
+(all in xstrap are components, including the core).
+
 Vendors used:
 
 + jquery [version < 2].

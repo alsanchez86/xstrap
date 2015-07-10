@@ -1,6 +1,3 @@
-// CORE
-@import url('../../core/less/core.less');
-
 // VARS
 @import url('vars.less');
 
@@ -9,8 +6,9 @@
 @import url('./mixins/text-shadow.less');
 
 // COMPONENTS (personalizados con de los valores de las variables definidas en vars.less)
-@import url('../../components/grid/less/grid.less'); //require: core (.clearfix)
-@import url('../../components/text/less/text.less'); //require: grid
+@import url('../../components/core/less/core.less');             // core
+@import url('../../components/grid/less/grid.less');  //require: core (.clearfix)
+@import url('../../components/text/less/text.less');  //require: grid
 @import url('../../components/links/less/links.less');
 @import url('../../components/glyphicons/less/glyphicons.less');
 @import url('../../components/icomoon/less/icomoon.less');
