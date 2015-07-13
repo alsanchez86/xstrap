@@ -5,22 +5,21 @@ jQuery (document).ready (function($) {
     bootstrap ();
     if (typeof preload  != 'undefined') preLoad ();
     //responsive ();
-    affix ();
+    affix ($('#spy-affix-nav'));
 });
 
-$(window)
+/*$(window)
     .on ({
         load: function () {
 
         },
         resize: function () {
-            //responsive ();
-            affixResponsive ();
+
         },
         scroll: function () {
 
         }
-    });
+    });*/
 
 // bootstrap
 function bootstrap () {
@@ -40,7 +39,7 @@ function bootstrap () {
 }
 
 // responsive
-function responsive () {
+/*function responsive () {
 
     var ventana = $(window).width ();
 
@@ -64,7 +63,7 @@ function sm () {
 
 function xs () {
 
-}
+}*/
 
 // preload
 function preLoad () {
@@ -73,27 +72,27 @@ function preLoad () {
 }
 
 // affix
-function affix () {
+function affix (affix) {
 
-    $('#spy-affix-nav')
+    affix
         .affix({
             offset: {
-                top: 0,
+                top: 20,
                 bottom: function () {
 
-                    return this.bottom = $('#footer').outerHeight (true);
+                    return this.bottom = $('#footer').outerHeight ();
                 }
             }
         });
-}
 
-function affixResponsive () {
+    $(window)
+        .on ({
+            resize: function () {
 
-    var nav     = $('#spy-affix-nav');
-    var parent  = nav.parent ();
-
-    nav
-        .css ({
-            width: parent.width ()
+                affix.
+                    css ({
+                        width: affix.parent ().width ()
+                    });
+            }
         });
 }
