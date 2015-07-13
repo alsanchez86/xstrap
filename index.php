@@ -53,6 +53,8 @@
         <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
             <nav id="spy-affix-nav">
                 <ul class="nav">
+                <li><a href="#footer">Go bottom <span class="icomoon icomoon-point-down"></span></a></li>
+
                     <li>
                         <a href="#spy-grid-system">Grid System</a>
 

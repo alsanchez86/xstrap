@@ -5,21 +5,23 @@ jQuery (document).ready (function($) {
     bootstrap ();
     if (typeof preload  != 'undefined') preLoad ();
     //responsive ();
-    affix ($('#spy-affix-nav'));
 });
 
-/*$(window)
+$(window)
     .on ({
         load: function () {
 
+            affix ();
+            affixResize ();
         },
         resize: function () {
-
+            //responsive ();
+            affixResize ();
         },
         scroll: function () {
 
         }
-    });*/
+    });
 
 // bootstrap
 function bootstrap () {
@@ -72,27 +74,27 @@ function preLoad () {
 }
 
 // affix
-function affix (affix) {
+function affix () {
 
-    affix
+    $('#spy-affix-nav')
         .affix({
             offset: {
-                top: 20,
+                top: 0,
                 bottom: function () {
 
-                    return this.bottom = $('#footer').outerHeight ();
+                    return $('#footer').outerHeight () + 100;
                 }
             }
         });
+}
 
-    $(window)
-        .on ({
-            resize: function () {
+function affixResize () {
 
-                affix.
-                    css ({
-                        width: affix.parent ().width ()
-                    });
-            }
+    var affix = $('#spy-affix-nav');
+
+    affix
+        .css ({
+            width:  affix.parent ().width (),
+            height: $(window).height () - $('#header').outerHeight () - 100
         });
 }
