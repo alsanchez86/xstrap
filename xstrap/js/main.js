@@ -75,15 +75,16 @@ function preLoad () {
 // affix
 function affix () {
 
-    $('#spy-affix-nav').affix({
-        offset: {
-            top: 0,
-            bottom: function () {
+    $('#spy-affix-nav')
+        .affix({
+            offset: {
+                top: 0,
+                bottom: function () {
 
-                return (this.bottom = $('#footer').outerHeight (true))
+                    return this.bottom = $('#footer').outerHeight (true);
+                }
             }
-        }
-    });
+        });
 }
 
 function affixResponsive () {

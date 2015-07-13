@@ -32,7 +32,7 @@
 <body data-spy="scroll" data-target="#spy-affix-nav" data-offset="20">
 
 <div class="body-content">
-<header class="header">
+<header id="spy-header" class="header">
     <h1>
         XSTRAP <strong>1.0</strong>
         <small>Build your own <strong>front-end</strong> framework</small>
@@ -95,6 +95,8 @@
                             <li><a href="#spy-forms">Forms</a></li>
                         </ul>
                     </li>
+
+                    <li><a href="#spy-header">Go top <span class="icomoon icomoon-point-up"></span></a></li>
                 </ul>
             </nav>
         </div>

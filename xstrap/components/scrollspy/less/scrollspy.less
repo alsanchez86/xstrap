@@ -1,0 +1,22 @@
+// vars
+@import url('vars.less');
+
+.nav {
+    a {
+        .link (@spy-a-color, @spy-a-color-hover, @spy-a-text-decoration, @spy-a-text-decoration-hover, @spy-a-background-color, @spy-a-background-color-hover);
+    }
+
+    .active {
+        & > a {
+            .link (@spy-a-active-color, @spy-a-active-color-hover, @spy-a-active-text-decoration, @spy-a-active-text-decoration-hover, @spy-a-active-background-color, @spy-a-active-background-color-hover);
+            padding: @spy-a-active-padding;
+        }
+
+        // subactive
+        .active {
+            & > a {
+                .link (@spy-a-subactive-color, @spy-a-subactive-color-hover, @spy-a-subactive-text-decoration, @spy-a-subactive-text-decoration-hover, @spy-a-subactive-background-color, @spy-a-subactive-background-color-hover);
+            }
+        }
+    }
+}
