@@ -79,10 +79,13 @@ function affix () {
     $('#spy-affix-nav')
         .affix({
             offset: {
-                top: 0,
+                top: function () {
+
+                    return $('#header').outerHeight () + 20;
+                },
                 bottom: function () {
 
-                    return $('#footer').outerHeight () + 100;
+                    return $('#footer').outerHeight () + 80;
                 }
             }
         });
@@ -95,6 +98,6 @@ function affixResize () {
     affix
         .css ({
             width:  affix.parent ().width (),
-            height: $(window).height () - $('#header').outerHeight () - 100
+            height: $(window).height () - 50
         });
 }
