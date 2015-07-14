@@ -1,6 +1,6 @@
 XSTRAP!
 
 Build your on front-end franmework.
-Thinks on components.
+Think on components.
 
 (all in xstrap are components, including the core).
