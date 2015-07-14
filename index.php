@@ -66,6 +66,7 @@
                             <li><a href="#spy-containers">Containers</a></li>
                             <li><a href="#spy-rows">Rows</a></li>
                             <li><a href="#spy-casos-especiales">Casos especiales</a></li>
+                            <li><a href="#spy-grid-utilities">Utilities</a></li>
                         </ul>
                     </li>
 
@@ -323,7 +324,7 @@
 
             <br>
             <br>
-            <h4 id="spy-casos-especiales">Utilities:</h4>
+            <h4 id="spy-grid-utilities">Utilities:</h4>
 
             <p>Heredados de <mark>Responsive: Utility classes</mark> de bootstrap.</p>
 
@@ -334,18 +335,22 @@
           <th></th>
           <th>
             Extra small devices
+            <br>
             <small>Phones (&lt;768px)</small>
           </th>
           <th>
             Small devices
+            <br>
             <small>Tablets (≥768px)</small>
           </th>
           <th>
             Medium devices
+            <br>
             <small>Desktops (≥992px)</small>
           </th>
           <th>
             Large devices
+            <br>
             <small>Desktops (≥1200px)</small>
           </th>
         </tr>
