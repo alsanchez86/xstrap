@@ -85,7 +85,7 @@ function affix () {
                 },
                 bottom: function () {
 
-                    return $('#footer').outerHeight () + 80;
+                    return $('#footer').outerHeight () + 100;
                 }
             }
         });
