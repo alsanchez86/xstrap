@@ -18,6 +18,14 @@
 @lowlight-color: 	@gris;
 @highlight-color: 	@gris-2;
 
+// links
+@a-color:					@rojo;
+@a-color-hover: 			@rojo-2;
+@a-text-decoration: 		none;
+@a-text-decoration-hover: 	none;
+@a-background-color: 		transparent;
+@a-background-color-hover: 	transparent;
+
 // titles
 @h1-font-family: @font-family;
 @h2-font-family: @font-family;
@@ -67,7 +75,7 @@
 @h5-text-transform: @text-transform;
 @h6-text-transform: @text-transform;
 
-@h1-line-height: 120%;
+@h1-line-height: 100%;
 @h2-line-height: @line-height;
 @h3-line-height: @line-height;
 @h4-line-height: @line-height;
@@ -142,3 +150,16 @@
 @pre-background-color: 	@code-background-color;
 @pre-border: 			@code-border;
 @pre-border-radius: 	@code-border-radius;
+
+// lists
+@list-item-margin-bottom: 	@space / 2;
+@sublist-padding-left: 		@space;
+
+@list-style-position: 		inside;
+@ol-list-style-type:		normal; //normal, upper-roman, lower-alpha
+@ol-list-style-color:		@color;
+
+@styled-list-style-image: '../components/lists/images/list-styled-icon.gif';
+
+@dd-float-breakpoint:   @screen-md;
+@dl-horizontal-offset:  180px;

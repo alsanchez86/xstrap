@@ -33,10 +33,12 @@
 
 <div class="body-content">
 <header id="header" class="header">
-    <h1>
-        XSTRAP <strong>1.0</strong>
-        <small>Build your own <strong>front-end</strong> framework</small>
-    </h1>
+    <h1>XSTRAP <strong>1.0</strong></h1>
+
+    <h2>
+        Build your own <strong>front-end</strong> framework
+        Think on components.
+    </h2>
 
     <img class="img-responsive img-responsive-center" src="./xstrap/images/xstrap-logo.png" alt="XStrap" title="XStrap">
 
@@ -104,6 +106,13 @@
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+
+
+
+(all in xstrap are components, including the core).
+
+
+
             <!-- Grid System -->
             <h2 id="spy-grid-system">
                 <span class="icomoon-redo2 icomoon"></span>
