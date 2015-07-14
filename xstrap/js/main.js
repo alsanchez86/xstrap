@@ -85,7 +85,7 @@ function affix () {
                 },
                 bottom: function () {
 
-                    return $('#footer').outerHeight () + 100;
+                    return $('#footer').outerHeight ();
                 }
             }
         });
@@ -98,6 +98,6 @@ function affixResize () {
     affix
         .css ({
             width:  affix.parent ().width (),
-            height: $(window).height () - 50
+            height: $(window).height () - 40
         });
 }

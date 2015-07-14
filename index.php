@@ -60,7 +60,7 @@
                     <li><a href="#spy-core">Core</a></li>
 
                     <li>
-                        <a href="#spy-grid-system">Grid System</a>
+                        <a href="#spy-grid-system">Grid</a>
 
                         <ul>
                             <li><a href="#spy-containers">Containers</a></li>
@@ -70,7 +70,7 @@
                     </li>
 
                     <li>
-                        <a href="#spy-html-elements">Html elements</a>
+                        <a href="#spy-html-elements">Texts</a>
 
                         <ul>
                             <li><a href="#spy-links">Links</a></li>
@@ -86,19 +86,13 @@
                             <li><a href="#spy-abbreviation">Abbreviation</a></li>
                             <li><a href="#spy-address">Address</a></li>
                             <li><a href="#spy-blockquotes">Blockquotes</a></li>
-                            <li><a href="#spy-lists">Lists</a></li>
                             <li><a href="#spy-code">Code</a></li>
+                            <li><a href="#spy-lists">Lists</a></li>
                         </ul>
                     </li>
 
-                    <li>
-                        <a href="#spy-xstrap-components">Xstrap Components</a>
-
-                        <ul>
-                            <li><a href="#spy-tables">Tables</a></li>
-                            <li><a href="#spy-forms">Forms</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#spy-tables">Tables</a></li>
+                    <li><a href="#spy-forms">Forms</a></li>
 
                     <li><a href="#header">Go top <span class="icomoon icomoon-point-up"></span></a></li>
                 </ul>
@@ -202,6 +196,12 @@
                 &nbsp;|&nbsp;
                 Grid:
             </h3>
+
+            <p>
+                A través del componente grid, podemos crear el sistema de rejilla que mas nos convenga para cada caso, cubriendo así todos los casos (no solamente para filas multiplos de 12).
+            </p>
+
+            <p>Xstrap hereda el sistema de rejilla de <a class="blank" href="http://getbootstrap.com/" target="_blank">bootstrap</a>, de forma que mantiene su filosofía de las 4 resoluciones (cada una pensada para un tipo de dispositivo), las cuales son XS, SM, MD y LG, cuyos valores son configurables desde el archivo de control vars.less.</p>
 
             <h4 id="spy-containers">Containers:</h4>
 
@@ -321,22 +321,25 @@
             </div>
             <!-- end Grid System -->
 
-            <!-- HTML Elements -->
+
+
+
+            <!-- Texts -->
             <br>
             <br>
             <h3 id="spy-html-elements">
                 <span class="icomoon-cogs icomoon"></span>
                 &nbsp;|&nbsp;
-                HTML ELEMENTS:
+                Texts:
             </h3>
 
             <h4 id="spy-links">Links: <small>(a)</small></h4>
 
             <ol>
-                <li><a href="">LINK</a></li>
-                <li><a class="blank" href="#" target="_blank">LINK (Target blank) <i>[required glyphicon component]</i></a></li>
-                <li><a class="disabled" href="#">LINK (Disabled)</a></li>
-                <li><a href="#">LINK with glyphicon&nbsp;<span class="glyphicon glyphicon-cloud"></span></a></li>
+                <li><a href="">Link</a></li>
+                <li><a class="blank" href="#" target="_blank">Link (Target blank) <i>[required glyphicon component]</i></a></li>
+                <li><a class="disabled" href="#">Link (Disabled)</a></li>
+                <li><a href="#">Link with glyphicon&nbsp;<span class="glyphicon glyphicon-cloud"></span></a></li>
             </ol>
 
             <h4 id="spy-titles">Titles: <small>(h1, h2, h3, h4, h5, h6)</small></h4>
@@ -415,6 +418,36 @@
                 </footer>
             </blockquote>
 
+            <h4 id="spy-code">Code: <small>(code, kbd, pre, var, samp)</small></h4>
+
+            <div class="code-block">
+                <p><strong>Inline:</strong> <small>(code)</small></p>
+
+                <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+
+                <p><strong>User input</strong>: <small>(kbd)</small></p>
+
+                <p>
+                    To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+                    To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+                </p>
+
+                <p><strong>Basic block</strong>: <small>(pre)</small></p>
+
+                <pre>
+                    (*) En la documentación de bootstrap, aquí van  las "alignment classes" y las "transformation classes", pero para xstrap quedan descartadas debido a la poca versatilidad a la hora de cambiar el alineamiento o el tipo de transformación para distintas resoluciones.
+                </pre>
+
+                <p><strong>Variables</strong>: <small>(var)</small></p>
+
+                <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
+
+                <p><strong>Sample output</strong>: <small>(samp)</small></p>
+
+                <p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+            </div>
+
+            <br>
             <h4 id="spy-lists">Lists: <small>(ul, ol, dl)</small></h4>
 
             <div class="row">
@@ -501,48 +534,16 @@
                     </dl>
                 </div>
             </div>
-
-            <h4 id="spy-code">Code: <small>(code, kbd, pre, var, samp)</small></h4>
-
-            <div class="code-block">
-                <p><strong>Inline:</strong> <small>(code)</small></p>
-
-                <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
-
-                <p><strong>User input</strong>: <small>(kbd)</small></p>
-
-                <p>
-                    To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
-                    To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
-                </p>
-
-                <p><strong>Basic block</strong>: <small>(pre)</small></p>
-
-                <pre>
-                    (*) En la documentación de bootstrap, aquí van  las "alignment classes" y las "transformation classes", pero para xstrap quedan descartadas debido a la poca versatilidad a la hora de cambiar el alineamiento o el tipo de transformación para distintas resoluciones.
-                </pre>
-
-                <p><strong>Variables</strong>: <small>(var)</small></p>
-
-                <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
-
-                <p><strong>Sample output</strong>: <small>(samp)</small></p>
-
-                <p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
-            </div>
-            <!-- end HTML Elements -->
+            <!-- end Texts -->
 
             <br>
-            <br>
-            <h3 id="spy-xstrap-components">
+            <h3 id="spy-tables">
                 <span class="icomoon-cogs icomoon"></span>
                 &nbsp;|&nbsp;
-                XSTRAP COMPONENTS:
+                Tables:
             </h3>
 
-            <h4 id="spy-tables">Tables: <small>(table)</small></h4>
-
-            <h5>Default table:</h5>
+            <h4>Default table:</h4>
 
             <table class="table">
                 <thead>
@@ -568,7 +569,7 @@
                 </tbody>
             </table>
 
-            <h5>Responsive table:</h5>
+            <h4>Responsive table:</h4>
 
             <div class="table-responsive">
                 <table class="table">
@@ -605,7 +606,12 @@
                 </table>
             </div>
 
-            <h4 id="spy-forms">Forms: <small>(forms)</small></h4>
+            <br>
+            <h3 id="spy-forms">
+                <span class="icomoon-cogs icomoon"></span>
+                &nbsp;|&nbsp;
+                Forms:
+            </h3>
 
             <form method="POST" action="javascript:actionForm ()">
                 <!-- action="{{ route("register") }}" -->
