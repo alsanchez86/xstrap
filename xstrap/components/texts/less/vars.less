@@ -36,10 +36,10 @@
 
 @h1-font-size: 			32px;
 @h1-font-size-xs-sm: 	@h1-font-size - 4px;
-@h2-font-size: 			28px;
-@h2-font-size-xs-sm: 	@h2-font-size - 4px;
+@h2-font-size: 			16px;
+@h2-font-size-xs-sm: 	@h2-font-size - 2px;
 @h3-font-size: 			18px;
-@h3-font-size-xs-sm: 	@h3-font-size - 4px;
+@h3-font-size-xs-sm: 	@h3-font-size - 3px;
 @h4-font-size: 			14px;
 @h4-font-size-xs-sm: 	@h4-font-size - 2px;
 @h5-font-size: 			14px;
@@ -61,9 +61,9 @@
 @h5-font-style: @font-style;
 @h6-font-style: @font-style;
 
-@h1-color: @color;
-@h2-color: @rojo1;
-@h3-color: @color;
+@h1-color: @blanco;
+@h2-color: @blanco;
+@h3-color: @rojo;
 @h4-color: @color;
 @h5-color: @color;
 @h6-color: @color;
@@ -76,14 +76,14 @@
 @h6-text-transform: @text-transform;
 
 @h1-line-height: 100%;
-@h2-line-height: @line-height;
-@h3-line-height: @line-height;
-@h4-line-height: @line-height;
-@h5-line-height: @line-height;
-@h6-line-height: @line-height;
+@h2-line-height: 160%;
+@h3-line-height: 100%;
+@h4-line-height: 100%;
+@h5-line-height: 100%;
+@h6-line-height: 100%;
 
-@h1-text-align: @text-align;
-@h2-text-align: @text-align;
+@h1-text-align: center;
+@h2-text-align: center;
 @h3-text-align: @text-align;
 @h4-text-align: @text-align;
 @h5-text-align: @text-align;
@@ -122,9 +122,9 @@
 @code-font-size: 		@font-size;
 @code-font-weight: 		@font-weight;
 @code-font-style: 		@font-style;
-@code-color: 			@blanco;
-@code-background-color: @negro;
-@code-border:  			1px solid @negro;
+@code-color: 			@negro;
+@code-background-color: @gris;
+@code-border:  			0px;
 @code-border-radius: 	@border-radius;
 
 // kbd
@@ -159,7 +159,7 @@
 @ol-list-style-type:		normal; //normal, upper-roman, lower-alpha
 @ol-list-style-color:		@color;
 
-@styled-list-style-image: '../components/lists/images/list-styled-icon.gif';
+@styled-list-style-image: '../components/texts/images/list-styled-icon.gif';
 
 @dd-float-breakpoint:   @screen-md;
 @dl-horizontal-offset:  180px;

@@ -6,9 +6,9 @@
 @import url('./mixins/text-shadow.less');
 
 // COMPONENTS (personalizados con de los valores de las variables definidas en vars.less)
-@import url('../../components/core/less/core.less');             // core
-@import url('../../components/grid/less/grid.less');  //require: core (.clearfix)
+@import url('../../components/core/less/core.less');    // core
 @import url('../../components/texts/less/texts.less');  //require: grid
+@import url('../../components/grid/less/grid.less');    //require: core (.clearfix)
 @import url('../../components/glyphicons/less/glyphicons.less');
 @import url('../../components/icomoon/less/icomoon.less');
 @import url('../../components/buttons/less/buttons.less');
@@ -65,10 +65,9 @@ body {
   text-align: center;
   background: linear-gradient(160deg, #290B36 0%, #043453 100%);
 
-  & > h1 {
+  & > h1,
+  & > h2 {
     .text-shadow (@blanco, 0px , 3px);
-    color: @blanco;
-    text-align: center;
 
     small {
       display: block;

@@ -36,7 +36,8 @@
     <h1>XSTRAP <strong>1.0</strong></h1>
 
     <h2>
-        Build your own <strong>front-end</strong> framework
+        Build your own <strong>front-end</strong> framework.
+        <br>
         Think on components.
     </h2>
 
@@ -55,7 +56,8 @@
         <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
             <nav id="spy-affix-nav">
                 <ul class="nav">
-                <li><a href="#footer">Go bottom <span class="icomoon icomoon-point-down"></span></a></li>
+                    <li><a href="#footer">Go bottom <span class="icomoon icomoon-point-down"></span></a></li>
+                    <li><a href="#spy-core">Core</a></li>
 
                     <li>
                         <a href="#spy-grid-system">Grid System</a>
@@ -66,8 +68,6 @@
                             <li><a href="#spy-casos-especiales">Casos especiales</a></li>
                         </ul>
                     </li>
-
-                    <li><a href="#spy-generics">Generics</a></li>
 
                     <li>
                         <a href="#spy-html-elements">Html elements</a>
@@ -106,20 +106,104 @@
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            <p class="text-indent"><strong>Todo en xstrap son componentes</strong>, incluyendo el core, aumentando así la modularidad, la extensibilidad y el mantenimiento de los proyectos creados con xstrap.</p>
 
+            <p>A continuación, se lista los componentes disponibles para la versión vigente de xstrap:</p>
+            <br>
 
+            <!-- CORE -->
+            <h3 id="spy-core">
+                <span class="icomoon-cogs icomoon"></span>
+                &nbsp;|&nbsp;
+                Core:
+            </h3>
 
-(all in xstrap are components, including the core).
+            <p class="text-indent"><strong>Componente base y requerido por el resto de componentes.</strong></p>
 
+            <p>
+                A través del core, controlaremos el valor de las variables básicas que afectan a todos los componentes de forma transversal, así como los mixins utilizados para generar dichos componentes.
+            </p>
 
+            <p>
+                El core tiene incluido por defecto <mark>normalize.css v3.0.3</mark>, para resetear y normalizar por defecto los elementos html.
+                <br>
+                Además, el core de xstrap hereda el código de <a class="blank" href="http://getbootstrap.com/" target="_blank">bootstrap</a> contenido en <mark>scaffolding <small>(reset.less en xstrap)</small></mark> y <mark>utilities <small>(utilities.less en xstrap)</small></mark>.
+            </p>
+
+            <h4>Vars:</h4>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <ul class="list-styled">
+                        <li>@path-images</li>
+                        <li>@path-css</li>
+                        <li>@path-components</li>
+                        <li>@path-fonts</li>
+                        <li>@space</li>
+                        <li>@space-small (xs & sm)</li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <ul class="list-styled">
+                        <li>@background-color</li>
+                        <li>@border-radius</li>
+                        <li>@opacity</li>
+                        <li>@shadow-color</li>
+                        <li>@blur</li>
+                        <li>@rotate</li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <ul class="list-styled">
+                        <li>@time</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4>Mixins:</h4>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <ul class="list-styled">
+                        <li>.background-cover ()</li>
+                        <li>.border ()</li>
+                        <li>.box-shadow ()</li>
+                        <li>.box-sizing ()</li>
+                        <li>.center-block ()</li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <ul class="list-styled">
+                        <li>.clearfix ()</li>
+                        <li>.disabled ()</li>
+                        <li>.hide-text ()</li>
+                        <li>.not-outline ()</li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <ul class="list-styled">
+                        <li>.opacity ()</li>
+                        <li>.space ()</li>
+                        <li>.transition ()</li>
+                        <li>.vendor-prefixes ()</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end CORE -->
 
             <!-- Grid System -->
-            <h2 id="spy-grid-system">
-                <span class="icomoon-redo2 icomoon"></span>
-                Grid System
-            </h2>
+            <br>
+            <h3 id="spy-grid-system">
+                <span class="icomoon-cogs icomoon"></span>
+                &nbsp;|&nbsp;
+                Grid:
+            </h3>
 
-            <h3 id="spy-containers">Containers:</h3>
+            <h4 id="spy-containers">Containers:</h4>
 
             <p>Dos tipos de container:</p>
 
@@ -139,7 +223,7 @@
             </blockquote>
 
             <div class="doc-rows">
-                <h3 id="spy-rows">Rows:</h3>
+                <h4 id="spy-rows">Rows:</h4>
 
                 <p>
                     Existen diferentes métodos para crear el grid system, cada uno pensado para cubrir ciertas necesidades que nos puedan surgir según los requisitos del diseño, tales como grids no múltiplos de 12.
@@ -180,7 +264,7 @@
 
                 <br>
                 <br>
-                <h3 id="spy-casos-especiales">Casos especiales:</h3>
+                <h4 id="spy-casos-especiales">Casos especiales:</h4>
 
                 <p><strong>1) Reset de posición de columnas:</strong></p>
 
@@ -237,60 +321,16 @@
             </div>
             <!-- end Grid System -->
 
-            <!-- Generics -->
-            <br>
-            <br>
-            <h2 id="spy-generics">
-                <span class="icomoon-redo2 icomoon"></span>
-                Generics:
-            </h2>
-
-            <div class="row">
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <h3>Basics:</h3>
-
-                    <ul class="list-styled">
-                        <li>space</li>
-                        <li>space-small</li>
-                        <li>background-color</li>
-                        <li>border-radius</li>
-                        <li>opacity</li>
-                        <li>shadow-color</li>
-                        <li>blur</li>
-                        <li>rotate</li>
-                        <li>time</li>
-                    </ul>
-                </div>
-
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <h3>Text base:</h3>
-
-                    <ul class="list-styled">
-                        <li>font-family</li>
-                        <li>font-size</li>
-                        <li>font-size-small</li>
-                        <li>font-weight</li>
-                        <li>font-style</li>
-                        <li>color</li>
-                        <li>line-height</li>
-                        <li>letter-spacing</li>
-                        <li>text-align</li>
-                        <li>text-transform</li>
-                        <li>text-indent</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end Generics -->
-
             <!-- HTML Elements -->
             <br>
             <br>
-            <h2 id="spy-html-elements">
-                <span class="icomoon-redo2 icomoon"></span>
+            <h3 id="spy-html-elements">
+                <span class="icomoon-cogs icomoon"></span>
+                &nbsp;|&nbsp;
                 HTML ELEMENTS:
-            </h2>
+            </h3>
 
-            <h3 id="spy-links">Links: <small>(a)</small></h3>
+            <h4 id="spy-links">Links: <small>(a)</small></h4>
 
             <ol>
                 <li><a href="">LINK</a></li>
@@ -299,54 +339,56 @@
                 <li><a href="#">LINK with glyphicon&nbsp;<span class="glyphicon glyphicon-cloud"></span></a></li>
             </ol>
 
-            <h3 id="spy-titles">Titles: <small>(h1, h2, h3, h4, h5, h6)</small></h3>
+            <h4 id="spy-titles">Titles: <small>(h1, h2, h3, h4, h5, h6)</small></h4>
 
-            <h1>h1 Title <small>Secondary text</small></h1>
-            <h2>h2 Title <small>Secondary text</small></h2>
-            <h3>h3 Title <small>Secondary text</small></h3>
-            <h4>h4 Title <small>Secondary text</small></h4>
-            <h5>h5 Title <small>Secondary text</small></h5>
-            <h6>h6 Title <small>Secondary text</small></h6>
+            <pre>
+                &lt;h1&gt;h1 Title &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h1&gt;
+                &lt;h2&gt;h2 Title &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h2&gt;
+                &lt;h3&gt;h3 Title &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h3&gt;
+                &lt;h4&gt;h4 Title &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h4&gt;
+                &lt;h5&gt;h5 Title &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h5&gt;
+                &lt;h6&gt;h6 Title &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h6&gt;
+            </pre>
 
-            <h3 id="spy-paragraphs">Paragraphs: <small>(p)</small></h3>
+            <h4 id="spy-paragraphs">Paragraphs: <small>(p)</small></h4>
 
             <p>Esto es un párrafo 1.</p>
 
             <p>Esto es un párrafo 2.</p>
 
-            <h3 id="spy-marked">Marked Text: <small>(mark)</small></h3>
+            <h4 id="spy-marked">Marked Text: <small>(mark)</small></h4>
 
             <p>You can use the mark tag to <mark>highlight</mark> text.</p>
 
-            <h3 id="spy-deleted">Deleted Text: <small>(del)</small></h3>
+            <h4 id="spy-deleted">Deleted Text: <small>(del)</small></h4>
 
             <p><del>This line of text is meant to be treated as deleted text.</del></p>
 
-            <h3 id="spy-strikethrough">Strikethrough Text: <small>(s)</small></h3>
+            <h4 id="spy-strikethrough">Strikethrough Text: <small>(s)</small></h4>
 
             <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
 
-            <h3 id="spy-inserted">Inserted Text: <small>(ins)</small></h3>
+            <h4 id="spy-inserted">Inserted Text: <small>(ins)</small></h4>
 
             <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
 
-            <h3 id="spy-underline">Underline Text: <small>(u)</small></h3>
+            <h4 id="spy-underline">Underline Text: <small>(u)</small></h4>
 
             <p><u>This line of text will render as underlined</u></p>
 
-            <h3 id="spy-small">Small Text: <small>(small)</small></h3>
+            <h4 id="spy-small">Small Text: <small>(small)</small></h4>
 
             <p><small>This line of text is meant to be treated as fine print.</small></p>
 
-            <h3 id="spy-bold">Bold Text: <small>(strong)</small></h3>
+            <h4 id="spy-bold">Bold Text: <small>(strong)</small></h4>
 
             <p><strong>Text rendered as bold text.</strong></p>
 
-            <h3 id="spy-italic">Italic Text: <small>(em, b, i)</small></h3>
+            <h4 id="spy-italic">Italic Text: <small>(em, b, i)</small></h4>
 
             <p><em>EM</em>, <b>B</b>, <i>I</i></p>
 
-            <h3 id="spy-abbreviation">Abbreviation: <small>(abbr)</small></h3>
+            <h4 id="spy-abbreviation">Abbreviation: <small>(abbr)</small></h4>
 
             <p>
                 <abbr title="attribute">attr</abbr>
@@ -354,7 +396,7 @@
                 <abbr class="initialism" title="HyperText Markup Language">HTML</abbr> is the best thing since sliced bread.
             </p>
 
-            <h3 id="spy-address">Address: <small>(address)</small></h3>
+            <h4 id="spy-address">Address: <small>(address)</small></h4>
 
             <address>
                 <strong>Twitter, Inc.</strong><br>
@@ -363,7 +405,7 @@
                 <abbr title="Phone">P:</abbr> (123) 456-7890
             </address>
 
-            <h3 id="spy-blockquotes">Blockquotes: <small>(blockquote)</small></h3>
+            <h4 id="spy-blockquotes">Blockquotes: <small>(blockquote)</small></h4>
 
             <blockquote>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -373,7 +415,7 @@
                 </footer>
             </blockquote>
 
-            <h3 id="spy-lists">Lists: <small>(ul, ol, dl)</small></h3>
+            <h4 id="spy-lists">Lists: <small>(ul, ol, dl)</small></h4>
 
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
@@ -460,7 +502,7 @@
                 </div>
             </div>
 
-            <h3 id="spy-code">Code: <small>(code, kbd, pre, var, samp)</small></h3>
+            <h4 id="spy-code">Code: <small>(code, kbd, pre, var, samp)</small></h4>
 
             <div class="code-block">
                 <p><strong>Inline:</strong> <small>(code)</small></p>
@@ -492,14 +534,15 @@
 
             <br>
             <br>
-            <h2 id="spy-xstrap-components">
-                <span class="icomoon-redo2 icomoon"></span>
+            <h3 id="spy-xstrap-components">
+                <span class="icomoon-cogs icomoon"></span>
+                &nbsp;|&nbsp;
                 XSTRAP COMPONENTS:
-            </h2>
+            </h3>
 
-            <h3 id="spy-tables">Tables: <small>(table)</small></h3>
+            <h4 id="spy-tables">Tables: <small>(table)</small></h4>
 
-            <h4>Default table:</h4>
+            <h5>Default table:</h5>
 
             <table class="table">
                 <thead>
@@ -525,7 +568,7 @@
                 </tbody>
             </table>
 
-            <h4>Responsive table:</h4>
+            <h5>Responsive table:</h5>
 
             <div class="table-responsive">
                 <table class="table">
@@ -562,7 +605,7 @@
                 </table>
             </div>
 
-            <h3 id="spy-forms">Forms: <small>(forms)</small></h3>
+            <h4 id="spy-forms">Forms: <small>(forms)</small></h4>
 
             <form method="POST" action="javascript:actionForm ()">
                 <!-- action="{{ route("register") }}" -->
@@ -586,31 +629,31 @@
             </form>
 
             <br>
-            <h3 id=="spy-images">Images: <small>(image)</small></h3>
+            <h4 id=="spy-images">Images: <small>(image)</small></h4>
 
-            <h4>Default image:</h4>
+            <h5>Default image:</h5>
 
             <img src="http://lorempixel.com/400/200/">
 
             <br>
             <br>
-            <h4>Rounded image:</h4>
+            <h5>Rounded image:</h5>
 
             <img class="img-rounded" src="http://lorempixel.com/400/200/">
 
             <br>
             <br>
-            <h4>Responsive image:</h4>
+            <h5>Responsive image:</h5>
 
             <img class="img-responsive" src="http://lorempixel.com/400/200/">
 
             <br>
-            <h4>Responsive max:</h4>
+            <h5>Responsive max:</h5>
 
             <img class="img-responsive-max img-responsive" src="http://lorempixel.com/400/200/">
 
             <br>
-            <h4>Responsive center:</h4>
+            <h5>Responsive center:</h5>
 
             <img class="img-responsive-center img-responsive" src="http://lorempixel.com/400/200/">
 

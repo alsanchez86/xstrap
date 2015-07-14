@@ -1,0 +1,43 @@
+// Utilities
+.clearfix         { .clearfix (); }
+.space            { .space (); }
+.disabled         { .disabled (); }
+.center-block     { .center-block (); }
+.text-hide        { .text-hide (); }
+.relative         { position: relative; }
+.absolute         { position: absolute; }
+.no-margin        { margin: 0px; }
+.no-padding       { padding: 0px; }
+.overhidden       { overflow: hidden; }
+.block            { display: block; }
+.pointer          { cursor: pointer; }
+.vertical-center  { vertical-align: middle; }
+.pull-right       { float: right !important; }
+.pull-left        { float: left !important; }
+.hide             { display: none !important; }
+.hidden           { display: none !important; }
+.show             { display: block !important; }
+.invisible        { visibility: hidden; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}

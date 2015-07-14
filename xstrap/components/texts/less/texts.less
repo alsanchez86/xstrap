@@ -3,7 +3,6 @@
 
 // mixins
 @import url('./mixins/text.less');
-@import url('./mixins/hide-text.less');
 @import url('./mixins/links.less');
 
 // utilities
@@ -151,26 +150,6 @@ pre {
   }
 }
 
-@media (max-width: @screen-sm-max) {
-
-  body {
-    font-size: @font-size-small;
-  }
-
-  // titles
-  h1 { font-size: @h1-font-size-xs-sm; }
-  h2 { font-size: @h2-font-size-xs-sm; }
-  h3 { font-size: @h3-font-size-xs-sm; }
-  h4 { font-size: @h4-font-size-xs-sm; }
-  h5 { font-size: @h5-font-size-xs-sm; }
-  h6 { font-size: @h6-font-size-xs-sm; }
-
-  // paragraph
-  p {
-    font-size: @font-size-small;
-  }
-}
-
 // lists
 ul,
 ol {
@@ -254,5 +233,25 @@ dl {
   dl {
     margin-bottom: 0px;
     padding-left: @sublist-padding-left;
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+
+  body {
+    font-size: @font-size-small;
+  }
+
+  // titles
+  h1 { font-size: @h1-font-size-xs-sm; }
+  h2 { font-size: @h2-font-size-xs-sm; }
+  h3 { font-size: @h3-font-size-xs-sm; }
+  h4 { font-size: @h4-font-size-xs-sm; }
+  h5 { font-size: @h5-font-size-xs-sm; }
+  h6 { font-size: @h6-font-size-xs-sm; }
+
+  // paragraph
+  p {
+    font-size: @font-size-small;
   }
 }
