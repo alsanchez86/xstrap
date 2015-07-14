@@ -39,6 +39,8 @@ table {
   & > tbody,
   & > tfoot {
     & > tr {
+      .border (@table-tr-border, @table-tr-border-radius);
+
       & > th,
       & > td {
         padding: @table-cell-padding;

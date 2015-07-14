@@ -137,8 +137,6 @@
 
   function popoverHide () {
 
-    $('.popover')
-      .popover ('hide');
+    $('.popover').popover ('hide');
   }
-
 }(jQuery);

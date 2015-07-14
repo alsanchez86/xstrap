@@ -93,6 +93,7 @@
 
                     <li><a href="#spy-tables">Tables</a></li>
                     <li><a href="#spy-forms">Forms</a></li>
+                    <li><a href="#spy-images">Images</a></li>
 
                     <li><a href="#header">Go top <span class="icomoon icomoon-point-up"></span></a></li>
                 </ul>
@@ -183,7 +184,7 @@
                         <li>.opacity ()</li>
                         <li>.space ()</li>
                         <li>.transition ()</li>
-                        <li>.vendor-prefixes ()</li>
+                        <li><i>(vendor-prefixes)...</i></li>
                     </ul>
                 </div>
             </div>
@@ -319,10 +320,99 @@
                     <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
                 </div>
             </div>
+
+            <br>
+            <br>
+            <h4 id="spy-casos-especiales">Utilities:</h4>
+
+            <p>Heredados de <mark>Responsive: Utility classes</mark> de bootstrap.</p>
+
+            <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>
+            Extra small devices
+            <small>Phones (&lt;768px)</small>
+          </th>
+          <th>
+            Small devices
+            <small>Tablets (≥768px)</small>
+          </th>
+          <th>
+            Medium devices
+            <small>Desktops (≥992px)</small>
+          </th>
+          <th>
+            Large devices
+            <small>Desktops (≥1200px)</small>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><code>.visible-xs-*</code></th>
+          <td class="is-visible">Visible</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.visible-sm-*</code></th>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.visible-md-*</code></th>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-hidden">Hidden</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.visible-lg-*</code></th>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-visible">Visible</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th scope="row"><code>.hidden-xs</code></th>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.hidden-sm</code></th>
+          <td class="is-visible">Visible</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.hidden-md</code></th>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-visible">Visible</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.hidden-lg</code></th>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-hidden">Hidden</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
             <!-- end Grid System -->
-
-
-
 
             <!-- Texts -->
             <br>
@@ -606,6 +696,8 @@
                 </table>
             </div>
 
+            <p class="text-lowlight"><i>(*) Se recomienda usar siempre las <strong>tablas responsives</strong>, ya que para cualquier proyecto el cual tenga incluido el componente grid, las tablas por defecto provocarán scroll horizontal en el navegador, ya que para las resoluciones pequeñas la tabla suele ser mas ancha que la propia ventana.</i></p>
+
             <br>
             <h3 id="spy-forms">
                 <span class="icomoon-cogs icomoon"></span>
@@ -616,13 +708,13 @@
             <form method="POST" action="javascript:actionForm ()">
                 <!-- action="{{ route("register") }}" -->
                 <div class="form-group">
-                    <label for="form-name">Name</label>
-                    <input type="text" class="form-control" id="form-name" name="form-name" placeholder="Name">
+                    <label for="form-name">Name:</label>
+                    <input type="text" class="form-control" id="form-name" name="form-name" placeholder="Enter your name...">
                 </div>
 
                 <div class="form-group">
-                    <label for="form-email">Email</label>
-                    <input type="text" class="form-control" id="form-email" name="form-email" placeholder="Email">
+                    <label for="form-email">Email:</label>
+                    <input type="text" class="form-control" id="form-email" name="form-email" placeholder="Enter your email...">
                 </div>
 
                 <div class="checkbox">
@@ -635,31 +727,36 @@
             </form>
 
             <br>
-            <h4 id=="spy-images">Images: <small>(image)</small></h4>
+            <br>
+            <h3 id="spy-images">
+                <span class="icomoon-cogs icomoon"></span>
+                &nbsp;|&nbsp;
+                Images:
+            </h3>
 
-            <h5>Default image:</h5>
+            <h4>Default image:</h4>
 
             <img src="http://lorempixel.com/400/200/">
 
             <br>
             <br>
-            <h5>Rounded image:</h5>
+            <h4>Rounded image:</h4>
 
             <img class="img-rounded" src="http://lorempixel.com/400/200/">
 
             <br>
             <br>
-            <h5>Responsive image:</h5>
+            <h4>Responsive image:</h4>
 
             <img class="img-responsive" src="http://lorempixel.com/400/200/">
 
             <br>
-            <h5>Responsive max:</h5>
+            <h4>Responsive max:</h4>
 
             <img class="img-responsive-max img-responsive" src="http://lorempixel.com/400/200/">
 
             <br>
-            <h5>Responsive center:</h5>
+            <h4>Responsive center:</h4>
 
             <img class="img-responsive-center img-responsive" src="http://lorempixel.com/400/200/">
 
