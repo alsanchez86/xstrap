@@ -20,7 +20,7 @@ $(window)
             affixResize ();
         },
         scroll: function () {
-
+            affixResize ();
         }
     });
 
@@ -94,13 +94,22 @@ function affix () {
 
 function affixResize () {
 
-    var affix = $('#spy-affix-nav');
+    var $affix   = $('#spy-affix-nav');
+    var $window = $(window);
 
-    affix
+    $affix
         .css ({
-            width:  affix.parent ().width (),
-            height: $(window).height () - 40
+            width: $affix.parent ().width ()
         });
+
+    if ($window.height () <= $affix.outerHeight ()) {
+
+        $affix
+            .addClass ('affix-overflowed')
+            .css ({
+                height: $(window).height () - 40
+            });
+    }
 }
 
 // datepicker

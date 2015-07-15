@@ -13,7 +13,10 @@
 .affix,
 .affix-top,
 .affix-bottom {
-    overflow-x: hidden;
+    &.affix-overflowed {
+        background-color: blue;
+        overflow-x: hidden;
+    }
 
     .nav {
         ul {
