@@ -94,7 +94,24 @@
 
                     <li><a href="#spy-tables">Tables</a></li>
                     <li><a href="#spy-forms">Forms</a></li>
-                    <li><a href="#spy-images">Images</a></li>
+
+                    <li>
+                        <a href="#spy-buttons">Buttons</a>
+
+                        <ul>
+                            <li><a href="#spy-buttons-groups">Buttons groups</a></li>
+                            <li><a href="#spy-buttons-dropdowns">Buttons dropdowns</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#spy-images">Images</a>
+
+                        <ul>
+                            <li><a href="#spy-image-gallery">Image gallery</a></li>
+                            <li><a href="#spy-image-map">Image map</a></li>
+                        </ul>
+                    </li>
 
                     <li><a href="#header">Go top <span class="icomoon icomoon-point-up"></span></a></li>
                 </ul>
@@ -328,95 +345,85 @@
 
             <p>Heredados de <mark>Responsive: Utility classes</mark> de bootstrap.</p>
 
-            <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th></th>
-          <th>
-            Extra small devices
-            <br>
-            <small>Phones (&lt;768px)</small>
-          </th>
-          <th>
-            Small devices
-            <br>
-            <small>Tablets (≥768px)</small>
-          </th>
-          <th>
-            Medium devices
-            <br>
-            <small>Desktops (≥992px)</small>
-          </th>
-          <th>
-            Large devices
-            <br>
-            <small>Desktops (≥1200px)</small>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row"><code>.visible-xs-*</code></th>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.visible-sm-*</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.visible-md-*</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.visible-lg-*</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <th scope="row"><code>.hidden-xs</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.hidden-sm</code></th>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.hidden-md</code></th>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.hidden-lg</code></th>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+            <div class="grid-utilities table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                          <th>&nbsp;</th>
+                          <th>XS</th>
+                          <th>SM</th>
+                          <th>MD</th>
+                          <th>LG</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th><code>.visible-xs-*</code></th>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                        </tr>
+
+                        <tr>
+                            <th><code>.visible-sm-*</code></th>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                        </tr>
+
+                        <tr>
+                            <th><code>.visible-md-*</code></th>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                        </tr>
+
+                        <tr>
+                            <th><code>.visible-lg-*</code></th>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                        </tr>
+
+                        <tr>
+                            <th><code>.hidden-xs</code></th>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                        </tr>
+
+                        <tr>
+                            <th><code>.hidden-sm</code></th>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                        </tr>
+
+                        <tr>
+                            <th><code>.hidden-md</code></th>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                        </tr>
+
+                        <tr>
+                            <th><code>.hidden-lg</code></th>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <!-- end Grid System -->
 
             <!-- Texts -->
@@ -703,6 +710,7 @@
 
             <p class="text-lowlight"><i>(*) Se recomienda usar siempre las <strong>tablas responsives</strong>, ya que para cualquier proyecto el cual tenga incluido el componente grid, las tablas por defecto provocarán scroll horizontal en el navegador, ya que para las resoluciones pequeñas la tabla suele ser mas ancha que la propia ventana.</i></p>
 
+            <!-- FORMS -->
             <br>
             <h3 id="spy-forms">
                 <span class="icomoon-cogs icomoon"></span>
@@ -728,10 +736,33 @@
                     </label>
                 </div>
 
-                <button type="submit" class="btn-3d btn">Submit</button>
+                <button type="submit" class="btn-3d">Submit</button>
             </form>
+            <!-- end FORMS -->
 
+            <!-- BUTTONS -->
             <br>
+            <br>
+            <h3 id="spy-buttons">
+                <span class="icomoon-cogs icomoon"></span>
+                &nbsp;|&nbsp;
+                Buttons:
+            </h3>
+
+            <p class="text-indent">En xstrap, los botones pueden ser elementos <code>&lt;a&gt;</code>, <code>input[type="button"]</code> y <code>&lt;button&gt;</code>.</p>
+
+            <p>Para dar apariencia de botón a un elemento, solo tenemos que añadirle la clase <mark>.btn</mark> (por defecto, los elementos <code>button</code> se les aplica los estilos de <mark>.btn</mark>).</p>
+
+            <p>
+                <a class="btn" href="">Link con apariencia de botón (tiene clase .btn)</a>
+                <br><br>
+                <button>Button con apariencia de botón (por defecto)</button>
+                <br><br>
+                <input type="button" value="Input con apariencia de botón (por defecto)">
+            </p>
+            <!-- end BUTTONS -->
+
+            <!-- IMAGES -->
             <br>
             <h3 id="spy-images">
                 <span class="icomoon-cogs icomoon"></span>
@@ -773,6 +804,7 @@
                 <br>
                 <a class="blank" href="http://lorempixel.com" target="_blank">Lorem Pixel</a>
             </p>
+            <!-- end IMAGES -->
         </div>
     </div>
 </div>
