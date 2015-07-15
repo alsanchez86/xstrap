@@ -5,6 +5,7 @@ jQuery (document).ready (function($) {
     bootstrap ();
     if (typeof preload  != 'undefined') preLoad ();
     //responsive ();
+    datepicker ($('#form-date'));
 });
 
 $(window)
@@ -100,4 +101,10 @@ function affixResize () {
             width:  affix.parent ().width (),
             height: $(window).height () - 40
         });
+}
+
+// datepicker
+function datepicker (input) {
+
+    input.datepicker ();
 }

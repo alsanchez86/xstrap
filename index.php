@@ -718,26 +718,53 @@
                 Forms:
             </h3>
 
+            <p><strong>Supported controls</strong></p>
+
+            <p>Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.</p>
+
             <form method="POST" action="javascript:actionForm ()">
                 <!-- action="{{ route("register") }}" -->
                 <div class="form-group">
-                    <label for="form-name">Name:</label>
-                    <input type="text" class="form-control" id="form-name" name="form-name" placeholder="Enter your name...">
+                    <label for="form-text">Type text:</label>
+                    <input type="text" class="form-control" id="form-text" name="form-text" placeholder="Enter your text...">
                 </div>
 
                 <div class="form-group">
-                    <label for="form-email">Email:</label>
-                    <input type="text" class="form-control" id="form-email" name="form-email" placeholder="Enter your email...">
+                    <label for="form-password">Type password:</label>
+                    <input type="password" class="form-control" id="form-password" name="form-password" placeholder="Enter your password...">
+                </div>
+
+                <!-- <div class="form-group">
+                    <label for="form-datetime">Type datetime:</label>
+                    <input type="datetime" class="form-control" id="form-datetime" name="form-datetime" placeholder="Enter your datetime...">
+                </div> -->
+
+                <div class="form-group">
+                    <label for="form-readonly">Readonly: <small>(add attribute readonly at the end of the input)</small></label>
+                    <input type="text" class="form-control" id="form-readonly" name="form-readonly" placeholder="Readonly" readonly>
                 </div>
 
                 <div class="checkbox">
                     <label>
-                        <input id="form-checkbox" name="form-checkbox" type="checkbox"> Check me out
+                        <input id="form-checkbox" name="form-checkbox" type="checkbox"> Type checkbox
                     </label>
                 </div>
 
                 <button type="submit" class="btn-3d">Submit</button>
             </form>
+
+            <br>
+            <p>Poner aqui otros componentes extras de bootstrap como el colorpicker, datapicker,... <a class="blank" href="http://speckyboy.com/2014/06/16/plugins-for-extending-bootstrap/" target="_blank">http://speckyboy.com/2014/06/16/plugins-for-extending-bootstrap/</a></p>
+
+            <!-- DATEPICKER -->
+            <h4 id="spy-datepicker">Datepicker:</h4>
+
+            <p>(*) Requires <strong>button dropdown</strong> component.</p>
+
+            <!-- <input type="text" class="form-control" id="form-text" name="form-text" placeholder="Enter your text..."> -->
+            <input type="text" class="form-control" id="form-date" name="form-date" placeholder="02-16-2012" value="02-16-2012">
+
+            <!-- end DATEPICKER -->
             <!-- end FORMS -->
 
             <!-- BUTTONS -->
@@ -828,6 +855,8 @@
 <script src="./xstrap/js/jquery.js"></script>
 
 <!-- COMPONENTS -->
+<!-- dropdowns -->
+<script src="./xstrap/components/dropdowns/js/dropdowns.js"></script>
 <!-- scrollspy -->
 <script src="./xstrap/components/scrollspy/js/scrollspy.js"></script>
 <!-- affix -->
@@ -838,6 +867,8 @@
 <script src="./xstrap/components/popovers/js/popover.js"></script>
 <!-- forms -->
 <script src="./xstrap/components/forms/js/forms.js"></script>
+<!-- forms -->
+<script src="./xstrap/components/datepicker/js/datepicker.js"></script>
 
 <!-- main -->
 <script src="./xstrap/js/main.js"></script>

@@ -113,23 +113,23 @@
   $(window)
     .resize (function () {
 
-        popoverHide ();
+      popoverHide ();
     })
     .scroll (function (event) {
 
-        popoverHide ();
+      popoverHide ();
     });
 
   function popover (element) {
 
     element [0].popover ({
-        container:  element [1],
-        trigger:    element [2],
-        animation:  element [3],
-        placement:  element [4],
-        html:       element [5],
-        template:   element [6],
-        content:    element [7]
+      container:  element [1],
+      trigger:    element [2],
+      animation:  element [3],
+      placement:  element [4],
+      html:       element [5],
+      template:   element [6],
+      content:    element [7]
     });
 
     if (element [8]) element [0].popover ('show');

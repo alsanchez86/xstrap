@@ -3,37 +3,37 @@
 // popover
 // modal
 
-function actionForm (route) {
+function actionForm () {
 
-    var name  = $('#form-name');
-    var email = $('#form-email');
-    var check = $('#form-checkbox');
+    var text  = $('#form-text');
+    //var email = $('#form-email');
+    //var check = $('#form-checkbox');
 
-    name
+    text
         .popover ('destroy')
         .keydown (function () {
 
-            name.popover ('destroy');
+            text.popover ('destroy');
         });
 
-    email
+    /*email
         .popover ('destroy')
         .keydown (function () {
 
             email.popover ('destroy');
-        });
+        });*/
 
-    check
+    /*check
         .popover ('destroy')
         .click (function () {
 
             check.popover ('destroy');
-        });
+        });*/
 
-    if (name.val () == '')              return reqInput (name,  'You must enter a name.');
-    if (email.val () == '')             return reqInput (email, 'You must enter an valid email.');
+    if (text.val () == '')              return reqInput (text,  'You must enter a text.');
+    /*if (email.val () == '')             return reqInput (email, 'You must enter an valid email.');
     if (! validateEmail (email.val ())) return reqInput (email, 'Your email is not valid.');
-    if (! check.is (':checked'))        return reqInput (check, 'You must accept the terms and conditions.');
+    if (! check.is (':checked'))        return reqInput (check, 'You must accept the terms and conditions.');*/
 
     //sendForm ($('#login-form').serialize ());
 }
