@@ -28,14 +28,31 @@
 		&:before {
 			content: '';
 			position: absolute;
-			top: -@datepicker-arrow-size;
-			left: @datepicker-arrow-size;
 			display: inline-block;
-
-			border-left:   @datepicker-arrow-size solid transparent;
-			border-right:  @datepicker-arrow-size solid transparent;
-			border-bottom: @datepicker-arrow-size solid @datepicker-background-color;
 		}
+
+		&.datepicker-orient-top {
+			&:before {
+				top: -@datepicker-arrow-size;
+				left: @datepicker-arrow-size;
+
+				border-left:   @datepicker-arrow-size solid transparent;
+				border-right:  @datepicker-arrow-size solid transparent;
+				border-bottom: @datepicker-arrow-size solid @datepicker-background-color;
+			}
+		}
+
+		&.datepicker-orient-bottom {
+			&:before {
+				bottom: -@datepicker-arrow-size;
+				left: @datepicker-arrow-size;
+
+				border-left:   	@datepicker-arrow-size solid transparent;
+				border-right:  	@datepicker-arrow-size solid transparent;
+				border-top: 	@datepicker-arrow-size solid @datepicker-background-color;
+			}
+		}
+
 		// end flechita
 
 		& > div {
