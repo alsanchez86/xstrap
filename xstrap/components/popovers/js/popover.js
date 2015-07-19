@@ -117,7 +117,7 @@
     })
     .scroll (function (event) {
 
-      popoverHide ();
+      //popoverHide ();
     });
 
   function popover (element) {
