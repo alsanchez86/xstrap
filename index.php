@@ -856,7 +856,7 @@
 
 <!-- COMPONENTS -->
 <!-- dropdowns -->
-<script src="./xstrap/components/dropdowns/js/dropdowns.js"></script>
+<script src="./xstrap/components/dropdowns/js/dropdown.js"></script>
 <!-- scrollspy -->
 <script src="./xstrap/components/scrollspy/js/scrollspy.js"></script>
 <!-- affix -->

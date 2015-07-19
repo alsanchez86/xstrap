@@ -94,22 +94,14 @@ function affix () {
 
 function affixResize () {
 
-    var $affix   = $('#spy-affix-nav');
-    var $window = $(window);
+    var $affix      = $('#spy-affix-nav');
+    var $window     = $(window);
 
     $affix
         .css ({
-            width: $affix.parent ().width ()
+            width:  $affix.parent ().width (),
+            height: $window.height () - 40
         });
-
-    if ($window.height () <= $affix.outerHeight ()) {
-
-        $affix
-            .addClass ('affix-overflowed')
-            .css ({
-                height: $(window).height () - 40
-            });
-    }
 }
 
 // datepicker
