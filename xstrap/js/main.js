@@ -6,6 +6,7 @@ jQuery (document).ready (function($) {
     if (typeof preload  != 'undefined') preLoad ();
     //responsive ();
     datepicker ($('#form-date'));
+    confirmation ();
 });
 
 $(window)
@@ -108,4 +109,24 @@ function affixResize () {
 function datepicker (input) {
 
     input.datepicker ();
+}
+
+// confirmation
+function confirmation () {
+
+    $('[data-toggle="confirmation"]')
+        .click (function () {
+
+            $(this)
+                .popover ({
+                    animation:  true,
+                    html:       true,
+                    trigger:    'manual',
+                    placement:  'bottom',
+                    container:  'body',
+                    content:    '<button>Are you sure?</button>'
+                })
+                .popover ('toggle');
+        });
+
 }

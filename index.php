@@ -832,6 +832,10 @@
                 <a class="blank" href="http://lorempixel.com" target="_blank">Lorem Pixel</a>
             </p>
             <!-- end IMAGES -->
+
+            <!-- POPOVER CONFIRMATION -->
+            <button data-toggle="confirmation">CONFIRMATION</button>
+            <!-- end POPOVER CONFIRMATION -->
         </div>
     </div>
 </div>
