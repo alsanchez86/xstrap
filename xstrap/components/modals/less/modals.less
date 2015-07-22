@@ -1,28 +1,5 @@
-@modal-width:               @screen-xs-max - 100; //no puede ser nunca mayor que @screen-xs-max
-@modal-margin:              50px;
-@modal-padding:             20px;
-@modal-body-padding-bottom: 20px;
-@modal-background-color:    @c1;
-
-@modal-close-color:                   @a-color;
-@modal-close-color-hover:             @a-color-hover;
-@modal-close-background-color:        transparent;
-@modal-close-background-color-hover:  transparent;
-@modal-close-font-size:               32px;
-
-@modal-close-shadow-color: transparent;
-@modal-close-blur: 0px;
-
-@modal-title-padding:  0px 0px 10px 0px;
-@modal-footer-padding: 10px 0px 0px 0px;
-
-@modal-backdrop-background-color: @c2;
-@modal-backdrop-opacity:          @opacity;
-
-@modal-border:        0px;
-@modal-border-radius: 5px;
-@modal-zindex:        1050;
-@modal-time:          0.5s;
+// VARS
+@import url('vars.less');
 
 .modal-open {
   overflow: hidden;
@@ -55,7 +32,7 @@
 
   &.fade .modal-dialog {
     .translate (0, -25%);
-    .transition-transform (~"@{modal-time} ease-out");
+    .transition (@modal-time, 'ease-out');
   }
 
   &.in .modal-dialog { .translate (0, 0); }
@@ -161,7 +138,7 @@
     .modal-dialog {
       max-width: auto;
       width: auto;
-      margin: @modal-margin @space-xs-sm;
+      margin: @modal-margin @space-small;
     }
   }
 }
