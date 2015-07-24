@@ -61,6 +61,10 @@ function modalEvent () {
     .on ('hidden.bs.modal', function () {
 
       $('body').css ({padding: 0}); //fix bootstrap bug
+    })
+    .scroll (function () {
+
+      if ($('.popover').length) popoverHide ();
     });
 }
 
