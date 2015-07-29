@@ -9,14 +9,14 @@
   color:              @color;
   background-color:   @background-color;
 
-  &::before,
-  &::after {
-    border-color: @color;
-  }
-
   &:hover,
   &.active {
     color:            @color-hover;
     background-color: @background-color-hover;
+  }
+
+  &::before,
+  &::after {
+    border-color: @color;
   }
 }

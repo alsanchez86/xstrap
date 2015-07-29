@@ -13,8 +13,8 @@ input[type="button"],
   .text         (@button-font-family, @button-font-size, @button-font-weight, @button-font-style, @button-color, @button-text-align, @button-text-transform, @button-line-height);
   .border       (@button-border, @button-border-radius);
   .box-shadow   (@button-shadow-color, @button-shadow-width, @button-shadow-height, @button-shadow-radius, @button-shadow-size);
-  .user-select  (none);
   .transition   (@button-time);
+  .user-select  (none);
   .not-outline  ();
   display: inline-block;
   height: @button-min-height;
@@ -30,10 +30,12 @@ input[type="button"],
   touch-action:     manipulation;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
 
-  &::before,
-  &::after {
-    display: inline-block;
-    vertical-align: middle;
+  &,
+  &:active,
+  &.active {
+    &:focus {
+      .tab-focus();
+    }
   }
 
   &:hover,
@@ -43,6 +45,12 @@ input[type="button"],
     outline: 0;
     text-decoration: none;
     background-image: none;
+  }
+
+  &::before,
+  &::after {
+    display: inline-block;
+    vertical-align: middle;
   }
 
   /*@media (max-width: @screen-sm-max) {
