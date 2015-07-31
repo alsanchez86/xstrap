@@ -718,30 +718,55 @@
                 Forms:
             </h3>
 
-            <p><strong>Supported controls</strong></p>
+            <p><strong>Supported controls:</strong></p>
 
             <p>Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.</p>
+
+            <blockquote>
+                <p>
+                    <strong>Type declaration required</strong>
+                    <br>
+                    Inputs will only be fully styled if their type is properly declared.
+                </p>
+            </blockquote>
+
+            <blockquote>
+                <p>
+                    <strong>Always add labels</strong>
+                    <br>
+                    Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the .sr-only class. There are further alternative methods of providing a label for assistive technologies, such as the aria-label, aria-labelledby or title attribute. If none of these is present, screen readers may resort to using the placeholder attribute, if present, but note that use of placeholder as a replacement for other labelling methods is not advised.
+                </p>
+            </blockquote>
+
+            <p>Poner aqui otros componentes extras de bootstrap como el colorpicker, datapicker,... <a class="blank" href="http://speckyboy.com/2014/06/16/plugins-for-extending-bootstrap/" target="_blank">http://speckyboy.com/2014/06/16/plugins-for-extending-bootstrap/</a></p>
 
             <form method="POST" action="javascript:actionForm ()">
                 <!-- action="{{ route("register") }}" -->
                 <div class="form-group">
-                    <label for="form-text">Type text:</label>
+                    <label for="form-text">Type <strong>text</strong>:</label>
                     <input type="text" class="form-control" id="form-text" name="form-text" placeholder="Enter your text...">
                 </div>
 
                 <div class="form-group">
-                    <label for="form-password">Type password:</label>
+                    <label for="form-password">Type <strong>password</strong>:</label>
                     <input type="password" class="form-control" id="form-password" name="form-password" placeholder="Enter your password...">
                 </div>
-
-                <!-- <div class="form-group">
-                    <label for="form-datetime">Type datetime:</label>
-                    <input type="datetime" class="form-control" id="form-datetime" name="form-datetime" placeholder="Enter your datetime...">
-                </div> -->
 
                 <div class="form-group">
                     <label for="form-readonly">Readonly: <small>(add attribute readonly at the end of the input)</small></label>
                     <input type="text" class="form-control" id="form-readonly" name="form-readonly" placeholder="Readonly" readonly>
+                </div>
+
+                <!-- DATEPICKER -->
+                <div class="form-group">
+                    <label for="form-datetime">Type datetime: <small>Requires <strong>button dropdown</strong> component.</small></label>
+                    <input type="datetime" class="form-control" id="form-datetime" name="form-datetime" placeholder="02-16-2012" value="02-16-2012">
+                </div>
+                <!-- end DATEPICKER -->
+
+                <div class="form-group">
+                    <label for="form-textarea">Textarea:</label>
+                    <textarea class="form-control" id="form-textarea" name="form-textarea" rows="3"></textarea>
                 </div>
 
                 <div class="checkbox">
@@ -752,19 +777,6 @@
 
                 <button type="submit" class="btn-3d">Submit</button>
             </form>
-
-            <br>
-            <p>Poner aqui otros componentes extras de bootstrap como el colorpicker, datapicker,... <a class="blank" href="http://speckyboy.com/2014/06/16/plugins-for-extending-bootstrap/" target="_blank">http://speckyboy.com/2014/06/16/plugins-for-extending-bootstrap/</a></p>
-
-            <!-- DATEPICKER -->
-            <h4 id="spy-datepicker">Datepicker:</h4>
-
-            <p>(*) Requires <strong>button dropdown</strong> component.</p>
-
-            <!-- <input type="text" class="form-control" id="form-text" name="form-text" placeholder="Enter your text..."> -->
-            <input type="text" class="form-control" id="form-date" name="form-date" placeholder="02-16-2012" value="02-16-2012">
-
-            <!-- end DATEPICKER -->
             <!-- end FORMS -->
 
             <!-- BUTTONS -->

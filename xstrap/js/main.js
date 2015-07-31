@@ -5,7 +5,7 @@ jQuery (document).ready (function($) {
     bootstrap ();
     if (typeof preload  != 'undefined') preLoad ();
     //responsive ();
-    datepicker ($('#form-date'));
+    datepicker ($('#form-datetime'));
     confirmation ();
 });
 

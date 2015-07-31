@@ -55,12 +55,13 @@ label {
 }*/
 
 .form-control {
-  .space        (@input-margin-bottom);
-  .text         (@input-font-family, @input-font-size, @input-font-weight, @input-font-style, @input-color);
-  .border       (@input-border, @input-border-radius);// Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
-  .box-shadow   (@input-box-shadow-color, @input-box-shadow-blur);
-  .transition   (~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
-  .placeholder  (@input-placeholder-color);
+  .space              (@input-margin-bottom);
+  .text               (@input-font-family, @input-font-size, @input-font-weight, @input-font-style, @input-color);
+  .border             (@input-border, @input-border-radius);// Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+  .box-shadow         (@input-box-shadow-color, @input-box-shadow-blur);
+  .transition         (~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+  .placeholder        (@input-placeholder-color);
+  //.form-control-focus (); // Customize the `:focus` state to imitate native WebKit styles.
   display: block;
   width: 100%;
   height: @input-height; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
@@ -69,23 +70,17 @@ label {
   background-color: @input-background-color;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
 
-  // Customize the `:focus` state to imitate native WebKit styles.
-  //.form-control-focus();
-
-  // Placeholder
-  //.placeholder();
-
   // Disabled and read-only inputs
   //
   // HTML5 says that controls under a fieldset > legend:first-child won't be
   // disabled if the fieldset is disabled. Due to implementation difficulty, we
   // don't honor that edge case; we style them as disabled anyway.
 
-  /*&:focus {
+  &:focus {
     .box-shadow   (@input-box-shadow-color-focus);
     .not-outline  ();
     border-color: @input-border-color-focus;
-  }*/
+  }
 
   &[disabled],
   &[readonly],
