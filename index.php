@@ -724,7 +724,7 @@
 
             <blockquote>
                 <p>
-                    <strong>Type declaration required</strong>
+                    <strong>(*) Type declaration required</strong>
                     <br>
                     Inputs will only be fully styled if their type is properly declared.
                 </p>
@@ -732,7 +732,7 @@
 
             <blockquote>
                 <p>
-                    <strong>Always add labels</strong>
+                    <strong>(*) Always add labels</strong>
                     <br>
                     Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the .sr-only class. There are further alternative methods of providing a label for assistive technologies, such as the aria-label, aria-labelledby or title attribute. If none of these is present, screen readers may resort to using the placeholder attribute, if present, but note that use of placeholder as a replacement for other labelling methods is not advised.
                 </p>
