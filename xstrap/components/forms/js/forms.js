@@ -5,7 +5,7 @@
 
 function actionForm () {
 
-    var text  = $('#form-text');
+    var text = $('#form-text');
     //var email = $('#form-email');
     //var check = $('#form-checkbox');
 
@@ -38,11 +38,14 @@ function actionForm () {
     //sendForm ($('#login-form').serialize ());
 }
 
-function sendForm (datos) {
+function sendForm (datos, php) {
 
     $.post (
-        window.baseUrl + "/share/email",
-        {data: datos, cache: false})
+        php,
+        {
+            data: datos,
+            cache: false
+        })
         .done (function (data) {
 
             if (data) return modalDefault (data, 1500);
