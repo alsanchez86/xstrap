@@ -1,6 +1,3 @@
-// normalize
-@import url('normalize.less');
-
 // vars
 @import url('vars.less');
 
@@ -10,6 +7,98 @@
 //
 // Forms
 // --------------------------------------------------
+
+// Normalize non-controls
+//
+// Restyle and baseline non-control form elements.
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+  // so we reset that to ensure it behaves more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359.
+  min-width: 0;
+}
+
+legend {
+  .space (@legend-margin-bottom);
+  .text (@legend-font-family, @legend-font-size, @legend-font-weight, @legend-font-style, @legend-color, @legend-text-align, @legend-text-transform, @legend-line-height);
+  display: block;
+  width: 100%;
+  padding: 0;
+
+  border: 0;
+  border-bottom: 1px solid @legend-border-bottom-color;
+}
+
+label {
+  .space (@label-margin-bottom);
+  .text (@label-font-family, @label-font-size, @label-font-weight, @label-font-style, @label-color);
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  cursor: pointer;
+}
+
+output {
+  .text (@output-font-family, @output-font-size, @output-font-weight, @output-font-style, @output-color);
+  display: block;
+  padding: @output-padding;
+}
+
+// Normalize form controls
+//
+// While most of our form styles require extra classes, some basic normalization
+// is required to ensure optimum display with or without those classes to better
+// address browser inconsistencies.
+
+// Override content-box in Normalize (* isn't specific enough)
+input[type="search"] {
+  .box-sizing (border-box);
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+  margin: @radio-checkbox-margin;
+  margin-top: 1px \9; // IE8-9
+  line-height: normal;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+// Focus for file, radio, and checkbox
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  .tab-focus ();
+}
+
+// Search inputs in iOS
+//
+// This overrides the extra rounded corners on search inputs in iOS so that our
+// `.form-control` class can properly style them. Note that this cannot simply
+// be added to `.form-control` as it's not specific enough. For details, see
+// https://github.com/twbs/bootstrap/issues/11586.
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
 
 // Common form controls
 //
@@ -33,34 +122,14 @@
 // input[type="tel"]
 // input[type="color"]
 
-// label
-label {
-  .space (@label-margin-bottom);
-  .text (@label-font-family, @label-font-size, @label-font-weight, @label-font-style, @label-color);
-  cursor: pointer;
-}
-
-// legend
-/*legend {
-  .space ();
-  border-bottom: 1px solid @gris;
-}*/
-
-// output
-/*output {
-  padding-top: (@space + 1);
-  font-size: @font-size;
-  line-height: @line-height;
-  color: @color;
-}*/
-
 .form-control {
-  .space        (@input-margin-bottom);
-  .text         (@input-font-family, @input-font-size, @input-font-weight, @input-font-style, @input-color);
-  .border       (@input-border, @input-border-radius);// Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
-  .box-shadow   (@input-box-shadow-color, @input-box-shadow-blur);
-  .transition   (~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
-  .placeholder  (@input-placeholder-color);
+  .space              (@input-margin-bottom);
+  .text               (@input-font-family, @input-font-size, @input-font-weight, @input-font-style, @input-color);
+  .border             (@input-border, @input-border-radius);// Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+  .box-shadow         (@input-box-shadow-color, @input-box-shadow-blur);
+  .transition         (~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+  .placeholder        (@input-placeholder-color);
+  //.form-control-focus (); // Customize the `:focus` state to imitate native WebKit styles.
   display: block;
   width: 100%;
   height: @input-height; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
@@ -68,13 +137,7 @@ label {
 
   background-color: @input-background-color;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  direction: @input-direction; // ltr | rlt
-
-  // Customize the `:focus` state to imitate native WebKit styles.
-  //.form-control-focus();
-
-  // Placeholder
-  //.placeholder();
+  direction: @input-direction;
 
   // Disabled and read-only inputs
   //
@@ -82,11 +145,11 @@ label {
   // disabled if the fieldset is disabled. Due to implementation difficulty, we
   // don't honor that edge case; we style them as disabled anyway.
 
-  /*&:focus {
+  &:focus {
     .box-shadow   (@input-box-shadow-color-focus);
     .not-outline  ();
     border-color: @input-border-color-focus;
-  }*/
+  }
 
   &[disabled],
   &[readonly],
