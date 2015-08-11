@@ -42,6 +42,7 @@ input[type="button"],
   &:focus,
   &.active,
   &:active {
+    .box-shadow (@button-shadow-color-hover, @button-shadow-width-hover, @button-shadow-height-hover, @button-shadow-radius-hover, @button-shadow-size-hover);
     outline: 0;
     text-decoration: none;
     background-image: none;
@@ -52,8 +53,4 @@ input[type="button"],
     display: inline-block;
     vertical-align: middle;
   }
-
-  /*@media (max-width: @screen-sm-max) {
-    font-size: @font-size-small;
-  }*/
 }
