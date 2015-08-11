@@ -1,0 +1,53 @@
+// vars
+@import url('vars.less');
+
+span.twitter-typeahead {
+  .tt-menu {
+    .text (@tt-font-family, @tt-font-size, @tt-font-weight, @tt-font-style, @tt-color, @tt-text-align, @tt-text-transform, @tt-line-height);
+    .box-shadow (@tt-shadow-color, @tt-shadow-width, @tt-shadow-height, @tt-shadow-radius, @tt-shadow-size);
+    .border (@tt-border, @tt-border-radius);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: @tt-min-width;
+    margin: @tt-margin; // override default ul
+    padding: @tt-padding;
+
+    float: left;
+    display: none; // none by default, but block on "open" of the menu
+    z-index: @tt-zindex;
+
+    background-color: @tt-background-color;
+    background-clip: padding-box;
+
+    .tt-dataset {
+      .tt-suggestion {
+        display: block;
+        padding: @tt-suggestion-padding;
+
+        clear: both;
+        white-space: nowrap; // prevent links from randomly breaking onto new lines
+        cursor: pointer;
+        background-color: @tt-suggestion-background-color;
+
+        &:hover {
+          background-color: @tt-suggestion-background-color-hover;
+        }
+
+        .tt-highlight {
+          color: @tt-highlight-color;
+        }
+      }
+    }
+  }
+}
+
+// XS
+@media (max-width: @screen-xs-max) {
+
+  span.twitter-typeahead {
+    .tt-menu {
+      min-width: 100%;
+    }
+  }
+}

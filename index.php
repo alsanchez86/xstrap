@@ -764,6 +764,16 @@
                 </div>
                 <!-- end DATEPICKER -->
 
+                <!-- TYPEAHEAD -->
+                <div class="form-group">
+                    <label for="form-typeahead">Typeahead:</label>
+                    <input type="text" class="form-control" id="form-typeahead" placeholder="States of USA">
+                </div>
+                <!-- <div id="the-basics">
+
+                </div> -->
+                <!-- end TYPEAHEAD -->
+
                 <div class="form-group">
                     <label for="form-textarea">Textarea:</label>
                     <textarea class="form-control" id="form-textarea" name="form-textarea" rows="3"></textarea>
@@ -881,10 +891,13 @@
 <script src="./xstrap/components/tooltips/js/tooltip.js"></script>
 <!-- popover -->
 <script src="./xstrap/components/popovers/js/popover.js"></script>
+
 <!-- forms -->
 <script src="./xstrap/components/forms/js/forms.js"></script>
-<!-- forms -->
+<!-- datepicker -->
 <script src="./xstrap/components/datepicker/js/datepicker.js"></script>
+<!-- typehead -->
+<script src="./xstrap/components/typeahead/js/typeahead.js"></script>
 
 <!-- main -->
 <script src="./xstrap/js/main.js"></script>

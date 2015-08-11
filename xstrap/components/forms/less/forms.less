@@ -123,7 +123,6 @@ input[type="search"] {
 // input[type="color"]
 
 .form-control {
-  .space              (@input-margin-bottom);
   .text               (@input-font-family, @input-font-size, @input-font-weight, @input-font-style, @input-color);
   .border             (@input-border, @input-border-radius);// Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
   .box-shadow         (@input-box-shadow-color, @input-box-shadow-blur);
@@ -199,7 +198,7 @@ input[type="search"] {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: @form-group-margin-bottom;
+  .space (@form-group-margin-bottom);
 }
 
 // Checkboxes and radios
