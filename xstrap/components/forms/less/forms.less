@@ -61,7 +61,6 @@ input[type="search"] {
 // Position radios and checkboxes better
 input[type="radio"],
 input[type="checkbox"] {
-  margin: @radio-checkbox-margin;
   margin-top: 1px \9; // IE8-9
 
   line-height: normal;
@@ -76,6 +75,8 @@ input[type="file"] {
 input[type="range"] {
   display: block;
   width: 100%;
+
+  cursor: col-resize;
 }
 
 // Make multiple select elements height not fixed
@@ -214,15 +215,14 @@ input[type="search"] {
 
 .radio,
 .checkbox {
+  .space (@radio-checkbox-margin);
   position: relative;
   display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
 
   label {
     min-height: @line-height; // Ensure the input doesn't jump when there is no text
     padding-left: 20px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     font-weight: normal;
     line-height: 100%;
     cursor: pointer;
@@ -243,7 +243,7 @@ input[type="search"] {
 
 .radio + .radio,
 .checkbox + .checkbox {
-  margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
+  // margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
 }
 
 // Radios and checkboxes on same line

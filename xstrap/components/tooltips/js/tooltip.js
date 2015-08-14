@@ -7,6 +7,21 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
+$(window)
+  .resize (function () {
+
+    tooltipHide ();
+  })
+  .scroll (function () {
+
+    tooltipHide ();
+  });
+
+function tooltipHide () {
+
+  $('[data-toggle="tooltip"]')
+    .tooltip ('hide');
+}
 
 +function ($) {
   'use strict';
