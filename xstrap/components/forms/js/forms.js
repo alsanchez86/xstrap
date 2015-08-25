@@ -62,7 +62,7 @@ function reqInput (input, text) {
             animation:  true,
             trigger:    'manual',
             placement:  'bottom',
-            container:  'body',
+            // container:  'body',
             html:       true,
             content:    text
         })
