@@ -2,15 +2,6 @@
 // Tooltips
 // --------------------------------------------------
 
-@zindex-tooltip: 1070;
-
-@tooltip-max-width:           200px;
-@tooltip-color:               #fff;
-@tooltip-bg:                  #000;
-@tooltip-opacity:             .9;
-@tooltip-arrow-width:         5px;
-@tooltip-arrow-color:         @tooltip-bg;
-
 /*.tooltip {
   & > .tooltip-inner {
     background-color: @c4;
@@ -21,19 +12,22 @@
   }
 }*/
 
+// VARS
+@import url('vars.less');
+
 // Base class
 .tooltip {
+  .opacity (0);
   position: absolute;
-  z-index: @zindex-tooltip;
   display: block;
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
   //.reset-text();
-  font-size: @font-size-small;
 
-  .opacity(0);
+  z-index: @tooltip-zindex;
+  text-shadow: none;
 
-  &.in     { .opacity(@tooltip-opacity); }
+  &.in     { .opacity (@tooltip-opacity); }
   &.top    { margin-top:  -3px; padding: @tooltip-arrow-width 0; }
   &.right  { margin-left:  3px; padding: 0 @tooltip-arrow-width; }
   &.bottom { margin-top:   3px; padding: @tooltip-arrow-width 0; }
@@ -42,12 +36,12 @@
 
 // Wrapper for the tooltip content
 .tooltip-inner {
+  .text (@tooltip-font-family, @tooltip-font-size, @tooltip-font-weight, @tooltip-font-style, @tooltip-color, @tooltip-text-align, @tooltip-text-transform, @tooltip-line-height);
+  .border (@tooltip-border, @tooltip-border-radius);
   max-width: @tooltip-max-width;
-  padding: 3px 8px;
-  color: @tooltip-color;
-  text-align: center;
-  background-color: @tooltip-bg;
-  border-radius: @border-radius;
+  padding: @tooltip-padding;
+
+  background-color: @tooltip-background-color;
 }
 
 // Arrows
