@@ -884,18 +884,50 @@
                 Buttons:
             </h3>
 
-            <p class="text-indent">En xstrap, los botones pueden ser elementos <code>&lt;a&gt;</code>, <code>input[type="button"]</code> y <code>&lt;button&gt;</code>.</p>
+            <p class="text-indent">En xstrap, los botones pueden ser elementos <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code> e <code>input[type="button"]</code>.</p>
 
             <p>Para dar apariencia de botón a un elemento, solo tenemos que añadirle la clase <mark>.btn</mark> (por defecto, los elementos <code>button</code> se les aplica los estilos de <mark>.btn</mark>).</p>
 
             <p>
-                <a class="btn" href="">Link con apariencia de botón (tiene clase .btn)</a>
+                <a href="#" class="btn" role="button">Link con apariencia de botón (tiene clase .btn)</a>
+
                 <br><br>
-                <button>Button con apariencia de botón (por defecto)</button>
+
+                <button type="button">Button con apariencia de botón (por defecto)</button>
+
                 <br><br>
-                <input type="button" value="Input con apariencia de botón (por defecto)">
+
+                <input type="button" value="Input type button con apariencia de botón (por defecto)">
             </p>
-            <!-- end BUTTONS -->
+            <!-- / BUTTONS -->
+
+            <!-- button groups -->
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button">Left</button>
+                <button type="button">Middle</button>
+                <button type="button">Right</button>
+            </div>
+
+            <div class="btn-toolbar" role="toolbar" aria-label="...">
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button">Left</button>
+                    <button type="button">Middle</button>
+                    <button type="button">Right</button>
+                </div>
+
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button">Left</button>
+                    <button type="button">Middle</button>
+                    <button type="button">Right</button>
+                </div>
+
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button">Left</button>
+                    <button type="button">Middle</button>
+                    <button type="button">Right</button>
+                </div>
+            </div>
+            <!-- / button groups -->
 
             <!-- IMAGES -->
             <br>
@@ -942,7 +974,7 @@
             <!-- end IMAGES -->
 
             <!-- POPOVER CONFIRMATION -->
-            <button data-toggle="confirmation">CONFIRMATION</button>
+            <button type="button" data-toggle="confirmation">CONFIRMATION</button>
             <!-- end POPOVER CONFIRMATION -->
         </div>
     </div>
