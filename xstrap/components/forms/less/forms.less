@@ -126,21 +126,21 @@ input[type="search"] {
 // input[type="color"]
 
 .form-control {
-  .space              (@input-margin-bottom);
-  .text               (@input-font-family, @input-font-size, @input-font-weight, @input-font-style, @input-color);
-  .border             (@input-border, @input-border-radius);// Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
-  .box-shadow         (@input-box-shadow-color, @input-box-shadow-blur);
+  .space              (@form-control-margin-bottom);
+  .text               (@form-control-font-family, @form-control-font-size, @form-control-font-weight, @form-control-font-style, @form-control-color);
+  .border             (@form-control-border, @form-control-border-radius); // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+  .box-shadow         (@form-control-box-shadow-color, @form-control-box-shadow-width, @form-control-box-shadow-height, @form-control-box-shadow-radius, @form-control-box-shadow-size);
   .transition         (~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
-  .placeholder        (@input-placeholder-color);
-  //.form-control-focus (); // Customize the `:focus` state to imitate native WebKit styles.
+  .placeholder        (@form-control-placeholder-color);
+  // .form-control-focus (); // Customize the `:focus` state to imitate native WebKit styles.
   display: block;
   width: 100%;
-  height: @input-height; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: @input-padding;
+  height: @form-control-height; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  padding: @form-control-padding;
 
-  background-color: @input-background-color;
+  background-color: @form-control-background-color;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  direction: @input-direction;
+  direction: @form-control-direction;
 
   // Disabled and read-only inputs
   //
@@ -149,9 +149,9 @@ input[type="search"] {
   // don't honor that edge case; we style them as disabled anyway.
 
   &:focus {
-    .box-shadow   (@input-box-shadow-color-focus);
     .not-outline  ();
-    border-color: @input-border-color-focus;
+    .box-shadow (@form-control-box-shadow-color-focus, @form-control-box-shadow-width-focus, @form-control-box-shadow-height-focus, @form-control-box-shadow-radius-focus, @form-control-box-shadow-size-focus);
+    border-color: @form-control-border-color-focus;
   }
 
   &[disabled],
@@ -163,6 +163,7 @@ input[type="search"] {
   // Reset height for `textarea`s
   textarea& {
     height: auto;
+    resize: @textarea-resize;
   }
 }
 
@@ -181,17 +182,17 @@ input[type="search"] {
   input[type="datetime-local"],
   input[type="month"] {
     &.form-control {
-      line-height: @input-height;
+      line-height: @form-control-height;
     }
 
     &.input-sm,
     .input-group-sm & {
-      line-height: @input-height;
+      line-height: @form-control-height;
     }
 
     &.input-lg,
     .input-group-lg & {
-      line-height: @input-height;
+      line-height: @form-control-height;
     }
   }
 }

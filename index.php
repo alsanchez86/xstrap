@@ -757,26 +757,28 @@
                     <input type="text" class="form-control" id="form-readonly" name="form-readonly" placeholder="Readonly" readonly>
                 </div>
 
-                <!-- DATEPICKER -->
+                <div class="form-group">
+                    <label for="form-disabled">Disabled input: <small>(add attribute disabled at the end of the input)</small></label>
+                    <input type="text" class="form-control" id="form-disabled" name="form-disabled" placeholder="Disabled" disabled>
+                </div>
+
+                <!-- datepicker -->
                 <div class="form-group">
                     <label for="form-datetime">Type datetime: <small>Requires <strong>button dropdown</strong> component.</small></label>
                     <input type="datetime" class="form-control" id="form-datetime" name="form-datetime" placeholder="02-16-2012" value="02-16-2012">
                 </div>
-                <!-- end DATEPICKER -->
+                <!-- / datepicker -->
 
-                <!-- TYPEAHEAD -->
+                <!-- typeahead -->
                 <div class="form-group">
                     <label for="form-typeahead">Typeahead:</label>
                     <input type="text" class="form-control" id="form-typeahead" placeholder="States of USA">
                 </div>
-                <!-- <div id="the-basics">
-
-                </div> -->
-                <!-- end TYPEAHEAD -->
+                <!-- / typeahead -->
 
                 <div class="form-group">
                     <label for="form-textarea">Textarea:</label>
-                    <textarea class="form-control" id="form-textarea" name="form-textarea" rows="3"></textarea>
+                    <textarea class="form-control" id="form-textarea" name="form-textarea" rows="5"></textarea>
                 </div>
 
                 <div class="checkbox">
@@ -807,6 +809,32 @@
                     </label>
                 </div>
                 <!-- / radios -->
+
+                <!-- selects -->
+                <div class="form-group">
+                    <label for="form-typeahead">Select:</label>
+
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="form-typeahead">Multiple select:</label>
+
+                    <select multiple class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <!-- / selects -->
 
                 <button type="submit" class="btn-3d">Submit</button>
             </form>
