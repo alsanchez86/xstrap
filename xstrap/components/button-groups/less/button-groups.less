@@ -8,6 +8,7 @@
 // Make the div behave like a button
 .btn-group,
 .btn-group-vertical {
+  .space (@btn-group-space);
   position: relative;
   display: inline-block;
   vertical-align: middle; // match .btn alignment given font-size hack above
@@ -38,8 +39,8 @@
 
 // Optional: Group multiple button groups together for a toolbar
 .btn-toolbar {
-  margin-left: -5px; // Offset the first child's margin
   &:extend(.clearfix all);
+  margin-left: -@btn-toolbar-margin; // Offset the first child's margin
 
   .btn,
   .btn-group,
@@ -49,25 +50,33 @@
   > .btn,
   > .btn-group,
   > .input-group {
-    margin-left: 5px;
+    margin-left: @btn-toolbar-margin;
   }
 }
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
-  border-radius: 0;
+  .border (@button-border, 0px);
 }
 
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
-.btn-group > .btn:first-child {
-  margin-left: 0;
-  &:not(:last-child):not(.dropdown-toggle) {
-    //.border-right-radius(0);
+.btn-group {
+  & > button,
+  & > .btn {
+    &:first-child {
+      margin-left: 0px;
+
+      &:not(:last-child):not(.dropdown-toggle) {
+        .border-right-radius (0);
+      }
+    }
   }
 }
+
 // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+.btn-group > button:last-child:not(:first-child),
 .btn-group > .btn:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
-  //.border-left-radius(0);
+  .border-left-radius(0);
 }
 
 // Custom edits for including btn-groups within btn-groups (useful for including dropdown buttons within a btn-group)
@@ -77,14 +86,15 @@
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0;
 }
+
 .btn-group > .btn-group:first-child:not(:last-child) {
   > .btn:last-child,
   > .dropdown-toggle {
-    //.border-right-radius(0);
+    .border-right-radius(0);
   }
 }
 .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
-  //.border-left-radius(0);
+  .border-left-radius(0);
 }
 
 // On active and open, don't show outline
