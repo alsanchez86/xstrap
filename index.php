@@ -812,9 +812,9 @@
 
                 <!-- selects -->
                 <div class="form-group">
-                    <label for="form-typeahead">Select:</label>
+                    <label for="form-select">Select:</label>
 
-                    <select class="form-control">
+                    <select class="form-control" id="form-select" name="form-select">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -824,9 +824,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="form-typeahead">Multiple select:</label>
+                    <label for="form-multiple-select">Multiple select:</label>
 
-                    <select multiple class="form-control">
+                    <select multiple class="form-control" id="form-multiple-select" name="form-multiple-select">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -835,6 +835,41 @@
                     </select>
                 </div>
                 <!-- / selects -->
+
+                <!-- form with grid component -->
+                <p>Combina con el grid component para maquetar formularios:</p>
+
+                <div class="row">
+                    <div class="col-xs-2">
+                        <div class="form-group">
+                            <label for="form-datetime-2">Datetime:</label>
+                            <input type="datetime" class="form-control" id="form-datetime-2" name="form-datetime-2" placeholder="02-16-2012" value="02-16-2012">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <div class="checkbox">
+                            <label>
+                                <input id="form-checkbox-2" name="form-checkbox-2" type="checkbox"> Type checkbox
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <div class="form-group">
+                            <label for="form-select-2">Select:</label>
+
+                            <select class="form-control" id="form-select-2" name="form-select-2">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- form with grid component -->
 
                 <button type="submit" class="btn-3d">Submit</button>
             </form>

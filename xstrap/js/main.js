@@ -6,6 +6,7 @@ jQuery (document).ready (function($) {
     if (typeof preload  != 'undefined') preLoad ();
     //responsive ();
     datepicker ($('#form-datetime'));
+    datepicker ($('#form-datetime-2'));
     confirmation ();
     typeHead ();
 });
