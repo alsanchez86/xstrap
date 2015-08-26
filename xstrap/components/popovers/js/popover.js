@@ -17,11 +17,11 @@ $(window)
 
     popoverHide ();
   })
-  .scroll (function (event) {
-    //popoverHide ();
+  .scroll (function () {
+
+    popoverHide ();
   });
 
-// esta función se debe llamar en el document.ready o en el mount de riot, nunca dentro de un evento click del boton
 function popover (element) {
 
   element [0].popover ({
@@ -34,7 +34,7 @@ function popover (element) {
     content:    element [7]
   });
 
-  // if (element [8]) element [0].popover ('show');
+  if (element [8]) element [0].popover ('toggle');
 }
 
 function popoverHide () {
