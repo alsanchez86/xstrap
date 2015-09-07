@@ -30,9 +30,9 @@ module.exports = function(grunt) {
         files: {
           '.tmp/all_coffee.js': [
               // ficheros coffee en el orden que queramos
-              './js/coffee/riotcontrol.coffee',
-              './js/coffee/store.coffee',
-              './js/coffee/search.coffee',
+              // './js/coffee/riotcontrol.coffee',
+              // './js/coffee/store.coffee',
+              // './js/coffee/search.coffee',
             ]
         }
       },
@@ -61,13 +61,13 @@ module.exports = function(grunt) {
             '.tmp/tags.js', // los tags
             '.tmp/all_coffee.js', // todos los ficheros coffee
              ],
-          dest: 'build/dyn-search.js',
+          dest: 'js/main.js',
         }
       },
       uglify: {
         default: {
           files: {
-            'build/dyn-search.js': ['build/dyn-search.min.js'],
+            'js/main.js': ['js/main.min.js'],
           }
         }
       },
