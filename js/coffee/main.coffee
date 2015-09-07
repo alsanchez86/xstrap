@@ -1,29 +1,31 @@
+### Begin Magic! ###
+
 preLoadImgs         = ['./images/cargando.gif']
 $window             = $(window)
 $affixTarget        = [$('#spy-affix-nav')]
 $datePickerTarget   = [$('#form-datetime'), $('#form-datetime-2')]
+$typeAheadTarget    = [$('#form-typeahead')]
 $confirmationTarget = $('[data-toggle="confirmation"]')
-$typeAheadTarget    = $('#form-typeahead')
 
 jQuery ->
     bootstrap()
     if typeof preLoadImgs  != 'undefined'
         preLoad()
     responsive()
-    datePicker($datePickerTarget)
-    typeAhead()
+    # datePicker($datePickerTarget)
+    # typeAhead($typeAheadTarget)
     # confirmation()
 
 $window
     .on
         load: () ->
-            affix($affixTarget)
-            affixResize($affixTarget)
+            # affix($affixTarget)
+            # affixResize($affixTarget)
         resize: () ->
             responsive()
-            affixResize($affixTarget)
+            # affixResize($affixTarget)
         scroll: () ->
-            affixResize($affixTarget)
+            # affixResize($affixTarget)
 
 preLoad = () ->
     for i in preLoadImgs
@@ -85,14 +87,13 @@ substringMatcher = (strs) ->
     findMatches = (q, cb) ->
         matches     = []
         substrRegex = new RegExp(q,'i')
-        $.each (
-                strs
-                (i, str) -> if substrRegex.test(str)
-                                matches.push(str)
-            )
+        $.each strs, (i, str) ->
+            if substrRegex.test str
+                matches.push str
+                return
         cb(matches)
 
-typeAhead = () ->
+typeAhead = (target) ->
     states = [
                 'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
                 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
@@ -105,8 +106,8 @@ typeAhead = () ->
                 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
             ]
 
-    $typeAheadTarget
-        .typeahead {
+    for i in target
+        i.typeahead {
             hint: true
             highlight: true
             minLength: 1
@@ -127,3 +128,14 @@ confirmation = () ->
                     container:  'body'
                     content:    '<button>Are you sure?</button>'
                 .popover('toggle')
+
+###################
+###################
+###################
+
+searchStore = new SearchStore
+globalConf  = 'store': searchStore
+
+RiotControl.addStore(searchStore)
+riot.mount '*', globalConf
+# searchStore.getSearch()

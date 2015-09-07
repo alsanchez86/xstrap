@@ -32,6 +32,6 @@ clone = ( obj) ->
     if obj == null || typeof(obj) != 'object'
         return obj
     temp = new obj.constructor()
-    for key of obj 
+    for key of obj
         temp[key] = clone(obj[key])
     return temp

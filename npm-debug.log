@@ -1,0 +1,114 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 warn package.json xstrap@0.0.1 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/Users/angelsanchez/Documents/LOCALHOST/xstrap',
+6 verbose install   [ 'grunt',
+6 verbose install     'grunt-contrib-jshint',
+6 verbose install     'grunt-contrib-nodeunit',
+6 verbose install     'grunt-contrib-uglify',
+6 verbose install     'grunt-riot',
+6 verbose install     'grunt-xstrap',
+6 verbose install     'grunt-coffee',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'grunt-contrib-coffee',
+6 verbose install     'grunt-concat-css',
+6 verbose install     'grunt-contrib-less',
+6 verbose install     'less-plugin-autoprefix',
+6 verbose install     'less-plugin-clean-css',
+6 verbose install     'grunt-contrib-cssmin',
+6 verbose install     'coffee-script',
+6 verbose install     'grunt-string-replace' ] ]
+7 info preinstall xstrap@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping grunt@~0.4.5 /Users/angelsanchez/Documents/LOCALHOST/xstrap
+10 verbose already installed skipping grunt-contrib-jshint@~0.10.0 /Users/angelsanchez/Documents/LOCALHOST/xstrap
+11 verbose already installed skipping grunt-contrib-nodeunit@~0.4.1 /Users/angelsanchez/Documents/LOCALHOST/xstrap
+12 verbose already installed skipping grunt-contrib-uglify@~0.5.0 /Users/angelsanchez/Documents/LOCALHOST/xstrap
+13 verbose already installed skipping grunt-riot@* /Users/angelsanchez/Documents/LOCALHOST/xstrap
+14 verbose cache add [ 'grunt-xstrap@*', null ]
+15 verbose cache add name=undefined spec="grunt-xstrap@*" args=["grunt-xstrap@*",null]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: 'grunt-xstrap@*',
+16 verbose parsed url   path: 'grunt-xstrap@*',
+16 verbose parsed url   href: 'grunt-xstrap@*' }
+17 verbose already installed skipping grunt-coffee@* /Users/angelsanchez/Documents/LOCALHOST/xstrap
+18 verbose already installed skipping grunt-contrib-concat@* /Users/angelsanchez/Documents/LOCALHOST/xstrap
+19 verbose cache add name="grunt-xstrap" spec="*" args=["grunt-xstrap","*"]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: '*',
+20 verbose parsed url   path: '*',
+20 verbose parsed url   href: '*' }
+21 verbose addNamed [ 'grunt-xstrap', '*' ]
+22 verbose addNamed [ null, '*' ]
+23 verbose already installed skipping grunt-contrib-watch@* /Users/angelsanchez/Documents/LOCALHOST/xstrap
+24 silly lockFile d0fa97f4-grunt-xstrap grunt-xstrap@*
+25 verbose lock grunt-xstrap@* /Users/angelsanchez/.npm/d0fa97f4-grunt-xstrap.lock
+26 verbose already installed skipping grunt-contrib-coffee@* /Users/angelsanchez/Documents/LOCALHOST/xstrap
+27 silly addNameRange { name: 'grunt-xstrap', range: '*', hasData: false }
+28 verbose already installed skipping grunt-concat-css@* /Users/angelsanchez/Documents/LOCALHOST/xstrap
+29 verbose already installed skipping grunt-contrib-less@* /Users/angelsanchez/Documents/LOCALHOST/xstrap
+30 verbose request where is /grunt-xstrap
+31 verbose request registry https://registry.npmjs.org/
+32 verbose request id e943f539e14e77b2
+33 verbose url raw /grunt-xstrap
+34 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-xstrap' ]
+35 verbose url resolved https://registry.npmjs.org/grunt-xstrap
+36 verbose request where is https://registry.npmjs.org/grunt-xstrap
+37 info trying registry request attempt 1 at 14:27:31
+38 http GET https://registry.npmjs.org/grunt-xstrap
+39 verbose already installed skipping less-plugin-autoprefix@* /Users/angelsanchez/Documents/LOCALHOST/xstrap
+40 verbose already installed skipping less-plugin-clean-css@* /Users/angelsanchez/Documents/LOCALHOST/xstrap
+41 verbose already installed skipping grunt-contrib-cssmin@* /Users/angelsanchez/Documents/LOCALHOST/xstrap
+42 verbose already installed skipping coffee-script@* /Users/angelsanchez/Documents/LOCALHOST/xstrap
+43 verbose already installed skipping grunt-string-replace@* /Users/angelsanchez/Documents/LOCALHOST/xstrap
+44 http 404 https://registry.npmjs.org/grunt-xstrap
+45 silly registry.get cb [ 404,
+45 silly registry.get   { 'content-type': 'application/json',
+45 silly registry.get     'cache-control': 'max-age=0',
+45 silly registry.get     'content-length': '2',
+45 silly registry.get     'accept-ranges': 'bytes',
+45 silly registry.get     date: 'Mon, 07 Sep 2015 12:27:32 GMT',
+45 silly registry.get     via: '1.1 varnish',
+45 silly registry.get     age: '0',
+45 silly registry.get     connection: 'keep-alive',
+45 silly registry.get     'x-served-by': 'cache-fra1225-FRA',
+45 silly registry.get     'x-cache': 'MISS',
+45 silly registry.get     'x-cache-hits': '0',
+45 silly registry.get     'x-timer': 'S1441628852.155878,VS0,VE105' } ]
+46 silly lockFile d0fa97f4-grunt-xstrap grunt-xstrap@*
+47 silly lockFile d0fa97f4-grunt-xstrap grunt-xstrap@*
+48 error 404 Not Found
+48 error 404
+48 error 404 'grunt-xstrap' is not in the npm registry.
+48 error 404 You should bug the author to publish it
+48 error 404 It was specified as a dependency of 'xstrap'
+48 error 404
+48 error 404 Note that you can also install from a
+48 error 404 tarball, folder, or http url, or git url.
+49 error System Darwin 13.3.0
+50 error command "node" "/usr/local/bin/npm" "install"
+51 error cwd /Users/angelsanchez/Documents/LOCALHOST/xstrap
+52 error node -v v0.10.32
+53 error npm -v 1.4.28
+54 error code E404
+55 verbose exit [ 1, true ]

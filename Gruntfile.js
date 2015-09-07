@@ -14,11 +14,12 @@ module.exports = function(grunt) {
   };
 
   try {
-
     config = grunt.file.readJSON( "config.json");
-  }catch(err){}
+  }catch(err){
 
-  // console.log(config);
+  }
+
+  console.log(config);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -30,15 +31,14 @@ module.exports = function(grunt) {
         files: {
           '.tmp/all_coffee.js': [
               // Coffee files
-              './js/coffee/main.coffee'
-              // './js/coffee/riotcontrol.coffee',
-              // './js/coffee/store.coffee',
-              // './js/coffee/search.coffee',
+              './js/coffee/riotcontrol.coffee',
+              './js/coffee/store.coffee',
+              './js/coffee/main.coffee',
             ]
         }
       },
     },
-    // riot
+    // supercomponents from this project
     riot: {
         options: {
           concat: true
@@ -46,7 +46,10 @@ module.exports = function(grunt) {
         task: {
           src: [
             './js/tags/*.tag',
-            ],
+            // xstrap components
+              './xstrap/icomoon/*.tag', //xstrap-icomoon
+              './xstrap/button/*.tag',  //xstrap-button
+          ],
           dest: '.tmp/tags.js',
         }
     },
@@ -62,14 +65,14 @@ module.exports = function(grunt) {
             './js/lib/jquery.js', // [v < 2]
             './js/lib/riot.min.js',
             // xstrap components
-              './xstrap/dropdowns/js/dropdown.js',    // dropdown
-              './xstrap/scrollspy/js/scrollspy.js',   // scrollspy
-              './xstrap/affix/js/affix.js',           // affix
-              './xstrap/tooltips/js/tooltip.js',      // tooltip
-              './xstrap/popovers/js/popover.js',      // popover
-              './xstrap/forms/js/forms.js',           // forms
-              './xstrap/datepicker/js/datepicker.js', // datepicker
-              './xstrap/typeahead/js/typeahead.js',   // typeahead
+              // './xstrap/dropdowns/js/dropdown.js',    // dropdown
+              // './xstrap/scrollspy/js/scrollspy.js',   // scrollspy
+              // './xstrap/affix/js/affix.js',           // affix
+              // './xstrap/tooltips/js/tooltip.js',      // tooltip
+              // './xstrap/popovers/js/popover.js',      // popover
+              // './xstrap/forms/js/forms.js',           // forms
+              // './xstrap/datepicker/js/datepicker.js', // datepicker
+              // './xstrap/typeahead/js/typeahead.js',   // typeahead
             // tags
             '.tmp/tags.js',
             // all coffee files compiled
@@ -100,7 +103,7 @@ module.exports = function(grunt) {
       }
   });
 
-  grunt.registerTask('compile', ['coffee', "riot" , "concat" ]); //por defecto
-  grunt.registerTask('dist',    [ "compile", "uglify", "cssmin" ]); // grunt dist
+  grunt.registerTask('compile', ['coffee', 'riot', 'concat']);  //por defecto
+  grunt.registerTask('dist',    ['compile', 'uglify', 'cssmin']);        // grunt dist
   grunt.registerTask('default', ['compile']);
 };

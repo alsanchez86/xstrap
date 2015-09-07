@@ -1,4 +1,3 @@
-# Our store
 class SearchStore
     constructor: ( ) ->
         riot.observable @
@@ -9,8 +8,8 @@ class SearchStore
         @currentPage    = 1 #Current Page
         @init()
     init: ()->
-        @getSearch()
-        return
+        # @getSearch()
+        # return
     addFilter: (word) ->
         @filters.push word
         @filters = $.unique @filters
