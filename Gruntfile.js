@@ -25,11 +25,12 @@ module.exports = function(grunt) {
     coffee: {
       compile: {
         options: {
-            bare: true,
+          bare: true,
         },
         files: {
           '.tmp/all_coffee.js': [
-              // ficheros coffee en el orden que queramos
+              // Coffee files
+              './js/coffee/main.coffee'
               // './js/coffee/riotcontrol.coffee',
               // './js/coffee/store.coffee',
               // './js/coffee/search.coffee',
@@ -57,17 +58,30 @@ module.exports = function(grunt) {
         // unimos los ficheros compilados
         dist: {
           src: [
+            // libs
+            './js/lib/jquery.js', // [v < 2]
             './js/lib/riot.min.js',
-            '.tmp/tags.js', // los tags
-            '.tmp/all_coffee.js', // todos los ficheros coffee
-             ],
-          dest: 'js/main.js',
+            // xstrap components
+              './xstrap/dropdowns/js/dropdown.js',    // dropdown
+              './xstrap/scrollspy/js/scrollspy.js',   // scrollspy
+              './xstrap/affix/js/affix.js',           // affix
+              './xstrap/tooltips/js/tooltip.js',      // tooltip
+              './xstrap/popovers/js/popover.js',      // popover
+              './xstrap/forms/js/forms.js',           // forms
+              './xstrap/datepicker/js/datepicker.js', // datepicker
+              './xstrap/typeahead/js/typeahead.js',   // typeahead
+            // tags
+            '.tmp/tags.js',
+            // all coffee files compiled
+            '.tmp/all_coffee.js',
+          ],
+          dest: 'build/dist.js',
         }
       },
       uglify: {
         default: {
           files: {
-            'js/main.js': ['js/main.min.js'],
+            'build/dist.js': ['build/dist.min.js'],
           }
         }
       },
@@ -86,7 +100,7 @@ module.exports = function(grunt) {
       }
   });
 
-  grunt.registerTask('compile', ['coffee',  "riot" ,  "concat" ]); //por defecto
-  grunt.registerTask('dist', [ "compile",  "uglify", "cssmin" ]); // grunt dist
+  grunt.registerTask('compile', ['coffee', "riot" , "concat" ]); //por defecto
+  grunt.registerTask('dist',    [ "compile", "uglify", "cssmin" ]); // grunt dist
   grunt.registerTask('default', ['compile']);
 };
