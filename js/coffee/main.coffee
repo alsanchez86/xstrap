@@ -1,31 +1,33 @@
-preLoadImgs     = ['./images/cargando.gif']
-$window         = $(window)
-$affixElement   = $('#spy-affix-nav')
+preLoadImgs         = ['./images/cargando.gif']
+$window             = $(window)
+$affixTarget        = [$('#spy-affix-nav')]
+$datePickerTarget   = [$('#form-datetime'), $('#form-datetime-2')]
+$confirmationTarget = $('[data-toggle="confirmation"]')
+$typeAheadTarget    = $('#form-typeahead')
 
 jQuery ->
     bootstrap()
     if typeof preLoadImgs  != 'undefined'
         preLoad()
     responsive()
-
-    # datepicker($('#form-datetime'))
-    # datepicker($('#form-datetime-2'))
+    datePicker($datePickerTarget)
+    typeAhead()
     # confirmation()
-    # typeHead()
 
 $window
     .on
         load: () ->
-            affix($affixElement)
-            affixResize($affixElement)
+            affix($affixTarget)
+            affixResize($affixTarget)
         resize: () ->
             responsive()
-            affixResize($affixElement)
+            affixResize($affixTarget)
         scroll: () ->
-            affixResize($affixElement)
+            affixResize($affixTarget)
 
 preLoad = () ->
-    $('<img />').attr src: preLoadImgs for i in preLoadImgs
+    for i in preLoadImgs
+        $('<img />').attr src: preLoadImgs
 
 bootstrap = () ->
     if navigator.userAgent.match(/IEMobile\/10\.0/)
@@ -59,8 +61,8 @@ sm = () ->
 xs = () ->
 
 affix = (target) ->
-    target
-        .affix
+    for i in target
+        i.affix
             offset: {
                 top: () ->
                     return $('#header').outerHeight() + 20
@@ -70,7 +72,58 @@ affix = (target) ->
             }
 
 affixResize = (target) ->
-    target
-        .css
-            width:  target.parent().width()
+    for i in target
+        i.css
+            width:  i.parent().width()
             height: $window.height() - 40
+
+datePicker = (target) ->
+    for i in target
+        i.datepicker()
+
+substringMatcher = (strs) ->
+    findMatches = (q, cb) ->
+        matches     = []
+        substrRegex = new RegExp(q,'i')
+        $.each (
+                strs
+                (i, str) -> if substrRegex.test(str)
+                                matches.push(str)
+            )
+        cb(matches)
+
+typeAhead = () ->
+    states = [
+                'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+                'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+                'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+                'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+                'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+                'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+                'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+                'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+                'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+            ]
+
+    $typeAheadTarget
+        .typeahead {
+            hint: true
+            highlight: true
+            minLength: 1
+        },
+        {
+            source: substringMatcher(states)
+        }
+
+confirmation = () ->
+    $confirmationTarget
+        .click () ->
+            $(this)
+                .popover
+                    animation:  true
+                    html:       true
+                    trigger:    'manual'
+                    placement:  'bottom'
+                    container:  'body'
+                    content:    '<button>Are you sure?</button>'
+                .popover('toggle')
