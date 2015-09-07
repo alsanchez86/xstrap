@@ -2,8 +2,12 @@
 	<button
 		type="{type}"
 		style="
-			color: {color};
-			background-color: {bgcolor};">
+        	position: 			{position};
+        	top: 				{top};
+        	right: 				{right};
+        	left:				{left}
+			color: 				{color};
+			background-color: 	{bgcolor};">
 		{text}
 	</button>
 
@@ -13,6 +17,12 @@
 		self.store 		= searchStore;
 		self.type 		= self.opts.type;
 		self.text 		= self.opts.text;
+
+		self.position 	= self.opts.position;
+		self.top 		= self.opts.top;
+		self.right 		= self.opts.right;
+		self.left 		= self.opts.left;
+
 		self.color 		= self.opts.color;
 		self.bgcolor 	= self.opts.bgcolor;
 	</script>
