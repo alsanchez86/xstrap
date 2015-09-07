@@ -1,39 +1,40 @@
-preLoadImgs = ['./images/cargando.gif'];
+preLoadImgs     = ['./images/cargando.gif']
+$window         = $(window)
+$affixElement   = $('#spy-affix-nav')
 
 jQuery ->
     bootstrap()
     if typeof preLoadImgs  != 'undefined'
         preLoad()
-    # //responsive ();
-    # datepicker ($('#form-datetime'));
-    # datepicker ($('#form-datetime-2'));
-    # confirmation ();
-    # typeHead ();
+    responsive()
 
-$(window)
-    .on ({
+    # datepicker($('#form-datetime'))
+    # datepicker($('#form-datetime-2'))
+    # confirmation()
+    # typeHead()
+
+$window
+    .on
         load: () ->
-            affix()
-            # affixResize ();
+            affix($affixElement)
+            affixResize($affixElement)
         resize: () ->
-            # //responsive ();
-            # affixResize ();
-
+            responsive()
+            affixResize($affixElement)
         scroll: () ->
-            # affixResize ();
-    });
+            affixResize($affixElement)
 
 preLoad = () ->
     $('<img />').attr src: preLoadImgs for i in preLoadImgs
 
 bootstrap = () ->
     if navigator.userAgent.match(/IEMobile\/10\.0/)
-        msViewportStyle = document.createElement ('style');
-        msViewportStyle.appendChild (document.createTextNode ('@-ms-viewport{width:auto!important}'));
-        document.querySelector ('head').appendChild (msViewportStyle);
+        msViewportStyle = document.createElement ('style')
+        msViewportStyle.appendChild (document.createTextNode ('@-ms-viewport{width:auto!important}'))
+        document.querySelector ('head').appendChild (msViewportStyle)
 
-    nua       = navigator.userAgent;
-    isAndroid = (nua.indexOf ('Mozilla/5.0') > -1 && nua.indexOf ('Android ') > -1 && nua.indexOf ('AppleWebKit') > -1 && nua.indexOf ('Chrome') == -1);
+    nua       = navigator.userAgent
+    isAndroid = (nua.indexOf ('Mozilla/5.0') > -1 && nua.indexOf ('Android ') > -1 && nua.indexOf ('AppleWebKit') > -1 && nua.indexOf ('Chrome') == -1)
 
     if isAndroid
         $('select.form-control')
@@ -41,14 +42,35 @@ bootstrap = () ->
             .css
                 width: '100%'
 
-affix = () ->
-    $('#spy-affix-nav')
-        .affix({
+responsive = () ->
+    width = $window.width()
+
+    if width >= 1185
+        lg()
+    if width >= 977
+        md()
+    if width >= 753
+        sm()
+    xs()
+
+lg = () ->
+md = () ->
+sm = () ->
+xs = () ->
+
+affix = (target) ->
+    target
+        .affix
             offset: {
                 top: () ->
-                    return $('#header').outerHeight() + 20;
+                    return $('#header').outerHeight() + 20
 
                 bottom: () ->
-                    return $('#footer').outerHeight();
+                    return $('#footer').outerHeight()
             }
-        });
+
+affixResize = (target) ->
+    target
+        .css
+            width:  target.parent().width()
+            height: $window.height() - 40
