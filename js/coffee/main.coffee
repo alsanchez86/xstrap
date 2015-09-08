@@ -138,4 +138,5 @@ globalConf  = 'store': searchStore
 
 RiotControl.addStore(searchStore)
 riot.mount '*', globalConf
+
 # searchStore.getSearch()

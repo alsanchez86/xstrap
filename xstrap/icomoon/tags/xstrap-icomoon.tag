@@ -1,27 +1,31 @@
 <xstrap-icomoon>
-	<span class="icomoon-{icon} icomoon"></span>
+	<span
+		class="icomoon-{icon} icomoon"
+		style="
+			font-size: 	{size};
+			color: 		{color};
+		">
+	</span>
 
 	<script>
 		var self = this;
 
-		self.store 	= searchStore;
+		// opts
 		self.icon 	= self.opts.icon;
-
-		self.root.style.position 	= 'absolute';
-		self.root.fontSize 			= self.opts.size;
-		self.root.color 			= self.opts.color;
+		self.size 	= self.opts.size;
+		self.color 	= self.opts.color;
 	</script>
 
 	<style type="text/less" scoped>
-		/* VARS */
-		@icomoon-font-family: 'IcoMoon-Free';
-		@icomoon-font-size:   18px;
+		/* CONSTANTS */
+		@icomoon-font-family: 	'IcoMoon-Free';
+		@icomoon-font-size:   	18px;
+		@icomoon-color:   		#FFF000;
 
 		/* MIXINS */
 		.icomoon (
 		    @hash: ''
 		){
-
   			content: '@{hash}';
   			position: relative;
   			top: 1px;
@@ -29,7 +33,8 @@
 
   			font-family: @icomoon-font-family;
   			font-size: @icomoon-font-size;
-  			speak: none;
+  			color: @icomoon-color;
+  			/* speak: none;*/
   			font-style: normal;
   			font-weight: normal;
   			font-variant: normal;

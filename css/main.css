@@ -258,13 +258,7 @@ textarea {
   line-height: inherit;
 }
 hr {
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   border: 0px;
   border-radius: 0px;
   -moz-border-radius: 0px;
@@ -295,9 +289,6 @@ dl.dl-horizontal dd:after {
 }
 .space {
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
 }
 .disabled {
   pointer-events: none;
@@ -1418,22 +1409,10 @@ h3,
 h4,
 h5,
 h6 {
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
 }
 p {
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
 }
 mark {
   padding: 2px 5px;
@@ -1445,22 +1424,10 @@ abbr[data-original-title] {
   border-bottom: 0px;
 }
 address {
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
 }
 blockquote {
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   padding: 20px;
   font-size: 12px;
   font-style: italic;
@@ -1471,9 +1438,6 @@ blockquote p,
 blockquote ol,
 blockquote ul {
   margin: 0px 0px 10px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
 }
 blockquote p:last-child,
 blockquote ol:last-child,
@@ -1533,13 +1497,7 @@ kbd kbd {
   border: 0px;
 }
 pre {
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   font-family: 'Courier New', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -1571,13 +1529,7 @@ pre code {
 }
 ul,
 ol {
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   padding: 0px;
   list-style-position: inside;
 }
@@ -1588,9 +1540,6 @@ ol.list-styled {
 ul li,
 ol li {
   margin: 0px 0px 10px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
 }
 ul li:last-child,
 ol li:last-child {
@@ -1616,13 +1565,7 @@ ol {
   color: #000000;
 }
 dl {
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
 }
 @media (min-width: 992px) {
   dl.dl-horizontal dt {
@@ -1641,9 +1584,6 @@ dl {
 dl dt,
 dl dd {
   margin: 0px 0px 10px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
 }
 dl dt:last-child,
 dl dd:last-child {
@@ -2517,13 +2457,7 @@ table th[class*="col-"] {
   display: table-cell;
 }
 .table {
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   width: 100%;
   max-width: 100%;
   background-color: #ffffff;
@@ -2569,13 +2503,7 @@ table th[class*="col-"] {
   border-top: 0px;
 }
 .table-responsive {
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   overflow-x: auto;
   min-height: 0.01%;
 }
@@ -2605,9 +2533,6 @@ fieldset {
 }
 legend {
   margin: 0px 0px 10px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   font-family: 'Ubuntu', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -2627,9 +2552,6 @@ legend small {
 }
 label {
   margin: 0px 0px 10px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   font-family: 'Ubuntu', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -2695,9 +2617,6 @@ input[type="search"] {
 }
 .form-control {
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   font-family: 'Ubuntu', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -2783,9 +2702,6 @@ textarea.form-control {
 }
 .form-group {
   margin: 0px 0px 20px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
 }
 .form-group .form-control {
   margin-bottom: 0px;
@@ -2793,9 +2709,6 @@ textarea.form-control {
 .radio,
 .checkbox {
   margin: 0px 0px 10px 0px;
-  /*@media (max-width: @screen-sm-max) {
-    margin: 0px 0px @small 0px;
-  }*/
   position: relative;
   display: block;
 }

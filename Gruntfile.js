@@ -11,13 +11,19 @@ module.exports = function(grunt) {
 
   riot.parsers.css.less = function (tagName, css){
 
+    console.log('CSS', css);
     // <style type="text/less" scoped>
-    var output = ''; // string
-    require('less').render(css, {sync: true}, function (err, result){
+
+    var output  = '';
+    var options = {sync: true, compress: true, paths: ['.']};
+
+    require('less').render (css, options, function (err, result){
+      // console.log('result', result);
+      // console.log('err', err);
       output = result.css;
     });
 
-    console.log ('OUTPUT', output);
+    console.log('OUTPUT', output);
 
     return output;
   };
@@ -28,11 +34,9 @@ module.exports = function(grunt) {
 
   try {
     config = grunt.file.readJSON( "config.json");
-  }catch(err){
+  }catch (err){
 
   }
-
-  console.log(config);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -60,8 +64,9 @@ module.exports = function(grunt) {
           src: [
             './js/tags/*.tag',
             // xstrap components
-              './xstrap/icomoon/*.tag', //xstrap-icomoon
-              './xstrap/button/*.tag',  //xstrap-button
+              './xstrap/core/tags/*.tag',     //xstrap-core
+              './xstrap/icomoon/tags/*.tag',  //xstrap-icomoon
+              './xstrap/button/tags/*.tag',   //xstrap-button
           ],
           dest: '.tmp/tags.js',
         }
@@ -91,13 +96,13 @@ module.exports = function(grunt) {
             // all coffee files compiled
             '.tmp/all_coffee.js',
           ],
-          dest: 'build/dist.js',
+          dest: 'build/app.js',
         }
       },
       uglify: {
         default: {
           files: {
-            'build/dist.js': ['build/dist.min.js'],
+            'build/app.js': ['build/app.min.js'],
           }
         }
       },
@@ -116,7 +121,7 @@ module.exports = function(grunt) {
       }
   });
 
-  grunt.registerTask('compile', ['coffee', 'riot', 'concat']);  //por defecto
-  grunt.registerTask('dist',    ['compile', 'uglify', 'cssmin']);        // grunt dist
+  grunt.registerTask('compile', ['coffee', 'riot', 'concat']);    //por defecto
+  grunt.registerTask('dist',    ['compile', 'uglify', 'cssmin']); // grunt dist
   grunt.registerTask('default', ['compile']);
 };
