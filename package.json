@@ -8,6 +8,7 @@
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-riot": "*",
     "grunt-coffee": "*",
+    "less": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-coffee": "*",
@@ -17,6 +18,7 @@
     "less-plugin-clean-css": "*",
     "grunt-contrib-cssmin": "*",
     "coffee-script": "*",
-    "grunt-string-replace": "*"
+    "grunt-string-replace": "*",
+    "q": "*"
   }
 }

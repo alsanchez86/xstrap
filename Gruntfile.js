@@ -9,6 +9,19 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-string-replace');
 
+  riot.parsers.css.less = function (tagName, css){
+
+    // <style type="text/less" scoped>
+    var output = ''; // string
+    require('less').render(css, {sync: true}, function (err, result){
+      output = result.css;
+    });
+
+    console.log ('OUTPUT', output);
+
+    return output;
+  };
+
   var config = {
     basePath: '/',
   };
