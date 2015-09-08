@@ -1,54 +1,16 @@
 <xstrap-button>
 	<button
 		type="{type}"
+		class="{class}"
 		style="
 			position: 	{position};
 			top: 		{top};
 
-			border: 		{border};
-			border-radius: 	{borderradius};
+			min-height: 35px;
+			padding: 0px 10px;
 
-
-			@min-height: 35px;
-		@padding: 0px 10px;
-
-		/* button */
-		@color:                  #FFF;
-		@color-hover:            #FFF;
-		@background-color:       #d9534f;
-		@background-color-hover: #E60026;
-
-		/* text */
-		@font-family:    'Ubuntu', sans-serif;
-		@font-size:      12px;
-		@font-weight:    400;
-		@font-style:     normal;
-		@text-align:     center;
-		@text-transform: uppercase;
-		@letter-spacing: auto;
-		@line-height:    @min-height;
-		@letter-spacing: auto;
-
-		/* border */
-		@border:        0px;
-		@border-radius: 2px;
-
-		/* shadow */
-		@shadow-color:  	transparent;
-		@shadow-width:  	0px;
-		@shadow-height:  	0px;
-		@shadow-radius:  	0px;
-		@shadow-size:  		0px;
-
-		/* shadow hover */
-		@shadow-color-hover:  	transparent;
-		@shadow-width-hover:  	0px;
-		@shadow-height-hover:  	0px;
-		@shadow-radius-hover:  	0px;
-		@shadow-size-hover:  	0px;
-
-
-
+			color:                  {color};
+			color-hover:            {colorhover};
 		">
 			{text}
 			<!-- <xstrap-icomoon icon="{icon}" size="{iconsize}" color="{iconcolor}"></xstrap-icomoon> -->
@@ -56,6 +18,8 @@
 
 	<script>
 		var self = this;
+
+		self.class = self.opts.class;
 
 		self.type 		= self.opts.type;
 		self.text 		= self.opts.text;
