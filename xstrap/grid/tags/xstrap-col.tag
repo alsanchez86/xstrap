@@ -37,11 +37,6 @@
 		self.mdpush = cols.indexOf(self.opts.mdpush) != -1 ? 'col-md-push-' + self.opts.mdpush : '';
 		self.lgpush = cols.indexOf(self.opts.lgpush) != -1 ? 'col-lg-push-' + self.opts.lgpush : '';
 
-		// <div class="row">
-        //     <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
-        //     <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
-        // </div>
-
 		self.addclass = self.opts.addclass;
 	</script>
 
