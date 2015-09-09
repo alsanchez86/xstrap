@@ -4,7 +4,7 @@
 			<yield/>
 
 			<footer>
-    			{footer}
+				{footer}
 			</footer>
 	</blockquote>
 
