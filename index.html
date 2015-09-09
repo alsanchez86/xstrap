@@ -18,31 +18,58 @@
 <meta name="generator" content=""/>
 
 <!-- favicon -->
-<link href="./images/favicon.ico" rel="shortcut icon"/>
+<link href="./xstrap/images/favicon.ico" rel="shortcut icon"/>
 <!-- main -->
 <link href="./css/main.css" rel="stylesheet"/>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+ 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-</head>
 <body>
 
+<!-- icons -->
 <xstrap-icomoon icon="music"></xstrap-icomoon>
 <xstrap-glyphicon icon="music"></xstrap-glyphicon>
+<!-- / icons -->
 
+<!-- grid -->
+<xstrap-container type="fluid">
+	<xstrap-row>
+		<xstrap-col xs="12" sm="6" md="6" lg="6" lgpush="6">
+			col1
+		</xstrap-col>
+
+		<xstrap-col xs="12" sm="6" md="6" lg="6" lgpull="6">
+			col2
+		</xstrap-col>
+
+		<!-- <xstrap-clearfix md="true" lg="true"></xstrap-clearfix> -->
+
+		<!-- <xstrap-col xs="12" sm="6" md="3" lg="3" lgpull="2">
+			col3
+		</xstrap-col>
+
+		<xstrap-col xs="12" sm="6" md="3" lg="3">
+			col4
+		</xstrap-col> -->
+	</xstrap-row>
+</xstrap-container>
+<!-- / grid -->
+
+<!-- buttons -->
 <xstrap-button type="button">
 	Texto del boton
 	<xstrap-icomoon icon="music"></xstrap-icomoon>
 </xstrap-button>
 
-<xstrap-button type="button" css="btn-3d">
+<xstrap-button type="button" addclass="btn-3d">
 	Texto del boton
 	<xstrap-glyphicon icon="tag"></xstrap-glyphicon>
 </xstrap-button>
+<!-- / buttons -->
 
 <!-- APP -->
 <script src="./build/app.js"></script>
