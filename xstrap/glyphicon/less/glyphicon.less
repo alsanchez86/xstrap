@@ -27,13 +27,15 @@
 }
 
 // Extra class for external links
-a.blank {
-  &:after {
-    .glyphicon ("\e164");
-    // margin-right: 5px;
-    padding-left: 5px;
+a[target="_blank"] {
+  &:not(.btn) {
+    &:after {
+      .glyphicon ("\e164");
+      // margin-right: 5px;
+      padding-left: 5px;
 
-    font-size: 90%;
+      font-size: 90%;
+    }
   }
 }
 

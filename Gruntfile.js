@@ -66,6 +66,7 @@ module.exports = function(grunt) {
             './xstrap/glyphicon/tags/*.tag',
 
             './xstrap/grid/tags/*.tag',
+            './xstrap/text/tags/*.tag',
 
             './xstrap/button/tags/*.tag',
           ],
