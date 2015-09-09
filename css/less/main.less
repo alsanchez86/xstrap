@@ -5,15 +5,15 @@
 @import url('./mixins/gradient.less');
 @import url('./mixins/text-shadow.less');
 
-// COMPONENTS (personalizados con de los valores de las variables definidas en vars.less)
-@import url('../../xstrap/core/less/core.less');    // core
+// XSTRAP COMPONENTS
+@import url('../../xstrap/core/less/core.less');    // core (required by all components)
+
+// icons
+@import url('../../xstrap/glyphicon/less/glyphicon.less');
+@import url('../../xstrap/icomoon/less/icomoon.less');
 
 @import url('../../xstrap/grid/less/grid.less');    //require: core (.clearfix)
-
 @import url('../../xstrap/texts/less/texts.less');  //require: grid
-
-@import url('../../xstrap/glyphicons/less/glyphicons.less');
-@import url('../../xstrap/icomoon/less/icomoon.less');
 
 @import url('../../xstrap/tables/less/tables.less');
 

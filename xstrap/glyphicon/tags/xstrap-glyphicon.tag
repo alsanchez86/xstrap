@@ -1,5 +1,5 @@
-<xstrap-icomoon>
-	<span class="icomoon-{icon} icomoon"></span>
+<xstrap-glyphicon>
+	<span class="glyphicon-{icon} glyphicon"></span>
 
 	<script>
 		var self = this;
@@ -10,4 +10,4 @@
 
 	<style type="text/less" scoped>
 	</style>
-</xstrap-icomoon>
+</xstrap-glyphicon>

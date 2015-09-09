@@ -18,8 +18,6 @@ module.exports = function(grunt) {
     var options = {sync: true, compress: true, paths: ['.']};
 
     require('less').render (css, options, function (err, result){
-      // console.log('result', result);
-      // console.log('err', err);
       output = result.css;
     });
 
@@ -64,8 +62,9 @@ module.exports = function(grunt) {
           src: [
             './js/tags/*.tag',
             // xstrap components
-              './xstrap/icomoon/tags/*.tag',  //xstrap-icomoon
-              './xstrap/button/tags/*.tag',   //xstrap-button
+              './xstrap/icomoon/tags/*.tag',    //xstrap-icomoon
+              './xstrap/glyphicon/tags/*.tag',  //xstrap-icomoon
+              // './xstrap/button/tags/*.tag',  //xstrap-button
           ],
           dest: '.tmp/tags.js',
         }
