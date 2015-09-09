@@ -4,7 +4,6 @@
 		{sm} {smoffset} {smpull} {smpush}
 		{md} {mdoffset} {mdpull} {mdpush}
 		{lg} {lgoffset} {lgpull} {lgpush}
-
 		{addclass}">
 			<yield/>
 	</div>
@@ -37,7 +36,8 @@
 		self.mdpush = cols.indexOf(self.opts.mdpush) != -1 ? 'col-md-push-' + self.opts.mdpush : '';
 		self.lgpush = cols.indexOf(self.opts.lgpush) != -1 ? 'col-lg-push-' + self.opts.lgpush : '';
 
-		self.addclass = self.opts.addclass;
+		// opts
+		self.addclass 	= self.opts.addclass;
 	</script>
 
 	<style type="text/less" scoped>
