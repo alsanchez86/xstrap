@@ -1,5 +1,5 @@
 <xstrap-icomoon>
-	<span class="icomoon-{icon} icomoon"></span>
+	<span class="icomoon icomoon-{icon}"></span>
 
 	<script>
 		var self = this;

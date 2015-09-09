@@ -1,9 +1,24 @@
+//
+// Icomoons
+//
+// Since icons are fonts, they can be placed anywhere text is placed and are
+// thus automatically sized to match the surrounding child. To use, create an
+// inline element with the appropriate classes, like so:
+//
+// <a href="#"><span class="icomoon icomoon-star"></span> Star</a>
+
 @import url('vars.less');
 @import url('mixins/icomoon.less');
 
+// Import the fonts
 @font-face {
-	font-family: @icomoon-font-family;
-	src: url('@{path-components}icomoon/fonts/icomoon.ttf?-b7qzp2') format('truetype');
+  font-family: @icomoon-font-family;
+  src: url('@{path-components}icomoon/fonts/icomoon.eot');
+  src: url('@{path-components}icomoon/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+       url('@{path-components}icomoon/fonts/icomoon.woff2') format('woff2'),
+       url('@{path-components}icomoon/fonts/icomoon.woff') format('woff'),
+       url('@{path-components}icomoon/fonts/icomoon.ttf?-b7qzp2') format('truetype'),
+       url('@{path-components}icomoon/fonts/icomoon.svg#glyphicons_halflingsregular') format('svg');
 }
 
 .icomoon {

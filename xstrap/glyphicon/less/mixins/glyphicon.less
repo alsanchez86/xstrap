@@ -1,6 +1,7 @@
 //mixing for create glyphicon from less
-.icomoon (
-    @hash: ''
+.glyphicon (
+    @hash: '',
+    @font-size: @glyphicon-font-size
   ){
 
   content: '@{hash}';
@@ -8,14 +9,10 @@
   top: 1px;
   display: inline-block;
 
-  font-family: @icomoon-font-family;
-  speak: none;
+  font-family: @glyphicon-font-family;
   font-style: normal;
   font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  //line-height: 1;
-
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

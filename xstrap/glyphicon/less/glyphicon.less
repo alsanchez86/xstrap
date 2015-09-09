@@ -8,34 +8,17 @@
 // <a href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
 
 @import url('vars.less');
+@import url('mixins/glyphicon.less');
 
 // Import the fonts
 @font-face {
-  font-family: @glyphicon;
+  font-family: @glyphicon-font-family;
   src: url('@{path-components}glyphicon/fonts/glyphicons-halflings-regular.eot');
   src: url('@{path-components}glyphicon/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
        url('@{path-components}glyphicon/fonts/glyphicons-halflings-regular.woff2') format('woff2'),
        url('@{path-components}glyphicon/fonts/glyphicons-halflings-regular.woff') format('woff'),
        url('@{path-components}glyphicon/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
        url('@{path-components}glyphicon/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-}
-
-//mixing for create glyphicon from less
-.glyphicon (
-    @hash: ''
-  ){
-
-  content: '@{hash}';
-  position: relative;
-  top: 1px;
-  display: inline-block;
-
-  font-family: @glyphicon;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 // Catchall baseclass

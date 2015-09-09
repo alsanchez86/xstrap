@@ -1,5 +1,5 @@
 <xstrap-glyphicon>
-	<span class="glyphicon-{icon} glyphicon"></span>
+	<span class="glyphicon glyphicon-{icon}"></span>
 
 	<script>
 		var self = this;
