@@ -62,9 +62,9 @@ module.exports = function(grunt) {
           src: [
             './js/tags/*.tag',
             // xstrap components
-              './xstrap/icomoon/tags/*.tag',    //xstrap-icomoon
-              './xstrap/glyphicon/tags/*.tag',  //xstrap-icomoon
-              // './xstrap/button/tags/*.tag',  //xstrap-button
+            './xstrap/icomoon/tags/*.tag',
+            './xstrap/glyphicon/tags/*.tag',
+            './xstrap/button/tags/*.tag',
           ],
           dest: '.tmp/tags.js',
         }
