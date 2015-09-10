@@ -1,31 +1,14 @@
 @import url('vars.less');
+@import url('./mixins/icomoon.less');
 
 @font-face {
 	font-family: @icomoon-font-family;
-	src: url('../components/icomoon/fonts/icomoon.ttf?-b7qzp2') format('truetype');
-}
-
-//mixing for create glyphicon from less
-.icomoon (
-    @hash: ''
-  ){
-
-  content: '@{hash}';
-  position: relative;
-  top: 1px;
-  display: inline-block;
-
-  font-family: @icomoon-font-family;
-  font-size: @icomoon-font-size;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  //line-height: 1;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  src: url('@{path-components}icomoon/fonts/icomoon.eot');
+  src: url('@{path-components}icomoon/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+       url('@{path-components}icomoon/fonts/icomoon.woff') format('woff'),
+       url('@{path-components}icomoon/fonts/icomoon.ttf?-b7qzp2') format('truetype'),
+       url('@{path-components}icomoon/fonts/icomoon.svg#glyphicons_halflingsregular') format('svg');
+       // url('@{path-components}icomoon/fonts/icomoon.woff2') format('woff2')
 }
 
 .icomoon {

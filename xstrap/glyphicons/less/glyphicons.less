@@ -8,6 +8,7 @@
 // <a href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
 
 @import url('vars.less');
+@import url('./mixins/glyphicons.less');
 
 // Import the fonts
 @font-face {
@@ -20,37 +21,21 @@
        url('@{path-components}glyphicons/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
-//mixing for create glyphicon from less
-.glyphicon (
-    @hash: ''
-  ){
-
-  content: '@{hash}';
-  position: relative;
-  top: 1px;
-  display: inline-block;
-
-  font-family: @glyphicon;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 // Catchall baseclass
 .glyphicon {
   .glyphicon ();
 }
 
 // Extra class for external links
-a.blank {
-  &:after {
-    .glyphicon ("\e164");
-    // margin-right: 5px;
-    padding-left: 5px;
+a[target="_blank"] {
+  &:not(.btn) {
+    &:after {
+      .glyphicon ("\e164");
+      // margin-right: 5px;
+      padding-left: 5px;
 
-    font-size: 90%;
+      font-size: 90%;
+    }
   }
 }
 
