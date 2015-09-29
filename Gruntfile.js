@@ -58,20 +58,52 @@ module.exports = function(grunt) {
           dest: 'build/app.js',
         }
       },
-      uglify: {
-        default: {
+
+      less: {
+        xstrap: {
+          options: {
+            paths: [ ],
+            plugins: [
+              new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})
+            ],
+            modifyVars: {
+              imgPath: '',
+              bgColor: ''
+            }
+          },
           files: {
-            'build/app.js': ['build/app.min.js'],
+            "./css/main.css": "./css/less/main.less"
           }
         }
       },
+
+      cssmin: {
+        target: {
+          files: [{
+            expand: true,
+            cwd: './css',
+            src: ['*.css', '!*.min.css'],
+            dest: './css',
+            ext: '.min.css'
+          }]
+        }
+      },
+
+      uglify: {
+        default: {
+          files: {
+            './build/app.js': ['./build/app.min.js'],
+          }
+        }
+      },
+
       // ficheros a observar que lanzarán la función default (varias)
       watch: {
         scripts: {
           files: [
             './js/coffee/*.coffee'
           ],
-          tasks: [ 'compile'],
+          tasks: ['compile'],
           options: {
             interrupt: false ,
           }
@@ -79,7 +111,6 @@ module.exports = function(grunt) {
       }
   });
 
-  grunt.registerTask('compile', ['coffee', 'concat']);    //por defecto
-  grunt.registerTask('dist',    ['compile', 'uglify', 'cssmin']); // grunt dist
+  grunt.registerTask('compile', ['coffee', 'less', 'cssmin', 'concat']);
   grunt.registerTask('default', ['compile']);
 };
