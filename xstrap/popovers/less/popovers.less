@@ -82,7 +82,7 @@
 
 .popover-title {
   margin: 0; // reset heading margin
-  padding: 8px 14px;
+  padding: @popover-title-padding;
   font-size: @font-size;
   background-color: @popover-title-background-color;
   border-bottom: 1px solid darken(@popover-title-background-color, 5%);
@@ -90,7 +90,7 @@
 }
 
 .popover-content {
-  padding: 9px 14px;
+  padding: @popover-content-padding;
 
   a {
     .link (@popover-a-color, @popover-a-color-hover, @popover-a-text-decoration, @popover-a-text-decoration-hover, @popover-a-background-color, @popover-a-background-color-hover);
@@ -136,6 +136,7 @@
       border-top-color: @popover-arrow-color;
     }
   }
+
   &.right > .arrow {
     top: 50%;
     left: -@popover-arrow-outer-width;
@@ -151,6 +152,7 @@
       border-right-color: @popover-arrow-color;
     }
   }
+
   &.bottom > .arrow {
     left: 50%;
     margin-left: -@popover-arrow-outer-width;
