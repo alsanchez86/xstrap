@@ -205,15 +205,16 @@
   ){
 
   -webkit-animation-duration:   @time;
-  animation-duration:       @time;
+  animation-duration:           @time;
   -webkit-animation-fill-mode:  both;
-  animation-fill-mode:      both;
+  animation-fill-mode:          both;
 }
 
 .fadeIn (
     @time: @time,
     @start: 0,
-    @end: 1
+    @end: 1,
+    @iteration: 1
   ){
 
   .animated (@time);
@@ -238,6 +239,10 @@
       }
   }
 
+  // iteration
+  -webkit-animation-iteration-count: @iteration;
+  animation-iteration-count: @iteration;
+
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
@@ -245,7 +250,8 @@
 .slideInLeft (
     @time:  @time,
     @start: 0%,
-    @end:   100%
+    @end:   100%,
+    @iteration: 1
   ){
 
   .animated (@time);
@@ -278,6 +284,10 @@
       }
   }
 
+  // iteration
+  -webkit-animation-iteration-count: @iteration;
+  animation-iteration-count: @iteration;
+
   -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
 }
@@ -285,7 +295,8 @@
 .slideInDown (
     @time:  @time,
     @start: 0%,
-    @end:   100%
+    @end:   100%,
+    @iteration: 1
   ){
 
   .animated (@time);
@@ -318,6 +329,101 @@
       }
   }
 
+  // iteration
+  -webkit-animation-iteration-count: @iteration;
+  animation-iteration-count: @iteration;
+
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
+}
+
+.flash (
+    @time:      @time,
+    @start:     0,
+    @end:       1,
+    @iteration: 1
+  ){
+
+  .animated (@time);
+
+  @-webkit-keyframes flash {
+    0%, 50%, 100% {
+      opacity: @end;
+    }
+
+    25%, 75% {
+      opacity: @start;
+    }
+  }
+
+  @keyframes flash {
+    0%, 50%, 100% {
+      opacity: @end;
+    }
+
+    25%, 75% {
+      opacity: @start;
+    }
+  }
+
+  // iteration
+  -webkit-animation-iteration-count: @iteration;
+  animation-iteration-count: @iteration;
+
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+.shake (
+    @time:      @time,
+    @start:     0px,
+    @end:       10px,
+    @iteration: 1
+  ){
+
+  .animated (@time);
+
+  @-webkit-keyframes shake {
+    0%, 100% {
+      -webkit-transform: translate3d(@start, 0, 0);
+      transform: translate3d(@start, 0, 0);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+      -webkit-transform: translate3d(-@end, 0, 0);
+      transform: translate3d(-@end, 0, 0);
+    }
+
+    20%, 40%, 60%, 80% {
+      -webkit-transform: translate3d(@end, 0, 0);
+      transform: translate3d(@end, 0, 0);
+    }
+  }
+
+  @keyframes shake {
+    0%, 100% {
+      -webkit-transform: translate3d(@start, 0, 0);
+      -ms-transform: translate3d(@start, 0, 0);
+      transform: translate3d(@start, 0, 0);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+      -webkit-transform: translate3d(-@end, 0, 0);
+      -ms-transform: translate3d(-@end, 0, 0);
+      transform: translate3d(-@end, 0, 0);
+    }
+
+    20%, 40%, 60%, 80% {
+      -webkit-transform: translate3d(@end, 0, 0);
+      -ms-transform: translate3d(@end, 0, 0);
+      transform: translate3d(@end, 0, 0);
+    }
+  }
+
+  // iteration
+  -webkit-animation-iteration-count: @iteration;
+  animation-iteration-count: @iteration;
+
+  -webkit-animation-name: shake;
+  animation-name: shake;
 }
