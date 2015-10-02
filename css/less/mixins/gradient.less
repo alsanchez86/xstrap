@@ -2,16 +2,16 @@
 		@startcolor: 	rgba(0,0,0, @opacity),
 		@endcolor: 		rgba(255,255,255, @opacity),
 		@dgree: 		0deg,
-		@start: 		0%,
-		@end: 			100%
+		@start: 		100%,
+		@end: 			0%
 	){
 
 	background: @startcolor;
 	//background: -webkit-gradient(linear, left @direction-1, left @direction-2, color-stop(@start, @startcolor), color-stop(@end, @endcolor));
-	background: -moz-linear-gradient(			@dgree, @startcolor @start, @endcolor @end);
-	background: -webkit-linear-gradient(		@dgree, @startcolor @start, @endcolor @end);
-	background: -o-linear-gradient(				@dgree, @startcolor @start, @endcolor @end);
-	background: -ms-linear-gradient(			@dgree, @startcolor @start, @endcolor @end);
-	background: linear-gradient(				@dgree, @startcolor @start, @endcolor @end);
+	background: -moz-linear-gradient(			@dgree, @endcolor @start, @startcolor @end);
+	background: -webkit-linear-gradient(		@dgree, @endcolor @start, @startcolor @end);
+	background: -o-linear-gradient(				@dgree, @endcolor @start, @startcolor @end);
+	background: -ms-linear-gradient(			@dgree, @endcolor @start, @startcolor @end);
+	background: linear-gradient(				@dgree, @endcolor @start, @startcolor @end);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{startcolor}', endColorstr='@{endcolor}',GradientType=0);
 }

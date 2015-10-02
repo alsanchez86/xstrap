@@ -3,26 +3,24 @@
 
 // MIXINS (propios del proyecto. No usados por ningún componente)
 @import url('./mixins/gradient.less');
-@import url('./mixins/text-shadow.less');
 
 // COMPONENTS (personalizados con de los valores de las variables definidas en vars.less)
 @import url('../../xstrap/core/less/core.less');    // core
-
 @import url('../../xstrap/grid/less/grid.less');    //require: core (.clearfix)
-
 @import url('../../xstrap/texts/less/texts.less');  //require: grid
 
 @import url('../../xstrap/glyphicons/less/glyphicons.less');
 @import url('../../xstrap/icomoon/less/icomoon.less');
 
-@import url('../../xstrap/tables/less/tables.less');
+@import url('../../xstrap/button/less/button.less');
+@import url('../../xstrap/button-groups/less/button-groups.less');
+
+@import url('../../xstrap/image/less/image.less');
 
 @import url('../../xstrap/forms/less/forms.less');
 @import url('../../xstrap/datepicker/less/datepicker.less');
 @import url('../../xstrap/dropdowns/less/dropdowns.less');
-
-@import url('../../xstrap/button/less/button.less');
-@import url('../../xstrap/button-groups/less/button-groups.less');
+@import url('../../xstrap/typeahead/less/typeahead.less');
 
 @import url('../../xstrap/scrollspy/less/scrollspy.less');
 @import url('../../xstrap/affix/less/affix.less');
@@ -30,10 +28,7 @@
 @import url('../../xstrap/tooltips/less/tooltip.less');
 @import url('../../xstrap/popovers/less/popovers.less');
 
-@import url('../../xstrap/image/less/image.less');
-
-@import url('../../xstrap/typeahead/less/typeahead.less');
-
+@import url('../../xstrap/tables/less/tables.less');
 @import url('../../xstrap/panel/less/panel.less');
 
 // MAIN
@@ -48,14 +43,14 @@ body {
 
 .btn-3d {
   .border (1px solid @rojo-1);
-  .gradient (@rojo, @rojo-1, -180deg, 50%, 100%);
+  .gradient (@rojo, @rojo-1, 0deg, 20%, 100%);
   border-top-color: @rojo1;
   border-bottom-color: @rojo-2;
 
   &:hover,
   &:focus,
   &.active {
-    .gradient (@rojo, @rojo-1, 0deg, 0%, 50%);
+    .gradient (@rojo, @rojo-1, 180deg, 20%, 100%);
     border-top-color: @rojo-1;
     border-bottom-color: @rojo-1;
   }

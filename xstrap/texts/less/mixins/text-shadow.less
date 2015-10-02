@@ -1,24 +1,11 @@
-.text (
-		@font-family: 		@font-family,
-		@font-size: 		@font-size,
-		@font-weight: 		@font-weight,
-		@font-style: 		@font-style,
-		@color: 			@color,
-		@text-align: 		@text-align,
-		@text-transform: 	@text-transform,
-		@line-height: 		@line-height
+// text-shadow
+.text-shadow (
+		@shadow-color: 	@shadow-color,
+		@size: 			0px,
+		@blur: 			@blur
 	){
 
-	font-family: 	@font-family;
-	font-size: 		@font-size;
-	font-weight: 	@font-weight;
-	font-style: 	@font-style;
-	color: 			@color;
-	text-align: 	@text-align;
-	text-transform: @text-transform;
-	line-height: 	@line-height;
-
-	small {
-		font-size: 	@small-font-size;
-	}
+	-webkit-text-shadow: -@size @size @blur @shadow-color; // iOS <4.3 & Android <4.1
+	-moz-text-shadow: -@size @size @blur @shadow-color;
+	text-shadow: -@size @size @blur @shadow-color;
 }

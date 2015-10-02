@@ -33,7 +33,7 @@ function modalDefault (text, timeout) {
 
   var modal = $('#modal-default');
 
-  if (! modal.length) return false;
+  if (! modal.length) return console.log('HTML for #modal-default not found.');
   $('.modal-body', modal).html (text);
   modal.modal ('show');
 
