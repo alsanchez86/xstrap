@@ -90,9 +90,12 @@ module.exports = function(grunt) {
       },
 
       uglify: {
-        default: {
+        options: {
+          mangle: true
+        },
+        my_target: {
           files: {
-            './build/app.js': ['./build/app.min.js'],
+            './build/app.min.js': ['./build/app.js']
           }
         }
       },
@@ -103,7 +106,7 @@ module.exports = function(grunt) {
           files: [
             './js/coffee/*.coffee'
           ],
-          tasks: ['compile'],
+          tasks: ['dev'],
           options: {
             interrupt: false ,
           }
@@ -111,6 +114,7 @@ module.exports = function(grunt) {
       }
   });
 
-  grunt.registerTask('compile', ['coffee', 'less', 'cssmin', 'concat']);
-  grunt.registerTask('default', ['compile']);
+  grunt.registerTask('dev',     ["coffee", "less", "concat"]);
+  grunt.registerTask('prod',    ["dev", "uglify", "cssmin"]);
+  grunt.registerTask('default', ["prod"]);
 };
