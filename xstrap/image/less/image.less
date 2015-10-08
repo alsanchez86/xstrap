@@ -4,16 +4,18 @@
 // mixins
 @import url('./mixins/image.less');
 
-.img-responsive {
+.img-responsive,
+.img-responsive-max,
+.img-responsive-center {
   	.img-responsive ();
+}
 
-  	&.img-responsive-max {
-    	width: 100%;
-  	}
+.img-responsive-max {
+	width: 100%;
+}
 
-  	&.img-responsive-center {
-    	.center-block ();
-  	}
+.img-responsive-center {
+	.center-block ();
 }
 
 .img-rounded {

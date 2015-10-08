@@ -41,8 +41,8 @@ module.exports = function(grunt) {
         // unimos los ficheros compilados
         dist: {
           src: [
-            // libs
-            './js/lib/jquery.js', // [v < 2]
+            // lib
+            './lib/js/jquery.js', // [v < 2]
             // xstrap components
               './xstrap/dropdowns/js/dropdown.js',    // dropdown
               './xstrap/scrollspy/js/scrollspy.js',   // scrollspy
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
             // all coffee files compiled
             '.tmp/all_coffee.js',
           ],
-          dest: 'build/app.js',
+          dest: './build/js/app.js',
         }
       },
 
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
             }
           },
           files: {
-            "./css/main.css": "./css/less/main.less"
+            "./build/css/main.css": "./css/less/main.less"
           }
         }
       },
@@ -81,9 +81,9 @@ module.exports = function(grunt) {
         target: {
           files: [{
             expand: true,
-            cwd: './css',
+            cwd: './build/css',
             src: ['*.css', '!*.min.css'],
-            dest: './css',
+            dest: './build/css',
             ext: '.min.css'
           }]
         }
@@ -95,7 +95,7 @@ module.exports = function(grunt) {
         },
         my_target: {
           files: {
-            './build/app.min.js': ['./build/app.js']
+            './build/js/app.min.js': ['./build/js/app.js']
           }
         }
       },
