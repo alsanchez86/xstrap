@@ -52,6 +52,8 @@ module.exports = function(grunt) {
               './xstrap/forms/js/forms.js',           // forms
               './xstrap/datepicker/js/datepicker.js', // datepicker
               './xstrap/typeahead/js/typeahead.js',   // typeahead
+
+              // './xstrap/lazy-sizes/js/lazysizes.min.js',   // lazy sizes
             // all coffee files compiled
             '.tmp/all_coffee.js',
           ],

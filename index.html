@@ -80,6 +80,8 @@
                         </ul>
                     </li>
 
+                    <li><a href="#spy-print-system" data-target="#spy-print-system">Print</a></li>
+
                     <li>
                         <a href="#spy-html-elements" data-target="#spy-html-elements">Texts</a>
 
@@ -120,6 +122,7 @@
                         <ul>
                             <li><a href="#spy-image-gallery" data-target="#spy-image-gallery">Image gallery</a></li>
                             <li><a href="#spy-image-map" data-target="#spy-image-map">Image map</a></li>
+                            <li><a href="#spy-image-lazy" data-target="#spy-image-lazy">Lazy sizes</a></li>
                         </ul>
                     </li>
 
@@ -241,12 +244,12 @@
                         <li>.pointer          { cursor: pointer; }</li>
                         <li>.vertical-center  { vertical-align: middle; }</li>
                         <li>.pull-right       { float: right !important; }</li>
+                        <li>.pull-left        { float: left !important; }</li>
                     </ul>
                 </div>
 
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                     <ul class="list-styled">
-                        <li>.pull-left        { float: left !important; }</li>
                         <li>.hide             { display: none !important; }</li>
                         <li>.hidden           { display: none !important; }</li>
                         <li>.show             { display: block !important; }</li>
@@ -476,9 +479,54 @@
                     </tbody>
                 </table>
             </div>
+            <!-- / Grid System -->
 
-            <h5>Print classes:</h5>
-            <!-- end Grid System -->
+            <!-- Print System -->
+            <br>
+            <h3 id="spy-print-system">
+                <span class="icomoon-cogs icomoon"></span>
+                &nbsp;|&nbsp;
+                Print:
+            </h3>
+
+            <p>Muestra u oculta los distintos componentes de la web a la hora de imprimir la página <kbd>ctrl / cmd + p</kbd>.</p>
+
+            <div class="grid-utilities table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                          <th>&nbsp;</th>
+                          <th>Browser</th>
+                          <th>Print</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th>
+                                <code>
+                                    .visible-print-block<br>
+                                    .visible-print-inline<br>
+                                    .visible-print-inline-block
+                                </code>
+                            </th>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <code>
+                                    .hidden-print
+                                </code>
+                            </th>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- / Print System -->
 
             <!-- Texts -->
             <br>
@@ -1001,29 +1049,29 @@
 
             <h4>Default image:</h4>
 
-            <img src="http://lorempixel.com/400/200/">
+            <!-- <img src="http://lorempixel.com/400/200/"> -->
 
             <br>
             <br>
             <h4>Rounded image:</h4>
 
-            <img class="img-rounded" src="http://lorempixel.com/400/200/">
+            <!-- <img class="img-rounded" src="http://lorempixel.com/400/200/"> -->
 
             <br>
             <br>
             <h4>Responsive image:</h4>
 
-            <img class="img-responsive" src="http://lorempixel.com/400/200/">
+            <!-- <img class="img-responsive" src="http://lorempixel.com/400/200/"> -->
 
             <br>
             <h4>Responsive max:</h4>
 
-            <img class="img-responsive-max img-responsive" src="http://lorempixel.com/400/200/">
+            <!-- <img class="img-responsive-max img-responsive" src="http://lorempixel.com/400/200/"> -->
 
             <br>
             <h4>Responsive center:</h4>
 
-            <img class="img-responsive-center img-responsive" src="http://lorempixel.com/400/200/">
+            <!-- <img class="img-responsive-center img-responsive" src="http://lorempixel.com/400/200/"> -->
 
             <br>
             <p>
@@ -1032,6 +1080,21 @@
                 <code>&lt;img src="http://lorempixel.com/400/200/"&gt;</code>
                 <br>
                 <a class="blank" href="http://lorempixel.com" target="_blank">Lorem Pixel</a>
+            </p>
+
+            <h4 id="spy-image-lazy">Lazy sizes:</h4>
+
+            <pre>
+                &lt;img
+                    alt="100%x200"
+                    src="low-quality.jpg"
+                    data-src="normal-quality.jpg"
+                    class="lazyload" /&gt;
+            </pre>
+
+
+            <p>
+                <img alt="Boat" src="https://farm5.staticflickr.com/4094/4859138371_9713d4396e_b.jpg" data-src="https://farm5.staticflickr.com/4094/4859138371_9713d4396e_b.jpg" class="img-responsive lazyloaded">
             </p>
             <!-- end IMAGES -->
 
