@@ -38,11 +38,13 @@ bootstrap = () ->
     nua       = navigator.userAgent
     isAndroid = (nua.indexOf ('Mozilla/5.0') > -1 && nua.indexOf ('Android ') > -1 && nua.indexOf ('AppleWebKit') > -1 && nua.indexOf ('Chrome') == -1)
 
-    if isAndroid
+    ###
+        if isAndroid
         $('select.form-control')
             .removeClass 'form-control'
             .css
                 width: '100%'
+    ###
 
 responsive = () ->
     width = $window.width()
