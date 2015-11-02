@@ -50,11 +50,11 @@ responsive = () ->
     width = $window.width()
 
     if width >= 1185
-        lg()
+        return lg()
     if width >= 977
-        md()
+        return md()
     if width >= 753
-        sm()
+        return sm()
     xs()
 
 lg = () ->
