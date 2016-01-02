@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-concat-css');
-  grunt.loadNpmTasks('grunt-contrib-less');
+  // grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-string-replace');
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
         }
       },
 
-      less: {
+      /*less: {
         xstrap: {
           options: {
             paths: [ ],
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
             "./build/css/main.css": "./css/less/main.less"
           }
         }
-      },
+      },*/
 
       cssmin: {
         target: {
@@ -106,7 +106,7 @@ module.exports = function(grunt) {
       watch: {
         scripts: {
           files: [
-            './css/less/*.less', // main.less
+            // './css/less/*.less', // main.less
             './js/coffee/*.coffee' // main.coffee
           ],
           tasks: ['default'],
@@ -117,7 +117,7 @@ module.exports = function(grunt) {
       }
   });
 
-  grunt.registerTask('dev',     ["coffee", "less", "concat"]);
+  grunt.registerTask('dev',     ["coffee", /*"less",*/ "concat"]);
   grunt.registerTask('prod',    ["dev", "uglify", "cssmin"]);
   grunt.registerTask('default', ["prod"]);
 };

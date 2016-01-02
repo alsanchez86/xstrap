@@ -1,23 +1,21 @@
 {
-  "name": "xstrap",
-  "version": "0.0.1",
+  "name":       "xstrap",
+  "version":    "0.0.1",
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-nodeunit": "~0.4.1",
-    "grunt-contrib-uglify": "~0.5.0",
-    "grunt-coffee": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-coffee": "*",
-    "grunt-concat-css": "*",
-    "grunt-contrib-less": "*",
-    "less": "*",
-    "less-plugin-autoprefix": "*",
-    "less-plugin-clean-css": "*",
-    "grunt-contrib-cssmin": "*",
-    "coffee-script": "*",
-    "grunt-string-replace": "*",
-    "q": "*"
+    "grunt":                    "~0.4.5",
+    "grunt-contrib-jshint":     "~0.10.0",
+    "grunt-contrib-nodeunit":   "~0.4.1",
+    "grunt-contrib-uglify":     "~0.5.0",
+    "grunt-contrib-concat":     "*",
+    "grunt-contrib-watch":      "*",
+    "grunt-contrib-cssmin":     "*",
+    "grunt-concat-css":         "*",
+    "grunt-string-replace":     "*",
+    "grunt-coffee":             "*",
+    "grunt-contrib-coffee":     "*",
+
+    "coffee-script":            "*",
+    "node-sass":                "*",
+    "q":                        "*"
   }
 }
