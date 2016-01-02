@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-concat-css');
-  // grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-string-replace');
@@ -33,6 +33,7 @@ module.exports = function(grunt) {
         }
       },
     },
+
     // concatenar los ficheros js
     concat: {
         options: {
@@ -43,7 +44,8 @@ module.exports = function(grunt) {
           src: [
             // lib
             './lib/js/jquery.js', // [v < 2]
-            // xstrap components
+
+              // xstrap components
               './xstrap/dropdowns/js/dropdown.js',    // dropdown
               './xstrap/scrollspy/js/scrollspy.js',   // scrollspy
               './xstrap/affix/js/affix.js',           // affix
@@ -52,8 +54,8 @@ module.exports = function(grunt) {
               './xstrap/forms/js/forms.js',           // forms
               './xstrap/datepicker/js/datepicker.js', // datepicker
               './xstrap/typeahead/js/typeahead.js',   // typeahead
-
               // './xstrap/lazy-sizes/js/lazysizes.min.js',   // lazy sizes
+
             // all coffee files compiled
             '.tmp/all_coffee.js',
           ],
@@ -61,23 +63,16 @@ module.exports = function(grunt) {
         }
       },
 
-      /*less: {
-        xstrap: {
-          options: {
-            paths: [ ],
-            plugins: [
-              new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})
-            ],
-            modifyVars: {
-              imgPath: '',
-              bgColor: ''
-            }
-          },
+      sass: {
+        options: {
+          // sourceMap: true
+        },
+        dist: {
           files: {
-            "./build/css/main.css": "./css/less/main.less"
+            "./build/css/main.css": "./css/sass/main.scss"
           }
         }
-      },*/
+      },
 
       cssmin: {
         target: {
@@ -106,8 +101,8 @@ module.exports = function(grunt) {
       watch: {
         scripts: {
           files: [
-            // './css/less/*.less', // main.less
-            './js/coffee/*.coffee' // main.coffee
+            './css/sass/*.scss',    // main.sass
+            './js/coffee/*.coffee'  // main.coffee
           ],
           tasks: ['default'],
           options: {
@@ -117,7 +112,7 @@ module.exports = function(grunt) {
       }
   });
 
-  grunt.registerTask('dev',     ["coffee", /*"less",*/ "concat"]);
+  grunt.registerTask('dev',     ["coffee", "sass", "concat"]);
   grunt.registerTask('prod',    ["dev", "uglify", "cssmin"]);
   grunt.registerTask('default', ["prod"]);
 };

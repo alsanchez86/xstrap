@@ -12,4 +12,13 @@ OLD LESS Packages:
 
 SASS Packages:
 
-"node-sass": "*",
+"node-sass": "*"
+
+Windows 7:
+1) install ruby:
+	http://rubyinstaller.org/downloads/
+2) create path in windows for "ruby" command:
+	echo %PATH%
+	set PATH=C:\Ruby22-x64\bin;%PATH%
+2) install sass:
+	(CMD) _> gem install sass
