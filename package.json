@@ -3,20 +3,21 @@
   "version":    "0.0.1",
   "devDependencies": {
     "grunt":                    "~0.4.5",
+    "coffee-script":            "*",
+    "node-sass":                "*",
+    "q":                        "*",
+    "load-grunt-tasks":         "*",
+
     "grunt-contrib-jshint":     "~0.10.0",
     "grunt-contrib-nodeunit":   "~0.4.1",
     "grunt-contrib-uglify":     "~0.5.0",
     "grunt-contrib-concat":     "*",
     "grunt-contrib-watch":      "*",
-    "grunt-contrib-sass":       "*",
     "grunt-contrib-cssmin":     "*",
     "grunt-concat-css":         "*",
     "grunt-string-replace":     "*",
     "grunt-coffee":             "*",
     "grunt-contrib-coffee":     "*",
-
-    "coffee-script":            "*",
-    "node-sass":                "*",
-    "q":                        "*"
+    "grunt-sass":               "*"
   }
 }
