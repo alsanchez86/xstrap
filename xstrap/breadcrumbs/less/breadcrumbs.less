@@ -1,10 +1,13 @@
+// vars
+@import url('vars.less');
+
 .breadcrumb {
-  margin: 0px 0px @space 0px;
+  margin-bottom: 0px;
   list-style: none;
 
   & > li {
     display: inline-block;
-    margin-right: 2px;
+    margin: 0px @breadcrumb-list-item-marging-right @breadcrumb-list-item-marging-bottom 0px;
 
     &:last-child {
       a {
