@@ -13,6 +13,7 @@ jQuery ->
     datePicker($datePickerTarget)
     typeAhead($typeAheadTarget)
     confirmation()
+    # dropdownHover($('#main-nav'));
 
 $window
     .on
@@ -58,9 +59,13 @@ responsive = () ->
     xs()
 
 lg = () ->
+    # dropdownData(true,  $('#main-nav'))
 md = () ->
+    # dropdownData(true,  $('#main-nav'))
 sm = () ->
+    # dropdownData(false, $('#main-nav'))
 xs = () ->
+    # dropdownData(false, $('#main-nav'))
 
 affix = (target) ->
     for i in target
