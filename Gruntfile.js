@@ -117,7 +117,7 @@ module.exports = function(grunt) {
       }
   });
 
-  grunt.registerTask('dev',     ["coffee", "less", "concat"]);
+  grunt.registerTask('dev',     ["less", "concat", "coffee"]);
   grunt.registerTask('prod',    ["dev", "uglify", "cssmin"]);
   grunt.registerTask('default', ["prod"]);
 };
