@@ -163,3 +163,56 @@
     .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
 
 }(jQuery);
+
+function dropdownData (hover, context) {
+
+    $('.btn-group', context).data ({hover: hover, open: false});
+
+    //cerramos todos los dropdown-menu al resize
+    dropdownClose (context);
+}
+
+function dropdownHover (context) {
+
+    $('.dropdown-toggle', context)
+        .click (function (event) {
+
+            event.preventDefault ();
+        });
+
+    $('.btn-group', context)
+        .click (function (event) {
+
+            var hover   = $(this).data ('hover');
+            var open    = $(this).data ('open');
+            var href    = $('a.btn', $(this)).attr ('href');
+            var ul      = $('.dropdown-menu', $(this)).length;
+
+            $(this).data ('open', ! open);
+            if (hover || (open && href && ul)) return window.location = href;
+        })
+        .mouseenter (function () {
+
+            var btnGroup    = $(this);
+            var menu        = $('.dropdown-menu', btnGroup);
+
+            if (btnGroup.data ('hover')) {
+
+                menu.css ({minWidth: btnGroup.outerWidth (), top: btnGroup.outerHeight ()});
+                btnGroup.addClass ('open');
+                return;
+            }
+
+            menu.css ({top: '100%'});
+        })
+        .mouseleave (function () {
+
+            $(this).data ('open', false);
+            dropdownClose (context);
+        });
+}
+
+function dropdownClose (context) {
+
+    if ($('.btn-group', context).data ('hover')) $('.btn-group.open', context).data ('open', false).removeClass ('open');
+}
