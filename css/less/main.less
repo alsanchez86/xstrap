@@ -39,41 +39,48 @@ body {
 
 .body-content {
   padding-bottom: @space * 3;
+
   background-color: @background-color;
 }
 
 .btn-3d {
-  .border (1px solid @rojo-1);
-  .gradient (@rojo, @rojo-1, 0deg, 20%, 100%);
   border-top-color: @rojo1;
   border-bottom-color: @rojo-2;
+
+  .border (1px solid @rojo-1);
+  .gradient (@rojo, @rojo-1, 0deg, 20%, 100%);
 
   &:hover,
   &:focus,
   &.active,
   &:active {
-    .gradient (@rojo, @rojo-1, 180deg, 20%, 100%);
     border-top-color: @rojo-1;
     border-bottom-color: @rojo-1;
+
+    .gradient (@rojo, @rojo-1, 180deg, 20%, 100%);
   }
 }
 
 .btn-3d-2 {
+  padding: 0px @space;
+
   .button (@blanco, @blanco, #7cbc27, #7cbc27);
   .text-shadow (#426d06, 1px, 0px);
   .box-shadow-inset (#a0d642, 0px, 1px, 0px, 0px);
   .border (0px, 3px);
   .gradient (#7cbc27, #62a30c);
-  padding: 0px @space;
 }
 
 .header {
   position: relative;
+
+  overflow: hidden;
+
   margin-bottom: @space * 2;
   padding: @space * 2 @space @space * 2.8 @space;
 
-  overflow: hidden;
   text-align: center;
+
   background: linear-gradient(160deg, #290B36 0%, #043453 100%);
 
   & > h1,
@@ -82,6 +89,7 @@ body {
 
     small {
       display: block;
+
       font-size: 50%;
     }
   }
@@ -98,14 +106,16 @@ body {
 
   .designed-by-header {
     position: absolute;
-    bottom: @space / 1.5;
     right: @space * 1.5;
+    bottom: @space / 1.5;
 
     overflow: hidden;
+
     color: @blanco;
 
     i {
       padding-right: 12px;
+
       font-size: 12px;
     }
 
@@ -118,9 +128,11 @@ body {
 .footer {
   padding: @space * 2 0px @space * 4 0px;
 
-  font-size: 12px;
-  color: @blanco;
   text-align: center;
+
+  color: @blanco;
+
+  font-size: 12px;
 
   a:not(.btn) {
     .link (@blanco, @blanco, none, underline);
@@ -206,8 +218,9 @@ body {
 }
 
 .code-block {
-  .border (1px solid @gris, 2px);
   padding: @space;
+
+  .border (1px solid @gris, 2px);
 }
 
 .grid-utilities {
@@ -232,16 +245,19 @@ body {
 .cargando {
   top: 47%;
   left: 50%;
-  height: 40px;
+
   width: 40px;
+  height: 40px;
 }
 
 .cargando-2 {
-  display: none;
   position: absolute;
   top: 0px;
-  height: 100%;
+
+  display: none;
+
   width: 100%;
+  height: 100%;
 
   opacity: 0.9;
   background: url('@{path-images}cargando-2.gif') no-repeat center 50px #FFF;
@@ -260,14 +276,16 @@ body {
       top: 0px;
       right: 0px;
       left: 0px;
+
       margin: @space 0px @space 0px;
     }
 
     .designed-by-header {
       position: relative;
+      right: 0px;
       bottom: 0px;
       left: 0px;
-      right: 0px;
+
       text-align: center;
 
       i {
