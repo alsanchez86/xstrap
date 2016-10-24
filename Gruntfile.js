@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   };
 
   try {
-    config = grunt.file.readJSON( "config.json");
+    config = grunt.file.readJSON("config.json");
   }catch (err){
 
   }
@@ -106,9 +106,10 @@ module.exports = function(grunt) {
       watch: {
         scripts: {
           files: [
-            './js/coffee/*.coffee'
+            './css/less/*.less', // main.less
+            './js/coffee/*.coffee' // main.coffee
           ],
-          tasks: ['dev'],
+          tasks: ['default'],
           options: {
             interrupt: false ,
           }
@@ -116,7 +117,7 @@ module.exports = function(grunt) {
       }
   });
 
-  grunt.registerTask('dev',     ["coffee", "less", "concat"]);
+  grunt.registerTask('dev',     ["less", "concat", "coffee"]);
   grunt.registerTask('prod',    ["dev", "uglify", "cssmin"]);
   grunt.registerTask('default', ["prod"]);
 };

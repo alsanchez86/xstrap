@@ -13,6 +13,7 @@ jQuery ->
     datePicker($datePickerTarget)
     typeAhead($typeAheadTarget)
     confirmation()
+    # dropdownHover($('#main-nav'));
 
 $window
     .on
@@ -38,27 +39,33 @@ bootstrap = () ->
     nua       = navigator.userAgent
     isAndroid = (nua.indexOf ('Mozilla/5.0') > -1 && nua.indexOf ('Android ') > -1 && nua.indexOf ('AppleWebKit') > -1 && nua.indexOf ('Chrome') == -1)
 
-    if isAndroid
+    ###
+        if isAndroid
         $('select.form-control')
             .removeClass 'form-control'
             .css
                 width: '100%'
+    ###
 
 responsive = () ->
     width = $window.width()
 
     if width >= 1185
-        lg()
+        return lg()
     if width >= 977
-        md()
+        return md()
     if width >= 753
-        sm()
+        return sm()
     xs()
 
 lg = () ->
+    # dropdownData(true,  $('#main-nav'))
 md = () ->
+    # dropdownData(true,  $('#main-nav'))
 sm = () ->
+    # dropdownData(false, $('#main-nav'))
 xs = () ->
+    # dropdownData(false, $('#main-nav'))
 
 affix = (target) ->
     for i in target

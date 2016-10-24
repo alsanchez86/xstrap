@@ -29,6 +29,7 @@ a {
     .link (); //valores por defecto "links" en .link ()
     .not-outline ();
     .transition ();
+    cursor: @a-cursor;
 
     &:hover {
       .badge {
@@ -158,10 +159,6 @@ ol {
   padding: 0px;
   list-style-position: @list-style-position;
 
-  &.list-styled {
-    list-style-image: url(@styled-list-style-image);
-  }
-
   li {
     .space (@list-item-margin-bottom);
 
@@ -182,15 +179,107 @@ ol {
   }
 }
 
-ul {
-  &:not(.list-styled) {
-    list-style: none;
-  }
-}
-
 ol {
   list-style-type: @ol-list-style-type;
   color: @ol-list-style-color;
+}
+
+ul {
+  &.list-none {
+    list-style: none;
+  }
+
+  &.list-image {
+    list-style-image: url(@styled-list-style-image);
+  }
+
+  &.list-disc {
+    list-style-type: disc;
+  }
+
+  &.list-armenian {
+    list-style-type: armenian;
+  }
+
+  &.list-circle {
+    list-style-type: circle;
+  }
+
+  &.list-cjk-ideographic {
+    list-style-type: ideographic;
+  }
+
+  &.list-decimal {
+    list-style-type: decimal;
+  }
+
+  &.list-decimal-leading-zero {
+    list-style-type: decimal-leading-zero;
+  }
+
+  &.list-georgian {
+    list-style-type: georgian;
+  }
+
+  &.list-hebrew {
+    list-style-type: hebrew;
+  }
+
+  &.list-hiragana {
+    list-style-type: hiragana;
+  }
+
+  &.list-hiragana-iroha {
+    list-style-type: iroha;
+  }
+
+  &.list-katakana {
+    list-style-type: katakana;
+  }
+
+  &.list-katakana-iroha {
+    list-style-type: katakana-iroha;
+  }
+
+  &.list-lower-alpha {
+    list-style-type: lower-alpha;
+  }
+
+  &.list-lower-greek {
+    list-style-type: lower-greek;
+  }
+
+  &.list-lower-latin {
+    list-style-type: lower-latin;
+  }
+
+  &.list-lower-roman {
+    list-style-type: lower-roman;
+  }
+
+  &.list-square {
+    list-style-type: square;
+  }
+
+  &.list-upper-alpha {
+    list-style-type: upper-alpha;
+  }
+
+  &.list-upper-latin {
+    list-style-type: upper-latin;
+  }
+
+  &.list-upper-roman {
+    list-style-type: upper-roman;
+  }
+
+  &.list-initial {
+    list-style-type: initial;
+  }
+
+  &.list-inherit {
+    list-style-type: inherit;
+  }
 }
 
 dl {

@@ -1,12 +1,17 @@
+// vars
+@import url('vars.less');
+
 .breadcrumb {
-  margin: 0px 0px @space 0px;
+  margin-bottom: 0px;
   list-style: none;
 
   & > li {
     display: inline-block;
-    margin-right: 2px;
+    margin: 0px @breadcrumb-list-item-marging-right @breadcrumb-list-item-marging-bottom 0px;
 
     &:last-child {
+      margin: 0px;
+
       a {
         &:after {
           content: none;
@@ -25,12 +30,13 @@
     .link (@a-color, @a-color-hover);
 
     &:after {
-      content: "\e258";
-      padding-left: 8px;
+      content:      @breadcrumb-icon;
+      padding-left: @breadcrumb-icon-padding-left;
 
-      font-family: @glyphicon;
-      font-size: 8px;
-      color: @a-color;
+      font-family:  @glyphicon;
+      font-size:    @breadcrumb-icon-font-size;
+      font-weight:  @breadcrumb-icon-font-weight;
+      color:        @a-color;
     }
   }
 }

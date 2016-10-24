@@ -144,7 +144,7 @@
           transform: translate3d(@x, @y, @z);
 }
 
-/*.rotate (
+.rotate (
     @rotation: @rotate
   ){
 
@@ -157,14 +157,14 @@
     -ms-transform: rotate(@degs);
     transform: rotate(@degs);
     filter: e("progid:DXImageTransform.Microsoft.BasicImage(rotation=@{degs-ie})");
-}*/
+}
 
-.rotate (@degrees) {
+/*.rotate (@degrees) {
   -webkit-transform: rotate(@degrees);
       -ms-transform: rotate(@degrees); // IE9 only
        -o-transform: rotate(@degrees);
           transform: rotate(@degrees);
-}
+}*/
 
 .rotateX (@degrees) {
   -webkit-transform: rotateX(@degrees);
@@ -426,4 +426,56 @@
 
   -webkit-animation-name: shake;
   animation-name: shake;
+}
+
+.rotateIn (
+    @time:      @time,
+    @deg:       45deg,
+    @iteration: 1
+  ){
+
+  .animated (@time);
+
+  @-webkit-keyframes rotateIn {
+    0% {
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-transform: rotate3d(0, 0, 1, -@deg);
+      transform: rotate3d(0, 0, 1, -@deg);
+    }
+
+    100% {
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @keyframes rotateIn {
+    0% {
+      -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-transform: rotate3d(0, 0, 1, -@deg);
+      -ms-transform: rotate3d(0, 0, 1, -@deg);
+      transform: rotate3d(0, 0, 1, -@deg);
+    }
+
+    100% {
+      -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+    }
+  }
+
+  // iteration
+  -webkit-animation-iteration-count: @iteration;
+  animation-iteration-count: @iteration;
+
+  -webkit-animation-name: rotateIn;
+  animation-name: rotateIn;
 }

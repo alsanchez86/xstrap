@@ -13,17 +13,17 @@
 	background-color: 	@background-color;
 
 	&:hover,
-	&.active {
+  	&:focus,
+  	&.active,
+  	&:active {
 		color: 				@color-hover;
 		text-decoration: 	@text-decoration-hover;
 		background-color: 	@background-color-hover;
-	}
 
-	&:hover {
-      	& > svg {
+		& > svg {
         	fill: @color-hover;
     	}
-    }
+	}
 
     & > svg {
     	fill: @color;
