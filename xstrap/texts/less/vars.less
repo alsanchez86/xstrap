@@ -1,90 +1,83 @@
 // body
-@background-color:  @blanco;
+@background-color: @blanco;
 
 // text-base
-@font-family: 		@ubuntu;
-@font-size:   		14px;
-@font-size-small:   12px;
-@font-weight: 		400;
-@font-style:		normal;
-@color: 			@negro;
-@line-height: 		180%;
-@letter-spacing: 	auto;
-@text-align: 		left;
-@text-transform: 	normal;
-@text-indent: 		@space; //.text-indent (class)
+@font-family: @font-base;
+@font-size: 16px;
+@font-size-small: 14px;
+@font-weight: 400;
+@font-style: normal;
+@color: @negro-3;
+@line-height: 200%;
+@letter-spacing: auto;
+@text-align: left;
+@text-transform: none;
+@text-indent: @space; //.text-indent (class)
 
 // special classes
-@lowlight-color: 	@gris;
-@highlight-color: 	@gris-2;
+@lowlight-color: @color;
+@highlight-color: @color;
 
 // links
-@a-color:					@rojo;
-@a-color-hover: 			@rojo-2;
-@a-text-decoration: 		none;
-@a-text-decoration-hover: 	none;
-@a-background-color: 		transparent;
-@a-background-color-hover: 	transparent;
-@a-cursor: 					pointer;
+@a-color: @gris-2;
+@a-color-hover: @rojo-4;
+@a-text-decoration: none;
+@a-text-decoration-hover: none;
+@a-background-color: transparent;
+@a-background-color-hover: transparent;
+@a-cursor: pointer;
 
 // titles
-@h1-font-family: @font-family;
-@h2-font-family: @font-family;
-@h3-font-family: @font-family;
-@h4-font-family: @font-family;
-@h5-font-family: @font-family;
-@h6-font-family: @font-family;
-
-@h1-font-size: 			32px;
-@h1-font-size-small: 	@h1-font-size - 4px;
-@h2-font-size: 			16px;
-@h2-font-size-small: 	@h2-font-size - 2px;
-@h3-font-size: 			18px;
-@h3-font-size-small: 	@h3-font-size - 3px;
-@h4-font-size: 			16px;
-@h4-font-size-small: 	@h4-font-size - 2px;
-@h5-font-size: 			14px;
-@h5-font-size-small: 	@h5-font-size - 2px;
-@h6-font-size: 			@font-size;
-@h6-font-size-small: 	@font-size-small;
-
-@h1-font-weight: @font-weight;
-@h2-font-weight: @font-weight;
-@h3-font-weight: @font-weight;
-@h4-font-weight: @font-weight;
-@h5-font-weight: @font-weight;
-@h6-font-weight: @font-weight;
-
+@h1-font-family: @font-titulo;
+@h2-font-family: @font-titulo;
+@h3-font-family: @font-titulo;
+@h4-font-family: @font-titulo;
+@h5-font-family: @font-titulo;
+@h6-font-family: @font-titulo;
+@h1-font-size: 42px;
+@h1-font-size-small: @h1-font-size - 2px;
+@h2-font-size: 30px;
+@h2-font-size-small: @h2-font-size - 2px;
+@h3-font-size: 23px;
+@h3-font-size-small: @h3-font-size - 2px;
+@h4-font-size: 18px;
+@h4-font-size-small: @h4-font-size - 2px;
+@h5-font-size: @font-size + 2px;
+@h5-font-size-small: @h5-font-size - 2px;
+@h6-font-size: @font-size;
+@h6-font-size-small: @font-size-small;
+@h1-font-weight: 300;
+@h2-font-weight: 400;
+@h3-font-weight: 400;
+@h4-font-weight: 400;
+@h5-font-weight: 700;
+@h6-font-weight: 700;
 @h1-font-style: @font-style;
 @h2-font-style: @font-style;
 @h3-font-style: @font-style;
 @h4-font-style: @font-style;
 @h5-font-style: @font-style;
 @h6-font-style: @font-style;
-
-@h1-color: @blanco;
-@h2-color: @blanco;
-@h3-color: @rojo-1;
-@h4-color: @rojo;
+@h1-color: @gris-2;
+@h2-color: @gris-2;
+@h3-color: @color;
+@h4-color: @color;
 @h5-color: @color;
 @h6-color: @color;
-
 @h1-text-transform: @text-transform;
 @h2-text-transform: @text-transform;
 @h3-text-transform: @text-transform;
 @h4-text-transform: @text-transform;
 @h5-text-transform: @text-transform;
 @h6-text-transform: @text-transform;
-
 @h1-line-height: 100%;
-@h2-line-height: 160%;
+@h2-line-height: 100%;
 @h3-line-height: 100%;
 @h4-line-height: 100%;
 @h5-line-height: 100%;
 @h6-line-height: 100%;
-
 @h1-text-align: center;
-@h2-text-align: center;
+@h2-text-align: @text-align;
 @h3-text-align: @text-align;
 @h4-text-align: @text-align;
 @h5-text-align: @text-align;
@@ -92,75 +85,66 @@
 
 // marked text
 @mark-padding: 2px 5px;
-
-@mark-color: 			@negro;
+@mark-color: @color;
 @mark-background-color: @gris;
 
 // small
 @small-font-size: 70%;
 
 // blockquotes
-@blockquote-padding: 			@space;
-
-@blockquote-font-size: 			12px;
-@blockquote-font-style: 		italic;
-@blockquote-color: 				@gris-2;
-@blockquote-small-font-size: 	11px;
-@blockquote-small-color: 		@gris;
-@blockquote-border-left: 		5px solid @gris;
+@blockquote-padding: @space;
+@blockquote-font-size: @font-size-small;
+@blockquote-font-style: italic;
+@blockquote-color: @color;
+@blockquote-small-font-size: 11px;
+@blockquote-small-color: @color;
+@blockquote-border-left: 3px solid @blanco-5;
 
 // caption
-@caption-padding: 0px;
-
-@caption-color: 		@color;
-@caption-text-align: 	left;
+@caption-padding: 0;
+@caption-color: @color;
+@caption-text-align: left;
 
 // CODE
 // inline
-@code-padding: 			2px 4px;
-
-@code-font-family: 		'Courier New', sans-serif;
-@code-font-size: 		@font-size;
-@code-font-weight: 		@font-weight;
-@code-font-style: 		@font-style;
-@code-color: 			@negro;
-@code-background-color: @gris;
-@code-border:  			0px;
-@code-border-radius: 	@border-radius;
+@code-padding: 2px 4px;
+@code-font-family: @font-code;
+@code-font-size: @font-size;
+@code-font-weight: @font-weight;
+@code-font-style: @font-style;
+@code-color: @blanco;
+@code-background-color: @negro-2;
+@code-border: 0;
+@code-border-radius: @border-radius;
 
 // kbd
-@kbd-padding: 			2px 6px;
-
-@kbd-font-family: 		@code-font-family;
-@kbd-font-size: 		12px;
-@kbd-font-weight: 		700;
-@kbd-font-style: 		@code-font-style;
-@kbd-color: 			@code-color;
-@kbd-background-color: 	@code-background-color;
-@kbd-border:  			@code-border;
-@kbd-border-radius: 	@code-border-radius;
+@kbd-padding: 2px 6px;
+@kbd-font-family: @code-font-family;
+@kbd-font-size: 12px;
+@kbd-font-weight: 700;
+@kbd-font-style: @code-font-style;
+@kbd-color: @code-color;
+@kbd-background-color: @code-background-color;
+@kbd-border: @code-border;
+@kbd-border-radius: @code-border-radius;
 
 // pre
-@pre-padding: 			@code-padding;
-
-@pre-font-family: 		@code-font-family;
-@pre-font-size: 		@code-font-size;
-@pre-font-weight: 		@code-font-weight;
-@pre-font-style: 		@code-font-style;
-@pre-color: 			@code-color;
-@pre-background-color: 	@code-background-color;
-@pre-border: 			@code-border;
-@pre-border-radius: 	@code-border-radius;
+@pre-padding: @code-padding;
+@pre-font-family: @code-font-family;
+@pre-font-size: @code-font-size;
+@pre-font-weight: @code-font-weight;
+@pre-font-style: @code-font-style;
+@pre-color: @code-color;
+@pre-background-color: @code-background-color;
+@pre-border: @code-border;
+@pre-border-radius: @code-border-radius;
 
 // lists
-@list-item-margin-bottom: 	@space / 2;
-@sublist-padding-left: 		@space;
-
-@list-style-position: 		inside;
-@ol-list-style-type:		normal; //normal, upper-roman, lower-alpha
-@ol-list-style-color:		@color;
-
+@list-item-margin-bottom: 1px;
+@sublist-padding-left: 15px;
+@list-style-position: inside;
+@ol-list-style-type: normal; //normal, upper-roman, lower-alpha
+@ol-list-style-color: @rojo;
 @styled-list-style-image: '@{path-components}texts/images/list-styled-icon.gif';
-
-@dd-float-breakpoint:   @screen-md;
-@dl-horizontal-offset:  180px;
+@dd-float-breakpoint: @screen-md;
+@dl-horizontal-offset: 180px;

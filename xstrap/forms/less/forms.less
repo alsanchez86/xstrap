@@ -130,7 +130,7 @@ input[type="search"] {
   .text               (@form-control-font-family, @form-control-font-size, @form-control-font-weight, @form-control-font-style, @form-control-color);
   .border             (@form-control-border, @form-control-border-radius); // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
   .box-shadow         (@form-control-box-shadow-color, @form-control-box-shadow-width, @form-control-box-shadow-height, @form-control-box-shadow-radius, @form-control-box-shadow-size);
-  .transition         (~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+  .transition         ();
   .placeholder        (@form-control-placeholder-color);
   // .form-control-focus (); // Customize the `:focus` state to imitate native WebKit styles.
   display: block;
@@ -140,6 +140,7 @@ input[type="search"] {
 
   background-color: @form-control-background-color;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border-radius: @border-radius 0 0 @border-radius;
   direction: @form-control-direction;
 
   // Disabled and read-only inputs
