@@ -1,0 +1,6 @@
+{
+  "name": "Blog_Agresebe",
+  "dependencies": {
+    "jquery": "1.9.1"
+  }
+}

@@ -42,7 +42,7 @@ module.exports = function(grunt) {
         dist: {
           src: [
             // lib
-            './lib/js/jquery.js', // [v < 2]
+            './bower_components/jquery/jquery.min.js', // [v < 2]
             // xstrap components
               './xstrap/dropdowns/js/dropdown.js',    // dropdown
               './xstrap/scrollspy/js/scrollspy.js',   // scrollspy
