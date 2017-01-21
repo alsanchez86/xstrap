@@ -1,5 +1,6 @@
 .tmp
 .DS_Store
+*.log
 build
 node_modules
 bower_components
