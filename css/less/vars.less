@@ -1,14 +1,27 @@
 // colours (http://paletton.com/)
-@blanco: 	#FFF;
-@negro: 	#000;
-@gris: 		#CCC;
-@gris-2: 	#666;
-@rojo: 		#d9534f;
-@rojo1: 	#E60026;
-@rojo-1: 	#D60023;
-@rojo-2: 	#8F0014;
+@blanco: #FFFFFF;
+@blanco-2: #EFEAE1;
+@blanco-3: #FAF6EC;
+@blanco-4: darken(@blanco-2, 2%);
+@blanco-5: darken(@blanco-2, 10%);
+@negro: #473D41;
+@negro-2: #584b4f;
+@negro-3: #66595C; // color font-base
+@gris: #C5C8C6;
+@gris-2: darken(@gris, 5%);
+@verde: #9ED194;
+@verde-2: darken(@verde, 20%);
+@verde-3: darken(@verde, 32%);
+@verde-4: lighten(@verde, 5%);
+@rojo: #E24C38;
+@rojo-2: darken(@rojo, 20%);
+@rojo-3: darken(@rojo, 32%);
+@rojo-4: lighten(@rojo, 5%);
 
 // fonts (imports from google fonts)
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400);
 
-@ubuntu: 'Ubuntu', sans-serif;
+// fonts
+@font-base: 'Ubuntu', sans-serif;
+@font-titulo: 'Ubuntu', sans-serif;
+@font-code: 'Ubuntu', sans-serif;

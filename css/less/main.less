@@ -1,37 +1,30 @@
 // VARS
-@import url('vars.less');
-
+@import url( 'vars.less');
 // MIXINS (propios del proyecto. No usados por ningún componente)
-@import url('./mixins/gradient.less');
-
+@import url( './mixins/gradient.less');
 // COMPONENTS (personalizados con de los valores de las variables definidas en vars.less)
-@import url('../../xstrap/core/less/core.less');    // core
-@import url('../../xstrap/grid/less/grid.less');    //require: core (.clearfix)
-@import url('../../xstrap/texts/less/texts.less');  //require: grid
-
-@import url('../../xstrap/glyphicons/less/glyphicons.less');
-@import url('../../xstrap/icomoon/less/icomoon.less');
-
-@import url('../../xstrap/button/less/button.less');
-@import url('../../xstrap/button-groups/less/button-groups.less');
-
-@import url('../../xstrap/image/less/image.less');
-@import url('../../xstrap/embed/less/responsive-embed.less');
-
-@import url('../../xstrap/forms/less/forms.less');
-@import url('../../xstrap/datepicker/less/datepicker.less');
-@import url('../../xstrap/dropdowns/less/dropdowns.less');
-@import url('../../xstrap/typeahead/less/typeahead.less');
-
-@import url('../../xstrap/scrollspy/less/scrollspy.less');
-@import url('../../xstrap/affix/less/affix.less');
-
-@import url('../../xstrap/tooltips/less/tooltip.less');
-@import url('../../xstrap/popovers/less/popovers.less');
-
-@import url('../../xstrap/tables/less/tables.less');
-@import url('../../xstrap/panel/less/panel.less');
-
+@import url( '../../xstrap/core/less/core.less');
+// core
+@import url( '../../xstrap/grid/less/grid.less');
+//require: core (.clearfix)
+@import url( '../../xstrap/texts/less/texts.less');
+//require: grid
+@import url( '../../xstrap/glyphicons/less/glyphicons.less');
+@import url( '../../xstrap/icomoon/less/icomoon.less');
+@import url( '../../xstrap/button/less/button.less');
+@import url( '../../xstrap/button-groups/less/button-groups.less');
+@import url( '../../xstrap/image/less/image.less');
+@import url( '../../xstrap/embed/less/responsive-embed.less');
+@import url( '../../xstrap/forms/less/forms.less');
+@import url( '../../xstrap/datepicker/less/datepicker.less');
+@import url( '../../xstrap/dropdowns/less/dropdowns.less');
+@import url( '../../xstrap/typeahead/less/typeahead.less');
+@import url( '../../xstrap/scrollspy/less/scrollspy.less');
+@import url( '../../xstrap/affix/less/affix.less');
+@import url( '../../xstrap/tooltips/less/tooltip.less');
+@import url( '../../xstrap/popovers/less/popovers.less');
+@import url( '../../xstrap/tables/less/tables.less');
+@import url( '../../xstrap/panel/less/panel.less');
 // MAIN
 body {
   background: url('@{path-images}texture.png') repeat;
@@ -39,63 +32,47 @@ body {
 
 .body-content {
   padding-bottom: @space * 3;
-
   background-color: @background-color;
 }
 
 .btn-3d {
-  border-top-color: @rojo1;
+  border-top-color: @rojo;
   border-bottom-color: @rojo-2;
+  .border (1px solid @rojo);
+  .gradient (@rojo, @rojo-2, 0deg, 20%, 100%);
 
-  .border (1px solid @rojo-1);
-  .gradient (@rojo, @rojo-1, 0deg, 20%, 100%);
-
-  &:hover,
-  &:focus,
   &.active,
-  &:active {
-    border-top-color: @rojo-1;
-    border-bottom-color: @rojo-1;
-
-    .gradient (@rojo, @rojo-1, 180deg, 20%, 100%);
+  &:active,
+  &:focus,
+  &:hover {
+    border-top-color: @rojo-2;
+    border-bottom-color: @rojo-2;
+    .gradient (@rojo, @rojo-2, 180deg, 20%, 100%);
   }
-}
-
-.btn-3d-2 {
-  padding: 0px @space;
-
-  .button (@blanco, @blanco, #7cbc27, #7cbc27);
-  .text-shadow (#426d06, 1px, 0px);
-  .box-shadow-inset (#a0d642, 0px, 1px, 0px, 0px);
-  .border (0px, 3px);
-  .gradient (#7cbc27, #62a30c);
 }
 
 .header {
   position: relative;
-
   overflow: hidden;
-
   margin-bottom: @space * 2;
   padding: @space * 2 @space @space * 2.8 @space;
-
   text-align: center;
-
   background: linear-gradient(160deg, #290B36 0%, #043453 100%);
 
   & > h1,
   & > h2 {
     .text-shadow (@blanco, 0px , 3px);
+    text-align: center;
+    color: @blanco;
 
     small {
       display: block;
-
       font-size: 50%;
     }
   }
 
   & > p {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .btn-github-header {
@@ -103,45 +80,22 @@ body {
     top: @space;
     right: @space + 6;
   }
-
-  .designed-by-header {
-    position: absolute;
-    right: @space * 1.5;
-    bottom: @space / 1.5;
-
-    overflow: hidden;
-
-    color: @blanco;
-
-    i {
-      padding-right: 12px;
-
-      font-size: 12px;
-    }
-
-    img {
-      float: right;
-    }
-  }
 }
 
-.footer {
-  padding: @space * 2 0px @space * 4 0px;
-
-  text-align: center;
-
-  color: @blanco;
-
-  font-size: 12px;
-
-  a:not(.btn) {
-    .link (@blanco, @blanco, none, underline);
-  }
-
-  span {
-    margin: 0px @space / 2;
-  }
-}
+// .footer {
+//   padding: @space * 2 0px @space * 4 0px;
+//   text-align: center;
+//   color: @blanco;
+//   font-size: 12px;
+//
+//   a:not(.btn) {
+//     .link (@blanco, @blanco, none, underline);
+//   }
+//
+//   span {
+//     margin: 0 @space / 2;
+//   }
+// }
 
 .doc-rows {
   .row {
@@ -150,12 +104,29 @@ body {
     & > div {
       color: @blanco;
 
-      &:nth-child(1) {background-color: #99CCFF;}
-      &:nth-child(2) {background-color: #8AB8E6;}
-      &:nth-child(3) {background-color: #7AA3CC;}
-      &:nth-child(4) {background-color: #6B8FB2;}
-      &:nth-child(5) {background-color: #5C7A99;}
-      &:nth-child(6) {background-color: #4C6680;}
+      &:nth-child(1) {
+        background-color: #99CCFF;
+      }
+
+      &:nth-child(2) {
+        background-color: #8AB8E6;
+      }
+
+      &:nth-child(3) {
+        background-color: #7AA3CC;
+      }
+
+      &:nth-child(4) {
+        background-color: #6B8FB2;
+      }
+
+      &:nth-child(5) {
+        background-color: #5C7A99;
+      }
+
+      &:nth-child(6) {
+        background-color: #4C6680;
+      }
     }
   }
 }
@@ -180,7 +151,6 @@ body {
   .make-sm-column (4);
   .make-xs-column (12);
 }
-
 //custom col no 12
 .custom-col-no-12-1 {
   .make-lg-column (2.4);
@@ -219,7 +189,6 @@ body {
 
 .code-block {
   padding: @space;
-
   .border (1px solid @gris, 2px);
 }
 
@@ -234,7 +203,6 @@ body {
     background-color: #4C6680;
   }
 }
-
 //cargandos
 .cargando,
 .cargando-2 {
@@ -245,92 +213,50 @@ body {
 .cargando {
   top: 47%;
   left: 50%;
-
   width: 40px;
   height: 40px;
 }
 
 .cargando-2 {
   position: absolute;
-  top: 0px;
-
+  top: 0;
   display: none;
-
   width: 100%;
   height: 100%;
-
   opacity: 0.9;
   background: url('@{path-images}cargando-2.gif') no-repeat center 50px #FFF;
   background-size: 55px;
 }
-
 // Media Breakpoints (al final de base.less, para que no haya sobreescritura de clases y no tener que usar !important)
 // XS
 @media (max-width: @screen-xs-max) {
-
   .header {
     padding-bottom: @space;
 
     .btn-github-header {
       position: relative;
-      top: 0px;
-      right: 0px;
-      left: 0px;
-
-      margin: @space 0px @space 0px;
-    }
-
-    .designed-by-header {
-      position: relative;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-
-      text-align: center;
-
-      i {
-        display: block;
-      }
-
-      img {
-        float: none;
-      }
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: @space 0;
     }
   }
 
   .code-block {
-    padding-left: 0px;
+    padding-left: 0;
   }
 }
-
 // GRID COMPONENT
 // XS
-@media (max-width: @screen-sm) {
-
-}
-
+@media (max-width: @screen-sm) {}
 // SM
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-
-}
-
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {}
 // MD
-@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-
-}
-
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {}
 // LG
-@media (min-width: @screen-lg-min) {
-
-}
-
+@media (min-width: @screen-lg-min) {}
 // Specials breakpoints
 // XS & SM
-@media (max-width: @screen-sm-max) {
-
-}
-
+@media (max-width: @screen-sm-max) {}
 // NO XS (todas las resoluciones menos XS)
-@media (min-width: @screen-sm-min) {
-
-}
+@media (min-width: @screen-sm-min) {}
