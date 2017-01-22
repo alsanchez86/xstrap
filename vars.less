@@ -1,6 +1,6 @@
 // ----- CORE ----- //
 // paths
-@path-components: '../xstrap/';
+@path-components: "./bower_components/xstrap/";
 @path-images: '../../images/';
 @path-css: '../../css/';
 @path-fonts: '../../fonts/';
@@ -222,3 +222,508 @@
 
 // ----- GLYPHICONS ----- //
 @glyphicon: 'Glyphicons Halflings';
+
+// ----- ICOMOON ----- //
+@icomoon-font-family: 'IcoMoon-Free';
+@icomoon-font-size:   18px;
+
+// ----- BUTTONS ----- //
+// button vars
+@button-min-height: 35px;
+@button-padding: 0px 10px;
+
+@button-font-family:            @font-family;
+@button-font-size:              @font-size - 2;
+@button-font-weight:            700;
+@button-font-style:             @font-style;
+@button-color:                  @negro;
+@button-color-hover:            @negro;
+@button-background-color:       @negro;
+@button-background-color-hover: @negro;
+@button-text-align:             center;
+@button-text-transform:         uppercase;
+@button-letter-spacing: 		  1px;
+@button-line-height:            @button-min-height;
+
+@button-border:        0px;
+@button-border-radius: @border-radius;
+
+// shadow
+@button-shadow-color:  	transparent;
+@button-shadow-width:  	0px;
+@button-shadow-height:  0px;
+@button-shadow-radius:  0px;
+@button-shadow-size:  	0px;
+
+// shadow-hover
+@button-shadow-color-hover:  	transparent;
+@button-shadow-width-hover:  	0px;
+@button-shadow-height-hover:  	0px;
+@button-shadow-radius-hover:  	0px;
+@button-shadow-size-hover:  	0px;
+
+@button-time: 0s;
+
+// ----- BUTTONS GROUPS ----- //
+// dimensions
+@btn-group-space: 		@space;
+@btn-toolbar-margin: 	@btn-group-space / 2;
+
+// caret
+@caret-width-large: 2px;
+
+// ----- IMAGE ----- //
+// image
+@img-rounded-radius: @border-radius * 4;
+
+// ----- FORMS ----- //
+// legend
+@legend-margin-bottom: 			@space / 2;
+
+@legend-font-family: 			@font-family;
+@legend-font-size: 				@font-size;
+@legend-font-weight: 			@font-weight;
+@legend-font-style: 			@font-style;
+@legend-color: 					@color;
+@legend-text-align: 			@text-align;
+@legend-text-transform: 		@text-transform;
+@legend-line-height: 			inherit;
+@legend-border-bottom-color: 	@gris;
+
+// label
+@label-margin-bottom: @space / 2;
+
+@label-font-family: 		@font-family;
+@label-font-size: 			@font-size - 2px;
+@label-font-weight: 		@font-weight;
+@label-font-style: 			@font-style;
+@label-color: 				  @color;
+@label-text-align: 			left;
+@label-text-transform: 	@text-transform;
+@label-line-height: 		@line-height;
+
+// output
+@output-font-family: 	@font-family;
+@output-font-size: 		@font-size;
+@output-font-weight: 	@font-weight;
+@output-font-style: 	@font-style;
+@output-color: 			@color;
+@output-padding: 		@space / 2 0px 0px 0px;
+
+// inputs
+@radio-checkbox-margin: @space / 2;
+
+@form-control-height:  		35px;
+@form-control-margin-bottom: 	@space;
+@form-control-padding: 		5px 10px;
+
+@form-control-font-family:             	@font-family;
+@form-control-font-size:               	@font-size - 2px;
+@form-control-font-weight:             	@font-weight;
+@form-control-font-style:              	@font-style;
+@form-control-color:                   	@color;
+@form-control-background-color:        	@blanco;
+@form-control-border:                  	1px solid @blanco;
+@form-control-border-radius:           	@border-radius;
+@form-control-border-color-focus:      	@blanco;
+
+@form-control-box-shadow-color:        	transparent;
+@form-control-box-shadow-width:        	0;
+@form-control-box-shadow-height:        0;
+@form-control-box-shadow-radius:        0;
+@form-control-box-shadow-size:        	0;
+
+@form-control-box-shadow-color-focus:   transparent;
+@form-control-box-shadow-width-focus:   0;
+@form-control-box-shadow-height-focus:  0;
+@form-control-box-shadow-radius-focus:  0;
+@form-control-box-shadow-size-focus:    0;
+
+@form-control-direction: 				ltr;
+
+@form-control-placeholder-color: #CCC;
+@form-group-margin-bottom: @space;
+
+@checkbox-padding-left: @space;
+
+// textarea
+@textarea-resize: none;
+
+// ----- DATEPICKER ----- //
+// datepicker
+@datepicker-padding: @space / 2;
+
+@datepicker-font-family: 		@font-family;
+@datepicker-font-size: 			@font-size;
+@datepicker-font-weight: 		@font-weight;
+@datepicker-font-style: 		@font-style;
+@datepicker-color: 				@blanco;
+@datepicker-background-color: 	@gris;
+@datepicker-border-radius: 		@border-radius;
+
+@datepicker-shadow-color: 	@shadow-color;
+@datepicker-shadow-width: 	2px;
+@datepicker-shadow-height: 	2px;
+@datepicker-shadow-radius: 	2px;
+@datepicker-shadow-size: 	2px;
+
+// arrow
+@datepicker-arrow-size: 8px;
+
+// dow
+@datepicker-dow-font-size: 	12px;
+@datepicker-dow-font-style: italic;
+@datepicker-dow-color:  	@gris;
+
+// cell
+@datepicker-cell-padding: 		@space / 4;
+@datepicker-cell-border: 		0px;
+@datepicker-cell-border-radius: @border-radius;
+@datepicker-cell-text-align: 	center;
+
+// prev & next
+@datepicker-prev-next-font-size: 		20px;
+@datepicker-prev-next-color: 			@gris;
+
+// switch
+@datepicker-switch-font-size: 	13px;
+@datepicker-switch-font-style: 	italic;
+@datepicker-switch-color: 		@gris;
+
+// day
+@datepicker-day-color-hover: 			@gris;
+@datepicker-day-background-color-hover: @blanco;
+
+// old & new
+@datepicker-old-new-color: @gris;
+
+// active
+@datepicker-active-color: @blanco;
+@datepicker-active-background-color: @gris;
+
+// ----- DROPDOWNS ----- //
+@caret-width-base:          4px;
+//** Carets increase slightly in size for larger components.
+@caret-width-large:         5px;
+
+//** Background for the dropdown menu.
+@dropdown-bg:                    #fff;
+//** Dropdown menu `border-color`.
+@dropdown-border:                rgba(0,0,0,.15);
+//** Dropdown menu `border-color` **for IE8**.
+@dropdown-fallback-border:       #ccc;
+//** Divider color for between dropdown items.
+@dropdown-divider-bg:            #e5e5e5;
+
+//** Dropdown link text color.
+@dropdown-link-color:            @gris;
+//** Hover color for dropdown links.
+@dropdown-link-hover-color:      darken(@gris, 5%);
+//** Hover background for dropdown links.
+@dropdown-link-hover-bg:         #f5f5f5;
+
+//** Active dropdown menu item text color.
+@dropdown-link-active-color:     @component-active-color;
+//** Active dropdown menu item background color.
+@dropdown-link-active-bg:        @component-active-bg;
+
+//** Disabled dropdown menu item background color.
+@dropdown-link-disabled-color:   @gris;
+
+//** Text color for headers within dropdown menus.
+@dropdown-header-color:          @gris;
+
+//** Deprecated `@dropdown-caret-color` as of v3.1.0
+@dropdown-caret-color:           #000;
+
+
+@zindex-dropdown:          1000;
+
+@component-active-color:    #fff;
+//** Global background color for active items (e.g., navs or dropdowns).
+@component-active-bg:       @gris;
+
+// ----- TYPEHEAD ----- //
+// BASE
+
+// dimensions
+@tt-min-width: 	260px;
+@tt-margin: 	@space / 3 0px;
+@tt-padding: 	10px 0px;
+
+// text
+@tt-font-family: 	@font-family;
+@tt-font-size: 		@font-size;
+@tt-font-weight: 	@font-weight;
+@tt-font-style: 	@font-style;
+@tt-color: 			@color;
+@tt-text-align: 	@text-align;
+@tt-text-transform: @text-transform;
+@tt-line-height: 	100%;
+
+// border
+@tt-border: 		0px;
+@tt-border-radius: 	@border-radius;
+
+// shadow
+@tt-shadow-color: 	@shadow-color;
+@tt-shadow-width: 	1px;
+@tt-shadow-height: 	1px;
+@tt-shadow-radius: 	1px;
+@tt-shadow-size: 	1px;
+
+// colours
+@tt-background-color: @background-color;
+
+// others
+@tt-zindex: 1049;
+
+// SUGGESTIONS
+@tt-suggestion-padding: @space / 2 @space;
+
+@tt-suggestion-background-color: 		@tt-background-color;
+@tt-suggestion-background-color-hover: 	#EEE;
+
+// HIGHLIGHT
+@tt-highlight-color: @a-color;
+
+// ----- SCROLLSPY ----- //
+// all links
+@spy-a-color:					@a-color;
+@spy-a-color-hover:				@a-color-hover;
+@spy-a-text-decoration:			@a-text-decoration;
+@spy-a-text-decoration-hover: 	@a-text-decoration-hover;
+@spy-a-background-color: 		@a-background-color;
+@spy-a-background-color-hover: 	@a-background-color-hover;
+
+// active links
+@spy-a-active-padding:					5px;
+
+@spy-a-active-color:					@blanco;
+@spy-a-active-color-hover:				@blanco;
+@spy-a-active-text-decoration:			none;
+@spy-a-active-text-decoration-hover: 	none;
+@spy-a-active-background-color: 		@gris;
+@spy-a-active-background-color-hover: 	@gris;
+
+// subactive links
+@spy-a-subactive-color: 					@blanco;
+@spy-a-subactive-color-hover: 				@blanco;
+@spy-a-subactive-text-decoration: 			none;
+@spy-a-subactive-text-decoration-hover: 	none;
+@spy-a-subactive-background-color: 			@gris;
+@spy-a-subactive-background-color-hover: 	@gris;
+
+// ----- AFFIX ----- //
+@affix-top: 20px;
+
+// ----- TOOLTIPS ----- //
+// dimensions
+@tooltip-max-width: 200px;
+@tooltip-padding:   5px 8px;
+
+// texts component
+@tooltip-font-family:   	@font-family;
+@tooltip-font-size:     	10px;
+@tooltip-font-weight:   	400;
+@tooltip-font-style:    	normal;
+@tooltip-color:       		@blanco;
+@tooltip-text-align:    	center;
+@tooltip-text-transform:  	uppercase;
+@tooltip-line-height:     	150%;
+
+// arrow
+@tooltip-arrow-width: 5px;
+@tooltip-arrow-color: @tooltip-background-color;
+
+// border
+@tooltip-border:        	0px;
+@tooltip-border-radius:   	@border-radius;
+
+// others
+@tooltip-background-color:      @negro;
+@tooltip-opacity:               0.95;
+@tooltip-zindex:        		1049;
+//@tooltip-zindex:        		@modal-zindex - 1;
+
+// ----- POPOVERS ----- //
+@popover-zindex:    1040;
+@popover-max-width: @screen-xs / 2;
+
+@popover-title-padding: 	9px 14px;
+@popover-content-padding: 	5px 10px;
+
+@popover-font-family:     @font-family;
+@popover-font-size:       12px;
+@popover-font-weight:     @font-weight;
+@popover-font-style:      @font-style;
+@popover-color:           @blanco;
+@popover-text-align:      @text-align;
+@popover-text-transform:  @text-transform;
+@popover-line-height:     @line-height;
+
+@popover-background-color:            @gris;
+@popover-border-color:                @gris;
+@popover-border:                      1px solid @popover-border-color;
+@popover-border-radius:               @border-radius;
+@popover-fallback-border-color:       @gris;
+@popover-title-background-color:      darken(@popover-background-color, 3%);
+
+@popover-shadow-color:  @shadow-color;
+@popover-shadow-width:  2px;
+@popover-shadow-height: 2px;
+@popover-shadow-radius: @border-radius;
+@popover-shadow-size:   0px;
+
+@popover-arrow-width:                 10px;
+@popover-arrow-color:                 @popover-background-color;
+@popover-arrow-outer-width:           (@popover-arrow-width + 1);
+@popover-arrow-outer-color:           fadein(@popover-border-color, 5%);
+@popover-arrow-outer-fallback-color:  darken(@popover-fallback-border-color, 20%);
+
+@popover-a-color: 						@blanco;
+@popover-a-color-hover: 				@blanco;
+@popover-a-text-decoration: 			none;
+@popover-a-text-decoration-hover: 		none;
+@popover-a-background-color: 			transparent;
+@popover-a-background-color-hover: 		transparent;
+
+// ----- TABLES ----- //
+// vars
+@table-cell-padding:        @space / 2;
+@table-cell-padding-small:  @table-cell-padding / 2;
+
+@table-line-height:       100%;
+@table-background-color:  @blanco;
+@table-text-align:        center;
+
+@table-tr-border: 			1px solid @negro;
+@table-tr-border-radius: 	0px;
+
+// ----- PANEL ----- //
+@panel-heading-padding: 15px 25px;
+@panel-body-padding:    0px 25px;
+@panel-footer-padding:  @panel-heading-padding;
+
+@panel-background-color: @gris;
+@panel-border:           1px solid transparent;
+@panel-border-radius:    0px;
+@panel-box-shadow:       @shadow-color;
+@panel-box-shadow-blur:  @blur;
+
+// ----- NAVS ----- //
+//== Navs
+//=== Shared nav styles
+@nav-link-padding: 10px 15px;
+@nav-link-hover-bg: @a-background-color-hover;
+
+@nav-disabled-link-color: @a-color;
+@nav-disabled-link-hover-color: @a-color-hover;
+
+//== Tabs
+@nav-tabs-border-color:                         @color;
+
+@nav-tabs-link-hover-border-color:              @a-color-hover;
+@nav-tabs-active-link-hover-bg:                 @a-background-color-hover;
+@nav-tabs-active-link-hover-color:              @a-color-hover;
+@nav-tabs-active-link-hover-border-color:       @a-color-hover;
+
+@nav-tabs-justified-link-border-color:          @a-color;
+@nav-tabs-justified-active-link-border-color:   @a-color-hover;
+
+//== Pills
+@nav-pills-border-radius:           @border-radius;
+@nav-pills-active-link-hover-bg:    @a-background-color-hover;
+@nav-pills-active-link-hover-color: @a-color-hover;
+
+// ----- NAVBAR ----- //
+@zindex-navbar:       1000;
+@zindex-navbar-fixed: 1030;
+
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+@grid-float-breakpoint: @screen-sm-min;
+//** Point at which the navbar begins collapsing.
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+// Basics of a navbar
+@navbar-height:               50px;
+@navbar-margin-bottom:        0;
+@navbar-border-radius:        @border-radius;
+@navbar-padding-vertical:     20px;
+@navbar-padding-horizontal:   15px;
+@navbar-collapse-max-height:  340px;
+@navbar-background-color:     @blanco;
+@navbar-line-height:          140%;
+
+// texts
+@navbar-font-family: @font-base;
+@navbar-font-size: 14px;
+
+// links
+@navbar-a-color:                    @color;
+@navbar-a-color-hover:              @color;
+@navbar-a-text-decoration:          none;
+@navbar-a-text-decoration-hover:    none;
+
+// Navbar toggle
+@navbar-toggle-color:                  @button-color;
+@navbar-toggle-color-hover:            @button-color-hover;
+@navbar-toggle-background-color:       @button-background-color;
+@navbar-toggle-background-color-hover: @button-background-color-hover;
+
+// forms
+@navbar-input-group-width: 300px;
+
+// others
+@navbar-transition-property: ~"height, visibility";
+@navbar-transition-duration: .35s;
+@navbar-timing-function: ease;
+
+// @navbar-default-color:  @color;
+// @navbar-default-bg:     @blanco;
+// @navbar-default-border: @blanco;
+
+// Navbar links
+// @navbar-default-link-color:          @color;
+// @navbar-default-link-hover-color:    @color;
+// @navbar-default-link-hover-bg:       transparent;
+// @navbar-default-link-active-color:   @a-color-hover;
+// @navbar-default-link-active-bg:      transparent;
+// @navbar-default-link-disabled-color: @a-color;
+// @navbar-default-link-disabled-bg:    transparent;
+
+// Navbar brand label
+// @navbar-default-brand-color:       @button-color;
+// @navbar-default-brand-hover-color: @button-color-hover;
+// @navbar-default-brand-hover-bg:    transparent;
+
+// Navbar toggle
+// @navbar-default-toggle-hover-bg:     @button-background-color-hover;
+// @navbar-default-toggle-icon-bar-bg:  @button-background-color;
+// @navbar-default-toggle-border-color: @button-background-color;
+
+//=== Inverted navbar
+// Reset inverted navbar basics
+// @navbar-inverse-color:  @a-color;
+// @navbar-inverse-bg:     transparent;
+// @navbar-inverse-border: @a-color;
+//
+// // Inverted navbar links
+// @navbar-inverse-link-color:          @a-color;
+// @navbar-inverse-link-hover-color:    @a-color-hover;
+// @navbar-inverse-link-hover-bg:       transparent;
+// @navbar-inverse-link-active-color:   @navbar-inverse-link-hover-color;
+// @navbar-inverse-link-active-bg:      transparent;
+// @navbar-inverse-link-disabled-color: @a-color;
+// @navbar-inverse-link-disabled-bg:    transparent;
+//
+// // Inverted navbar brand label
+// @navbar-inverse-brand-color:       @navbar-inverse-link-color;
+// @navbar-inverse-brand-hover-color: @blanco;
+// @navbar-inverse-brand-hover-bg:    transparent;
+//
+// // Inverted navbar toggle
+// @navbar-inverse-toggle-hover-bg:     transparent;
+// @navbar-inverse-toggle-icon-bar-bg:  @blanco;
+// @navbar-inverse-toggle-border-color: @color;
